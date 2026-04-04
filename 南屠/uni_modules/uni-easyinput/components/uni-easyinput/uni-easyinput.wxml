@@ -1,0 +1,19 @@
+<view class="{{['uni-easyinput',aa&&'uni-easyinput-error']}}" style="{{ab}}">
+    <view class="{{['uni-easyinput__content',Y]}}" style="{{Z}}">
+        <uni-icons bind:__l="__l" bindclick="{{b}}" class="content-clear-icon" uI="1f28d1f0-0" uP="{{c}}" wx:if="{{a}}"></uni-icons>
+        <textarea autoHeight="{{m}}" bindblur="{{p}}" bindconfirm="{{r}}" bindfocus="{{q}}" bindinput="{{o}}" bindkeyboardheightchange="{{s}}" class="{{['uni-easyinput__content-textarea',e&&'input-padding']}}" cursorSpacing="{{n}}" disabled="{{j}}" focus="{{l}}" maxlength="{{k}}" name="{{f}}" placeholder="{{h}}" placeholderClass="uni-easyinput__placeholder-class" placeholderStyle="{{i}}" value="{{g}}" wx:if="{{d}}"></textarea>
+        <block wx:else>
+            <input bindblur="{{H}}" bindconfirm="{{J}}" bindfocus="{{G}}" bindinput="{{I}}" bindkeyboardheightchange="{{K}}" class="uni-easyinput__content-input" confirmType="{{E}}" cursorSpacing="{{F}}" disabled="{{B}}" focus="{{D}}" maxlength="{{C}}" name="{{w}}" password="{{y}}" placeholder="{{z}}" placeholderClass="uni-easyinput__placeholder-class" placeholderStyle="{{A}}" style="{{v}}" type="{{t}}" value="{{x}}" wx:if="{{r0}}"></input>
+        </block>
+        <block wx:if="{{L}}">
+            <uni-icons bind:__l="__l" bindclick="{{O}}" class="{{['content-clear-icon',N&&'is-textarea-icon']}}" uI="1f28d1f0-1" uP="{{P}}" wx:if="{{M}}"></uni-icons>
+        </block>
+        <block wx:elif="{{Q}}">
+            <uni-icons bind:__l="__l" bindclick="{{S}}" class="content-clear-icon" uI="1f28d1f0-2" uP="{{T}}" wx:if="{{R}}"></uni-icons>
+        </block>
+        <block wx:else>
+            <uni-icons bind:__l="__l" bindclick="{{W}}" class="{{['content-clear-icon',V&&'is-textarea-icon']}}" uI="1f28d1f0-3" uP="{{X}}" wx:if="{{U}}"></uni-icons>
+        </block>
+        <slot name="right"></slot>
+    </view>
+</view>

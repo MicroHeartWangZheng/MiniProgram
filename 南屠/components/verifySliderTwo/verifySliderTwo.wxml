@@ -1,0 +1,25 @@
+<view class="hidden relative data-v-a545c17d">
+    <view class="msg width-100 fail text-center font-12 data-v-a545c17d" wx:if="{{a}}">验证失败，请重新尝试</view>
+    <view class="msg width-100 text-center font-12 data-v-a545c17d" wx:if="{{b}}">验证成功</view>
+    <view class="slider-com data-v-a545c17d" style="{{'background-image:'+r}}" wx:if="{{c}}">
+        <view class="img-box data-v-a545c17d">
+            <image class="bg data-v-a545c17d" src="{{d}}"></image>
+            <view class="{{['slider','data-v-a545c17d',e&&'opacity-0']}}" style="{{f}}"></view>
+            <view class="{{['slider-img','overflow-hide','data-v-a545c17d',k&&'wrong',l&&'opacity-0',m&&'no-transition']}}" id="slider" style="{{'top:'+n+';'+'left:'+o+';'+'width:'+p+';'+'height:'+q}}">
+                <image class="bg-s data-v-a545c17d" src="{{g}}" style="{{h}}"></image>
+                <view class="fail-img-box data-v-a545c17d" wx:if="{{i}}">
+                    <image class="fail-img width-100 height-100 data-v-a545c17d" src="{{j}}"></image>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="slider-wrap hidden relative data-v-a545c17d">
+        <view class="{{['slider-bg','height-100','data-v-a545c17d',s&&'no-transition']}}" style="{{'width:'+t}}"></view>
+        <view class="tip height-100 font-12 width-100 text-center data-v-a545c17d" wx:if="{{v}}">向右滑动完成验证</view>
+        <view bindtouchcancel="{{C}}" bindtouchend="{{D}}" bindtouchmove="{{E}}" bindtouchstart="{{B}}" class="{{['slider-ctrl','border-box','flex','flex-center','flex-center-v','data-v-a545c17d',z&&'no-transition']}}" style="{{'left:'+A}}">
+            <uni-icons bind:__l="__l" class="icon data-v-a545c17d" uI="a545c17d-0" uP="{{x}}" wx:if="{{w}}"></uni-icons>
+            <uni-icons bind:__l="__l" class="icon data-v-a545c17d" uI="a545c17d-1" uP="{{y||''}}" wx:else></uni-icons>
+        </view>
+    </view>
+    <view bindtap="{{H}}" class="{{['sure-btn','font-14','text-center','data-v-a545c17d',G&&'disabled']}}">{{F}}</view>
+</view>

@@ -1,0 +1,4 @@
+<view>
+    <web-view src="{{a}}"></web-view>
+    <back-home bind:__l="__l" uI="4a4a6faa-0"></back-home>
+</view>

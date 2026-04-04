@@ -1,0 +1,217 @@
+<view class="{{['pages','border-box','data-v-6c2fddb2',ax&&'is-edit']}}">
+    <page-head bind:__l="__l" class="data-v-6c2fddb2" uI="6c2fddb2-0" uP="{{a}}" wx:if="{{a}}"></page-head>
+    <view class="room-intro relative data-v-6c2fddb2">
+        <view class="title-box flex flex-center-v flex-start data-v-6c2fddb2" wx:if="{{b}}">
+            <view class="title font-12 font-000 data-v-6c2fddb2">
+                <text class="data-v-6c2fddb2">点击查看</text>
+                <text bindtap="{{c}}" class="a data-v-6c2fddb2">观众绑定及参观说明</text>
+            </view>
+        </view>
+        <view class="container bg-fff data-v-6c2fddb2">
+            <view class="harvestAdd-content flex flex-column data-v-6c2fddb2">
+                <view class="item data-v-6c2fddb2">
+                    <view class="label data-v-6c2fddb2">证件类型</view>
+                    <view class="input flex flex-between flex-center-v data-v-6c2fddb2">
+                        <view class="pick-box data-v-6c2fddb2">
+                            <view bindtap="{{i}}" class="park-pick data-v-6c2fddb2">
+                                <text class="{{['data-v-6c2fddb2',f&&'idTypeDisabled']}}" style="color:#2c2c2c" wx:if="{{d}}">{{e}}</text>
+                                <text class="placeholder data-v-6c2fddb2" wx:else>请选择</text>
+                                <image class="icon-down data-v-6c2fddb2" src="{{h}}" wx:if="{{g}}"></image>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+                <view class="item data-v-6c2fddb2">
+                    <view class="label data-v-6c2fddb2">姓名</view>
+                    <view class="input flex flex-center flex-center-v data-v-6c2fddb2">
+                        <uni-easyinput bind:__l="__l" bindinput="{{k}}" bindupdateModelValue="{{l}}" class="data-v-6c2fddb2" uI="6c2fddb2-1" uP="{{m}}" wx:if="{{j}}"></uni-easyinput>
+                        <uni-easyinput bind:__l="__l" bindinput="{{o}}" bindupdateModelValue="{{p}}" class="data-v-6c2fddb2" uI="6c2fddb2-2" uP="{{q}}" wx:if="{{n}}"></uni-easyinput>
+                    </view>
+                </view>
+                <view class="item data-v-6c2fddb2" wx:if="{{r}}">
+                    <view class="label data-v-6c2fddb2">国籍</view>
+                    <country-select bind:__l="__l" class="data-v-6c2fddb2" uI="6c2fddb2-3" uP="{{s}}" wx:if="{{s}}"></country-select>
+                </view>
+                <view class="item data-v-6c2fddb2">
+                    <view class="label data-v-6c2fddb2">证件号码</view>
+                    <view class="input flex flex-center flex-center-v data-v-6c2fddb2">
+                        <uni-easyinput bind:__l="__l" bindblur="{{t}}" bindupdateModelValue="{{v}}" class="data-v-6c2fddb2" uI="6c2fddb2-4" uP="{{w}}" wx:if="{{w}}"></uni-easyinput>
+                    </view>
+                </view>
+                <view class="item data-v-6c2fddb2" wx:if="{{x}}">
+                    <view class="label data-v-6c2fddb2">出生日期</view>
+                    <view class="input flex flex-center flex-center-v data-v-6c2fddb2">
+                        <view class="pick-box data-v-6c2fddb2">
+                            <picker bindchange="{{D}}" class="data-v-6c2fddb2" end="{{C}}" mode="date" start="1900-01-01" value="{{B}}">
+                                <view class="park-pick data-v-6c2fddb2">
+                                    <text class="data-v-6c2fddb2" style="color:#2c2c2c" wx:if="{{y}}">{{z}}</text>
+                                    <text class="placeholder data-v-6c2fddb2" wx:else>请选择年/月/日</text>
+                                    <image class="icon-down data-v-6c2fddb2" src="{{A}}"></image>
+                                </view>
+                            </picker>
+                        </view>
+                    </view>
+                </view>
+                <view class="item data-v-6c2fddb2" wx:if="{{E}}">
+                    <view class="label data-v-6c2fddb2">是否属于优待人员</view>
+                    <view class="ul flex flex-wrap data-v-6c2fddb2">
+                        <view class="data-v-6c2fddb2" wx:for="{{F}}" wx:key="d">
+                            <view bindtap="{{item.b}}" class="{{['relative','li','font-14','border-box','data-v-6c2fddb2',item.c&&'ac']}}">
+                                <text class="data-v-6c2fddb2">{{item.a}}</text>
+                                <image class="ac-img data-v-6c2fddb2" src="{{G}}"></image>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+                <view class="item data-v-6c2fddb2" wx:if="{{H}}">
+                    <view bindtap="{{I}}" class="label flex flex-center-v data-v-6c2fddb2">
+                        <text class="data-v-6c2fddb2">有效证件照片</text>
+                        <text class="data-v-6c2fddb2" style="color:#a87e6c">(必填)</text>
+                    </view>
+                    <upload-img bind:__l="__l" class="data-v-6c2fddb2" uI="6c2fddb2-5" uP="{{J}}" wx:if="{{J}}"></upload-img>
+                </view>
+                <view class="item data-v-6c2fddb2" wx:if="{{K}}">
+                    <view class="label data-v-6c2fddb2">是否属于优待人员</view>
+                    <view class="ul flex flex-wrap data-v-6c2fddb2">
+                        <view class="data-v-6c2fddb2" wx:for="{{L}}" wx:key="f">
+                            <view bindtap="{{item.d}}" class="{{['relative','li','font-14','border-box','data-v-6c2fddb2',item.e&&'ac']}}" wx:if="{{item.a}}">
+                                <text class="data-v-6c2fddb2">{{item.b}}</text>
+                                <image class="ac-img data-v-6c2fddb2" src="{{item.c}}"></image>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+                <view class="item data-v-6c2fddb2" wx:if="{{M}}">
+                    <view class="label data-v-6c2fddb2">优待证件号<text class="data-v-6c2fddb2" style="color:#a87e6c">(必填,须与上传的证件相对应)</text>
+                    </view>
+                    <view class="input flex flex-center flex-center-v data-v-6c2fddb2">
+                        <uni-easyinput bind:__l="__l" bindupdateModelValue="{{N}}" class="data-v-6c2fddb2" uI="6c2fddb2-6" uP="{{O}}" wx:if="{{O}}"></uni-easyinput>
+                    </view>
+                </view>
+                <view class="item data-v-6c2fddb2" wx:if="{{P}}">
+                    <view bindtap="{{Q}}" class="label flex flex-center-v data-v-6c2fddb2">
+                        <text class="data-v-6c2fddb2">有效证件照片</text>
+                        <text class="data-v-6c2fddb2" style="color:#a87e6c">(必填)</text>
+                    </view>
+                    <upload-img bind:__l="__l" class="data-v-6c2fddb2" uI="6c2fddb2-7" uP="{{R}}" wx:if="{{R}}"></upload-img>
+                </view>
+                <view class="item data-v-6c2fddb2" wx:if="{{S}}">
+                    <view bindtap="{{T}}" class="label flex flex-center-v data-v-6c2fddb2">
+                        <text class="data-v-6c2fddb2">有效证件照片</text>
+                        <text class="data-v-6c2fddb2" style="color:#a87e6c">(必填)</text>
+                    </view>
+                    <upload-list bind:__l="__l" class="data-v-6c2fddb2" uI="6c2fddb2-8" uP="{{U}}" wx:if="{{U}}"></upload-list>
+                </view>
+                <view class="item data-v-6c2fddb2" wx:if="{{V}}">
+                    <view bindtap="{{W}}" class="label flex flex-center-v data-v-6c2fddb2">
+                        <text class="data-v-6c2fddb2">有效证件照片</text>
+                        <text class="data-v-6c2fddb2" style="color:#a87e6c">(必填)</text>
+                    </view>
+                    <upload-img bind:__l="__l" class="data-v-6c2fddb2" uI="6c2fddb2-9" uP="{{X}}" wx:if="{{X}}"></upload-img>
+                </view>
+                <view class="item data-v-6c2fddb2" wx:if="{{Y}}">
+                    <view bindtap="{{Z}}" class="label flex flex-center-v data-v-6c2fddb2">
+                        <text class="data-v-6c2fddb2">有效证件照片</text>
+                        <text class="data-v-6c2fddb2" style="color:#a87e6c">(必填)</text>
+                    </view>
+                    <upload-img bind:__l="__l" class="data-v-6c2fddb2" uI="6c2fddb2-10" uP="{{aa}}" wx:if="{{aa}}"></upload-img>
+                </view>
+                <view class="item data-v-6c2fddb2" wx:if="{{ab}}">
+                    <view bindtap="{{ac}}" class="label flex flex-center-v data-v-6c2fddb2">
+                        <text class="data-v-6c2fddb2">有效证件照片</text>
+                        <text class="data-v-6c2fddb2" style="color:#a87e6c">(必填)</text>
+                    </view>
+                    <upload-img bind:__l="__l" class="data-v-6c2fddb2" uI="6c2fddb2-11" uP="{{ad}}" wx:if="{{ad}}"></upload-img>
+                </view>
+                <view class="item data-v-6c2fddb2" wx:if="{{ae}}">
+                    <view bindtap="{{af}}" class="label flex flex-center-v data-v-6c2fddb2">
+                        <text class="data-v-6c2fddb2">有效证件照片</text>
+                        <text class="data-v-6c2fddb2" style="color:#a87e6c">(必填)</text>
+                    </view>
+                    <upload-img bind:__l="__l" class="data-v-6c2fddb2" uI="6c2fddb2-12" uP="{{ag}}" wx:if="{{ag}}"></upload-img>
+                </view>
+                <view class="item data-v-6c2fddb2" wx:if="{{ah}}">
+                    <view bindtap="{{ai}}" class="label flex flex-center-v data-v-6c2fddb2">
+                        <text class="data-v-6c2fddb2">有效证件照片</text>
+                        <text class="data-v-6c2fddb2" style="color:#a87e6c">(必填)</text>
+                    </view>
+                    <upload-img bind:__l="__l" class="data-v-6c2fddb2" uI="6c2fddb2-13" uP="{{aj}}" wx:if="{{aj}}"></upload-img>
+                </view>
+                <view class="item data-v-6c2fddb2" wx:if="{{ak}}">
+                    <view bindtap="{{al}}" class="label flex flex-center-v data-v-6c2fddb2">
+                        <text class="data-v-6c2fddb2">有效证件照片</text>
+                        <text class="data-v-6c2fddb2" style="color:#a87e6c">(必填)</text>
+                    </view>
+                    <upload-img bind:__l="__l" class="data-v-6c2fddb2" uI="6c2fddb2-14" uP="{{am}}" wx:if="{{am}}"></upload-img>
+                </view>
+                <view class="templateimg border-box data-v-6c2fddb2" wx:if="{{an}}">
+                    <view class="templateimg_title data-v-6c2fddb2">医务人员证书示例</view>
+                    <view class="templateimg_main data-v-6c2fddb2">
+                        <view class="templateimg_main_one data-v-6c2fddb2" wx:for="{{ao}}" wx:key="d">
+                            <view class="templateimg_main_one_inner data-v-6c2fddb2">
+                                <view class="templateimg_main_one_img data-v-6c2fddb2">
+                                    <image class="data-v-6c2fddb2" mode="aspectFill" src="{{item.a}}"></image>
+                                    <image class="data-v-6c2fddb2" mode="aspectFill" src="{{item.b}}"></image>
+                                </view>
+                                <view class="templateimg_main_one_name data-v-6c2fddb2">{{item.c}}</view>
+                            </view>
+                        </view>
+                        <view class="templateimg_main_s data-v-6c2fddb2">
+                            <view class="templateimg_main_s_a data-v-6c2fddb2">说明：</view>
+                            <view class="templateimg_main_s_b data-v-6c2fddb2">以上仅为照片示例，请务必以政府部门正式下发的真实证件为准，上传证件照片时，请上传带有信息的<text class="data-v-6c2fddb2" style="color:#a87e6c">证书内页</text>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+                <exp-blood bind:__l="__l" class="data-v-6c2fddb2" uI="6c2fddb2-15" uP="{{aq}}" wx:if="{{ap}}"></exp-blood>
+            </view>
+            <view class="btn-wrap bg-fff data-v-6c2fddb2">
+                <view class="font-12 add-tip font-12 data-v-6c2fddb2" wx:if="{{ar}}">
+                    <view class="data-v-6c2fddb2">1.为保障预约顺利，请务必填写真实有效信息</view>
+                    <view class="data-v-6c2fddb2">2.确认保存后证件类型无法修改，请务必确认无误。</view>
+                </view>
+                <view bindtap="{{at}}" class="del_btn data-v-6c2fddb2" wx:if="{{as}}">删除观众</view>
+                <button bindtap="{{aw}}" class="login_btn data-v-6c2fddb2">
+                    <text class="login-wx-btn data-v-6c2fddb2" style="{{av}}"> 确认保存</text>
+                </button>
+            </view>
+        </view>
+    </view>
+</view>
+<uni-popup-select bind:__l="__l" bindchange="{{az}}" bindupdateValue="{{aA}}" class="r data-v-6c2fddb2" uI="6c2fddb2-16" uP="{{aB}}" uR="popupSelect" wx:if="{{aB}}"></uni-popup-select>
+<dialog-info bind:__l="__l" class="r data-v-6c2fddb2" uI="6c2fddb2-17" uR="dialogInfo"></dialog-info>
+<dialog-info2 bind:__l="__l" class="r data-v-6c2fddb2" uI="6c2fddb2-18" uR="dialogInfo2Ref"></dialog-info2>
+<dialog-wrap bind:__l="__l" class="r data-v-6c2fddb2" uI="6c2fddb2-19" uP="{{aM}}" uR="dialogWrapRef" uS="{{['d']}}" wx:if="{{aM}}">
+    <view class="tip bg-fff flex flex-column flex-center-v hidden data-v-6c2fddb2">
+        <image class="img data-v-6c2fddb2" src="{{aE}}"></image>
+        <text class="text-title data-v-6c2fddb2">是否确定删除该观众信息，</text>
+        <text class="text-title data-v-6c2fddb2">删除后{{aF}}天内该证件号将无法预约参观。</text>
+        <view class="tip-bottom flex flex-center-v width-100 p-0 data-v-6c2fddb2">
+            <view bindtap="{{aG}}" class="sure item text-center cancel-btn data-v-6c2fddb2">取消</view>
+            <view bindtap="{{aK}}" class="{{['cancel','item','text-center','confirm-btn','data-v-6c2fddb2',aJ&&'disabled']}}">{{aH}}{{aI}}</view>
+        </view>
+    </view>
+</dialog-wrap>
+<dialog-wrap bind:__l="__l" class="r data-v-6c2fddb2" uI="6c2fddb2-20" uP="{{aS}}" uR="dialogWrapRef2" uS="{{['d']}}" wx:if="{{aS}}">
+    <view class="tip bg-fff flex flex-column flex-center-v data-v-6c2fddb2">
+        <image class="img data-v-6c2fddb2" src="{{aN}}"></image>
+        <text class="text-title data-v-6c2fddb2">是否确认保存？</text>
+        <text class="text_content text-center data-v-6c2fddb2">每个观众信息仅可被1位用户绑定</text>
+        <view class="tip-bottom flex flex-center-v width-100 data-v-6c2fddb2">
+            <view bindtap="{{aO}}" class="sure item text-center data-v-6c2fddb2">取消</view>
+            <view bindtap="{{aQ}}" class="cancel item text-center data-v-6c2fddb2">{{aP}}</view>
+        </view>
+    </view>
+</dialog-wrap>
+<dialog-wrap bind:__l="__l" class="r data-v-6c2fddb2" uI="6c2fddb2-21" uP="{{aY}}" uR="dialogWrapRef3" uS="{{['d']}}" wx:if="{{aY}}">
+    <view class="tip bg-fff flex flex-column flex-center-v data-v-6c2fddb2">
+        <image class="img data-v-6c2fddb2" src="{{aT}}"></image>
+        <text class="text-title data-v-6c2fddb2">是否确认修改？</text>
+        <text class="text_content text-center data-v-6c2fddb2">每个观众信息仅可修改3次，是否确定修改?</text>
+        <view class="tip-bottom flex flex-center-v width-100 data-v-6c2fddb2">
+            <view bindtap="{{aU}}" class="sure item text-center data-v-6c2fddb2">取消</view>
+            <view bindtap="{{aW}}" class="cancel item text-center data-v-6c2fddb2">{{aV}}</view>
+        </view>
+    </view>
+</dialog-wrap>
+<dialog-wrap-text bind:__l="__l" class="r data-v-6c2fddb2" uI="6c2fddb2-22" uR="dialogWrapTextRef"></dialog-wrap-text>

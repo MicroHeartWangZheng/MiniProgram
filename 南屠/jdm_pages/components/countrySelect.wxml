@@ -1,0 +1,45 @@
+<view class="data-v-26ceb48d">
+    <view class="country-wrap data-v-26ceb48d">
+        <view class="input flex flex-between flex-center-v data-v-26ceb48d">
+            <view class="pick-box data-v-26ceb48d">
+                <view class="park-pick relative data-v-26ceb48d">
+                    <text class="disabled data-v-26ceb48d" wx:if="{{a}}">{{b}}</text>
+                    <uni-easyinput bind:__l="__l" bindblur="{{d}}" bindfocus="{{c}}" bindinput="{{e}}" bindupdateModelValue="{{f}}" class="data-v-26ceb48d" uI="26ceb48d-0" uP="{{g||''}}" wx:else></uni-easyinput>
+                    <view bindtap="{{j}}" class="down flex flex-end flex-center-v data-v-26ceb48d" wx:if="{{h}}">
+                        <image class="icon-down data-v-26ceb48d" src="{{i}}"></image>
+                    </view>
+                    <view class="select width-100 bg-fff data-v-26ceb48d" wx:if="{{k}}">
+                        <block wx:if="{{l}}">
+                            <view bindtap="{{word.b}}" class="cell border-box data-v-26ceb48d" wx:for="{{m}}" wx:for-item="word" wx:key="c">{{word.a}}</view>
+                        </block>
+                        <view class="empty font-12 data-v-26ceb48d" wx:else>无匹配数据</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <dialog-wrap bind:__l="__l" class="r data-v-26ceb48d" uI="26ceb48d-1" uP="{{r}}" uR="dialogWrap" uS="{{['d']}}" wx:if="{{r}}">
+        <view class="fee-detail relative data-v-26ceb48d">
+            <view class="title-box bg-fff flex flex-center-v flex-center data-v-26ceb48d">
+                <view bindtap="{{n}}" class="close data-v-26ceb48d">+</view>
+                <view class="title font-18 font-000 font-bold text-center data-v-26ceb48d">国籍</view>
+            </view>
+            <view class="container bg-fff border-box data-v-26ceb48d">
+                <view class="dl data-v-26ceb48d">
+                    <view class="dd data-v-26ceb48d" wx:for="{{o}}" wx:for-item="country" wx:key="b">
+                        <view bindtap="{{child.e}}" class="{{['li','flex','flex-between','data-v-26ceb48d',child.g&&'ac']}}" wx:for="{{country.a}}" wx:for-item="child" wx:key="f">
+                            <view class="flex flex-center-v data-v-26ceb48d">
+                                <view class="label font-14 data-v-26ceb48d">
+                                    <text class="data-v-26ceb48d" wx:if="{{child.a}}">{{child.b}}</text>
+                                </view>
+                                <text class="value font-14 data-v-26ceb48d">{{child.c}}</text>
+                            </view>
+                            <uni-icons bind:__l="__l" class="icon data-v-26ceb48d" uI="{{child.d}}" uP="{{p}}" wx:if="{{p}}"></uni-icons>
+                        </view>
+                    </view>
+                </view>
+                <view class="bt-safe data-v-26ceb48d"></view>
+            </view>
+        </view>
+    </dialog-wrap>
+</view>

@@ -1,0 +1,130 @@
+<view class="pageBox data-v-dbb94038">
+    <page-head bind:__l="__l" class="data-v-dbb94038" uI="dbb94038-0" uP="{{a}}" wx:if="{{a}}"></page-head>
+    <view class="pageContent data-v-dbb94038">
+        <view class="topBG data-v-dbb94038">
+            <view class="triangle data-v-dbb94038"></view>
+        </view>
+        <view class="resultBox data-v-dbb94038">
+            <uni-icons bind:__l="__l" class="data-v-dbb94038" uI="dbb94038-1" uP="{{b}}" wx:if="{{b}}"></uni-icons>
+            <view class="resultBox_info data-v-dbb94038">
+                <view class="result data-v-dbb94038">{{c}}</view>
+                <view class="hint data-v-dbb94038" wx:if="{{d}}">请凭本人<text class="data-v-dbb94038" style="font-weight:bold"> 预约证件、优待证件原件和预约已受理信息 </text>，<text class="data-v-dbb94038" style="font-weight:bold">{{e}}</text>，核验通过后<text class="data-v-dbb94038" wx:if="{{f}}"> 从 <text class="data-v-dbb94038" style="font-weight:bold">{{g}}</text>
+                    </text>入馆参观，{{h}}。入馆时须配合进行证件核验。</view>
+                <view class="hint data-v-dbb94038" wx:if="{{i}}">您的预约申请已提交审核，来馆前请确认预约状态显示为“待入馆”。参观时凭本人<text class="data-v-dbb94038" style="font-weight:bold"> 身份证件原件和预约成功信息，严格按预约时段 </text>从<text class="data-v-dbb94038" style="font-weight:bold">{{j}}</text>入馆参观，{{k}}。入馆时须配合进行证件核验。</view>
+                <view class="hint data-v-dbb94038" wx:if="{{l}}">请凭本人<text class="data-v-dbb94038" style="font-weight:bold"> 预约证件原件和预约成功信息，严格按预约时段 </text>从<text class="data-v-dbb94038" style="font-weight:bold">{{m}}</text>入馆参观，{{n}}。入馆时须配合进行证件核验。<view class="data-v-dbb94038"></view>若行程有变，请及时取消该预约，否则视为爽约。爽约后<text class="data-v-dbb94038" style="font-weight:bold"> 当月 </text>不可预约。</view>
+                <view class="hint data-v-dbb94038" wx:if="{{o}}">请留意您的实名验证结果，若身份信息有误造成验证失败，本次预约将失效。</view>
+            </view>
+        </view>
+        <view class="appointmentBox data-v-dbb94038">
+            <view class="appointmentBox_tip data-v-dbb94038">{{p}}</view>
+            <view class="appointmentBox_title data-v-dbb94038">
+                <image class="appointmentBox_title_icon data-v-dbb94038" src="{{q}}"></image>预约场馆</view>
+            <view class="appointmentBox_content data-v-dbb94038">{{r}}</view>
+            <view class="appointmentBox_title data-v-dbb94038">
+                <image class="appointmentBox_title_icon data-v-dbb94038" src="{{s}}"></image>预约时段</view>
+            <view class="appointmentBox_content data-v-dbb94038">{{t}}</view>
+            <view class="appointmentBox_title data-v-dbb94038">
+                <image class="appointmentBox_title_icon data-v-dbb94038" src="{{v}}"></image>预约人员</view>
+            <view class="appointmentBox_content data-v-dbb94038">{{w}}</view>
+        </view>
+        <view class="hintBox data-v-dbb94038">
+            <view class="hintBox_title data-v-dbb94038">参观须知</view>
+            <view class="hintBox_content data-v-dbb94038">
+                <view class="data-v-dbb94038" wx:if="{{x}}">
+                    <image bindtap="{{y}}" class="mapBox data-v-dbb94038" src="https://jdmqn.19371213.com.cn/jdm/miniAppImages/stadium1.jpg"></image>
+                </view>
+                <image bindtap="{{A}}" class="mapBox data-v-dbb94038" src="https://jdmqn.19371213.com.cn/jdm/miniAppImages/stadium2.jpg" wx:if="{{z}}"></image>
+                <image bindtap="{{C}}" class="mapBox data-v-dbb94038" src="https://jdmqn.19371213.com.cn/jdm/miniAppImages/stadium3.jpg" wx:if="{{B}}"></image>
+                <view bindtap="{{E}}" class="navigationBox data-v-dbb94038">
+                    <image class="navigationBox_img data-v-dbb94038" src="{{D}}"></image>点击查看入口位置</view>
+                <view class="hintBox_content_text data-v-dbb94038" wx:if="{{F}}">
+                    <view class="data-v-dbb94038" wx:if="{{G}}">
+                        <view class="textRow textTitle data-v-dbb94038">一、入馆参观</view>
+                        <view class="textRow data-v-dbb94038">1.参观时请务必携带预约时的身份证件原件（含二代身份证、江苏省第三代社保卡、护照、港澳居民来往内地通行证、台湾居民来往大陆通行证、中华人民共和国外国人永久居留身份证等）在1号门入口经过人脸比对入馆。</view>
+                        <view class="textRow data-v-dbb94038">2.现役军人及军人家属须携带有效证件前往纪念馆1号门人工窗口登记入馆。</view>
+                        <view class="textRow data-v-dbb94038">3.因运用智能技术困难不能线上预约的65周岁（含）以上老年人(仅限本人)可前往纪念馆1号门人工窗口登记入馆。</view>
+                        <view class="textRow data-v-dbb94038">4.参观须遵守《南京市国家公祭保障条例》及纪念馆有关规定。</view>
+                        <view class="textRow textTitle data-v-dbb94038">二、服务指南</view>
+                        <view class="textRow data-v-dbb94038">1.馆内免费提供婴儿车、轮椅。地点：南京大屠杀史实展服务台。请于当日17:30前归还至服务处。</view>
+                        <view class="textRow data-v-dbb94038">2.馆内提供箱包寄存服务：大件行李（拖拉杆行李箱）须寄存，小件行李（背包、拎袋）可带入展厅。请于当日17:30前于寄存处领取箱包。</view>
+                        <view class="textRow data-v-dbb94038">3.如有问题或遇到突发情况，可向纪念馆服务台工作人员或就近导览服务人员求助。</view>
+                        <view class="textRow data-v-dbb94038">4.咨询电话：025-86612230</view>
+                        <view class="textRow data-v-dbb94038">投诉电话：025-86898620（8:00-20:00）</view>
+                    </view>
+                    <view class="data-v-dbb94038" wx:else>
+                        <view class="textRow textTitle data-v-dbb94038">一、入馆参观</view>
+                        <view class="textRow data-v-dbb94038">1.参观时请务必携带预约时的身份证件原件（含二代身份证、江苏省第三代社保卡、护照、港澳居民来往内地通行证、台湾居民来往大陆通行证、中华人民共和国外国人永久居留身份证等）在1号门入口经过人脸比对入馆。</view>
+                        <view class="textRow data-v-dbb94038">2.现役军人及军人家属须携带有效证件前往纪念馆1号门人工窗口登记入馆。</view>
+                        <view class="textRow data-v-dbb94038">3.因运用智能技术困难不能线上预约的65周岁（含）以上老年人(仅限本人)可前往纪念馆1号门人工窗口登记入馆。</view>
+                        <view class="textRow data-v-dbb94038">4.参观须遵守《南京市国家公祭保障条例》及纪念馆有关规定。</view>
+                        <view class="textRow textTitle data-v-dbb94038">二、服务指南</view>
+                        <view class="textRow data-v-dbb94038">1.馆内免费提供婴儿车、轮椅。地点：南京大屠杀史实展服务台。请于当日17:30前归还至服务处。</view>
+                        <view class="textRow data-v-dbb94038">2.馆内提供箱包寄存服务：大件行李（拖拉杆行李箱）须寄存，小件行李（背包、拎袋）可带入展厅。请于当日17:30前于寄存处领取箱包。</view>
+                        <view class="textRow data-v-dbb94038">3.如有问题或遇到突发情况，可向纪念馆服务台工作人员或就近导览服务人员求助。</view>
+                        <view class="textRow data-v-dbb94038">4.咨询电话：025-86612230</view>
+                        <view class="textRow data-v-dbb94038">投诉电话：025-86898620（8:00-20:00）</view>
+                    </view>
+                </view>
+                <view class="hintBox_content_text data-v-dbb94038" wx:if="{{H}}">
+                    <view class="data-v-dbb94038" wx:if="{{I}}">
+                        <view class="textRow textTitle data-v-dbb94038">一、入馆参观</view>
+                        <view class="textRow data-v-dbb94038">1.参观时请务必携带预约时的身份证件原件（含二代身份证、江苏省第三代社保卡、护照、港澳居民来往内地通行证、台湾居民来往大陆通行证、中华人民共和国外国人永久居留身份证等）在7号门入口经过人脸比对入馆。</view>
+                        <view class="textRow data-v-dbb94038">2.现役军人及军人家属须携带有效证件前往纪念馆1号门人工窗口登记入馆。</view>
+                        <view class="textRow data-v-dbb94038">3.因运用智能技术困难不能线上预约的65周岁（含）以上老年人(仅限本人)可前往纪念馆1号门人工窗口登记入馆。</view>
+                        <view class="textRow data-v-dbb94038">4.参观须遵守《南京市国家公祭保障条例》及纪念馆有关规定。</view>
+                        <view class="textRow textTitle data-v-dbb94038">二、服务指南</view>
+                        <view class="textRow data-v-dbb94038">1.馆内免费提供婴儿车、轮椅。地点：正义必胜 和平必胜 人民必胜——中国战区反法西斯战争胜利暨审判日本战犯史实展服务台。请于当日17:30前归还至服务处。</view>
+                        <view class="textRow data-v-dbb94038">2.馆内提供箱包寄存服务：大件行李（拖拉杆行李箱）须寄存，小件行李（背包、拎袋）可带入展厅。请于当日17:30前于寄存处领取箱包。</view>
+                        <view class="textRow data-v-dbb94038">3.如有问题或遇到突发情况，可向纪念馆服务台工作人员或就近导览服务人员求助。</view>
+                        <view class="textRow data-v-dbb94038">4.咨询电话：025-86612230</view>
+                        <view class="textRow data-v-dbb94038">投诉电话：025-86898620（8:00-20:00）</view>
+                    </view>
+                    <view class="data-v-dbb94038" wx:else>
+                        <view class="textRow textTitle data-v-dbb94038">一、入馆参观</view>
+                        <view class="textRow data-v-dbb94038">1.参观时请务必携带预约时的身份证件原件（含二代身份证、江苏省第三代社保卡、护照、港澳居民来往内地通行证、台湾居民来往大陆通行证、中华人民共和国外国人永久居留身份证等）在7号门入口经过人脸比对入馆。</view>
+                        <view class="textRow data-v-dbb94038">2.现役军人及军人家属须携带有效证件前往纪念馆1号门人工窗口登记入馆。</view>
+                        <view class="textRow data-v-dbb94038">3.因运用智能技术困难不能线上预约的65周岁（含）以上老年人(仅限本人)可前往纪念馆1号门人工窗口登记入馆。</view>
+                        <view class="textRow data-v-dbb94038">4.参观须遵守《南京市国家公祭保障条例》及纪念馆有关规定。</view>
+                        <view class="textRow textTitle data-v-dbb94038">二、服务指南</view>
+                        <view class="textRow data-v-dbb94038">1.馆内免费提供婴儿车、轮椅。地点：正义必胜 和平必胜 人民必胜——中国战区反法西斯战争胜利暨审判日本战犯史实展服务台。请于当日17:30前归还至服务处。</view>
+                        <view class="textRow data-v-dbb94038">2.馆内提供箱包寄存服务：大件行李（拖拉杆行李箱）须寄存，小件行李（背包、拎袋）可带入展厅。请于当日17:30前于寄存处领取箱包。</view>
+                        <view class="textRow data-v-dbb94038">3.如有问题或遇到突发情况，可向纪念馆服务台工作人员或就近导览服务人员求助。</view>
+                        <view class="textRow data-v-dbb94038">4.咨询电话：025-86612230</view>
+                        <view class="textRow data-v-dbb94038">投诉电话：025-86898620（8:00-20:00）</view>
+                    </view>
+                </view>
+                <view class="hintBox_content_text data-v-dbb94038" wx:if="{{J}}">
+                    <view class="data-v-dbb94038" wx:if="{{K}}">
+                        <view class="textRow textTitle data-v-dbb94038">一、入馆参观</view>
+                        <view class="textRow data-v-dbb94038">1.参观时请务必携带预约时的身份证件原件（含二代身份证、江苏省第三代社保卡、护照、港澳居民来往内地通行证、台湾居民来往大陆通行证、中华人民共和国外国人永久居留身份证等）在陈列馆入口安检处核对后入馆。</view>
+                        <view class="textRow data-v-dbb94038">2.现役军人及军人家属须携带有效证件前往纪念馆陈列馆入口安检处登记入馆。</view>
+                        <view class="textRow data-v-dbb94038">3.因运用智能技术困难不能线上预约的65周岁（含）以上老年人(仅限本人)可前往纪念馆陈列馆入口安检处登记入馆。</view>
+                        <view class="textRow data-v-dbb94038">4.参观须遵守陈列馆有关规定。</view>
+                        <view class="textRow textTitle data-v-dbb94038">二、服务指南</view>
+                        <view class="textRow data-v-dbb94038">1.陈列馆观众服务中心免费提供轮椅，请于当日17:30前归还至服务处。</view>
+                        <view class="textRow data-v-dbb94038">2.陈列馆内提供箱包寄存服务：大件行李（拖拉杆行李箱）须寄存，小件行李（背包、拎袋）可带入展厅。请于当日17:30前于寄存处领取箱包。</view>
+                        <view class="textRow data-v-dbb94038">3.如有问题或遇到突发情况，可向陈列馆工作人员或就近导览服务人员求助。</view>
+                        <view class="textRow data-v-dbb94038">4.咨询电话：025-58598353</view>
+                        <view class="textRow data-v-dbb94038">投诉电话：025-58598353（周二至周日：8:30-17:30）</view>
+                    </view>
+                    <view class="data-v-dbb94038" wx:else>
+                        <view class="textRow textTitle data-v-dbb94038">一、入馆参观</view>
+                        <view class="textRow data-v-dbb94038">1.参观时请务必携带预约时的身份证件原件（含二代身份证、江苏省第三代社保卡、护照、港澳居民来往内地通行证、台湾居民来往大陆通行证、中华人民共和国外国人永久居留身份证等）在陈列馆入口安检处核对后入馆。</view>
+                        <view class="textRow data-v-dbb94038">2.现役军人及军人家属须携带有效证件前往纪念馆陈列馆入口安检处登记入馆。</view>
+                        <view class="textRow data-v-dbb94038">3.因运用智能技术困难不能线上预约的65周岁（含）以上老年人(仅限本人)可前往纪念馆陈列馆入口安检处登记入馆。</view>
+                        <view class="textRow data-v-dbb94038">4.参观须遵守陈列馆有关规定。</view>
+                        <view class="textRow textTitle data-v-dbb94038">二、服务指南</view>
+                        <view class="textRow data-v-dbb94038">1.陈列馆观众服务中心免费提供轮椅，请于当日17:30前归还至服务处。</view>
+                        <view class="textRow data-v-dbb94038">2.陈列馆内提供箱包寄存服务：大件行李（拖拉杆行李箱）须寄存，小件行李（背包、拎袋）可带入展厅。请于当日17:30前于寄存处领取箱包。</view>
+                        <view class="textRow data-v-dbb94038">3.如有问题或遇到突发情况，可向陈列馆工作人员或就近导览服务人员求助。</view>
+                        <view class="textRow data-v-dbb94038">4.咨询电话：025-58598353</view>
+                        <view class="textRow data-v-dbb94038">投诉电话：025-58598353（周二至周日：8:30-17:30）</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="pageBottom data-v-dbb94038">
+        <view bindtap="{{L}}" class="pageBottom_btn data-v-dbb94038">查看预约详情</view>
+    </view>
+</view>

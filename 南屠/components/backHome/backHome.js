@@ -1,1 +1,0 @@
-Component({properties:{},data:{winWidth:0,winHeight:0,btnTop:0,btnLeft:0},pageLifetimes:{show:function(){var t=this;wx.getSystemInfo({success:function(i){var n=i.windowWidth,e=i.windowHeight;t.setData({winWidth:n,winHeight:e,btnLeft:i.windowWidth-65,btnTop:.8*i.windowHeight})}})}},methods:{}});

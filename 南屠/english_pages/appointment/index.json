@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "场馆预约",
+  "onReachBottomDistance": 50,
+  "navigationStyle": "custom",
+  "enablePullDownRefresh": false
+}

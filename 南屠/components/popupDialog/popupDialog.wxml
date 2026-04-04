@@ -1,0 +1,27 @@
+<view class="data-v-37acdb73">
+    <uni-popup bind:__l="__l" bindchange="{{i}}" bindmaskClick="{{j}}" class="r data-v-37acdb73" uI="37acdb73-0" uP="{{k}}" uR="{{h}}" uS="{{['d']}}" wx:if="{{k}}">
+        <view class="popup-dialog data-v-37acdb73">
+            <view class="popup-dialog-header data-v-37acdb73" wx:if="{{a}}">
+                <view class="dialog-header-title data-v-37acdb73">{{b}}</view>
+            </view>
+            <view class="popup-dialog-body data-v-37acdb73" style="{{d}}">
+                <view bindtap="{{item.o}}" class="{{['item','data-v-37acdb73',item.k&&'border-top',item.l&&'active',item.m&&'item-column']}}" wx:for="{{c}}" wx:key="n">
+                    <block wx:if="{{item.a}}">
+                        <button class="item-column-btn popup-dialog-body-btn data-v-37acdb73" hoverClass="none" openType="share" wx:if="{{item.b}}">
+                            <image class="img data-v-37acdb73" mode="aspectFill" src="{{item.c}}"></image>
+                            <view class="popup-dialog-body-btn data-v-37acdb73">{{item.d}}</view>
+                        </button>
+                        <view class="name data-v-37acdb73" wx:else>{{item.e}}</view>
+                    </block>
+                    <block wx:else>
+                        <button class="popup-dialog-body-btn data-v-37acdb73" hoverClass="none" openType="share" wx:if="{{item.f}}">{{item.g}}</button>
+                        <view class="name data-v-37acdb73" wx:else>{{item.h}}</view>
+                        <image class="image data-v-37acdb73" mode="aspectFill" src="{{item.j}}" wx:if="{{item.i}}"></image>
+                    </block>
+                </view>
+            </view>
+            <view class="popup-dialog-bg data-v-37acdb73"></view>
+            <view bindtap="{{f}}" class="popup-dialog-footer data-v-37acdb73">{{e}}</view>
+        </view>
+    </uni-popup>
+</view>

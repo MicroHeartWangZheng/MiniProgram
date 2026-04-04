@@ -1,0 +1,33 @@
+<view class="data-v-f6501e29">
+    <view class="loveCardBind_main_img_uplod data-v-f6501e29">
+        <view class="{{['flex','flex-wrap','data-v-f6501e29',i&&'w-600']}}">
+            <view class="img-wrap data-v-f6501e29" wx:for="{{a}}">
+                <view class="data-v-f6501e29" wx:if="{{b}}">
+                    <image class="loveCardBind_main_img_uplod_leftimg data-v-f6501e29" mode="aspectFill" src="{{item.a}}"></image>
+                    <image bindtap="{{item.d}}" class="imgItem_close data-v-f6501e29" src="{{item.c}}" wx:if="{{item.b}}"></image>
+                </view>
+            </view>
+            <block wx:if="{{c}}">
+                <view bindtap="{{h}}" class="loveCardBind_main_img_uplod_left border-box loveCardBind_main_img_uplod_left-row data-v-f6501e29" wx:if="{{d}}">
+                    <uni-icons bind:__l="__l" class="data-v-f6501e29" uI="f6501e29-0" uP="{{f}}" wx:if="{{e}}"></uni-icons>
+                    <image class="iamgtuy data-v-f6501e29" mode="scaleToFill" src="{{g}}" wx:else></image>
+                </view>
+            </block>
+        </view>
+        <view class="loveCardBind_main_img_uplod_inner data-v-f6501e29">
+            <block wx:if="{{j}}">
+                <view bindtap="{{o}}" class="loveCardBind_main_img_uplod_left border-box data-v-f6501e29" wx:if="{{k}}">
+                    <uni-icons bind:__l="__l" class="data-v-f6501e29" uI="f6501e29-1" uP="{{m}}" wx:if="{{l}}"></uni-icons>
+                    <image class="iamgtuy data-v-f6501e29" mode="scaleToFill" src="{{n}}" wx:else></image>
+                </view>
+            </block>
+            <view class="{{['loveCardBind_main_img_uplod_right','font-jiang500W','data-v-f6501e29',s&&'width-full']}}" wx:if="{{p}}">
+                <view class="tips-1 data-v-f6501e29">
+                    <mp-html bind:__l="__l" bindlinktap="{{q}}" class="data-v-f6501e29" uI="f6501e29-2" uP="{{r}}" wx:if="{{r}}"></mp-html>
+                </view>
+            </view>
+        </view>
+    </view>
+    <popup-dialog bind:__l="__l" bindonDialogVisibleChange="{{v}}" bindonSelcetClick="{{w}}" class="r data-v-f6501e29" uI="f6501e29-3" uP="{{x}}" uR="popupDialog" wx:if="{{x}}"></popup-dialog>
+    <dialog-info bind:__l="__l" class="r data-v-f6501e29" uI="f6501e29-4" uR="dialogInfo"></dialog-info>
+</view>

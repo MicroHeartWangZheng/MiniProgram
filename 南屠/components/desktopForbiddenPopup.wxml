@@ -1,0 +1,9 @@
+<view class="privacy data-v-3030aed9">
+    <view class="content data-v-3030aed9">
+        <view class="image-wrap title data-v-3030aed9">
+            <image class="logo data-v-3030aed9" src="{{a}}"></image>
+        </view>
+        <image class="image data-v-3030aed9" src="{{b}}"></image>
+        <view class="sub-title data-v-3030aed9">请用手机端微信扫一扫进行预约</view>
+    </view>
+</view>

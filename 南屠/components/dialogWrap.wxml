@@ -1,0 +1,6 @@
+<view bindtap="{{b}}" class="{{['modal','data-v-a611b6f1',a&&'modal-hide']}}"></view>
+<view class="{{['content','data-v-a611b6f1',c]}}">
+    <view class="data-v-a611b6f1">
+        <slot></slot>
+    </view>
+</view>

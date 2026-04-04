@@ -1,0 +1,14 @@
+<dialog-wrap bind:__l="__l" class="r data-v-30ad1a84" uI="30ad1a84-0" uP="{{r}}" uR="dialogWrap" uS="{{['d']}}" wx:if="{{r}}">
+    <view class="verify-wrap bg-fff relative data-v-30ad1a84">
+        <view class="title text-center data-v-30ad1a84">验证码</view>
+        <view bindtap="{{b}}" class="close data-v-30ad1a84" wx:if="{{a}}">+</view>
+        <block wx:if="{{c}}">
+            <verify-slider bind:__l="__l" bindafterAnswer="{{f}}" class="r data-v-30ad1a84" uI="30ad1a84-1,30ad1a84-0" uR="instance" wx:if="{{d}}"></verify-slider>
+            <verify-point bind:__l="__l" bindafterAnswer="{{h}}" class="data-v-30ad1a84" uI="30ad1a84-2,30ad1a84-0" wx:elif="{{g}}"></verify-point>
+            <verify-plus bind:__l="__l" bindafterAnswer="{{j}}" class="data-v-30ad1a84" uI="30ad1a84-3,30ad1a84-0" wx:elif="{{i}}"></verify-plus>
+            <verify-rotate bind:__l="__l" bindafterAnswer="{{l}}" class="data-v-30ad1a84" uI="30ad1a84-4,30ad1a84-0" wx:elif="{{k}}"></verify-rotate>
+            <verify-slider-two bind:__l="__l" bindafterAnswer="{{n}}" class="data-v-30ad1a84" uI="30ad1a84-5,30ad1a84-0" wx:elif="{{m}}"></verify-slider-two>
+            <verify-match bind:__l="__l" bindafterAnswer="{{p}}" class="data-v-30ad1a84" uI="30ad1a84-6,30ad1a84-0" wx:elif="{{o}}"></verify-match>
+        </block>
+    </view>
+</dialog-wrap>

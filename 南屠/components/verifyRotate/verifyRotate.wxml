@@ -1,0 +1,29 @@
+<view class="hidden relative data-v-c7ddb387">
+    <view class="msg width-100 fail text-center font-12 data-v-c7ddb387" wx:if="{{a}}">验证失败，请重新尝试</view>
+    <view class="msg width-100 text-center font-12 data-v-c7ddb387" wx:if="{{b}}">验证成功</view>
+    <view class="slider-com data-v-c7ddb387" style="{{'background-image:'+t}}" wx:if="{{c}}">
+        <view class="img-box data-v-c7ddb387">
+            <image class="bg data-v-c7ddb387" src="{{d}}"></image>
+            <view class="{{['slider','data-v-c7ddb387',e&&'opacity-0']}}" style="{{f}}"></view>
+            <view class="slider-img-wrap data-v-c7ddb387" style="{{'top:'+p+';'+'left:'+q+';'+'width:'+r+';'+'height:'+s}}">
+                <view class="slider-img-in data-v-c7ddb387" style="{{'transform:'+o}}">
+                    <view class="{{['slider-img','overflow-hide','data-v-c7ddb387',k&&'wrong',l&&'opacity-0',m&&'no-transition']}}" id="slider" style="{{'transform:'+n}}">
+                        <image class="bg-s data-v-c7ddb387" src="{{g}}" style="{{h}}"></image>
+                        <view class="fail-img-box data-v-c7ddb387" wx:if="{{i}}">
+                            <image class="fail-img width-100 height-100 data-v-c7ddb387" src="{{j}}"></image>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="slider-wrap hidden relative data-v-c7ddb387">
+        <view class="{{['slider-bg','height-100','data-v-c7ddb387',v&&'no-transition']}}" style="{{'width:'+w}}"></view>
+        <view class="tip height-100 font-12 width-100 text-center data-v-c7ddb387" wx:if="{{x}}">向右滑动完成验证</view>
+        <view bindtouchcancel="{{E}}" bindtouchend="{{F}}" bindtouchmove="{{G}}" bindtouchstart="{{D}}" class="{{['slider-ctrl','border-box','flex','flex-center','flex-center-v','data-v-c7ddb387',B&&'no-transition']}}" style="{{'left:'+C}}">
+            <uni-icons bind:__l="__l" class="icon data-v-c7ddb387" uI="c7ddb387-0" uP="{{z}}" wx:if="{{y}}"></uni-icons>
+            <uni-icons bind:__l="__l" class="icon data-v-c7ddb387" uI="c7ddb387-1" uP="{{A||''}}" wx:else></uni-icons>
+        </view>
+    </view>
+    <view bindtap="{{J}}" class="{{['sure-btn','font-14','text-center','data-v-c7ddb387',I&&'disabled']}}">{{H}}</view>
+</view>

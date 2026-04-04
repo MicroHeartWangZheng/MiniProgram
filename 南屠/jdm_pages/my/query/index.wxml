@@ -1,0 +1,61 @@
+<view class="query-wrap data-v-e019be1d">
+    <page-head bind:__l="__l" class="data-v-e019be1d" uI="e019be1d-0" uP="{{a}}" wx:if="{{a}}"></page-head>
+    <view class="room-intro relative data-v-e019be1d">
+        <view class="container bg-fff data-v-e019be1d">
+            <view class="harvestAdd-content flex flex-column data-v-e019be1d">
+                <view class="jbxx flex flex-center-v flex-between data-v-e019be1d">
+                    <text class="label data-v-e019be1d">请输入身份信息查询</text>
+                </view>
+                <view class="item data-v-e019be1d">
+                    <view class="label data-v-e019be1d">证件类型</view>
+                    <view class="input flex flex-between flex-center-v data-v-e019be1d">
+                        <view class="pick-box data-v-e019be1d">
+                            <view bindtap="{{e}}" class="park-pick data-v-e019be1d">
+                                <text class="data-v-e019be1d" wx:if="{{b}}">{{c}}</text>
+                                <text class="placeholder data-v-e019be1d" wx:else>请选择</text>
+                                <image class="icon-down data-v-e019be1d" src="{{d}}"></image>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+                <view class="item data-v-e019be1d">
+                    <view class="label data-v-e019be1d">姓名</view>
+                    <view class="input flex flex-center flex-center-v data-v-e019be1d">
+                        <uni-easyinput bind:__l="__l" bindupdateModelValue="{{f}}" class="data-v-e019be1d" uI="e019be1d-1" uP="{{g}}" wx:if="{{g}}"></uni-easyinput>
+                    </view>
+                </view>
+                <view class="item data-v-e019be1d">
+                    <view class="label data-v-e019be1d">证件号码</view>
+                    <view class="input flex flex-center flex-center-v data-v-e019be1d">
+                        <uni-easyinput bind:__l="__l" bindblur="{{h}}" bindupdateModelValue="{{i}}" class="data-v-e019be1d" uI="e019be1d-2" uP="{{j}}" wx:if="{{j}}"></uni-easyinput>
+                    </view>
+                </view>
+                <view class="item data-v-e019be1d">
+                    <view class="label data-v-e019be1d">子订单编码</view>
+                    <view class="input flex flex-center flex-center-v data-v-e019be1d">
+                        <uni-easyinput bind:__l="__l" bindupdateModelValue="{{k}}" class="data-v-e019be1d" uI="e019be1d-3" uP="{{l}}" wx:if="{{l}}"></uni-easyinput>
+                    </view>
+                </view>
+            </view>
+            <view class="btn-wrap bg-fff data-v-e019be1d">
+                <button bindtap="{{m}}" class="login_btn data-v-e019be1d">
+                    <text class="login-wx-btn data-v-e019be1d">确认查询</text>
+                </button>
+            </view>
+        </view>
+        <view class="query-result data-v-e019be1d">
+            <block wx:if="{{n}}">
+                <view class="result-title data-v-e019be1d">查询结果</view>
+                <view class="field-list data-v-e019be1d">
+                    <view class="field-item data-v-e019be1d" wx:for="{{o}}" wx:for-item="fieldItem" wx:key="c">
+                        <view class="field-name data-v-e019be1d">{{fieldItem.a}}</view>
+                        <view class="field-value data-v-e019be1d">{{fieldItem.b}}</view>
+                    </view>
+                </view>
+            </block>
+            <view class="result-title data-v-e019be1d" wx:else>未找到相关预约记录</view>
+        </view>
+    </view>
+    <uni-popup-select bind:__l="__l" bindchange="{{q}}" bindupdateValue="{{r}}" class="r data-v-e019be1d" uI="e019be1d-4" uP="{{s}}" uR="popupSelect" wx:if="{{s}}"></uni-popup-select>
+    <dialog-info bind:__l="__l" class="r data-v-e019be1d" uI="e019be1d-5" uR="dialogInfo"></dialog-info>
+</view>

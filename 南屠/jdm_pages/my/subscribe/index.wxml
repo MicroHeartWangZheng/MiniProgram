@@ -1,0 +1,26 @@
+<view class="pageBox border-box data-v-64f22573">
+    <page-head bind:__l="__l" class="data-v-64f22573" uI="64f22573-0" uP="{{a}}" wx:if="{{a}}"></page-head>
+    <view class="pageContent data-v-64f22573">
+        <view class="listBox data-v-64f22573" wx:if="{{b}}">
+            <view class="listItem data-v-64f22573" wx:for="{{c}}" wx:key="g">
+                <view class="listItem_tip data-v-64f22573">{{item.a}}</view>
+                <view class="listItem_title data-v-64f22573">
+                    <image class="listItem_title_icon data-v-64f22573" src="{{d}}"></image>预约场馆</view>
+                <view class="listItem_content data-v-64f22573">{{item.b}}</view>
+                <view class="listItem_title data-v-64f22573">
+                    <image class="listItem_title_icon data-v-64f22573" src="{{e}}"></image>预约时段</view>
+                <view class="listItem_content data-v-64f22573">{{item.c}}</view>
+                <view class="listItem_title data-v-64f22573">
+                    <image class="listItem_title_icon data-v-64f22573" src="{{f}}"></image>预约人数</view>
+                <view class="listItem_content data-v-64f22573">{{item.d}}</view>
+                <view bindtap="{{item.f}}" class="listItem_bottom data-v-64f22573">
+                    <uni-icons bind:__l="__l" class="data-v-64f22573" uI="{{item.e}}" uP="{{g}}" wx:if="{{g}}"></uni-icons>
+                    <view class="listItem_bottom_text data-v-64f22573">查看详情</view>
+                </view>
+            </view>
+        </view>
+        <view class="noBox data-v-64f22573" wx:else>
+            <empty bind:__l="__l" class="data-v-64f22573" uI="64f22573-2" uP="{{h}}" wx:if="{{h}}"></empty>
+        </view>
+    </view>
+</view>

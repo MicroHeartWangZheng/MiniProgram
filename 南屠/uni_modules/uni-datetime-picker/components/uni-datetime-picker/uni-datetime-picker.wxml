@@ -1,0 +1,63 @@
+<view class="uni-date">
+    <view bindtap="{{m}}" class="uni-date-editor">
+        <slot wx:if="{{$slots.d}}"></slot>
+        <view class="{{['uni-date-editor--x',k&&'uni-date-editor--x__disabled',l&&'uni-date-x--border']}}" wx:else>
+            <view class="uni-date-x uni-date-single" wx:if="{{a}}">
+                <uni-icons bind:__l="__l" class="icon-calendar" uI="7855cbc8-0" uP="{{b}}" wx:if="{{b}}"></uni-icons>
+                <view class="uni-date__x-input">{{c}}</view>
+            </view>
+            <view class="uni-date-x uni-date-range" wx:else>
+                <uni-icons bind:__l="__l" class="icon-calendar" uI="7855cbc8-1" uP="{{d}}" wx:if="{{d}}"></uni-icons>
+                <view class="uni-date__x-input text-center">{{e}}</view>
+                <view class="range-separator">{{f}}</view>
+                <view class="uni-date__x-input text-center">{{g}}</view>
+            </view>
+            <view catchtap="{{j}}" class="uni-date__icon-clear" wx:if="{{h}}">
+                <uni-icons bind:__l="__l" uI="7855cbc8-2" uP="{{i}}" wx:if="{{i}}"></uni-icons>
+            </view>
+        </view>
+    </view>
+    <view bindtap="{{o}}" class="uni-date-mask--pc" hidden="{{!n}}"></view>
+    <view class="uni-date-picker__container" hidden="{{!av}}" ref="datePicker" wx:if="{{p}}">
+        <view class="uni-date-single--x" style="{{J}}" wx:if="{{q}}">
+            <view class="uni-popper__arrow"></view>
+            <view class="uni-date-changed popup-x-header" wx:if="{{r}}">
+                <input bindinput="{{v}}" class="uni-date__input text-center" placeholder="{{s}}" type="text" value="{{t}}"></input>
+                <time-picker bind:__l="__l" bindupdateModelValue="{{A}}" style="width:100%" uI="7855cbc8-3" uP="{{B}}" uS="{{['d']}}" wx:if="{{B}}">
+                    <input bindinput="{{z}}" class="uni-date__input text-center" disabled="{{x}}" placeholder="{{w}}" type="text" value="{{y}}"></input>
+                </time-picker>
+            </view>
+            <calendar bind:__l="__l" bindchange="{{D}}" bindmonthSwitch="{{E}}" class="r" style="padding:0 8px" uI="7855cbc8-4" uP="{{F}}" uR="pcSingle" wx:if="{{F}}"></calendar>
+            <view class="popup-x-footer" wx:if="{{G}}">
+                <text bindtap="{{I}}" class="confirm-text">{{H}}</text>
+            </view>
+        </view>
+        <view class="uni-date-range--x" style="{{at}}" wx:else>
+            <view class="uni-popper__arrow"></view>
+            <view class="popup-x-header uni-date-changed" wx:if="{{K}}">
+                <view class="popup-x-header--datetime">
+                    <input bindinput="{{N}}" class="uni-date__input uni-date-range__input" placeholder="{{L}}" type="text" value="{{M}}"></input>
+                    <time-picker bind:__l="__l" bindupdateModelValue="{{S}}" uI="7855cbc8-5" uP="{{T}}" uS="{{['d']}}" wx:if="{{T}}">
+                        <input bindinput="{{R}}" class="uni-date__input uni-date-range__input" disabled="{{P}}" placeholder="{{O}}" type="text" value="{{Q}}"></input>
+                    </time-picker>
+                </view>
+                <uni-icons bind:__l="__l" style="line-height:40px" uI="7855cbc8-6" uP="{{U}}" wx:if="{{U}}"></uni-icons>
+                <view class="popup-x-header--datetime">
+                    <input bindinput="{{X}}" class="uni-date__input uni-date-range__input" placeholder="{{V}}" type="text" value="{{W}}"></input>
+                    <time-picker bind:__l="__l" bindupdateModelValue="{{ac}}" uI="7855cbc8-7" uP="{{ad}}" uS="{{['d']}}" wx:if="{{ad}}">
+                        <input bindinput="{{ab}}" class="uni-date__input uni-date-range__input" disabled="{{Z}}" placeholder="{{Y}}" type="text" value="{{aa}}"></input>
+                    </time-picker>
+                </view>
+            </view>
+            <view class="popup-x-body">
+                <calendar bind:__l="__l" bindchange="{{af}}" bindfirstEnterCale="{{ag}}" bindmonthSwitch="{{ah}}" class="r" style="padding:0 8px" uI="7855cbc8-8" uP="{{ai}}" uR="left" wx:if="{{ai}}"></calendar>
+                <calendar bind:__l="__l" bindchange="{{ak}}" bindfirstEnterCale="{{al}}" bindmonthSwitch="{{am}}" class="r" style="padding:0 8px;border-left:1px solid #F1F1F1" uI="7855cbc8-9" uP="{{an}}" uR="right" wx:if="{{an}}"></calendar>
+            </view>
+            <view class="popup-x-footer" wx:if="{{ao}}">
+                <text bindtap="{{aq}}">{{ap}}</text>
+                <text bindtap="{{as}}" class="confirm-text">{{ar}}</text>
+            </view>
+        </view>
+    </view>
+    <calendar bind:__l="__l" bindclose="{{aA}}" bindconfirm="{{ay}}" bindmaskClose="{{az}}" bindmonthSwitch="{{aB}}" class="r" uI="7855cbc8-10" uP="{{aC}}" uR="mobile" wx:if="{{aw}}"></calendar>
+</view>

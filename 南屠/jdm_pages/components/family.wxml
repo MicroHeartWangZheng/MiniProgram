@@ -1,0 +1,14 @@
+<view class="data-v-288c67d1">
+    <view class="personnelBox data-v-288c67d1">
+        <view class="personnelBox_title data-v-288c67d1">
+            <image class="personnelBox_title_img data-v-288c67d1" src="{{a}}"></image>成年人信息<view class="maxNumBox data-v-288c67d1">（最多2人）</view>
+        </view>
+        <personnel-select bind:__l="__l" bindupdate="{{c}}" bindupdateValue="{{d}}" class="r data-v-288c67d1" uI="288c67d1-0" uP="{{e}}" uR="personnelSelectRef" wx:if="{{e}}"></personnel-select>
+    </view>
+    <view class="personnelBox data-v-288c67d1">
+        <view class="personnelBox_title data-v-288c67d1">
+            <image class="personnelBox_title_img data-v-288c67d1" src="{{f}}"></image>未成年人信息<view class="maxNumBox data-v-288c67d1">（最多3人）</view>
+        </view>
+        <personnel-select bind:__l="__l" bindupdate="{{h}}" bindupdateValue="{{i}}" class="r data-v-288c67d1" uI="288c67d1-1" uP="{{j}}" uR="personnelSelectRef" wx:if="{{j}}"></personnel-select>
+    </view>
+</view>

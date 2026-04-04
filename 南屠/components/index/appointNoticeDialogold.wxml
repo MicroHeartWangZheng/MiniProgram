@@ -1,0 +1,16 @@
+<dialog-wrap bind:__l="__l" class="r data-v-4c559ef7" uI="4c559ef7-0" uP="{{i}}" uR="dialogWrap" uS="{{['d']}}" wx:if="{{i}}">
+    <view class="main-notice-dialog data-v-4c559ef7">
+        <view class="notice-wrap bg-fff relative data-v-4c559ef7">
+            <view class="title text-center data-v-4c559ef7">预约须知</view>
+            <view class="content data-v-4c559ef7">
+                <mp-html bind:__l="__l" class="data-v-4c559ef7" uI="4c559ef7-1,4c559ef7-0" uP="{{a}}" wx:if="{{a}}"></mp-html>
+            </view>
+            <view bindtap="{{c}}" class="hintBox data-v-4c559ef7">
+                <uni-icons bind:__l="__l" class="data-v-4c559ef7" uI="4c559ef7-2,4c559ef7-0" uP="{{b}}" wx:if="{{b}}"></uni-icons>我已阅读并同意《预约须知》</view>
+            <view bindtap="{{g}}" class="{{['close','data-v-4c559ef7',f&&'disabled']}}">
+                <text class="login-wx-btn data-v-4c559ef7" wx:if="{{d}}">我已知晓{{e}}</text>
+                <text class="login-wx-btn data-v-4c559ef7" wx:else>我已知晓 </text>
+            </view>
+        </view>
+    </view>
+</dialog-wrap>

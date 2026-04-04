@@ -1,0 +1,8 @@
+<view class="statement data-v-e713cdfa">
+    <page-head bind:__l="__l" class="data-v-e713cdfa" uI="e713cdfa-0" uP="{{a}}" wx:if="{{a}}"></page-head>
+    <view class="data-v-e713cdfa" style="background-color:#A87E6C">
+        <tabs bind:__l="__l" bindchengTab="{{b}}" class="data-v-e713cdfa" uI="e713cdfa-1" uP="{{c}}" wx:if="{{c}}"></tabs>
+    </view>
+    <subscribe-daily bind:__l="__l" class="data-v-e713cdfa" uI="e713cdfa-2" wx:if="{{d}}"></subscribe-daily>
+    <ridership-statement bind:__l="__l" class="data-v-e713cdfa" uI="e713cdfa-3" uP="{{f}}" wx:if="{{e}}"></ridership-statement>
+</view>

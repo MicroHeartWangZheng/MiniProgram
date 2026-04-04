@@ -1,0 +1,19 @@
+<view class="verifyPoint-wrap data-v-f35ffadc">
+    <view class="in relative data-v-f35ffadc">
+        <image class="bg width-100 height-100 data-v-f35ffadc" src="{{a}}"></image>
+        <view class="grid width-100 height-100 flex flex-nowrap flex-center flex-center-v data-v-f35ffadc">
+            <view class="msg width-100 fail text-center data-v-f35ffadc" wx:if="{{b}}">
+                <uni-icons bind:__l="__l" class="data-v-f35ffadc" uI="f35ffadc-0" uP="{{c}}" wx:if="{{c}}"></uni-icons>验证失败，请重新尝试</view>
+            <view class="msg width-100 text-center data-v-f35ffadc" wx:if="{{d}}">验证成功</view>
+            <view class="plus-a data-v-f35ffadc">{{e}}</view>
+            <view class="plus-symbol data-v-f35ffadc">{{f}}</view>
+            <view class="plus-b data-v-f35ffadc">{{g}}</view>
+            <view class="plus-equal data-v-f35ffadc">=</view>
+            <view class="plus-res data-v-f35ffadc">?</view>
+        </view>
+    </view>
+    <view class="tip data-v-f35ffadc">
+        <uni-easyinput bind:__l="__l" bindfocus="{{h}}" bindupdateModelValue="{{i}}" class="data-v-f35ffadc" uI="f35ffadc-1" uP="{{j}}" wx:if="{{j}}"></uni-easyinput>
+    </view>
+    <view bindtap="{{m}}" class="{{['sure-btn','font-14','text-center','data-v-f35ffadc',l&&'disabled']}}">{{k}}</view>
+</view>

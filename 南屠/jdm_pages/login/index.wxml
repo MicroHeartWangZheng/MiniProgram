@@ -1,0 +1,17 @@
+<view class="login-page data-v-a746e1de">
+    <page-head bind:__l="__l" class="data-v-a746e1de" uI="a746e1de-0" uP="{{a}}" wx:if="{{a}}"></page-head>
+    <image class="logo data-v-a746e1de" src="https://jdmqn.19371213.com.cn/jdm/miniAppImages/login.png"></image>
+    <view class="login-container data-v-a746e1de">
+        <button bindtap="{{c}}" class="login_btn data-v-a746e1de" wx:if="{{b}}">
+            <text class="login-wx-btn data-v-a746e1de">用户确认登录</text>
+        </button>
+        <button bindtap="{{d}}" class="login_btn data-v-a746e1de" wx:else>
+            <text class="login-wx-btn data-v-a746e1de">用户确认登录</text>
+        </button>
+        <view class="login_tips data-v-a746e1de">
+            <uni-icons bind:__l="__l" bindclick="{{e}}" class="data-v-a746e1de" uI="a746e1de-1" uP="{{f}}" wx:if="{{f}}"></uni-icons>
+            <text bindtap="{{g}}" class="data-v-a746e1de"> 阅读并同意 </text>
+            <view catchtap="{{h}}" class="xieyi data-v-a746e1de">《服务协议与隐私条款》</view>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,9 @@
+<dialog-wrap bind:__l="__l" class="r data-v-f6fa94c1" uI="f6fa94c1-0" uP="{{e}}" uR="dialogWrapTextRef" uS="{{['d']}}" wx:if="{{e}}">
+    <view class="tip bg-fff flex flex-column flex-center-v data-v-f6fa94c1" style="width:560rpx;word-break:break-all">
+        <image class="img data-v-f6fa94c1" src="{{a}}"></image>
+        <text class="text_content data-v-f6fa94c1">{{b}}</text>
+        <view class="tip-bottom flex flex-center-v width-100 data-v-f6fa94c1">
+            <view bindtap="{{c}}" class="sure item text-center data-v-f6fa94c1" style="width:100%">确定</view>
+        </view>
+    </view>
+</dialog-wrap>

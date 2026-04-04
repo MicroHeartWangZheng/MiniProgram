@@ -1,0 +1,1 @@
+{"component":true,"usingComponents":{"dialog-wrap":"./dialogWrap","btn-wrap":"/components/btnWrap","close-dialog":"/components/index/closeDialog","desktop-forbidden":"/components/desktopForbiddenPopup","empty":"/components/empty","page-head":"/components/navigator","red-btn":"/components/redBtn"}}

@@ -1,0 +1,7 @@
+<view class="data-v-5d4fa591">
+    <view class="imgList data-v-5d4fa591">
+        <image bindtap="{{a}}" class="imgAdd data-v-5d4fa591" src="{{b}}"></image>
+    </view>
+    <view class="listForm_hint data-v-5d4fa591">请确保照片真实准确、完整清晰，大小须在2M以内，符合优待人群证件类别要求。如存在失实行为，可能会影响您的预约入馆。</view>
+    <popup-dialog bind:__l="__l" bindonSelcetClick="{{d}}" class="r data-v-5d4fa591" uI="5d4fa591-0" uP="{{e}}" uR="popupDialogRef" wx:if="{{e}}"></popup-dialog>
+</view>

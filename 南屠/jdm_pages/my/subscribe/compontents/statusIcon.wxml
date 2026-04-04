@@ -1,0 +1,6 @@
+<view class="data-v-14b52501">
+    <image class="status-icon data-v-14b52501" mode="aspectFill" src="{{b}}" wx:if="{{a}}"></image>
+    <image class="status-icon data-v-14b52501" mode="aspectFill" src="{{d}}" wx:if="{{c}}"></image>
+    <image class="status-icon data-v-14b52501" mode="aspectFill" src="{{f}}" wx:if="{{e}}"></image>
+    <image class="status-icon data-v-14b52501" mode="aspectFill" src="{{h}}" wx:if="{{g}}"></image>
+</view>

@@ -1,0 +1,75 @@
+<view class="pages border-box data-v-56e9de20">
+    <page-head bind:__l="__l" class="data-v-56e9de20" uI="56e9de20-0" uP="{{a}}" wx:if="{{a}}"></page-head>
+    <view class="contact data-v-56e9de20">
+        <view class="list data-v-56e9de20" wx:if="{{b}}">
+            <view class="{{['item','flex','flex-center-v','flex-between','data-v-56e9de20',item.F&&'del']}}" wx:for="{{c}}" wx:key="G">
+                <view bindchange="{{item.E}}" bindtap="{{item.D}}" class="item-swipe data-v-56e9de20" rightOptions="{{d}}">
+                    <view class="left flex flex-column data-v-56e9de20" style="position:relative">
+                        <view class="listItem_tag data-v-56e9de20" wx:if="{{item.a}}">{{item.b}}</view>
+                        <view class="childBox data-v-56e9de20" wx:if="{{item.c}}">未成年人</view>
+                        <view class="item-top flex flex-center-v flex-between data-v-56e9de20">
+                            <view class="flex flex-center-v flex-between width-100 data-v-56e9de20">
+                                <text class="name txt-hidden data-v-56e9de20" decode="false" selectable="false" space="false">{{item.d}}</text>
+                                <text class="deling data-v-56e9de20" wx:if="{{item.e}}"> 删除中 </text>
+                                <text class="default data-v-56e9de20" wx:elif="{{item.f}}">{{item.g}}</text>
+                            </view>
+                        </view>
+                        <view class="item-input flex flex-between flex-center-v data-v-56e9de20" style="align-items:self-start">
+                            <view class="label data-v-56e9de20" style="display:flex;width:0;flex:1;margin-right:8rpx;font-family:Alibaba PuHuiTi 3, Alibaba PuHuiTi 30;font-weight:normal;font-size:24rpx;color:#898989;line-height:34rpx">
+                                <view class="data-v-56e9de20">证件类型：</view>
+                                <view class="data-v-56e9de20" style="width:0;flex:1;font-family:Alibaba PuHuiTi 3, Alibaba PuHuiTi 30;font-weight:normal;font-size:24rpx;color:#898989;line-height:34rpx">{{item.h}}</view>
+                            </view>
+                        </view>
+                        <view class="item-info flex flex-center-v flex-between data-v-56e9de20">
+                            <view class="flex flex-center-v flex-between width-100 data-v-56e9de20">
+                                <text class="label data-v-56e9de20"> 证件号码：{{item.i}}</text>
+                                <view class="data-v-56e9de20" style="display:flex" wx:if="{{item.j}}">
+                                    <image catchtap="{{item.k}}" class="editUrl data-v-56e9de20" src="{{item.l}}"></image>
+                                    <image catchtap="{{item.n}}" class="editUrl data-v-56e9de20" src="{{item.o}}" wx:if="{{item.m}}"></image>
+                                </view>
+                            </view>
+                        </view>
+                        <view class="pandsa data-v-56e9de20">
+                            <text class="red txt-hidden data-v-56e9de20" wx:if="{{item.p}}"> 信息修改中 </text>
+                            <text class="red txt-hidden data-v-56e9de20" wx:if="{{item.q}}">{{item.r}}删除生效 </text>
+                            <text class="red txt-hidden data-v-56e9de20" wx:if="{{item.s}}"> 信息审核中 </text>
+                            <text class="{{['txt-hidden','font-12','fail-text','data-v-56e9de20',item.w&&'red']}}" wx:if="{{item.t}}">{{item.v}}</text>
+                            <text class="red txt-hidden data-v-56e9de20" wx:if="{{item.x}}">{{item.y}}</text>
+                        </view>
+                        <view class="rejectReasonBox data-v-56e9de20" wx:if="{{item.z}}">
+                            <uni-icons bind:__l="__l" class="data-v-56e9de20" uI="{{item.A}}" uP="{{item.B}}" wx:if="{{item.B}}"></uni-icons>{{item.C}}</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class=" data-v-56e9de20" wx:if="{{e}}">
+            <empty bind:__l="__l" class="data-v-56e9de20" uI="56e9de20-2" uP="{{f}}" wx:if="{{f}}"></empty>
+        </view>
+        <uni-load-more bind:__l="__l" class="data-v-56e9de20" uI="56e9de20-3" uP="{{h}}" wx:if="{{g}}"></uni-load-more>
+        <view class="footer-btn flex flex-center-v flex-center flex-column data-v-56e9de20">
+            <view bindtap="{{j}}" class="{{['bt-text','flex','flex-center-v','flex-center','data-v-56e9de20',i&&'forbidden']}}">新增观众</view>
+            <view class="bt-safe data-v-56e9de20"></view>
+        </view>
+        <confirm-dialog bind:__l="__l" bindconfirm="{{l}}" class="r data-v-56e9de20" uI="56e9de20-4" uP="{{m}}" uR="delContactRef" wx:if="{{m}}"></confirm-dialog>
+    </view>
+    <dialog-wrap bind:__l="__l" class="r data-v-56e9de20" uI="56e9de20-5" uP="{{w}}" uR="dialogWrapRef" uS="{{['d']}}" wx:if="{{w}}">
+        <view class="tip bg-fff flex flex-column flex-center-v hidden data-v-56e9de20">
+            <image class="img data-v-56e9de20" src="{{n}}"></image>
+            <text class="text-title data-v-56e9de20">是否确定删除该观众信息,</text>
+            <text class="text-title data-v-56e9de20">删除后{{o}}天内该证件号将无法预约参观。</text>
+            <view class="tip-bottom flex flex-center-v width-100 p-0 data-v-56e9de20">
+                <view bindtap="{{p}}" class="sure item text-center cancel-btn data-v-56e9de20">取消</view>
+                <view bindtap="{{t}}" class="{{['cancel','item','text-center','confirm-btn','data-v-56e9de20',s&&'disabled']}}">{{q}}{{r}}</view>
+            </view>
+        </view>
+    </dialog-wrap>
+    <dialog-wrap bind:__l="__l" class="r data-v-56e9de20" uI="56e9de20-6" uP="{{A}}" uR="dialogWrapRef2" uS="{{['d']}}" wx:if="{{A}}">
+        <view class="tip bg-fff flex flex-column flex-center-v data-v-56e9de20" style="width:560rpx;word-break:break-all">
+            <image class="img data-v-56e9de20" src="{{x}}"></image>
+            <text class="text_content data-v-56e9de20">该账号异常，请联系工作人员025-86612230（8:00-20:00）</text>
+            <view class="tip-bottom flex flex-center-v width-100 data-v-56e9de20">
+                <view bindtap="{{y}}" class="sure item text-center data-v-56e9de20" style="width:100%">确定</view>
+            </view>
+        </view>
+    </dialog-wrap>
+</view>

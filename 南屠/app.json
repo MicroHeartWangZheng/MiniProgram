@@ -1,121 +1,87 @@
 {
   "permission": {
     "scope.userLocation": {
-      "desc": "您的位置信息将用于为您提供问吧服务"
+      "desc": "你的位置信息将用于查找周围酒店并进行展示"
+    },
+    "scope.address": {
+      "desc": "你的收货信息将用于商品收货"
     }
   },
-  "networkTimeout": {
-    "request": 20000
-  },
-  "plugins": {
-    "turingCore": {
-      "version": "2.0.3",
-      "provider": "wx63af045606be281d",
-      "subpackage": "__APP__"
-    }
-  },
-  "navigateToMiniProgramAppIdList": [
-    "wxd194fd0d80f89a44",
-    "wx5bbb4ab7ac0a7bf4",
-    "wxbd08b4baa10fcc1d"
-  ],
   "requiredPrivateInfos": [
-    "getLocation"
+    "chooseAddress",
+    "getLocation",
+    "onLocationChange",
+    "startLocationUpdate"
   ],
-  "__usePrivacyCheck__": true,
-  "componentFramework": {
-    "allUsed": [
-      "exparser"
-    ],
-    "default": "exparser"
-  },
-  "tabBar": {
-    "color": "#808080",
-    "selectedColor": "#AC732E",
-    "backgroundColor": "#F6E8DA",
-    "borderStyle": "black",
-    "list": [
-      {
-        "pagePath": "pages/index/index",
-        "text": "问吧",
-        "iconPath": "lib/images/tab01.png",
-        "selectedIconPath": "lib/images/tab01-on.png"
-      },
-      {
-        "pagePath": "pages/myInfo/myInfo",
-        "text": "我的南博",
-        "iconPath": "lib/images/tab03.png",
-        "selectedIconPath": "lib/images/tab03-on.png"
-      },
-      {
-        "pagePath": "pages/member/member",
-        "text": "会员",
-        "iconPath": "lib/images/tab04.png",
-        "selectedIconPath": "lib/images/tab04-on.png"
-      }
-    ]
-  },
+  "componentFramework": "exparser",
   "subPackages": [
     {
-      "root": "wbpackage/",
-      "name": "wbpackage",
+      "root": "jdm_pages/",
       "pages": [
-        "pages/askList/askList",
-        "pages/wenba/wenba",
-        "pages/wblist/wblist"
+        "appointment/index",
+        "appointment/notice",
+        "appointment/appointment",
+        "appointment/succeed",
+        "my/index",
+        "my/subscribe/index",
+        "my/subscribe/details",
+        "my/subscribe/infoToBeComplete",
+        "my/subscribe/history",
+        "my/query/index",
+        "my/user/list",
+        "my/statement/index",
+        "my/user/info",
+        "login/index",
+        "login/agreement"
       ]
     },
     {
-      "root": "tzpackage/",
-      "name": "tzpackage",
+      "root": "english_pages/",
       "pages": [
-        "pages/pay/pay",
-        "pages/ticketQRcode/ticketQRcode",
-        "pages/ticketDetail/ticketDetail",
-        "pages/success/success",
-        "pages/linkman/linkman",
-        "pages/exhibitionList/exhibitionList",
-        "pages/exhibitionDetail/exhibitionDetail",
-        "pages/buyTicket/buyTicket",
-        "pages/myTicket/myTicket",
-        "pages/payTimeout/payTimeout",
-        "pages/exlistEmp/exlistEmp",
-        "pages/exdetailEmp/exdetailEmp",
-        "pages/buyEmp/buyEmp",
-        "pages/ticketRefund/ticketRefund"
+        "appointment/index",
+        "my/statement/index",
+        "appointment/appointment",
+        "appointment/succeed",
+        "my/index",
+        "my/subscribe/index",
+        "my/subscribe/details",
+        "my/subscribe/infoToBeComplete",
+        "my/subscribe/history",
+        "my/query/index",
+        "my/user/list",
+        "my/user/info",
+        "login/index",
+        "login/agreement"
+      ]
+    },
+    {
+      "root": "oldage_pages/",
+      "pages": [
+        "appointment/index",
+        "appointment/notice",
+        "appointment/appointment",
+        "appointment/succeed",
+        "my/index",
+        "my/subscribe/index",
+        "my/subscribe/details",
+        "my/subscribe/infoToBeComplete",
+        "my/subscribe/history",
+        "my/query/index",
+        "my/user/list",
+        "my/user/info",
+        "login/index",
+        "login/agreement"
       ]
     }
   ],
   "window": {
-    "backgroundTextStyle": "dark",
-    "navigationBarBackgroundColor": "#ffffff",
-    "navigationBarTitleText": "南京博物院",
-    "navigationBarTextStyle": "black",
-    "enablePullDownRefresh": false
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "demo",
+    "navigationBarBackgroundColor": "#FFFFFF",
+    "backgroundColor": "#FFFFFF"
   },
   "pages": [
     "pages/index/index",
-    "pages/testLoading/testLoading",
-    "pages/teamTipsH5/teamTipsH5",
-    "pages/privacyContractH5/privacyContractH5",
-    "pages/reservationSuccess/reservationSuccess",
-    "pages/selTicketType/selTicketType",
-    "pages/ticket/ticket",
-    "pages/addLinkman/addLinkman",
-    "pages/myReservation/myReservation",
-    "pages/cancelReservation/cancelReservation",
-    "pages/pathDetail/pathDetail",
-    "pages/voice/voice",
-    "pages/phone/phone",
-    "pages/error/error",
-    "pages/visitor/visitor",
-    "pages/park/park",
-    "pages/neterror/neterror",
-    "pages/myInfo/myInfo",
-    "pages/newPark/newPark",
-    "pages/member/member",
-    "pages/myLinkman/myLinkman",
-    "pages/reservationP/reservationP",
-    "pages/reservationSuccessP/reservationSuccessP"
+    "pages/index/version"
   ]
 }

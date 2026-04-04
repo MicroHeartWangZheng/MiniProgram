@@ -1,0 +1,14 @@
+<btn-wrap bind:__l="__l" class="data-v-ad6d7274" uI="ad6d7274-0" uP="{{g}}" uS="{{['d']}}" wx:if="{{g}}">
+    <view class="{{['btn-container','data-v-ad6d7274',e,f]}}">
+        <view class="btn-text data-v-ad6d7274">{{a}}</view>
+        <view class="red-btn data-v-ad6d7274">
+            <view class="left data-v-ad6d7274">
+                <image class="width-100 height-100 data-v-ad6d7274" src="{{b}}"></image>
+            </view>
+            <view class="center data-v-ad6d7274" style="{{'background-image:'+c}}"></view>
+            <view class="right data-v-ad6d7274">
+                <image class="width-100 height-100 data-v-ad6d7274" src="{{d}}"></image>
+            </view>
+        </view>
+    </view>
+</btn-wrap>

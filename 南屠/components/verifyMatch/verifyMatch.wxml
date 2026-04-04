@@ -1,0 +1,17 @@
+<view class="hidden relative data-v-99c16d5a">
+    <view class="msg width-100 fail text-center font-12 data-v-99c16d5a" wx:if="{{a}}">验证失败，请重新尝试</view>
+    <view class="msg width-100 text-center font-12 data-v-99c16d5a" wx:if="{{b}}">验证成功</view>
+    <view class="slider-box data-v-99c16d5a">
+        <view class="slider-top data-v-99c16d5a" style="{{'width:'+'300%'+';'+'background-image:'+c+';'+'left:'+d}}"></view>
+        <view class="slider-bottom data-v-99c16d5a" id="slider" style="{{'width:'+'600%'+';'+'background-image:'+e+';'+'left:'+f}}"></view>
+    </view>
+    <view class="slider-wrap hidden relative data-v-99c16d5a">
+        <view class="{{['slider-bg','height-100','data-v-99c16d5a',g&&'no-transition']}}" style="{{'width:'+h}}"></view>
+        <view class="tip height-100 font-12 width-100 text-center data-v-99c16d5a" wx:if="{{i}}">向右滑动完成验证</view>
+        <view bindtouchcancel="{{p}}" bindtouchend="{{q}}" bindtouchmove="{{r}}" bindtouchstart="{{o}}" class="{{['slider-ctrl','border-box','flex','flex-center','flex-center-v','data-v-99c16d5a',m&&'no-transition']}}" style="{{'left:'+n}}">
+            <uni-icons bind:__l="__l" class="icon data-v-99c16d5a" uI="99c16d5a-0" uP="{{k}}" wx:if="{{j}}"></uni-icons>
+            <uni-icons bind:__l="__l" class="icon data-v-99c16d5a" uI="99c16d5a-1" uP="{{l||''}}" wx:else></uni-icons>
+        </view>
+    </view>
+    <view bindtap="{{v}}" class="{{['sure-btn','font-14','text-center','data-v-99c16d5a',t&&'disabled']}}">{{s}}</view>
+</view>

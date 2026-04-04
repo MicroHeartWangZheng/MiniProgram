@@ -1,0 +1,6 @@
+<view class="personnelBox data-v-5d37c27e">
+    <view class="personnelBox_title data-v-5d37c27e">
+        <image class="personnelBox_title_img data-v-5d37c27e" src="{{a}}"></image>观众信息<text class="maxNumBox data-v-5d37c27e"> （最多5人） </text>
+    </view>
+    <personnel-select bind:__l="__l" bindupdate="{{c}}" bindupdateValue="{{d}}" class="r data-v-5d37c27e" uI="5d37c27e-0" uP="{{e}}" uR="personnelSelectRef" wx:if="{{e}}"></personnel-select>
+</view>

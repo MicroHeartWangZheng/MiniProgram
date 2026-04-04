@@ -1,0 +1,73 @@
+<view bindmouseleave="{{Q}}" class="{{['uni-calendar',P&&'is-custom-select']}}">
+    <view bindtap="{{c}}" class="{{['uni-calendar__mask',b&&'uni-calendar--mask-show']}}" wx:if="{{a}}"></view>
+    <view class="{{['uni-calendar__content',M&&'uni-calendar--fixed',N&&'uni-calendar--ani-show',O&&'uni-calendar__content-mobile']}}" wx:if="{{d}}">
+        <view class="{{['uni-calendar__header',l&&'uni-calendar__header-mobile']}}">
+            <view catchtap="{{e}}" class="uni-calendar__header-btn-box">
+                <view class="uni-calendar__header-btn uni-calendar--left"></view>
+            </view>
+            <picker bindchange="{{h}}" fields="month" mode="date" value="{{g}}">
+                <text class="uni-calendar__header-text">{{f}}</text>
+            </picker>
+            <view catchtap="{{i}}" class="uni-calendar__header-btn-box">
+                <view class="uni-calendar__header-btn uni-calendar--right"></view>
+            </view>
+            <view bindtap="{{k}}" class="dialog-close" wx:if="{{j}}">
+                <view class="dialog-close-plus" data-id="close"></view>
+                <view class="dialog-close-plus dialog-close-rotate" data-id="close"></view>
+            </view>
+        </view>
+        <view class="uni-calendar__box">
+            <view class="uni-calendar__box-bg" wx:if="{{m}}">
+                <text class="uni-calendar__box-bg-text">{{n}}</text>
+            </view>
+            <view class="uni-calendar__weeks" style="padding-bottom:7px">
+                <view class="uni-calendar__weeks-day">
+                    <text class="uni-calendar__weeks-day-text">{{o}}</text>
+                </view>
+                <view class="uni-calendar__weeks-day">
+                    <text class="uni-calendar__weeks-day-text">{{p}}</text>
+                </view>
+                <view class="uni-calendar__weeks-day">
+                    <text class="uni-calendar__weeks-day-text">{{q}}</text>
+                </view>
+                <view class="uni-calendar__weeks-day">
+                    <text class="uni-calendar__weeks-day-text">{{r}}</text>
+                </view>
+                <view class="uni-calendar__weeks-day">
+                    <text class="uni-calendar__weeks-day-text">{{s}}</text>
+                </view>
+                <view class="uni-calendar__weeks-day">
+                    <text class="uni-calendar__weeks-day-text">{{t}}</text>
+                </view>
+                <view class="uni-calendar__weeks-day">
+                    <text class="uni-calendar__weeks-day-text">{{v}}</text>
+                </view>
+            </view>
+            <view class="uni-calendar__weeks" wx:for="{{w}}" wx:key="b">
+                <view class="uni-calendar__weeks-item" wx:for="{{item.a}}" wx:for-item="weeks" wx:key="e">
+                    <calendar-item bind:__l="__l" bindchange="{{weeks.a}}" bindhandleMouse="{{weeks.b}}" class="uni-calendar-item--hook" uI="{{weeks.c}}" uP="{{weeks.d}}" wx:if="{{weeks.d}}"></calendar-item>
+                </view>
+            </view>
+        </view>
+        <view class="uni-date-changed uni-calendar--fixed-top" style="padding:0 80px" wx:if="{{x}}">
+            <view class="uni-date-changed--time-date">{{y}}</view>
+            <time-picker bind:__l="__l" bindupdateModelValue="{{z}}" class="time-picker-style" uI="20c67a89-1" uP="{{A}}" wx:if="{{A}}"></time-picker>
+        </view>
+        <view class="uni-date-changed uni-calendar--fixed-top" wx:if="{{B}}">
+            <view class="uni-date-changed--time-start">
+                <view class="uni-date-changed--time-date">{{C}}</view>
+                <time-picker bind:__l="__l" bindupdateModelValue="{{D}}" class="time-picker-style" uI="20c67a89-2" uP="{{E}}" wx:if="{{E}}"></time-picker>
+            </view>
+            <view style="line-height:50px">
+                <uni-icons bind:__l="__l" uI="20c67a89-3" uP="{{F}}" wx:if="{{F}}"></uni-icons>
+            </view>
+            <view class="uni-date-changed--time-end">
+                <view class="uni-date-changed--time-date">{{G}}</view>
+                <time-picker bind:__l="__l" bindupdateModelValue="{{H}}" class="time-picker-style" uI="20c67a89-4" uP="{{I}}" wx:if="{{I}}"></time-picker>
+            </view>
+        </view>
+        <view class="uni-date-changed uni-date-btn--ok" wx:if="{{J}}">
+            <view bindtap="{{L}}" class="uni-datetime-picker--btn">{{K}}</view>
+        </view>
+    </view>
+</view>

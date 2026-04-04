@@ -1,0 +1,14 @@
+<view class="pages border-box data-v-1610ab11">
+    <page-head bind:__l="__l" class="data-v-1610ab11" uI="1610ab11-0" uP="{{a}}" wx:if="{{a}}"></page-head>
+    <view class="pages-main data-v-1610ab11">
+        <view class="list border-box data-v-1610ab11" wx:for="{{b}}" wx:key="i">
+            <view class="list_left data-v-1610ab11">
+                <uni-icons bind:__l="__l" bindclick="{{item.a}}" class="data-v-1610ab11" uI="{{item.b}}" uP="{{item.c}}" wx:if="{{item.c}}"></uni-icons>
+                <view class="{{['list_left_wz','data-v-1610ab11',item.e]}}">{{item.d}}</view>
+            </view>
+            <image class="data-v-1610ab11" mode="scaleToFill" src="https://jdmqn.19371213.com.cn/jdm/miniAppImages/bb_bz.png" wx:if="{{item.f}}"></image>
+            <image class="data-v-1610ab11" mode="scaleToFill" src="https://jdmqn.19371213.com.cn/jdm/miniAppImages/bb_jl.png" wx:if="{{item.g}}"></image>
+            <image class="data-v-1610ab11" mode="scaleToFill" src="https://jdmqn.19371213.com.cn/jdm/miniAppImages/bb_yw.png" wx:if="{{item.h}}"></image>
+        </view>
+    </view>
+</view>

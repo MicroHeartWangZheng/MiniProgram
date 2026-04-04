@@ -1,0 +1,25 @@
+<view class="my-wrap data-v-14b32fb5">
+    <page-head bind:__l="__l" class="data-v-14b32fb5" uI="14b32fb5-0" uP="{{a}}" uS="{{['d']}}" wx:if="{{a}}">
+        <view class="page-title data-v-14b32fb5">我的</view>
+    </page-head>
+    <view class="container relative data-v-14b32fb5">
+        <image class="bg-top width-100 data-v-14b32fb5" src="{{b}}"></image>
+        <view class="in relative data-v-14b32fb5">
+            <view class="fun-title data-v-14b32fb5">管理功能</view>
+            <view class="fun-box data-v-14b32fb5">
+                <view class="fun-list data-v-14b32fb5" wx:if="{{c}}">
+                    <view bindtap="{{funItem.d}}" class="fun-item flex flex-center-v flex-between data-v-14b32fb5" wx:for="{{d}}" wx:for-item="funItem" wx:key="c">
+                        <view class="left flex flex-center-v data-v-14b32fb5">
+                            <image class="icon data-v-14b32fb5" src="{{funItem.a}}"></image>
+                            <text class="name data-v-14b32fb5">{{funItem.b}}</text>
+                        </view>
+                        <view class="right data-v-14b32fb5">
+                            <image class="icon-right data-v-14b32fb5" src="{{e}}"></image>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <tabbar bind:__l="__l" class="data-v-14b32fb5" uI="14b32fb5-1" uP="{{f}}" wx:if="{{f}}"></tabbar>
+</view>

@@ -1,0 +1,31 @@
+<view class="index-wrap border-box data-v-2632409a" style="{{'filter:'+p}}">
+    <page-head bind:__l="__l" class="data-v-2632409a" uI="2632409a-0" uP="{{b}}" uS="{{['d']}}" wx:if="{{b}}">
+        <image class="logo data-v-2632409a" src="{{a}}"></image>
+    </page-head>
+    <block wx:if="{{c}}">
+        <view class="dl data-v-2632409a">
+            <view class="dt data-v-2632409a">
+                <image class="width-100 height-100 data-v-2632409a" src="{{d}}"></image>
+                <view bindtap="{{f}}" class="dt-right data-v-2632409a">
+                    <image class="data-v-2632409a" mode="scaleToFill" src="{{e}}"></image>
+                    <view class="data-v-2632409a">中/En/关怀</view>
+                </view>
+            </view>
+            <view class="dl_title data-v-2632409a">点击下方预约场馆</view>
+            <view bindtap="{{g}}" class="dd d1 data-v-2632409a">
+                <image class="width-100 height-100 data-v-2632409a" src="https://jdmqn.19371213.com.cn/jdm/miniAppImages/jng_jl.png"></image>
+            </view>
+            <view bindtap="{{h}}" class="dd d2 data-v-2632409a">
+                <image class="width-100 height-100 data-v-2632409a" src="https://jdmqn.19371213.com.cn/jdm/miniAppImages/zy_jl.png"></image>
+            </view>
+            <view bindtap="{{i}}" class="dd d3 data-v-2632409a">
+                <image class="width-100 height-100 data-v-2632409a" src="https://jdmqn.19371213.com.cn/jdm/miniAppImages/clg_jl.png"></image>
+            </view>
+        </view>
+        <audit-result-notice-dialog bind:__l="__l" class="r data-v-2632409a" uI="2632409a-1" uR="auditResultNoticeDialogRef"></audit-result-notice-dialog>
+        <main-notice-dialog bind:__l="__l" bindclose="{{l}}" class="r data-v-2632409a" uI="2632409a-2" uP="{{m}}" uR="mainNoticeDialogRef" wx:if="{{m}}"></main-notice-dialog>
+        <appoint-notice-dialogold bind:__l="__l" class="r data-v-2632409a" uI="2632409a-3" uR="appointNoticeDialogRef"></appoint-notice-dialogold>
+        <tabbar bind:__l="__l" class="data-v-2632409a" uI="2632409a-4" uP="{{o}}" wx:if="{{o}}"></tabbar>
+    </block>
+    <desktop-forbidden bind:__l="__l" class="data-v-2632409a" uI="2632409a-5" wx:else></desktop-forbidden>
+</view>

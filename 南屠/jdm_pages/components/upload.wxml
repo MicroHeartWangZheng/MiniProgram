@@ -1,0 +1,17 @@
+<view class="data-v-f9190d02">
+    <view class="loveCardBind_main_img_uplod data-v-f9190d02">
+        <view bindtap="{{e}}" class="loveCardBind_main_img_uplod_left border-box data-v-f9190d02" wx:if="{{a}}">
+            <uni-icons bind:__l="__l" class="data-v-f9190d02" uI="f9190d02-0" uP="{{c}}" wx:if="{{b}}"></uni-icons>
+            <image class="iamgtuy data-v-f9190d02" mode="scaleToFill" src="{{d}}" wx:else></image>
+        </view>
+        <image class="loveCardBind_main_img_uplod_leftimg data-v-f9190d02" mode="aspectFill" src="{{f}}" wx:else></image>
+        <uni-icons bind:__l="__l" bindclick="{{h}}" class="closes data-v-f9190d02" uI="f9190d02-1" uP="{{i}}" wx:if="{{g}}"></uni-icons>
+        <view class="loveCardBind_main_img_uplod_right font-jiang500W data-v-f9190d02">
+            <view class="tips-1 data-v-f9190d02">
+                <mp-html bind:__l="__l" bindlinktap="{{j}}" class="data-v-f9190d02" uI="f9190d02-2" uP="{{k}}" wx:if="{{k}}"></mp-html>
+            </view>
+        </view>
+    </view>
+    <popup-dialog bind:__l="__l" bindonDialogVisibleChange="{{m}}" bindonSelcetClick="{{n}}" class="r data-v-f9190d02" uI="f9190d02-3" uP="{{o}}" uR="popupDialog" wx:if="{{o}}"></popup-dialog>
+    <dialog-info bind:__l="__l" class="r data-v-f9190d02" uI="f9190d02-4" uR="dialogInfo"></dialog-info>
+</view>

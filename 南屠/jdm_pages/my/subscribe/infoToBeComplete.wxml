@@ -1,0 +1,125 @@
+<view class="pageBox data-v-c7ffeb70">
+    <page-head bind:__l="__l" class="data-v-c7ffeb70" uI="c7ffeb70-0" uP="{{a}}" wx:if="{{a}}"></page-head>
+    <view class="pageContent data-v-c7ffeb70" key="{{w}}">
+        <view class="statusBox data-v-c7ffeb70">
+            <view class="statusBox_text data-v-c7ffeb70">{{b}}</view>
+        </view>
+        <view class="dataBox data-v-c7ffeb70">
+            <view class="dataBox_tip data-v-c7ffeb70">{{c}}</view>
+            <view class="dataBox_title data-v-c7ffeb70">
+                <image class="dataBox_title_icon data-v-c7ffeb70" src="{{d}}"></image>预约场馆</view>
+            <view class="dataBox_content data-v-c7ffeb70">{{e}}</view>
+            <view class="dataBox_title data-v-c7ffeb70">
+                <image class="dataBox_title_icon data-v-c7ffeb70" src="{{f}}"></image>预约时段</view>
+            <view class="dataBox_content data-v-c7ffeb70">{{g}}</view>
+        </view>
+        <view class="personnelBox data-v-c7ffeb70">
+            <view class="personnelBox_title data-v-c7ffeb70" wx:if="{{h}}">
+                <image class="personnelBox_title_img data-v-c7ffeb70" src="{{i}}"></image>预约人员</view>
+            <view class="personnelList data-v-c7ffeb70" wx:if="{{j}}">
+                <view class="personnelItem data-v-c7ffeb70" style="{{item.s}}" wx:for="{{k}}" wx:key="t">
+                    <view class="personnelItem_status flex flex-column flex-center-v data-v-c7ffeb70" style="{{item.d}}">
+                        <status-icon bind:__l="__l" class="data-v-c7ffeb70" uI="{{item.a}}" uP="{{item.b}}" wx:if="{{item.b}}"></status-icon>
+                        <text class="t data-v-c7ffeb70" wx:for="{{item.c}}" wx:for-item="k" wx:key="b">{{k.a}}</text>
+                    </view>
+                    <view class="flex-1 data-v-c7ffeb70">
+                        <view class="flex flex-center-v data-v-c7ffeb70">
+                            <view class="personnelItem_info data-v-c7ffeb70">
+                                <view class="info_tag data-v-c7ffeb70" wx:if="{{item.e}}">{{item.f}}</view>
+                                <view class="info_name data-v-c7ffeb70">{{item.g}}</view>
+                                <view class="info_ID flex data-v-c7ffeb70" style="margin-bottom:12rpx">
+                                    <view class="data-v-c7ffeb70" style="color:#898989">证件类型：</view>
+                                    <view class="data-v-c7ffeb70" style="width:0;flex:1;color:#898989">{{item.h}}</view>
+                                </view>
+                                <view class="info_ID data-v-c7ffeb70">证件号码：{{item.i}}</view>
+                                <view class="info_rejectReason data-v-c7ffeb70" wx:if="{{item.j}}">
+                                    <uni-icons bind:__l="__l" class="data-v-c7ffeb70" uI="{{item.k}}" uP="{{item.l}}" wx:if="{{item.l}}"></uni-icons>{{item.m}}</view>
+                            </view>
+                            <view bindtap="{{item.r}}" class="personnelItem_btn data-v-c7ffeb70" style="{{item.q}}" wx:if="{{item.n}}">
+                                <uni-icons bind:__l="__l" class="data-v-c7ffeb70" uI="{{item.o}}" uP="{{item.p}}" wx:if="{{item.p}}"></uni-icons>
+                                <view class="personnelItem_btnText data-v-c7ffeb70">取消预约</view>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+            <view class="data-v-c7ffeb70" wx:if="{{l}}">
+                <view class="personnelBox_title data-v-c7ffeb70">
+                    <image class="personnelBox_title_img data-v-c7ffeb70" src="{{m}}"></image>携带陪同</view>
+                <view class="personnelList data-v-c7ffeb70" wx:if="{{n}}">
+                    <view class="personnelItem data-v-c7ffeb70" style="{{item.y}}" wx:for="{{o}}" wx:key="z">
+                        <view class="personnelItem_status flex flex-column flex-center-v data-v-c7ffeb70" style="{{item.d}}">
+                            <status-icon bind:__l="__l" class="data-v-c7ffeb70" uI="{{item.a}}" uP="{{item.b}}" wx:if="{{item.b}}"></status-icon>
+                            <text class="t data-v-c7ffeb70" wx:for="{{item.c}}" wx:for-item="k" wx:key="b">{{k.a}}</text>
+                        </view>
+                        <view class="flex-1 relative data-v-c7ffeb70">
+                            <view class="flex flex-center-v data-v-c7ffeb70">
+                                <view class="personnelItem_info data-v-c7ffeb70">
+                                    <view class="info_name data-v-c7ffeb70">{{item.e}}</view>
+                                    <view class="info_ID flex data-v-c7ffeb70" style="margin-bottom:12rpx">
+                                        <view class="data-v-c7ffeb70" style="color:#898989">证件类型：</view>
+                                        <view class="data-v-c7ffeb70" style="width:0;flex:1;color:#898989">{{item.f}}</view>
+                                    </view>
+                                    <view class="info_ID data-v-c7ffeb70">证件号码：{{item.g}}</view>
+                                    <view class="uploadList-wrap data-v-c7ffeb70" wx:if="{{item.h}}">
+                                        <upload-list bind:__l="__l" class="uploadList data-v-c7ffeb70" uI="{{item.j}}" uP="{{item.k}}" wx:if="{{item.i}}"></upload-list>
+                                        <preview-images bind:__l="__l" class="data-v-c7ffeb70" uI="{{item.m}}" uP="{{item.n}}" wx:if="{{item.l}}"></preview-images>
+                                    </view>
+                                    <view class="info_rejectReason data-v-c7ffeb70" wx:if="{{item.o}}">
+                                        <uni-icons bind:__l="__l" class="data-v-c7ffeb70" uI="{{item.p}}" uP="{{item.q}}" wx:if="{{item.q}}"></uni-icons>{{item.r}}</view>
+                                </view>
+                                <view bindtap="{{item.x}}" class="personnelItem_btn data-v-c7ffeb70" style="{{item.w}}" wx:if="{{item.s}}">
+                                    <uni-icons bind:__l="__l" class="data-v-c7ffeb70" uI="{{item.t}}" uP="{{item.v}}" wx:if="{{item.v}}"></uni-icons>
+                                    <view class="personnelItem_btnText data-v-c7ffeb70">取消预约</view>
+                                </view>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+            <view class="data-v-c7ffeb70" wx:if="{{p}}">
+                <view class="personnelBox_title data-v-c7ffeb70">
+                    <image class="personnelBox_title_img data-v-c7ffeb70" src="{{q}}"></image>携带未成年人</view>
+                <view class="personnelList data-v-c7ffeb70" wx:if="{{r}}">
+                    <view class="personnelItem data-v-c7ffeb70" style="{{item.n}}" wx:for="{{s}}" wx:key="m">
+                        <view class="personnelItem_status flex flex-column flex-center-v data-v-c7ffeb70" style="{{item.d}}">
+                            <status-icon bind:__l="__l" class="data-v-c7ffeb70" uI="{{item.a}}" uP="{{item.b}}" wx:if="{{item.b}}"></status-icon>
+                            <text class="t data-v-c7ffeb70" wx:for="{{item.c}}" wx:for-item="k" wx:key="b">{{k.a}}</text>
+                        </view>
+                        <view class="flex-1 data-v-c7ffeb70">
+                            <view class="flex flex-center-v data-v-c7ffeb70">
+                                <view class="personnelItem_info data-v-c7ffeb70">
+                                    <view class="info_name data-v-c7ffeb70">{{item.e}}</view>
+                                    <view class="info_ID flex data-v-c7ffeb70" style="margin-bottom:12rpx">
+                                        <view class="data-v-c7ffeb70" style="color:#898989">证件类型：</view>
+                                        <view class="data-v-c7ffeb70" style="width:0;flex:1;color:#898989">{{item.f}}</view>
+                                    </view>
+                                    <view class="info_ID data-v-c7ffeb70">证件号码：{{item.g}}</view>
+                                </view>
+                                <view bindtap="{{item.l}}" class="personnelItem_btn data-v-c7ffeb70" style="{{item.k}}" wx:if="{{item.h}}">
+                                    <uni-icons bind:__l="__l" class="data-v-c7ffeb70" uI="{{item.i}}" uP="{{item.j}}" wx:if="{{item.j}}"></uni-icons>
+                                    <view class="personnelItem_btnText data-v-c7ffeb70">取消预约</view>
+                                </view>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="submit-btn-wrap data-v-c7ffeb70" wx:if="{{t}}">
+            <view bindtap="{{v}}" class="submit-btn data-v-c7ffeb70">提交</view>
+        </view>
+    </view>
+    <dialog-wrap bind:__l="__l" class="r data-v-c7ffeb70" uI="c7ffeb70-11" uP="{{I}}" uR="dialogWrapRef" uS="{{['d']}}" wx:if="{{I}}">
+        <view class="tip bg-fff flex flex-column flex-center-v data-v-c7ffeb70">
+            <image class="img data-v-c7ffeb70" src="{{x}}"></image>
+            <text class="text data-v-c7ffeb70" wx:if="{{y}}"> 每人每天可取消2次，每月累计不超过4次，超出后当月无法预约。是否确定取消{{z}}的预约? </text>
+            <text class="text data-v-c7ffeb70" wx:if="{{A}}"> 14周岁（不含）以下未成年人无法单独入馆参观，是否确定同步取消{{B}}及携带未成年人的预约? </text>
+            <text class="text data-v-c7ffeb70" wx:if="{{C}}"> 陪同人员/14周岁（不含）以下未成年人无法单独入馆参观，是否确定同步取消{{D}}及陪同人员和携带未成年人的预约? </text>
+            <view class="tip-bottom flex flex-center-v width-100 data-v-c7ffeb70">
+                <view bindtap="{{E}}" class="sure item text-center data-v-c7ffeb70">取消</view>
+                <view bindtap="{{G}}" class="cancel item text-center data-v-c7ffeb70">{{F}}</view>
+            </view>
+        </view>
+    </dialog-wrap>
+</view>

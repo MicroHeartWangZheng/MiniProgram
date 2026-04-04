@@ -1,0 +1,181 @@
+<view class="pageBox data-v-786822cc">
+    <page-head bind:__l="__l" class="data-v-786822cc" uI="786822cc-0" uP="{{a}}" wx:if="{{a}}"></page-head>
+    <view class="pageContent data-v-786822cc" key="{{U}}">
+        <view class="statusBox data-v-786822cc">
+            <view class="statusBox_text data-v-786822cc">{{b}}</view>
+        </view>
+        <view class="dataBox data-v-786822cc">
+            <view class="dataBox_tip data-v-786822cc">{{c}}</view>
+            <view class="dataBox_title data-v-786822cc">
+                <image class="dataBox_title_icon data-v-786822cc" src="{{d}}"></image>预约场馆</view>
+            <view class="dataBox_content data-v-786822cc">{{e}}</view>
+            <view class="dataBox_title data-v-786822cc">
+                <image class="dataBox_title_icon data-v-786822cc" src="{{f}}"></image>预约时段</view>
+            <view class="dataBox_content data-v-786822cc">{{g}}</view>
+        </view>
+        <view class="personnelBox data-v-786822cc">
+            <view class="personnelBox_title data-v-786822cc">
+                <image class="personnelBox_title_img data-v-786822cc" src="{{h}}"></image>预约人员</view>
+            <view class="personnelList data-v-786822cc" wx:if="{{i}}">
+                <view class="personnelItem data-v-786822cc" style="{{item.t}}" wx:for="{{j}}" wx:key="v">
+                    <view class="personnelItem_status flex flex-column flex-center-v data-v-786822cc" style="{{item.e}}">
+                        <status-icon bind:__l="__l" class="data-v-786822cc" uI="{{item.a}}" uP="{{item.b}}" wx:if="{{item.b}}"></status-icon>
+                        <text class="t data-v-786822cc" style="{{item.d}}" wx:for="{{item.c}}" wx:for-item="k" wx:key="b">{{k.a}}</text>
+                    </view>
+                    <view class="flex-1 data-v-786822cc">
+                        <view class="flex flex-center-v data-v-786822cc">
+                            <view class="personnelItem_info data-v-786822cc">
+                                <view class="info_tag data-v-786822cc" wx:if="{{item.f}}">{{item.g}}</view>
+                                <view class="info_name data-v-786822cc">{{item.h}}</view>
+                                <view class="info_ID flex data-v-786822cc" style="margin-bottom:12rpx">
+                                    <view class="data-v-786822cc" style="color:#898989">证件类型：</view>
+                                    <view class="data-v-786822cc" style="width:0;flex:1;color:#898989">{{item.i}}</view>
+                                </view>
+                                <view class="info_ID data-v-786822cc">证件号码：{{item.j}}</view>
+                                <view class="info_rejectReason data-v-786822cc" wx:if="{{item.k}}">
+                                    <uni-icons bind:__l="__l" class="data-v-786822cc" uI="{{item.l}}" uP="{{item.m}}" wx:if="{{item.m}}"></uni-icons>{{item.n}}</view>
+                            </view>
+                            <view bindtap="{{item.s}}" class="personnelItem_btn data-v-786822cc" style="{{item.r}}" wx:if="{{item.o}}">
+                                <uni-icons bind:__l="__l" class="data-v-786822cc" uI="{{item.p}}" uP="{{item.q}}" wx:if="{{item.q}}"></uni-icons>
+                                <view class="personnelItem_btnText data-v-786822cc">取消预约</view>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+            <view class="data-v-786822cc" wx:if="{{k}}">
+                <view class="personnelBox_title data-v-786822cc">
+                    <image class="personnelBox_title_img data-v-786822cc" src="{{l}}"></image>携带陪同</view>
+                <view class="personnelList data-v-786822cc" wx:if="{{m}}">
+                    <view class="personnelItem data-v-786822cc" style="{{item.r}}" wx:for="{{n}}" wx:key="s">
+                        <view class="personnelItem_status flex flex-column flex-center-v data-v-786822cc" style="{{item.e}}">
+                            <status-icon bind:__l="__l" class="data-v-786822cc" uI="{{item.a}}" uP="{{item.b}}" wx:if="{{item.b}}"></status-icon>
+                            <text class="t data-v-786822cc" style="{{item.d}}" wx:for="{{item.c}}" wx:for-item="k" wx:key="b">{{k.a}}</text>
+                        </view>
+                        <view class="flex-1 data-v-786822cc">
+                            <view class="flex flex-center-v data-v-786822cc">
+                                <view class="personnelItem_info data-v-786822cc">
+                                    <view class="info_name data-v-786822cc">{{item.f}}</view>
+                                    <view class="info_ID flex data-v-786822cc" style="margin-bottom:12rpx">
+                                        <view class="data-v-786822cc" style="color:#898989">证件类型：</view>
+                                        <view class="data-v-786822cc" style="width:0;flex:1;color:#898989">{{item.g}}</view>
+                                    </view>
+                                    <view class="info_ID data-v-786822cc">证件号码：{{item.h}}</view>
+                                    <view class="info_rejectReason data-v-786822cc" wx:if="{{item.i}}">
+                                        <uni-icons bind:__l="__l" class="data-v-786822cc" uI="{{item.j}}" uP="{{item.k}}" wx:if="{{item.k}}"></uni-icons>{{item.l}}</view>
+                                </view>
+                                <view bindtap="{{item.q}}" class="personnelItem_btn data-v-786822cc" style="{{item.p}}" wx:if="{{item.m}}">
+                                    <uni-icons bind:__l="__l" class="data-v-786822cc" uI="{{item.n}}" uP="{{item.o}}" wx:if="{{item.o}}"></uni-icons>
+                                    <view class="personnelItem_btnText data-v-786822cc">取消预约</view>
+                                </view>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+            <view class="data-v-786822cc" wx:if="{{o}}">
+                <view class="personnelBox_title data-v-786822cc">
+                    <image class="personnelBox_title_img data-v-786822cc" src="{{p}}"></image>携带未成年人</view>
+                <view class="personnelList data-v-786822cc" wx:if="{{q}}">
+                    <view class="personnelItem data-v-786822cc" style="{{item.o}}" wx:for="{{r}}" wx:key="n">
+                        <view class="personnelItem_status flex flex-column flex-center-v data-v-786822cc" style="{{item.e}}">
+                            <status-icon bind:__l="__l" class="data-v-786822cc" uI="{{item.a}}" uP="{{item.b}}" wx:if="{{item.b}}"></status-icon>
+                            <text class="t data-v-786822cc" style="{{item.d}}" wx:for="{{item.c}}" wx:for-item="k" wx:key="b">{{k.a}}</text>
+                        </view>
+                        <view class="flex-1 data-v-786822cc">
+                            <view class="flex flex-center-v data-v-786822cc">
+                                <view class="personnelItem_info data-v-786822cc">
+                                    <view class="info_name data-v-786822cc">{{item.f}}</view>
+                                    <view class="info_ID flex data-v-786822cc" style="margin-bottom:12rpx">
+                                        <view class="data-v-786822cc" style="color:#898989">证件类型：</view>
+                                        <view class="data-v-786822cc" style="width:0;flex:1;color:#898989">{{item.g}}</view>
+                                    </view>
+                                    <view class="info_ID data-v-786822cc">证件号码：{{item.h}}</view>
+                                </view>
+                                <view bindtap="{{item.m}}" class="personnelItem_btn data-v-786822cc" style="{{item.l}}" wx:if="{{item.i}}">
+                                    <uni-icons bind:__l="__l" class="data-v-786822cc" uI="{{item.j}}" uP="{{item.k}}" wx:if="{{item.k}}"></uni-icons>
+                                    <view class="personnelItem_btnText data-v-786822cc">取消预约</view>
+                                </view>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="hintBox data-v-786822cc" style="margin-bottom:80rpx">
+            <view class="hintBox_title data-v-786822cc">参观须知</view>
+            <view class="hintBox_content data-v-786822cc">
+                <view class="data-v-786822cc" wx:if="{{s}}">
+                    <image bindtap="{{t}}" class="mapBox data-v-786822cc" src="https://jdmqn.19371213.com.cn/jdm/miniAppImages/stadium1.jpg"></image>
+                </view>
+                <image bindtap="{{w}}" class="mapBox data-v-786822cc" src="https://jdmqn.19371213.com.cn/jdm/miniAppImages/stadium2.jpg" wx:if="{{v}}"></image>
+                <image bindtap="{{y}}" class="mapBox data-v-786822cc" src="https://jdmqn.19371213.com.cn/jdm/miniAppImages/stadium3.jpg" wx:if="{{x}}"></image>
+                <view bindtap="{{A}}" class="navigationBox data-v-786822cc">
+                    <image class="navigationBox_img data-v-786822cc" src="{{z}}"></image>点击查看入口位置</view>
+                <view class="ztdas data-v-786822cc" wx:if="{{B}}">
+                    <view class="textRow textTitle data-v-786822cc">一、入馆参观</view>
+                    <view class="data-v-786822cc"></view>
+                    <view class="textRow data-v-786822cc">1.参观时请务必携带预约时的身份证件原件（含二代身份证、江苏省第三代社保卡、护照、港澳居民来往内地通行证、台湾居民来往大陆通行证、中华人民共和国外国人永久居留身份证等）在陈列馆入口安检处核对后入馆。</view>
+                    <view class="data-v-786822cc"></view>
+                    <view class="textRow data-v-786822cc">2.现役军人及军人家属须携带有效证件前往陈列馆入口安检处登记入馆。</view>
+                    <view class="data-v-786822cc"></view>
+                    <view class="textRow data-v-786822cc">3.因运用智能技术困难不能线上预约的65周岁（含）以上老年人（仅限本人）可前往陈列馆入口安检处登记入馆。</view>
+                    <view class="data-v-786822cc"></view>
+                    <view class="textRow data-v-786822cc">4.参观须遵守陈列馆有关规定。</view>
+                    <view class="data-v-786822cc"></view>
+                    <view class="textRow textTitle data-v-786822cc">二、服务指南</view>
+                    <view class="data-v-786822cc"></view>
+                    <view class="textRow data-v-786822cc" wx:if="{{C}}">1.馆内免费提供婴儿车、轮椅。地点：南京大屠杀史实展服务台。请于当日17:30前归还至服务处。</view>
+                    <view class="textRow data-v-786822cc" wx:if="{{D}}">1.馆内免费提供婴儿车、轮椅。地点：正义必胜 和平必胜 人民必胜——中国战区反法西斯战争胜利暨审判日本战犯史实展服务台。请于当日17:30前归还至服务处。</view>
+                    <view class="textRow data-v-786822cc" wx:if="{{E}}">1.陈列馆观众服务中心免费提供轮椅，请于当日17:30前归还至服务处。</view>
+                    <view class="data-v-786822cc"></view>
+                    <view class="textRow data-v-786822cc" wx:if="{{F}}">2.陈列馆内提供箱包寄存服务：大件行李（拖拉杆行李箱）须寄存，小件行李（背包、拎袋）可带入展厅。请于当日17:30前于寄存处领取箱包。</view>
+                    <view class="textRow data-v-786822cc" wx:else>2.馆内提供箱包寄存服务：大件行李（拖拉杆行李箱）须寄存，小件行李（背包、拎袋）可带入展厅。请于当日17:30前于寄存处领取箱包。</view>
+                    <view class="data-v-786822cc"></view>
+                    <view class="textRow data-v-786822cc" wx:if="{{G}}">3.如有问题或遇到突发情况，可向纪念馆服务台工作人员或就近导览服务人员求助。</view>
+                    <view class="textRow data-v-786822cc" wx:if="{{H}}">3.如有问题或遇到突发情况，可向陈列馆工作人员或就近导览服务人员求助。</view>
+                    <view class="data-v-786822cc"></view>
+                    <view class="textRow data-v-786822cc">4.咨询电话：025-86612230 投诉电话：025-86898620（8:00-20:00）</view>
+                </view>
+                <view class="ztdas data-v-786822cc" wx:else>
+                    <view class="textRow textTitle data-v-786822cc">一、入馆参观</view>
+                    <view class="data-v-786822cc"></view>
+                    <view class="textRow data-v-786822cc">1.参观时请务必携带预约时的身份证件原件（含二代身份证、江苏省第三代社保卡、护照、港澳居民来往内地通行证、台湾居民来往大陆通行证、中华人民共和国外国人永久居留身份证等）在{{I}}入口经过人脸比对入馆。</view>
+                    <view class="data-v-786822cc"></view>
+                    <view class="textRow data-v-786822cc">2.现役军人及军人家属{{J}}须携带有效证件前往{{K}}人工窗口登记入馆。</view>
+                    <view class="data-v-786822cc"></view>
+                    <view class="textRow data-v-786822cc">3.因运用智能技术困难不能线上预约的65周岁（含）以上老年人（仅限本人）可前往{{L}}人工窗口登记入馆。</view>
+                    <view class="data-v-786822cc"></view>
+                    <view class="textRow data-v-786822cc">4.参观须遵守《南京市国家公祭保障条例》及纪念馆有关规定。</view>
+                    <view class="data-v-786822cc"></view>
+                    <view class="textRow textTitle data-v-786822cc">二、服务指南</view>
+                    <view class="data-v-786822cc"></view>
+                    <view class="textRow data-v-786822cc" wx:if="{{M}}">1.馆内免费提供婴儿车、轮椅。地点：南京大屠杀史实展服务台。请于当日17:30前归还至服务处。</view>
+                    <view class="textRow data-v-786822cc" wx:if="{{N}}">1.馆内免费提供婴儿车、轮椅。地点：正义必胜 和平必胜 人民必胜——中国战区反法西斯战争胜利暨审判日本战犯史实展服务台。请于当日17:30前归还至服务处。</view>
+                    <view class="textRow data-v-786822cc" wx:if="{{O}}">1.陈列馆观众服务中心免费提供轮椅，请于当日17:30前归还至服务处。</view>
+                    <view class="data-v-786822cc"></view>
+                    <view class="textRow data-v-786822cc" wx:if="{{P}}">2.陈列馆内提供箱包寄存服务：大件行李（拖拉杆行李箱）须寄存，小件行李（背包、拎袋）可带入展厅。请于当日17:30前于寄存处领取箱包。</view>
+                    <view class="textRow data-v-786822cc" wx:else>2.馆内提供箱包寄存服务：大件行李（拖拉杆行李箱）须寄存，小件行李（背包、拎袋）可带入展厅。请于当日17:30前于寄存处领取箱包。</view>
+                    <view class="data-v-786822cc"></view>
+                    <view class="textRow data-v-786822cc" wx:if="{{Q}}">3.如有问题或遇到突发情况，可向纪念馆服务台工作人员或就近导览服务人员求助。</view>
+                    <view class="textRow data-v-786822cc" wx:if="{{R}}">3.如有问题或遇到突发情况，可向陈列馆工作人员或就近导览服务人员求助。</view>
+                    <view class="data-v-786822cc"></view>
+                    <view class="textRow data-v-786822cc">4.咨询电话：025-86612230 投诉电话：025-86898620（8:00-20:00）</view>
+                </view>
+            </view>
+        </view>
+        <info-to-be-complete-btns bind:__l="__l" class="data-v-786822cc" uI="786822cc-9" uP="{{T}}" wx:if="{{S}}"></info-to-be-complete-btns>
+    </view>
+    <dialog-wrap bind:__l="__l" class="r data-v-786822cc" uI="786822cc-10" uP="{{ag}}" uR="dialogWrapRef" uS="{{['d']}}" wx:if="{{ag}}">
+        <view class="tip bg-fff flex flex-column flex-center-v data-v-786822cc">
+            <image class="img data-v-786822cc" src="{{V}}"></image>
+            <text class="text data-v-786822cc" wx:if="{{W}}"> 每人每天可取消2次，每月累计不超过4次，超出后当月无法预约。是否确定取消{{X}}的预约? </text>
+            <text class="text data-v-786822cc" wx:if="{{Y}}"> 14周岁（不含）以下未成年人无法单独入馆参观，是否确定同步取消{{Z}}及携带未成年人的预约? </text>
+            <text class="text data-v-786822cc" wx:if="{{aa}}"> 陪同人员/14周岁（不含）以下未成年人无法单独入馆参观，是否确定同步取消{{ab}}及陪同人员和携带未成年人的预约? </text>
+            <view class="tip-bottom flex flex-center-v width-100 data-v-786822cc">
+                <view bindtap="{{ac}}" class="sure item text-center data-v-786822cc">取消</view>
+                <view bindtap="{{ae}}" class="cancel item text-center data-v-786822cc">{{ad}}</view>
+            </view>
+        </view>
+    </dialog-wrap>
+</view>

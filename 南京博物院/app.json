@@ -1,0 +1,104 @@
+{
+  "permission": {
+    "scope.userLocation": {
+      "desc": "您的位置信息将用于为您提供问吧服务"
+    }
+  },
+  "networkTimeout": {
+    "request": 20000
+  },
+  "requiredPrivateInfos": [
+    "getLocation"
+  ],
+  "__usePrivacyCheck__": true,
+  "componentFramework": "exparser",
+  "tabBar": {
+    "color": "#808080",
+    "selectedColor": "#AC732E",
+    "backgroundColor": "#F6E8DA",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "问吧",
+        "iconPath": "lib/images/tab01.png",
+        "selectedIconPath": "lib/images/tab01-on.png"
+      },
+      {
+        "pagePath": "pages/myInfo/myInfo",
+        "text": "我的南博",
+        "iconPath": "lib/images/tab03.png",
+        "selectedIconPath": "lib/images/tab03-on.png"
+      },
+      {
+        "pagePath": "pages/member/member",
+        "text": "会员",
+        "iconPath": "lib/images/tab04.png",
+        "selectedIconPath": "lib/images/tab04-on.png"
+      }
+    ]
+  },
+  "subPackages": [
+    {
+      "root": "wbpackage/",
+      "name": "wbpackage",
+      "pages": [
+        "pages/askList/askList",
+        "pages/wenba/wenba",
+        "pages/wblist/wblist"
+      ]
+    },
+    {
+      "root": "tzpackage/",
+      "name": "tzpackage",
+      "pages": [
+        "pages/pay/pay",
+        "pages/ticketQRcode/ticketQRcode",
+        "pages/ticketDetail/ticketDetail",
+        "pages/success/success",
+        "pages/linkman/linkman",
+        "pages/exhibitionList/exhibitionList",
+        "pages/exhibitionDetail/exhibitionDetail",
+        "pages/buyTicket/buyTicket",
+        "pages/myTicket/myTicket",
+        "pages/payTimeout/payTimeout",
+        "pages/exlistEmp/exlistEmp",
+        "pages/exdetailEmp/exdetailEmp",
+        "pages/buyEmp/buyEmp",
+        "pages/ticketRefund/ticketRefund"
+      ]
+    }
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTitleText": "南京博物院",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": false
+  },
+  "pages": [
+    "pages/index/index",
+    "pages/testLoading/testLoading",
+    "pages/teamTipsH5/teamTipsH5",
+    "pages/privacyContractH5/privacyContractH5",
+    "pages/reservationSuccess/reservationSuccess",
+    "pages/selTicketType/selTicketType",
+    "pages/ticket/ticket",
+    "pages/addLinkman/addLinkman",
+    "pages/myReservation/myReservation",
+    "pages/cancelReservation/cancelReservation",
+    "pages/pathDetail/pathDetail",
+    "pages/voice/voice",
+    "pages/phone/phone",
+    "pages/error/error",
+    "pages/visitor/visitor",
+    "pages/park/park",
+    "pages/neterror/neterror",
+    "pages/myInfo/myInfo",
+    "pages/newPark/newPark",
+    "pages/member/member",
+    "pages/myLinkman/myLinkman",
+    "pages/reservationP/reservationP",
+    "pages/reservationSuccessP/reservationSuccessP"
+  ]
+}

@@ -1,0 +1,41 @@
+<view class="calendar-body data-v-93315db4" wx:if="{{a}}">
+    <view class="week-wrap day-list bg-fff data-v-93315db4">
+        <view class="week-list data-v-93315db4">
+            <view class="week-day__text data-v-93315db4" wx:for="{{b}}" wx:for-item="itemZh" wx:key="b">{{itemZh.a}}</view>
+        </view>
+    </view>
+    <view class="fixed-wrap bg-fff border-box bg-fff width-100 data-v-93315db4">
+        <view class="range-text flex flex-center-v data-v-93315db4">
+            <view class="left flex flex-end-v data-v-93315db4">
+                <view class="alt font-12 data-v-93315db4">入住</view>
+                <view class="time data-v-93315db4">
+                    <text class="data-v-93315db4">{{c}}月{{d}}日</text>
+                </view>
+            </view>
+            <view class="font-bold data-v-93315db4">-</view>
+            <view class="right flex flex-end-v data-v-93315db4">
+                <view class="alt font-12 data-v-93315db4">离店</view>
+                <view class="time data-v-93315db4">
+                    <text class="data-v-93315db4">{{e}}月{{f}}日</text>
+                </view>
+            </view>
+        </view>
+        <view bindtap="{{i}}" class="btn success text-center font-bold data-v-93315db4" wx:if="{{g}}">入住{{h}}晚</view>
+        <view class="btn disabled text-center font-bold data-v-93315db4" wx:elif="{{j}}">请选择离店日期</view>
+        <view class="btn disabled text-center font-bold data-v-93315db4" wx:else>请选择入住日期</view>
+    </view>
+    <view class="{{['day-list','data-v-93315db4',l&&'day-range']}}">
+        <view class="day-item data-v-93315db4" wx:for="{{k}}" wx:key="d">
+            <view class="day-title data-v-93315db4">{{item.a}}</view>
+            <view class="content data-v-93315db4">
+                <view class="item data-v-93315db4" wx:for="{{item.b}}" wx:for-item="itemArr" wx:key="a"></view>
+                <view bindtap="{{dayItem.m}}" class="{{['item','data-v-93315db4',dayItem.e&&'disabled',dayItem.f&&'hoverData',dayItem.g&&'activeData',dayItem.h&&'startDate',dayItem.i&&'startOrend',dayItem.j&&'endDate',dayItem.k&&'weekDay',dayItem.l&&'today']}}" wx:for="{{item.c}}" wx:for-item="dayItem" wx:key="d">
+                    <view class="number data-v-93315db4">{{dayItem.a}}</view>
+                    <view class="price flex flex-center-item text-center flex-center width-100 data-v-93315db4" wx:if="{{dayItem.b}}">
+                        <text class="text data-v-93315db4">{{dayItem.c}}</text>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

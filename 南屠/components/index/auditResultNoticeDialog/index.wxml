@@ -1,0 +1,17 @@
+<dialog-wrap bind:__l="__l" class="r data-v-daa23e5a" uI="daa23e5a-0" uP="{{n}}" uR="dialogWrap" uS="{{['d']}}" wx:if="{{n}}">
+    <view class="main-notice-dialog data-v-daa23e5a">
+        <view class="{{['notice-wrap','bg-fff','relative','data-v-daa23e5a',j&&'old']}}">
+            <view class="content data-v-daa23e5a" wx:if="{{a}}">
+                <mp-html bind:__l="__l" class="data-v-daa23e5a" uI="daa23e5a-1,daa23e5a-0" uP="{{c}}" wx:if="{{b}}"></mp-html>
+                <mp-html bind:__l="__l" class="data-v-daa23e5a" uI="daa23e5a-2,daa23e5a-0" uP="{{d||''}}" wx:else></mp-html>
+            </view>
+            <view bindtap="{{g}}" class="close data-v-daa23e5a" wx:if="{{e}}">{{f}}</view>
+            <view class="content data-v-daa23e5a" wx:if="{{h}}">
+                <view class="data-v-daa23e5a">{{i}}</view>
+            </view>
+        </view>
+        <view bindtap="{{l}}" class="close-btn data-v-daa23e5a">
+            <image class="icon-close data-v-daa23e5a" src="{{k}}"></image>
+        </view>
+    </view>
+</dialog-wrap>

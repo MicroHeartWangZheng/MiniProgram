@@ -1,0 +1,74 @@
+<view class="personnelSelect data-v-363318fa">
+    <view class="listBox data-v-363318fa" wx:if="{{a}}">
+        <view class="hintBox data-v-363318fa" wx:if="{{b}}">
+            <view class="hintItem data-v-363318fa" style="{{item.b}}" wx:for="{{c}}" wx:key="c">
+                <image class="hintItem_img data-v-363318fa" src="{{d}}"></image>
+                <view class="{{['hintItem_text','data-v-363318fa',e&&'row_emphasis']}}">{{item.a}}</view>
+            </view>
+        </view>
+        <view class="listItemBox data-v-363318fa" wx:for="{{f}}" wx:key="y">
+            <view bindtap="{{item.q}}" class="listItem data-v-363318fa">
+                <view class="listItem_tagBox data-v-363318fa">
+                    <view class="listItem_tag data-v-363318fa" style="{{item.c}}" wx:if="{{item.a}}">{{item.b}}</view>
+                    <view class="listItem_childTag data-v-363318fa" style="{{item.e}}" wx:if="{{item.d}}">未成年人</view>
+                    <uni-icons bind:__l="__l" bindclick="{{item.g}}" class="data-v-363318fa" uI="{{item.h}}" uP="{{item.i}}" wx:if="{{item.f}}"></uni-icons>
+                </view>
+                <view class="listItem_leftBox data-v-363318fa">
+                    <uni-icons bind:__l="__l" class="data-v-363318fa" uI="{{item.k}}" uP="{{item.l}}" wx:if="{{item.j}}"></uni-icons>
+                    <view class="{{['data-v-363318fa',item.m]}}" wx:else></view>
+                </view>
+                <view class="listItem_info data-v-363318fa">
+                    <view class="listItem_info_name data-v-363318fa">{{item.n}}</view>
+                    <view class="listItem_info_papersType data-v-363318fa">
+                        <view class="data-v-363318fa" style="color:#898989">证件类型：</view>
+                        <view class="data-v-363318fa" style="width:0;flex:1;color:#898989">{{item.o}}</view>
+                    </view>
+                    <view class="listItem_info_papersNo data-v-363318fa">证件号码： {{item.p}}</view>
+                </view>
+            </view>
+            <view class="listForm data-v-363318fa" wx:if="{{item.r}}">
+                <view class="listForm_title data-v-363318fa">直系亲属证明照片<view class="listForm_title_emphasis data-v-363318fa">（必填）</view>
+                </view>
+                <view class="listForm_tip data-v-363318fa">证件可参照<text bindtap="{{item.s}}" class="data-v-363318fa" style="color:#a87e6c">《优待人群证件类别要求》</text>
+                </view>
+                <view class="imgList data-v-363318fa">
+                    <view class="imgBox data-v-363318fa" wx:for="{{item.t}}" wx:for-item="item2" wx:key="e">
+                        <image class="imgItem data-v-363318fa" src="{{item2.a}}"></image>
+                        <image bindtap="{{item2.d}}" class="imgItem_close data-v-363318fa" src="{{item2.c}}" wx:if="{{item2.b}}"></image>
+                    </view>
+                    <image bindtap="{{item.w}}" class="imgAdd data-v-363318fa" src="{{item.x}}" wx:if="{{item.v}}"></image>
+                </view>
+                <view class="listForm_hint data-v-363318fa">请确保照片真实准确、完整清晰，大小须在2M以内，符合优待人群证件类别要求。如存在失实行为，可能会影响您的预约入馆。</view>
+            </view>
+        </view>
+        <view bindtap="{{h}}" class="editBtn data-v-363318fa" wx:if="{{g}}">新增/删除/编辑观众</view>
+    </view>
+    <view class="noBox data-v-363318fa" wx:else>
+        <view bindtap="{{i}}" class="noBox_btn data-v-363318fa">新增观众</view>
+        <view class="hintBox data-v-363318fa" wx:if="{{j}}">
+            <view class="hintItem data-v-363318fa" style="{{item.b}}" wx:for="{{k}}" wx:key="c">
+                <image class="hintItem_img data-v-363318fa" src="{{l}}"></image>
+                <view class="{{['hintItem_text','data-v-363318fa',m&&'row_emphasis']}}">{{item.a}}</view>
+            </view>
+        </view>
+    </view>
+    <dialog-wrap bind:__l="__l" class="r data-v-363318fa" uI="363318fa-2" uP="{{r}}" uR="imgSelectRef" uS="{{['d']}}" wx:if="{{r}}">
+        <view class="imgSelect data-v-363318fa">
+            <view bindtap="{{n}}" class="imgSelect_row data-v-363318fa" style="border-radius:32rpx 32rpx 0rpx 0rpx">拍照上传</view>
+            <view bindtap="{{o}}" class="imgSelect_row data-v-363318fa">从手机相册选择上传</view>
+            <view class="imgSelect_partition data-v-363318fa"></view>
+            <view bindtap="{{p}}" class="imgSelect_btn data-v-363318fa">取消</view>
+        </view>
+    </dialog-wrap>
+    <dialog-info bind:__l="__l" class="r data-v-363318fa" uI="363318fa-3" uR="dialogInfo"></dialog-info>
+    <popup-dialog bind:__l="__l" bindonSelcetClick="{{v}}" class="r data-v-363318fa" uI="363318fa-4" uP="{{w}}" uR="popupDialogRef" wx:if="{{w}}"></popup-dialog>
+    <dialog-wrap bind:__l="__l" class="r data-v-363318fa" uI="363318fa-5" uP="{{B}}" uR="dialogWrapRef2" uS="{{['d']}}" wx:if="{{B}}">
+        <view class="tip bg-fff flex flex-column flex-center-v data-v-363318fa" style="width:560rpx;word-break:break-all">
+            <image class="img data-v-363318fa" src="{{x}}"></image>
+            <text class="text_content data-v-363318fa">{{y}}</text>
+            <view class="tip-bottom flex flex-center-v width-100 data-v-363318fa">
+                <view bindtap="{{z}}" class="sure item text-center data-v-363318fa" style="width:100%">确定</view>
+            </view>
+        </view>
+    </dialog-wrap>
+</view>

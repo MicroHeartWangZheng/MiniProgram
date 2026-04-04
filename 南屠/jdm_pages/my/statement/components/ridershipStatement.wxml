@@ -1,0 +1,68 @@
+<view class="subscribeDaily data-v-63b660d0">
+    <view class="inputBox_absolute data-v-63b660d0">
+        <uni-datetime-picker bind:__l="__l" bindchange="{{a}}" bindupdateModelValue="{{b}}" class="data-v-63b660d0" uI="63b660d0-0" uP="{{c}}" wx:if="{{c}}"></uni-datetime-picker>
+    </view>
+    <view class="statement_top data-v-63b660d0">
+        <image class="statement_top_img data-v-63b660d0" src="{{d}}"></image>
+        <view class="statement_top_dateStr data-v-63b660d0">数据更新于 {{e}}</view>
+        <view class="statement_top_searchBox data-v-63b660d0">
+            <view class="inputBox data-v-63b660d0">
+                <image class="inputIcon data-v-63b660d0" src="{{f}}"></image>
+                <text class="inputText data-v-63b660d0">{{g}}</text>
+                <image class="inputIcon data-v-63b660d0" src="{{h}}"></image>
+            </view>
+            <view bindtap="{{j}}" class="searchBoxBtn data-v-63b660d0">
+                <image class="searchBoxBtn_icon data-v-63b660d0" src="{{i}}"></image>数据刷新</view>
+        </view>
+    </view>
+    <view class="statement_content data-v-63b660d0">
+        <view class="statisticsBox data-v-63b660d0">
+            <view class="statisticsBoxItem data-v-63b660d0" style="background:#a87e6c">
+                <view class="statisticsBoxItem_title data-v-63b660d0">今日客流总计</view>
+                <view class="statisticsBoxItem_text data-v-63b660d0">{{k}}</view>
+                <image class="statisticsBoxItem_img data-v-63b660d0" src="{{l}}"></image>
+            </view>
+            <view class="statisticsBoxItem data-v-63b660d0" style="background:#c7ab7e">
+                <view class="statisticsBoxItem_title data-v-63b660d0">本月客流总计</view>
+                <view class="statisticsBoxItem_text data-v-63b660d0">{{m}}</view>
+                <image class="statisticsBoxItem_img data-v-63b660d0" src="{{n}}"></image>
+            </view>
+            <view class="statisticsBoxItem white data-v-63b660d0" style="background:#f2f2f2">
+                <view class="statisticsBoxItem_title data-v-63b660d0">本年度客流总计</view>
+                <view class="statisticsBoxItem_text data-v-63b660d0">{{o}}</view>
+                <image class="statisticsBoxItem_img data-v-63b660d0" src="{{p}}"></image>
+            </view>
+            <view class="statisticsBoxItem white data-v-63b660d0" style="background:#f2f2f2">
+                <view class="statisticsBoxItem_title data-v-63b660d0">历史客流总计</view>
+                <view class="statisticsBoxItem_text data-v-63b660d0">{{q}}</view>
+                <image class="statisticsBoxItem_img data-v-63b660d0" src="{{r}}"></image>
+            </view>
+        </view>
+        <view class="tlite data-v-63b660d0">
+            <image class="tliteImg data-v-63b660d0" src="{{s}}"></image>客流状态<image class="tliteImg data-v-63b660d0" src="{{t}}"></image>
+        </view>
+        <view class="legendBox data-v-63b660d0">
+            <view class="legend data-v-63b660d0" wx:for="{{v}}" wx:for-item="e" wx:key="c">
+                <view class="legendIcon data-v-63b660d0" style="{{e.a}}"></view>
+                <view class="legendText data-v-63b660d0">{{e.b}}</view>
+            </view>
+        </view>
+        <view class="ridershipList data-v-63b660d0">
+            <view class="ridershipItem data-v-63b660d0" style="{{y}}" wx:for="{{w}}" wx:for-item="e" wx:key="f">
+                <view class="ridershipTlite data-v-63b660d0" style="{{e.b}}">{{e.a}}</view>
+                <view class="ridershipRow data-v-63b660d0" wx:if="{{x}}">
+                    <view class="ridershipLeft data-v-63b660d0">实时在馆人数</view>
+                    <view class="ridershipRight data-v-63b660d0" style="color:#A87E6C">{{e.c}}</view>
+                </view>
+                <view class="ridershipRow data-v-63b660d0" style="background-color:#F8F8F8">
+                    <view class="ridershipLeft data-v-63b660d0">今日入馆人数</view>
+                    <view class="ridershipRight data-v-63b660d0" style="color:#2C2C2C">{{e.d}}</view>
+                </view>
+                <view class="ridershipRow data-v-63b660d0">
+                    <view class="ridershipLeft data-v-63b660d0">今日离开人数</view>
+                    <view class="ridershipRight data-v-63b660d0" style="color:#898989">{{e.e}}</view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

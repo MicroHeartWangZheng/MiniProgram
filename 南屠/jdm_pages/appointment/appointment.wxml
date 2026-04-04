@@ -1,0 +1,47 @@
+<view class="pageBox data-v-6474dace">
+    <page-head bind:__l="__l" class="data-v-6474dace" uI="6474dace-0" uP="{{a}}" wx:if="{{a}}"></page-head>
+    <block wx:if="{{b}}">
+        <view class="pageContent data-v-6474dace">
+            <view class="top relative hidden topBg border-box data-v-6474dace" style="{{c}}">
+                <image class="a-bg width-100 data-v-6474dace" mode="widthFix" src="https://jdmqn.19371213.com.cn/jdm/miniAppImages/a-bg.png"></image>
+            </view>
+            <view class="pageTitle data-v-6474dace">{{d}}</view>
+            <view class="partition data-v-6474dace"></view>
+            <view class="data-v-6474dace" style="position:relative;z-index:10">
+                <calendar-select bind:__l="__l" bindselectTime="{{h}}" bindsetAppointmentTime="{{g}}" class="r data-v-6474dace" uI="6474dace-1" uP="{{i}}" uR="calendar" wx:if="{{e}}"></calendar-select>
+            </view>
+            <view class="personnelBox data-v-6474dace">
+                <normal-com bind:__l="__l" class="data-v-6474dace" uI="6474dace-2" uP="{{k}}" wx:if="{{j}}"></normal-com>
+                <family-com bind:__l="__l" class="data-v-6474dace" uI="6474dace-3" uP="{{m}}" wx:elif="{{l}}"></family-com>
+                <special-com bind:__l="__l" class="data-v-6474dace" uI="6474dace-4" uP="{{o}}" wx:elif="{{n}}"></special-com>
+                <view class="data-v-6474dace" wx:else>预约类型有误</view>
+            </view>
+            <view class="declareBox data-v-6474dace">
+                <view class="declareBox_title data-v-6474dace">重要提示</view>
+                <view class="declareBox_content data-v-6474dace" wx:if="{{p}}">
+                    <text class="{{['data-v-6474dace',r&&'c-default']}}">1.每日放票时间为8:00<text class="data-v-6474dace" wx:if="{{q}}">，提前7天连续放票，参观当日不放票</text>。</text>
+                    <view class="data-v-6474dace"></view>2.上午时段{{s}}可延迟至13:00入馆，下午时段12:30-16:30可提前至12:00入馆。<view class="data-v-6474dace"></view>3.如无法按时入馆，须通过微信公众号“纪念馆预约-我的-我的预约”取消预约。每人每天不可取消超过1次，每月不可取消超过4次，超出后当月该证件号将被限制预约。预约上午时段的观众可于当日13:00前取消，预约下午时段的观众可于当日17:30前取消。<view class="data-v-6474dace"></view>4.预约时段未到馆且未取消视为爽约，爽约3次后，该观众将限制预约90天。三个场馆独立计算。</view>
+                <view class="declareBox_content data-v-6474dace" wx:if="{{t}}">
+                    <text class="{{['data-v-6474dace',w&&'c-default']}}">1.每日放票时间为8:00<text class="data-v-6474dace" wx:if="{{v}}">，提前7天连续放票，参观当日不放票</text>。</text>
+                    <view class="data-v-6474dace"></view>2.上午时段{{x}}可延迟至13:00入馆，下午时段12:30-16:30可提前至12:00入馆。<view class="data-v-6474dace"></view>3.如无法按时入馆，须通过微信公众号“纪念馆预约-我的-我的预约”取消预约。每人每天不可取消超过1次，每月不可取消超过4次，超出后当月该证件号将被限制预约。预约上午时段的观众可于当日13:00前取消，预约下午时段的观众可于当日17:30前取消。<view class="data-v-6474dace"></view>4.当亲子票中的成年人全部取消预约，绑定的未成年人预约自动失效。<view class="data-v-6474dace"></view>5.预约时段未到馆且未取消视为爽约，爽约3次后，该观众将限制预约90天。三个场馆独立计算。</view>
+                <view class="declareBox_content data-v-6474dace" wx:if="{{y}}">1.每日放票时间为8:00。<view class="data-v-6474dace"></view>2.上午时段{{z}}可延迟至13:00入馆，下午时段12:30-16:30可提前至12:00入馆。<view class="data-v-6474dace"></view>3.所有陪同人员均须为优待人员本人亲属，须相对固定且1年内不得超过2名。<view class="data-v-6474dace"></view>4.现役军人及军人家属{{A}}须携带有效证件前往{{B}}登记入馆。<view class="data-v-6474dace"></view>5.残疾军人按照服役状态，参照现役军人/退役军人享受优待政策。<view class="data-v-6474dace"></view>6.如无法按时入馆，须通过微信公众号“纪念馆预约-我的-我的预约”取消预约。每人每天不可取消超过1次，每月不可取消超过4次，超出后当月该证件号将被限制预约。预约上午时段的观众可于当日13:00前取消，预约下午时段的观众可于当日17:30前取消。<view class="data-v-6474dace"></view>7.预约时段未到馆且未取消视为爽约，爽约3次后，该观众将限制预约90天。三个场馆独立计算。</view>
+            </view>
+        </view>
+        <verify-dialog bind:__l="__l" bindafterAnswer="{{D}}" class="r data-v-6474dace" uI="6474dace-5" uR="verify"></verify-dialog>
+        <view class="pageBottom data-v-6474dace">
+            <view bindtap="{{F}}" class="pageBottom_btn data-v-6474dace" wx:if="{{E}}">确认预约</view>
+            <view class="pageBottom_btn disabled data-v-6474dace" wx:else>确认预约</view>
+        </view>
+        <dialog-wrap bind:__l="__l" class="r data-v-6474dace" uI="6474dace-6" uP="{{L}}" uR="dialogWrapRef" uS="{{['d']}}" wx:if="{{L}}">
+            <view class="tip bg-fff flex flex-column flex-center-v data-v-6474dace">
+                <image class="img data-v-6474dace" src="{{G}}"></image>
+                <text class="text data-v-6474dace">{{H}}</text>
+                <view class="tip-bottom flex flex-center-v width-100 data-v-6474dace">
+                    <view bindtap="{{I}}" class="sure item text-center data-v-6474dace">我在想想</view>
+                    <view bindtap="{{J}}" class="cancel item text-center data-v-6474dace">确认预约</view>
+                </view>
+            </view>
+        </dialog-wrap>
+    </block>
+    <desktop-forbidden bind:__l="__l" class="data-v-6474dace" uI="6474dace-7" wx:else></desktop-forbidden>
+</view>

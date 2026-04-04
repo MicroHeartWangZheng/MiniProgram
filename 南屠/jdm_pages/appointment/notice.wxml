@@ -1,0 +1,13 @@
+<page-head bind:__l="__l" class="data-v-eed957e1" uI="eed957e1-0" uP="{{a}}" wx:if="{{a}}"></page-head>
+<view class="agree-page data-v-eed957e1">
+    <view class="label data-v-eed957e1">预约须知</view>
+    <mp-html bind:__l="__l" class="data-v-eed957e1" uI="eed957e1-1" uP="{{b}}" wx:if="{{b}}"></mp-html>
+    <view bindtap="{{d}}" class="login_tips data-v-eed957e1">
+        <uni-icons bind:__l="__l" class="data-v-eed957e1" uI="eed957e1-2" uP="{{c}}" wx:if="{{c}}"></uni-icons>我已阅读并同意《预约须知》</view>
+</view>
+<view class="btn-wrap bg-fff data-v-eed957e1">
+    <button bindtap="{{h}}" class="{{['login_btn','data-v-eed957e1',g&&'disabled']}}">
+        <text class="login-wx-btn data-v-eed957e1" wx:if="{{e}}">继续{{f}}s</text>
+        <text class="login-wx-btn data-v-eed957e1" wx:else>继续</text>
+    </button>
+</view>

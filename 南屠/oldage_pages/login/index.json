@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "授权登录",
+  "onReachBottomDistance": 50,
+  "navigationStyle": "custom",
+  "enablePullDownRefresh": false
+}

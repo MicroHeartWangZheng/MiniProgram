@@ -1,0 +1,10 @@
+<dialog-wrap bind:__l="__l" class="r data-v-07a570e9" uI="07a570e9-0" uP="{{h}}" uR="dialog" uS="{{['d']}}" wx:if="{{h}}">
+    <view class="room-notice bg-fff relative hidden data-v-07a570e9">
+        <view class="title font-18 color-333 font-bold text-center data-v-07a570e9">{{a}}</view>
+        <view class="tip data-v-07a570e9">{{b}}</view>
+        <view class="btn-wrap flex flex-center-v flex-between data-v-07a570e9">
+            <view bindtap="{{d}}" class="btn-l flex flex-center flex-center-v data-v-07a570e9">{{c}}</view>
+            <view bindtap="{{f}}" class="btn-r flex flex-center flex-center-v data-v-07a570e9">{{e}}</view>
+        </view>
+    </view>
+</dialog-wrap>

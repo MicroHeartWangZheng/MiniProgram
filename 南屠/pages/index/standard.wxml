@@ -1,0 +1,30 @@
+<view class="index-wrap border-box data-v-5b4d6f76" style="{{'filter:'+p}}">
+    <page-head bind:__l="__l" class="data-v-5b4d6f76" uI="5b4d6f76-0" uP="{{b}}" uS="{{['d']}}" wx:if="{{b}}">
+        <image class="logo data-v-5b4d6f76" src="{{a}}"></image>
+    </page-head>
+    <block wx:if="{{c}}">
+        <view class="dl data-v-5b4d6f76">
+            <view class="dt data-v-5b4d6f76">
+                <image class="width-100 height-100 data-v-5b4d6f76" src="{{d}}"></image>
+                <view bindtap="{{f}}" class="dt-right data-v-5b4d6f76">
+                    <image class="data-v-5b4d6f76" mode="scaleToFill" src="{{e}}"></image>
+                    <view class="data-v-5b4d6f76">中/En/关怀</view>
+                </view>
+            </view>
+            <view bindtap="{{g}}" class="dd d1 data-v-5b4d6f76">
+                <image class="width-100 height-100 data-v-5b4d6f76" src="https://jdmqn.19371213.com.cn/jdm/miniAppImages/a1.jpg"></image>
+            </view>
+            <view bindtap="{{h}}" class="dd d2 data-v-5b4d6f76">
+                <image class="width-100 height-100 data-v-5b4d6f76" src="https://jdmqn.19371213.com.cn/jdm/miniAppImages/a2.png"></image>
+            </view>
+            <view bindtap="{{i}}" class="dd d3 data-v-5b4d6f76">
+                <image class="width-100 height-100 data-v-5b4d6f76" src="https://jdmqn.19371213.com.cn/jdm/miniAppImages/a3.jpg"></image>
+            </view>
+        </view>
+        <audit-result-notice-dialog bind:__l="__l" class="r data-v-5b4d6f76" uI="5b4d6f76-1" uR="auditResultNoticeDialogRef"></audit-result-notice-dialog>
+        <main-notice-dialog bind:__l="__l" bindclose="{{l}}" class="r data-v-5b4d6f76" uI="5b4d6f76-2" uP="{{m}}" uR="mainNoticeDialogRef" wx:if="{{m}}"></main-notice-dialog>
+        <appoint-notice-dialog bind:__l="__l" class="r data-v-5b4d6f76" uI="5b4d6f76-3" uR="appointNoticeDialogRef"></appoint-notice-dialog>
+        <tabbar bind:__l="__l" class="data-v-5b4d6f76" uI="5b4d6f76-4" uP="{{o}}" wx:if="{{o}}"></tabbar>
+    </block>
+    <desktop-forbidden bind:__l="__l" class="data-v-5b4d6f76" uI="5b4d6f76-5" wx:else></desktop-forbidden>
+</view>

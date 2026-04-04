@@ -1,0 +1,14 @@
+<empty-com bind:__l="__l" class="data-v-d133ac2f" uI="d133ac2f-0" uS="{{['d']}}">
+    <view class="tab-wrap flex flex-center-v bg-fff data-v-d133ac2f" style="{{'filter:'+m}}">
+        <view bindtap="{{f}}" class="{{['item','flex','flex-column','flex-center-v','data-v-d133ac2f',e&&'ac']}}">
+            <image class="icon data-v-d133ac2f" src="{{b}}" wx:if="{{a}}"></image>
+            <image class="icon data-v-d133ac2f" src="{{c}}" wx:else></image>
+            <text class="data-v-d133ac2f">{{d}}</text>
+        </view>
+        <view bindtap="{{l}}" class="{{['item','flex','flex-column','flex-center-v','data-v-d133ac2f',k&&'ac']}}">
+            <image class="icon data-v-d133ac2f" src="{{h}}" wx:if="{{g}}"></image>
+            <image class="icon data-v-d133ac2f" src="{{i}}" wx:else></image>
+            <text class="data-v-d133ac2f">{{j}}</text>
+        </view>
+    </view>
+</empty-com>

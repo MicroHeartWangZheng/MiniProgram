@@ -1,0 +1,6 @@
+<view class="tabsBox data-v-f64eaa46">
+    <view class="tabList data-v-f64eaa46">
+        <view bindtap="{{e.f}}" class="{{['tabItem','data-v-f64eaa46',e.e]}}" style="{{b}}" wx:for="{{a}}" wx:for-item="e" wx:key="d">{{e.a}}<image class="arrows data-v-f64eaa46" src="{{e.c}}" wx:if="{{e.b}}"></image>
+        </view>
+    </view>
+</view>

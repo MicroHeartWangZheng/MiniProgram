@@ -1,0 +1,17 @@
+<view class="{{['capsule-wrap','data-v-f9ae89e7',k&&'sticky']}}" style="{{'height:'+l}}">
+    <view class="capsule width-100 relative data-v-f9ae89e7" style="{{'padding-top:'+i+';'+'height:'+j}}" wx:if="{{a}}">
+        <slot wx:if="{{$slots.d}}"></slot>
+        <view class="custom-title relative data-v-f9ae89e7" wx:else>
+            <view class="btn-groups isDarkColor data-v-f9ae89e7" style="{{'width:'+f+';'+'height:'+g}}">
+                <view bindtap="{{c}}" class="btn-item data-v-f9ae89e7">
+                    <image class="data-v-f9ae89e7" mode="widthFix" src="{{b}}"></image>
+                </view>
+                <view class="split-line data-v-f9ae89e7"></view>
+                <view bindtap="{{e}}" class="btn-item data-v-f9ae89e7">
+                    <image class="data-v-f9ae89e7" mode="widthFix" src="{{d}}"></image>
+                </view>
+            </view>
+            <view class="title text-center data-v-f9ae89e7">{{h}}</view>
+        </view>
+    </view>
+</view>

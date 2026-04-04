@@ -1,0 +1,6 @@
+<view class="data-v-8d0132a2">
+    <page-head bind:__l="__l" class="data-v-8d0132a2" uI="8d0132a2-0" uP="{{a}}" wx:if="{{a}}"></page-head>
+    <view class="agree-page data-v-8d0132a2">
+        <mp-html bind:__l="__l" class="data-v-8d0132a2" uI="8d0132a2-1" uP="{{b}}" wx:if="{{b}}"></mp-html>
+    </view>
+</view>

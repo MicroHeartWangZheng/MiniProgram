@@ -1,0 +1,16 @@
+<view class="verifyPoint-wrap data-v-7fa83aa9">
+    <view class="in relative data-v-7fa83aa9">
+        <image class="bg width-100 height-100 data-v-7fa83aa9" src="{{a}}"></image>
+        <view class="grid width-100 height-100 flex flex-wrap flex-between flex-between-v data-v-7fa83aa9">
+            <view class="msg width-100 fail text-center font-12 data-v-7fa83aa9" wx:if="{{b}}">验证失败，请重新尝试</view>
+            <view class="msg width-100 text-center font-12 data-v-7fa83aa9" wx:if="{{c}}">验证成功</view>
+            <view bindtap="{{item.d}}" class="item relative flex flex-center flex-center-v data-v-7fa83aa9" wx:for="{{d}}" wx:key="e">
+                <text class="data-v-7fa83aa9">{{item.a}}</text>
+                <text class="num text-center font-12 data-v-7fa83aa9" wx:if="{{item.b}}">{{item.c}}</text>
+            </view>
+        </view>
+    </view>
+    <view class="tip data-v-7fa83aa9">请在上图依次点击：<text class="answer data-v-7fa83aa9">{{e}}</text>
+    </view>
+    <view bindtap="{{h}}" class="{{['sure-btn','font-14','text-center','data-v-7fa83aa9',g&&'disabled']}}">{{f}}</view>
+</view>

@@ -1,0 +1,4 @@
+<view class="flex fixed data-v-84557915">
+    <view bindtap="{{b}}" class="btn-item b-r-1 data-v-84557915" wx:if="{{a}}">查看详情</view>
+    <view bindtap="{{d}}" class="btn-item data-v-84557915" wx:if="{{c}}">补充材料</view>
+</view>

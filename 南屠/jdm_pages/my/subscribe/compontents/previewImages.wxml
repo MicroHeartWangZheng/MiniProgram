@@ -1,0 +1,3 @@
+<view class="data-v-e77de8e3">
+    <image bindtap="{{item.b}}" class="img-wrap data-v-e77de8e3" mode="aspectFill" src="{{item.a}}" wx:for="{{a}}"></image>
+</view>

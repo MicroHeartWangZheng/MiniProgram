@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "常用联系人",
+  "onReachBottomDistance": 50,
+  "navigationStyle": "custom",
+  "enablePullDownRefresh": true
+}

@@ -1,0 +1,83 @@
+<view class="data-v-969d6dcc">
+    <view class="personnelBox data-v-969d6dcc">
+        <view class="personnelBox_title data-v-969d6dcc">
+            <image class="personnelBox_title_img data-v-969d6dcc" src="{{a}}"></image>优待观众<view class="maxNumBox data-v-969d6dcc">（最多可选1名）</view>
+        </view>
+        <personnel-select bind:__l="__l" bindupdate="{{b}}" bindupdateValue="{{d}}" class="data-v-969d6dcc" key="{{c}}" uI="969d6dcc-0" uP="{{e}}" wx:if="{{e}}"></personnel-select>
+        <view class="data-v-969d6dcc" wx:if="{{f}}">
+            <view class="personnelBox_title data-v-969d6dcc">
+                <image class="personnelBox_title_img data-v-969d6dcc" src="{{g}}"></image>携带陪同<view class="maxNumBox data-v-969d6dcc">（最多1人）</view>
+            </view>
+            <personnel-select bind:__l="__l" bindupdateValue="{{i}}" class="data-v-969d6dcc" key="{{h}}" uI="969d6dcc-1" uP="{{j}}" wx:if="{{j}}"></personnel-select>
+            <view class="personnelBox_title data-v-969d6dcc" wx:if="{{k}}">
+                <image class="personnelBox_title_img data-v-969d6dcc" src="{{l}}"></image>携带未成年人<view class="maxNumBox data-v-969d6dcc">（最多3人）</view>
+            </view>
+            <personnel-select bind:__l="__l" bindupdateValue="{{o}}" class="data-v-969d6dcc" key="{{n}}" uI="969d6dcc-2" uP="{{p}}" wx:if="{{m}}"></personnel-select>
+        </view>
+        <view class="data-v-969d6dcc" wx:if="{{q}}">
+            <view class="personnelBox_title data-v-969d6dcc">
+                <image class="personnelBox_title_img data-v-969d6dcc" src="{{r}}"></image>携带直系亲属<view class="maxNumBox data-v-969d6dcc">（最多2人）</view>
+            </view>
+            <personnel-select bind:__l="__l" bindupdateDict="{{t}}" bindupdateValue="{{v}}" class="data-v-969d6dcc" key="{{s}}" uI="969d6dcc-3" uP="{{w}}" wx:if="{{w}}"></personnel-select>
+        </view>
+        <view class="data-v-969d6dcc" wx:if="{{x}}">
+            <view class="personnelBox_title data-v-969d6dcc">
+                <image class="personnelBox_title_img data-v-969d6dcc" src="{{y}}"></image>携带陪同<view class="maxNumBox data-v-969d6dcc">（最多1人）</view>
+            </view>
+            <personnel-select bind:__l="__l" bindupdateValue="{{A}}" class="data-v-969d6dcc" key="{{z}}" uI="969d6dcc-4" uP="{{B}}" wx:if="{{B}}"></personnel-select>
+        </view>
+    </view>
+    <view class="explainBox data-v-969d6dcc">
+        <view class="explainBox_title data-v-969d6dcc">优待政策</view>
+        <view class="explainBox_header data-v-969d6dcc">
+            <view class="headerItem data-v-969d6dcc" style="width:165rpx">优待人员</view>
+            <view class="headerItem data-v-969d6dcc" style="width:0;flex:1">陪同人员</view>
+            <view class="headerItem data-v-969d6dcc" style="width:220rpx" wx:if="{{C}}">未成年人</view>
+        </view>
+        <view class="explainBox_content data-v-969d6dcc">
+            <view class="partition1 data-v-969d6dcc"></view>
+            <view class="partition2 data-v-969d6dcc" wx:if="{{D}}"></view>
+            <view class="explainBox_row data-v-969d6dcc">
+                <view class="rowItem titleItem data-v-969d6dcc" style="width:165rpx">现役军人<view class="data-v-969d6dcc" style="color:#a87e6c">(现场登记)</view>
+                </view>
+                <view class="rowItem data-v-969d6dcc" style="width:0;flex:1">14周岁（含）以上成年人：0-1名</view>
+                <view class="rowItem data-v-969d6dcc" style="width:220rpx" wx:if="{{E}}">{{F}}</view>
+            </view>
+            <view class="explainBox_row grayBG data-v-969d6dcc">
+                <view class="rowItem titleItem data-v-969d6dcc" style="width:165rpx">老年人</view>
+                <view class="rowItem data-v-969d6dcc" style="width:0;flex:1">18周岁（含）以上成年人：0-1名</view>
+                <view class="rowItem data-v-969d6dcc" style="width:220rpx" wx:if="{{G}}">——</view>
+            </view>
+            <view class="explainBox_row data-v-969d6dcc">
+                <view class="rowItem titleItem data-v-969d6dcc" style="width:165rpx">残疾人</view>
+                <view class="rowItem data-v-969d6dcc" style="width:0;flex:1">“盲人、重度残疾人”可携带18周岁（含）以上成年人：0-1名</view>
+                <view class="rowItem data-v-969d6dcc" style="width:220rpx" wx:if="{{H}}">——</view>
+            </view>
+            <view class="explainBox_row grayBG data-v-969d6dcc">
+                <view class="rowItem titleItem data-v-969d6dcc" style="width:165rpx">退役军人</view>
+                <view class="rowItem data-v-969d6dcc" style="width:0;flex:1">14周岁（含）以上成年人：0-1名</view>
+                <view class="rowItem data-v-969d6dcc" style="width:220rpx" wx:if="{{I}}">{{J}}</view>
+            </view>
+            <view class="explainBox_row data-v-969d6dcc">
+                <view class="rowItem titleItem data-v-969d6dcc" style="width:165rpx">烈士遗属、因公牺牲军人遗属、病故军人遗属</view>
+                <view class="rowItem data-v-969d6dcc" style="width:0;flex:1">14周岁（含）以上成年人：0-1名</view>
+                <view class="rowItem data-v-969d6dcc" style="width:220rpx" wx:if="{{K}}">{{L}}</view>
+            </view>
+            <view class="explainBox_row grayBG data-v-969d6dcc">
+                <view class="rowItem titleItem data-v-969d6dcc" style="width:165rpx">消防救援人员</view>
+                <view class="rowItem data-v-969d6dcc" style="width:0;flex:1">14周岁（含）以上成年人：0-1名</view>
+                <view class="rowItem data-v-969d6dcc" style="width:220rpx" wx:if="{{M}}">{{N}}</view>
+            </view>
+            <view class="explainBox_row data-v-969d6dcc">
+                <view class="rowItem titleItem data-v-969d6dcc" style="width:165rpx">献血荣誉证持有者</view>
+                <view class="rowItem data-v-969d6dcc" style="width:0;flex:1">14周岁（含）以上成年人：0-1名</view>
+                <view class="rowItem data-v-969d6dcc" style="width:220rpx" wx:if="{{O}}">{{P}}</view>
+            </view>
+            <view class="explainBox_row grayBG data-v-969d6dcc" style="{{S}}">
+                <view class="rowItem titleItem data-v-969d6dcc" style="width:165rpx">医务人员</view>
+                <view class="rowItem data-v-969d6dcc" style="width:0;flex:1;position:relative;z-index:10" wx:if="{{Q}}">直系亲属：0-2名</view>
+                <view class="rowItem data-v-969d6dcc" style="width:0;flex:1" wx:if="{{R}}">14周岁（含）以上成年人直系亲属：0-2名</view>
+            </view>
+        </view>
+    </view>
+</view>

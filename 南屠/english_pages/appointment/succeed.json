@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "预约完成",
+  "onReachBottomDistance": 50,
+  "navigationStyle": "custom",
+  "enablePullDownRefresh": false
+}

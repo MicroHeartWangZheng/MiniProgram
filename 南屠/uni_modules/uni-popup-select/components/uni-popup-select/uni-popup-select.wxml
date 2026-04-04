@@ -1,0 +1,13 @@
+<uni-popup bind:__l="__l" bindchange="{{g}}" class="r" uI="091884c6-0" uP="{{h}}" uR="popup" uS="{{['d']}}" wx:if="{{h}}">
+    <view class="uni-popup-select">
+        <view class="sub-title" wx:if="{{a}}">{{b}}</view>
+        <view class="ul">
+            <view bindtap="{{item.f}}" class="{{['li','flex','flex-between','flex-center-v',item.d&&'ac']}}" wx:for="{{c}}" wx:key="e">
+                <view class="flex-1">{{item.a}}</view>
+                <uni-icons bind:__l="__l" class="icon" uI="{{item.b}}" uP="{{item.c}}" wx:if="{{item.c}}"></uni-icons>
+            </view>
+        </view>
+        <view bindtap="{{e}}" class="cancel text-center">{{d}}</view>
+        <view class="bt-safe"></view>
+    </view>
+</uni-popup>

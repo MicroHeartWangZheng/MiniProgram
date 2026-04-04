@@ -1,0 +1,3 @@
+<view bindtouchcancel="{{c}}" bindtouchend="{{b}}" bindtouchstart="{{a}}" class="{{['data-v-19fe557a',d&&'scale']}}" style="{{'transform-origin:'+e}}">
+    <slot></slot>
+</view>

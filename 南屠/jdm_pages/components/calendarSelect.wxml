@@ -1,0 +1,53 @@
+<view class="calendar-wrap bg-fff data-v-3ba89595">
+    <view class="personnelBox_title flex flex-between flex-center-v data-v-3ba89595">
+        <view class="flex flex-center-v data-v-3ba89595">
+            <image class="personnelBox_title_img data-v-3ba89595" src="{{a}}"></image>参观日期</view>
+        <view class="font-14 data-v-3ba89595">{{b}}</view>
+    </view>
+    <view class="calendar data-v-3ba89595">
+        <view class="weeks flex flex-between flex-center-v text-center font-14 data-v-3ba89595">
+            <view class="week-item data-v-3ba89595">日</view>
+            <view class="week-item data-v-3ba89595">一</view>
+            <view class="week-item data-v-3ba89595">二</view>
+            <view class="week-item data-v-3ba89595">三</view>
+            <view class="week-item data-v-3ba89595">四</view>
+            <view class="week-item data-v-3ba89595">五</view>
+            <view class="week-item data-v-3ba89595">六</view>
+        </view>
+        <view class="ul flex flex-wrap flex-between data-v-3ba89595">
+            <view bindtap="{{item.i}}" class="{{['li','text-center','data-v-3ba89595',item.g&&'gray',item.h&&'ac']}}" wx:for="{{c}}" wx:key="j">
+                <view class="day font-bold data-v-3ba89595">{{item.a}}</view>
+                <block wx:if="{{item.b}}">
+                    <view class="tip allow data-v-3ba89595" wx:if="{{item.c}}">{{item.d}}</view>
+                    <view class="{{['tip','gray','data-v-3ba89595',item.f&&'light-gray']}}" wx:else>{{item.e}}</view>
+                </block>
+                <view class="tip data-v-3ba89595" wx:else>-</view>
+            </view>
+        </view>
+        <view class="{{['ticket-released-wrap','data-v-3ba89595',i&&'h-60']}}">
+            <view class="ticket-released-wrap-inner data-v-3ba89595">
+                <view class="flex data-v-3ba89595" wx:if="{{d}}">
+                    <image class="tip-icon data-v-3ba89595" src="{{e}}"></image>
+                    <view class="tip-content data-v-3ba89595">“待放票”表示预约当日放票名额已约满<text class="data-v-3ba89595" wx:if="{{f}}">，{{g}}继续放票</text>。“已约满”表示参观当日所有名额均已约满。</view>
+                </view>
+                <view class="flex data-v-3ba89595">
+                    <image class="tip-icon data-v-3ba89595" src="{{h}}"></image>
+                    <view class="tip-content data-v-3ba89595">22:00-次日8:00为系统维护时间，暂不可约。</view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <block wx:if="{{j}}">
+        <view class="personnelBox_title data-v-3ba89595">
+            <image class="personnelBox_title_img data-v-3ba89595" src="{{k}}"></image>选择时段</view>
+        <view class="sharing-time flex flex-between flex-wrap data-v-3ba89595">
+            <view bindtap="{{item.i}}" class="{{['sharing-item','text-center','data-v-3ba89595',item.g&&'ac',item.h&&'disabled']}}" wx:for="{{l}}" wx:key="j">
+                <view class="time font-14 data-v-3ba89595" style="font-weight:bold">{{item.a}}-{{item.b}}</view>
+                <view class="status font-12 allow relative data-v-3ba89595" wx:if="{{item.c}}">•可预约</view>
+                <view class="status font-12 relative data-v-3ba89595" wx:elif="{{item.d}}">•闭馆</view>
+                <view class="status font-12 relative data-v-3ba89595" wx:elif="{{item.e}}">•不可预约</view>
+                <view class="status font-12 relative data-v-3ba89595" wx:elif="{{item.f}}">•已约满</view>
+            </view>
+        </view>
+    </block>
+</view>

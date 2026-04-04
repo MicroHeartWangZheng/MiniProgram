@@ -1,0 +1,16 @@
+<dialog-wrap bind:__l="__l" class="r data-v-047f5552" uI="047f5552-0" uP="{{m}}" uR="dialogWrap" uS="{{['d']}}" wx:if="{{m}}">
+    <view class="main-notice-dialog data-v-047f5552">
+        <view class="notice-wrap bg-fff relative data-v-047f5552">
+            <view class="title text-center data-v-047f5552">{{a}}</view>
+            <view class="content data-v-047f5552">
+                <mp-html bind:__l="__l" class="data-v-047f5552" uI="047f5552-1,047f5552-0" uP="{{b}}" wx:if="{{b}}"></mp-html>
+            </view>
+            <view bindtap="{{e}}" class="hintBox data-v-047f5552">
+                <uni-icons bind:__l="__l" class="data-v-047f5552" uI="047f5552-2,047f5552-0" uP="{{c}}" wx:if="{{c}}"></uni-icons>{{d}}</view>
+            <view bindtap="{{k}}" class="{{['close','data-v-047f5552',j&&'disabled']}}">
+                <text class="login-wx-btn data-v-047f5552" wx:if="{{f}}">{{g}}{{h}}</text>
+                <text class="login-wx-btn data-v-047f5552" wx:else>{{i}}</text>
+            </view>
+        </view>
+    </view>
+</dialog-wrap>

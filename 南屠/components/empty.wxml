@@ -1,0 +1,19 @@
+<view class="empty data-v-bc01826a" style="{{j}}">
+    <view class="empty-imgView data-v-bc01826a">
+        <image class="empty-img data-v-bc01826a" src="https://jdmqn.19371213.com.cn/jdm/miniAppImages/no-data.png"></image>
+    </view>
+    <view class="{{['empty-tips','data-v-bc01826a',b&&'empty-tips-bold']}}">
+        <view class="data-v-bc01826a">{{a}}</view>
+    </view>
+    <view class="empty-btn data-v-bc01826a" wx:if="{{c}}">
+        <view class="empty-actionButtons data-v-bc01826a" wx:for="{{d}}" wx:key="g">
+            <button class="{{['data-v-bc01826a',item.c]}}" openType="share" wx:if="{{item.a}}">{{item.b}}</button>
+            <button bindtap="{{item.f}}" class="{{['data-v-bc01826a',item.e]}}" wx:else>{{item.d}}</button>
+        </view>
+    </view>
+    <view class="custom-btn data-v-bc01826a" wx:if="{{e}}">
+        <button bindtap="{{g}}" class="drafts data-v-bc01826a">{{f}}</button>
+        <button bindtap="{{i}}" class="add data-v-bc01826a">{{h}}</button>
+    </view>
+    <slot name="btn"></slot>
+</view>

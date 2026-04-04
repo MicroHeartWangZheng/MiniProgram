@@ -1,0 +1,7 @@
+<view bindmouseenter="{{q}}" bindtap="{{p}}" class="{{['uni-calendar-item__weeks-box',j&&'is-custom-select',k&&'is-can-select',l&&'uni-calendar-item--disable',m&&'uni-calendar-item--before-checked-x',n&&'uni-calendar-item--multiple',o&&'uni-calendar-item--after-checked-x']}}">
+    <view class="{{['uni-calendar-item__weeks-box-item',c&&'uni-calendar-item--checked',d&&'uni-calendar-item--checked-range-text',e&&'uni-calendar-item--before-checked',f&&'uni-calendar-item--multiple',g&&'uni-calendar-item--after-checked',h&&'uni-calendar-item--disable']}}">
+        <text class="uni-calendar-item__weeks-box-circle" wx:if="{{a}}"></text>
+        <text class="uni-calendar-item__weeks-box-text uni-calendar-item__weeks-box-text-disable uni-calendar-item--checked-text">{{b}}</text>
+    </view>
+    <view class="{{[i&&'uni-calendar-item--today']}}"></view>
+</view>

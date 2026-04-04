@@ -1,0 +1,17 @@
+<view class="templateimg border-box data-v-997a1395">
+    <view class="templateimg_title data-v-997a1395">献血荣誉证书示例</view>
+    <view class="templateimg_main data-v-997a1395">
+        <view class="templateimg_main_one data-v-997a1395" wx:for="{{a}}" wx:key="d">
+            <view class="templateimg_main_one_img data-v-997a1395">
+                <image class="data-v-997a1395" mode="aspectFit" src="{{item.a}}"></image>
+                <image class="data-v-997a1395" mode="aspectFit" src="{{item.b}}"></image>
+            </view>
+            <view class="templateimg_main_one_name data-v-997a1395">{{item.c}}</view>
+        </view>
+        <view class="{{['templateimg_main_s','data-v-997a1395',b&&'width-full']}}">
+            <view class="templateimg_main_s_a data-v-997a1395">说明：</view>
+            <view class="templateimg_main_s_b data-v-997a1395">以上仅为照片示例，请务必以政府部门正式下发的真实证件为准，上传证件照片时，请上传带有信息的<text class="data-v-997a1395" style="color:#a87e6c">证书内页</text>
+            </view>
+        </view>
+    </view>
+</view>

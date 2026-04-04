@@ -1,0 +1,67 @@
+<dialog-wrap bind:__l="__l" class="r data-v-f4bec012" uI="f4bec012-0" uP="{{e}}" uR="dialog" uS="{{['d']}}" wx:if="{{e}}">
+    <view class="fee-detail relative data-v-f4bec012">
+        <view class="title-box bg-fff flex flex-center-v flex-center data-v-f4bec012">
+            <view bindtap="{{a}}" class="close data-v-f4bec012">+</view>
+            <view class="title_text font-18 font-000 font-bold text-center data-v-f4bec012">观众绑定及参观说明</view>
+        </view>
+        <view class="container bg-fff border-box data-v-f4bec012">
+            <view class="content data-v-f4bec012">1.1位用户最多可绑定10个观众信息，每个观众信息仅可同时绑定在1位用户下，<view class="data-v-f4bec012"></view>2.删除观众信息后，该观众72小时内不可预约。<view class="data-v-f4bec012"></view>3.1位用户当月可累积修改观众信息3次(包含优待证件类别、号码和图片)。<view class="data-v-f4bec012"></view>4.优待政策详见下表:<view class="data-v-f4bec012"></view>
+                <view class="explainBox data-v-f4bec012">
+                    <view class="explainBox_title data-v-f4bec012">优待政策</view>
+                    <view class="explainBox_header data-v-f4bec012">
+                        <view class="headerItem data-v-f4bec012" style="width:165rpx">优待人员</view>
+                        <view class="headerItem data-v-f4bec012" style="width:0;flex:1">陪同人员</view>
+                        <view class="headerItem data-v-f4bec012" style="width:220rpx">未成年人</view>
+                    </view>
+                    <view class="explainBox_content data-v-f4bec012">
+                        <view class="partition1 data-v-f4bec012"></view>
+                        <view class="partition2 data-v-f4bec012"></view>
+                        <view class="explainBox_row data-v-f4bec012">
+                            <view class="rowItem titleItem data-v-f4bec012" style="width:165rpx">现役军人<view class="data-v-f4bec012" style="color:#a87e6c">(现场登记)</view>
+                            </view>
+                            <view class="rowItem data-v-f4bec012" style="width:0;flex:1">14周岁（含）以上成年人：0-1名</view>
+                            <view class="rowItem data-v-f4bec012" style="width:220rpx">14周岁（不含）以下未成年人：0-3名</view>
+                        </view>
+                        <view class="explainBox_row grayBG data-v-f4bec012">
+                            <view class="rowItem titleItem data-v-f4bec012" style="width:165rpx">老年人</view>
+                            <view class="rowItem data-v-f4bec012" style="width:0;flex:1">18周岁（含）以上成年人：0-1名</view>
+                            <view class="rowItem data-v-f4bec012" style="width:220rpx">——</view>
+                        </view>
+                        <view class="explainBox_row data-v-f4bec012">
+                            <view class="rowItem titleItem data-v-f4bec012" style="width:165rpx">残疾人</view>
+                            <view class="rowItem data-v-f4bec012" style="width:0;flex:1">“盲人、重度残疾人”可携带18周岁（含）以上成年人：0-1名</view>
+                            <view class="rowItem data-v-f4bec012" style="width:220rpx">——</view>
+                        </view>
+                        <view class="explainBox_row grayBG data-v-f4bec012">
+                            <view class="rowItem titleItem data-v-f4bec012" style="width:165rpx">退役军人</view>
+                            <view class="rowItem data-v-f4bec012" style="width:0;flex:1">14周岁（含）以上成年人：0-1名</view>
+                            <view class="rowItem data-v-f4bec012" style="width:220rpx">14周岁（不含）以下未成年人：0-3名</view>
+                        </view>
+                        <view class="explainBox_row data-v-f4bec012">
+                            <view class="rowItem titleItem data-v-f4bec012" style="width:165rpx">烈士遗属、因公牺牲军人遗属、病故军人遗属</view>
+                            <view class="rowItem data-v-f4bec012" style="width:0;flex:1">14周岁（含）以上成年人：0-1名</view>
+                            <view class="rowItem data-v-f4bec012" style="width:220rpx">14周岁（不含）以下未成年人：0-3名</view>
+                        </view>
+                        <view class="explainBox_row grayBG data-v-f4bec012">
+                            <view class="rowItem titleItem data-v-f4bec012" style="width:165rpx">消防救援人员</view>
+                            <view class="rowItem data-v-f4bec012" style="width:0;flex:1">14周岁（含）以上成年人：0-1名</view>
+                            <view class="rowItem data-v-f4bec012" style="width:220rpx">14周岁（不含）以下未成年人：0-3名</view>
+                        </view>
+                        <view class="explainBox_row data-v-f4bec012">
+                            <view class="rowItem titleItem data-v-f4bec012" style="width:165rpx">献血荣誉证持有者</view>
+                            <view class="rowItem data-v-f4bec012" style="width:0;flex:1">14周岁（含）以上成年人：0-1名</view>
+                            <view class="rowItem data-v-f4bec012" style="width:220rpx">14周岁（不含）以下未成年人：0-3名</view>
+                        </view>
+                        <view class="explainBox_row grayBG data-v-f4bec012" style="position:relative">
+                            <view class="rowItem titleItem data-v-f4bec012" style="width:165rpx">医务人员</view>
+                            <view class="rowItem data-v-f4bec012" style="width:0;flex:1;position:relative;z-index:10">直系亲属：0-2名</view>
+                        </view>
+                    </view>
+                </view>
+                <view class="content data-v-f4bec012">重要提示：南京利济巷慰安所旧址陈列馆暂未对14周岁（不含）以下未成年人开放参观</view>
+            </view>
+            <view bindtap="{{c}}" class="btn text-center data-v-f4bec012" wx:if="{{b}}">我已知晓</view>
+            <view class="bt-safe data-v-f4bec012"></view>
+        </view>
+    </view>
+</dialog-wrap>
