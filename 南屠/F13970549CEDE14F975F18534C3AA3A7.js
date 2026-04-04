@@ -65,8 +65,12 @@ e.index.addInterceptor("request", {
     else if (t && 200 == t.statusCode) {
       if (!t.data || 2007 != t.data.code) {
         if (0 === t.data.type) {
+          
+          console.log("返回的数据：",t.data.data);
           var i = n.utils.decryptSm4(t.data.data);
           i = decodeURIComponent(i);
+
+          console.log("解密后的数据：",i);
           try {
             i = JSON.parse(i)
           } catch (e) {}
