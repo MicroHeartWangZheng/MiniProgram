@@ -1,0 +1,9 @@
+<view class="loading-container" wx:if="{{loadingShow}}">
+    <view catchtouchmove="true" class="loading-mask {{maskShow?'mask-show':'mask-hidden'}}"></view>
+    <view class="loading-box">
+        <view class="weui-loading"></view>
+        <view class="loading-text">
+            <text class="title">{{loadingText}}</text>
+        </view>
+    </view>
+</view>

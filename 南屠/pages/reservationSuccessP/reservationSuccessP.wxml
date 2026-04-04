@@ -1,0 +1,60 @@
+<view class="container flexview">
+    <scroll-view scrollY class="tic-box flex-auto">
+        <view class="ressuc-box" wx:if="{{ticketType=='normal'}}">
+            <view class="rsuc-box flex">
+                <text class="leui-icon leui-icon-actsuc04"></text>
+                <view class="rsuc-textbox">
+                    <text class="rsuc-text rsuc-text1">预约成功</text>
+                    <text class="rsuc-text rsuc-text2" wx:if="{{rankNum>0}}">您是第{{rankNum}}位预约{{time}}参观南京博物院的观众</text>
+                    <text class="rsuc-text rsuc-text2">预约时间为{{time}}{{period.name}}，请于当天{{period.slastTime}}前进馆</text>
+                </view>
+            </view>
+            <view class="tip-box">
+                <view class="tip-title">预约成功后如何进入南博？</view>
+                <view class="tip-content">
+                    <view class="info-item">
+                        <text class="info-text1">
+                            <text class="mcircle"></text>第一步：请于参观当日携带本人预约证件原件，在预约时间段内到达服务中心安检口；持港澳居民来往内地通行证、台湾居民来往大陆通行证及外国人永久居留身份证或外籍护照的观众，凭本人有效证件原件和预约成功凭证在正门东侧绿色通道服务窗口办理相关手续后入馆。</text>
+                        <image class="info-img" mode="widthFix" src="/lib/images/info-img1.jpg"></image>
+                    </view>
+                    <view class="info-item">
+                        <text class="info-text1">
+                            <text class="mcircle"></text>第二步：按现场指引，请在对应通道刷证，并通过人脸比对系统核验入馆；每张证件当日仅可进出馆1次。</text>
+                        <image class="info-gif" mode="widthFix" src="/lib/images/snotice1.gif"></image>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="fml-box" wx:else>
+            <view class="rsuc-box flex">
+                <text class="leui-icon leui-icon-actsuc04"></text>
+                <view class="rsuc-textbox">
+                    <text class="rsuc-text rsuc-text1">预约成功</text>
+                    <text class="rsuc-text rsuc-text2" wx:if="{{rankNum>0}}">您是第{{rankNum}}位预约{{time}}参观南京博物院的观众</text>
+                    <text class="rsuc-text rsuc-text2">预约时间为{{time}}{{period.name}}，请于当天{{period.slastTime}}前进馆</text>
+                </view>
+            </view>
+            <view class="tip-box">
+                <view class="tip-title">预约成功后如何进入南博？</view>
+                <view class="tip-content">
+                    <view class="info-item">
+                        <text class="info-text1">
+                            <text class="mcircle"></text>第一步：请于参观当日携带本人预约证件原件，在预约时间段内到达服务中心安检口；持港澳居民来往内地通行证、台湾居民来往大陆通行证及外国人永久居留身份证或外籍护照的观众，凭本人有效证件原件和预约成功凭证在正门东侧绿色通道服务窗口办理相关手续后入馆。</text>
+                        <image class="info-img" mode="widthFix" src="/lib/images/info-img1.jpg"></image>
+                    </view>
+                    <view class="info-item">
+                        <text class="info-text1">
+                            <text class="mcircle"></text>第二步：按现场指引，请在对应通道刷证，并通过人脸比对系统核验入馆；每张证件当日仅可进出馆1次。</text>
+                        <text class="info-text2">请按照绑定的组合刷成人证件过闸机，只需刷一次证件（预约亲子票的未成年人须与成年人同步核验入馆）。</text>
+                        <image class="info-gif" mode="widthFix" src="/lib/images/snotice2.gif"></image>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </scroll-view>
+    <view class="bot-box {{isIphoneX?'padbotX':''}}">
+        <view class="bot-btn flex s-center">
+            <button bindtap="goTicket" class="btn outline-btn">查看我的预约</button>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,1 @@
+module.exports={BIZ_FLAGS_UAID:1,BIZ_FLAGS_GW_NUMBER:2,BIZ_FLAGS_UAID_GW_NUMBER:3,Statis_Name_Uaid:"tdiduaid_",Statis_Interface_Init:"init",Statis_Interface_Token:"token"};

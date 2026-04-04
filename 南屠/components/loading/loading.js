@@ -1,0 +1,1 @@
+Component({properties:{mask:{type:Boolean,value:!0},show:{type:Boolean,value:!0},title:{type:String,value:""}},data:{maskShow:!1,loadingShow:!1,loadingText:"加载中..."},methods:{show:function(){this.setData({maskShow:!0,loadingShow:!0,loadingText:"正在加载"})},hide:function(){this.setData({loadingShow:!1})}}});

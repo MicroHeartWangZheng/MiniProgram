@@ -1,0 +1,1 @@
+Page({data:{},onLoad:function(n){this.setData({})},onReady:function(){},onShow:function(){},backTap:function(){wx.navigateBack({delta:-1})},onHide:function(){},onUnload:function(){},onReachBottom:function(){}});

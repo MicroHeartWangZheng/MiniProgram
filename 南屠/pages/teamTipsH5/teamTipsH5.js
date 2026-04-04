@@ -1,0 +1,1 @@
+Page({data:{url:getApp().globalData.codeUrl},onLoad:function(n){this.setData({timestamp:(new Date).getTime()})},onReady:function(){},onShow:function(){},onHide:function(){},onUnload:function(){},onPullDownRefresh:function(){},onReachBottom:function(){},onShareAppMessage:function(){}});

@@ -1,0 +1,1 @@
+var r=new Uint32Array(function(){for(var r,n=[],t=0;t<256;t++){r=t;for(var o=0;o<8;o++)r=1&r?3988292384^r>>>1:r>>>1;n[t]=r}return n}());module.exports=function(n,t,o,a){var e=r,u=a+o;n^=-1;for(var f=a;f<u;f++)n=n>>>8^e[255&(n^t[f])];return-1^n};

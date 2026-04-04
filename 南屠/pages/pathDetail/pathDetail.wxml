@@ -1,0 +1,26 @@
+<view class="container bgfff" wx:if="{{id==0}}">
+    <view class="view-bd">
+        <view class="prompt-textbox">
+            <view class="prompt-text">① 预约成功后，凭本人二代身份证、港澳台居民居住证、江苏省第三代社保卡原件刷证入馆；</view>
+            <view class="prompt-text">② 持港澳居民来往内地通行证、台湾居民来往大陆通行证及外国人永久居留身份证或外籍护照的人士，通过官方微信小程序提前预约后，参观当日凭本人有效证件原件和预约成功凭证在正门东侧绿色通道服务窗口办理相关手续后入馆；</view>
+            <view class="prompt-text">③ 预约亲子票的观众（14周岁及以下未成年人），须与预约人同步核验入馆。</view>
+            <view class="prompt-bot">
+                <image class="prompt-img" mode="widthFix" src="/lib/images/snotice2.gif"></image>
+            </view>
+        </view>
+    </view>
+</view>
+<view class="containera" wx:if="{{id==1}}">
+    <view class="view-bd">
+        <view class="prompt-textbox">
+            <view class="prompt-text">① 14周岁及以下未成年人不得单独预约，须由成年人代为预约亲子票并同步核验入馆；</view>
+            <view class="prompt-text">② 每个账号每个参观日最多可预约5人（其中一个订单中14周岁及以下未成年人不得超过三人）；</view>
+            <view class="prompt-text">③ 亲子票仅支持使用身份证、港澳台居民居住证预约。持其他证件者直接预约普通票；</view>
+            <view class="prompt-text mbot-none">④ 每个证件号每日只能预约一次。使用虚拟手机号码完成注册的相关账号将被及时清理，同时取消相关预约。</view>
+        </view>
+        <view class="view-botbtn">
+            <button bindtap="ticket" class="mr-btn" data-type="family" hoverClass="none">继续预约亲子票</button>
+            <button bindtap="ticket" class="mr-btn mr-linebtn mtop" data-type="normal" hoverClass="none">预约普通票</button>
+        </view>
+    </view>
+</view>

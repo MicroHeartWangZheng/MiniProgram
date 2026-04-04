@@ -1,0 +1,10 @@
+<movable-area class="movable-area">
+    <movable-view animation="{{false}}" class="fixed-back" direction="all" x="{{btnLeft}}" y="{{btnTop}}">
+        <navigator appId="wx6e063f3c2759c7af" extraData="" hoverClass="none" openType="navigate" path="/page/index/index" target="miniProgram" version="release">
+            <view class="back-home">
+                <image class="back-img" src="/lib/images/backhome.png"></image>
+                <view class="back-text">首页</view>
+            </view>
+        </navigator>
+    </movable-view>
+</movable-area>

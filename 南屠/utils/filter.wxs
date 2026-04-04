@@ -1,0 +1,43 @@
+var formatDate = (function (val) {
+  if (val && val != 'null') {
+    var date = getDate();
+    var offset_GMT = date.getTimezoneOffset();
+    var vaFinal = val + offset_GMT * 60 * 1000 + 8 * 60 * 60 * 1000;
+    date.setTime(vaFinal);
+    var year = date.getFullYear();
+    var month = date.getMonth() + 1;
+    var day = date.getDate();
+    var str = year + '-' + toDou(month) + '-' + toDou(day);
+    return (str)
+  } else {
+    return ('')
+  }
+});
+var formatTime = (function (val) {
+  if (val && val != 'null') {
+    var date = getDate();
+    var offset_GMT = date.getTimezoneOffset();
+    var vaFinal = val + offset_GMT * 60 * 1000 + 8 * 60 * 60 * 1000;
+    date.setTime(vaFinal);
+    var year = date.getFullYear();
+    var month = date.getMonth() + 1;
+    var day = date.getDate();
+    var hour = date.getHours();
+    var minute = date.getMinutes();
+    var second = date.getSeconds();
+    return (year + '-' + toDou(month) + '-' + toDou(day) + " " + toDou(hour) + ':' + toDou(minute) + ':' + toDou(second))
+  } else {
+    return ('')
+  }
+});
+var toDou = (function (n) {
+  if (n < 10) {
+    return ('0' + n)
+  } else {
+    return ('' + n)
+  }
+});
+module.exports = ({
+  formatDate: formatDate,
+  formatTime: formatTime,
+});

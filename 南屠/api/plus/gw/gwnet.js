@@ -1,0 +1,1 @@
+var r=require("../comm/rcode");function e(e,n,t){return new Promise((function(o,u){e.request(t,(function(r){o(r)}),(function(e){u({ret:r.commCode.ERROR_REQUEST_ERR,error:e})}),n)}))}module.exports={getGwUrl:function(r,n,t){return e(r,n.gwUrl,t)},getPhoneMask:function(r,n,t){return e(r,n.gnUrl,t)}};

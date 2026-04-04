@@ -1,0 +1,72 @@
+<view style="font-size:28rpx;position:relative">
+    <view class="member-box">
+        <view class="flex column s-center member-top">
+            <text class="yellow prompt-info">付款前向工作人员出示该条形码即可积分</text>
+            <view class="bar-code">
+                <canvas canvasId="mycanvas" class="bar-img" hidden="{{showModalStatus}}"></canvas>
+            </view>
+            <view class="bar-codenum">{{no}}</view>
+        </view>
+        <view class="member-bot">
+            <view class="leui-cell m-between">
+                <view class="leui-cell-hd">会员名</view>
+                <view class="leui-cell-ft">
+                    <text class="gray3">{{nickName}}</text>
+                </view>
+            </view>
+            <view class="leui-cell m-between">
+                <view class="leui-cell-hd">手机号码</view>
+                <view class="leui-cell-ft flex s-center">
+                    <text class="gray3">{{mytel}}</text>
+                    <image bindtap="changePhone" class="icon-edit" hidden="{{!userId}}" src="/lib/images/icon-edit.png"></image>
+                </view>
+            </view>
+            <view class="leui-cell m-between">
+                <view class="leui-cell-hd">当前积分</view>
+                <view class="leui-cell-ft">
+                    <text class="gray3">{{point}}</text>
+                </view>
+            </view>
+            <view class="leui-cell m-between">
+                <view class="leui-cell-hd">会员注册日</view>
+                <view class="leui-cell-ft">
+                    <text class="gray3">{{createTime}}</text>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="bot-btn">
+        <view bindtap="getUser" class="cge-number" wx:if="{{!userId}}">登录</view>
+        <view bindtap="logOut" class="cge-number" wx:else>退出登录</view>
+    </view>
+    <view class="flex column fixed-top" wx:if="{{showModalStatus}}">
+        <view class="prompt-box">
+            <text class="prompt-info color333">请输入新的手机号码</text>
+        </view>
+        <form bindreset="" bindsubmit="changeTel">
+            <view class="phone-box">
+                <view class="leui-cell">
+                    <view class="leui-cell-hd color999">手机号码</view>
+                    <view class="leui-cell-bd">
+                        <input bindfocus="changError" bindinput="getTel" class="{{telstyl=='error'?'error':'leui-input'}}" maxlength="11" name="tel" placeholder="请输入手机号码" placeholderClass="gray" type="number"></input>
+                    </view>
+                </view>
+                <view class="leui-cell">
+                    <view class="leui-cell-hd color999">验证码</view>
+                    <view class="leui-cell-bd">
+                        <input class="{{codestyl=='error'?'error':'leui-input'}}" maxlength="6" name="code" placeholder="请输入验证码" placeholderClass="gray" type="number"></input>
+                    </view>
+                    <view class="leui-cell-ft">
+                        <button bindtap="getCode" class="btn empty-btn" wx:if="{{status==0}}">获取验证码</button>
+                        <text class="btn gray-btn" wx:else>{{second}}s后可重新发送</text>
+                    </view>
+                </view>
+            </view>
+            <view class="btn-area">
+                <button class="btn primary-btn" formType="submit">确定</button>
+            </view>
+        </form>
+    </view>
+    <view bindtap="hideModal" class="maskbox" wx:if="{{showModalStatus}}"></view>
+</view>
+<back-home></back-home>

@@ -1,0 +1,98 @@
+<view class="container" wx:if="{{status==0}}">
+    <form bindreset="" bindsubmit="cancelTap">
+        <view class="flexview">
+            <view class="res-box flex-auto">
+                <view class="res-title">请选择取消原因及需要取消的人员</view>
+                <view class="reason-box">
+                    <view class="reason-hd">选择取消原因<text class="pred">(*)</text>：</view>
+                    <view class="reason-bd">
+                        <radio-group class="flex flex-wrap" name="reasonIndex">
+                            <view class="reason-item" wx:for="{{reasons}}" wx:for-index="idx0" wx:for-item="item0">
+                                <view class="flex s-center">
+                                    <radio value="{{idx0+1}}"></radio>
+                                    <text>{{item0}}</text>
+                                </view>
+                            </view>
+                        </radio-group>
+                    </view>
+                </view>
+                <view class="res-hd">选择需要取消的人员：</view>
+                <block wx:if="{{ticketType==='family'}}">
+                    <view class="res-content">
+                        <checkbox-group bindchange="checkboxChange" name="indexs">
+                            <view class="leui-cell leui-cell-all" wx:for="{{adultLinks}}" wx:for-index="idx">
+                                <view class="leui-cell-hd flex m-center">
+                                    <checkbox value="{{idx}}"></checkbox>
+                                </view>
+                                <view class="leui-cell-bd flex column">
+                                    <view class="leui-cell-pt column">
+                                        <view>{{item.linkmanName}}</view>
+                                        <text class="gray3">{{typeList[item.type]}}	{{item.cardNo}}（成人票）</text>
+                                    </view>
+                                    <block wx:if="{{item.childNum>0}}">
+                                        <view class="leui-cell leui-cell-child column" wx:for="{{childLinks}}" wx:for-index="idx1" wx:for-item="item1">
+                                            <view>{{item1.linkmanName}}</view>
+                                            <text class="gray3">{{typeList[item1.type]}}	{{item1.cardNo}}（未成年人票）</text>
+                                        </view>
+                                    </block>
+                                </view>
+                            </view>
+                        </checkbox-group>
+                    </view>
+                    <view class="bot-prompt">已选择{{num}}人</view>
+                </block>
+                <block wx:else>
+                    <view class="res-content">
+                        <checkbox-group bindchange="checkboxChange" name="indexs">
+                            <view class="leui-cell" wx:for="{{adultLinks}}" wx:for-index="idx">
+                                <view class="leui-cell-hd flex m-center">
+                                    <checkbox value="{{idx}}"></checkbox>
+                                </view>
+                                <view class="leui-cell-bd flex column">
+                                    <view>{{item.linkmanName}}</view>
+                                    <text class="gray3">{{typeList[item.type]}}	{{item.cardNo}}</text>
+                                </view>
+                            </view>
+                        </checkbox-group>
+                    </view>
+                    <view class="bot-prompt">已选择{{num}}人</view>
+                </block>
+            </view>
+            <view class="bot-btnbox">
+                <button class="btn primary-btn" formType="submit">确定取消预约</button>
+            </view>
+        </view>
+    </form>
+</view>
+<view class="container flexview" wx:else>
+    <view class="res-box res-sucbox flex-auto">
+        <view class="success-imgbox flex column m-center s-center">
+            <image class="success-img" src="/lib/images/ssuc.png"></image>
+            <view class="success-text">预约取消成功</view>
+            <view class="success-text1">
+                <text>本次取消{{num}}人</text>
+            </view>
+        </view>
+        <view class="res-content">
+            <view class="leui-cell" wx:for="{{cancelList}}" wx:for-index="idx">
+                <view class="leui-cell-bd">
+                    <view class="leui-cell-pt column">
+                        <view>{{item.linkmanName}}</view>
+                        <text class="gray3">{{typeList[item.type]}}	{{item.cardNo}}（成人票）</text>
+                    </view>
+                    <block wx:if="{{item.childNum>0}}">
+                        <view class="leui-cell leui-cell-child column" wx:for="{{childLinks}}" wx:for-index="idx1" wx:for-item="item1">
+                            <view>{{item1.linkmanName}}</view>
+                            <text class="gray3">{{typeList[item1.type]}}	{{item1.cardNo}}（未成年人票）</text>
+                        </view>
+                    </block>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view>
+        <navigator class="fixed-bot {{isIphoneX?'padbotX':''}}" openType="reLaunch" url="/pages/myReservation/myReservation">
+            <button class="btn primary-btn">查看我的预约</button>
+        </navigator>
+    </view>
+</view>

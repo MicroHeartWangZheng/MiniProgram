@@ -1,0 +1,41 @@
+<view class="container">
+    <view class="list-box">
+        <button bindtap="getUserMsg" class="list-item" data-url="/pages/myReservation/myReservation" hoverClass="none">
+            <view class="list-iteml flex m-between s-center">
+                <view class="flex s-center">
+                    <image class="iteml-img iteml-img1" src="/lib/images/inner01.png"></image>
+                    <text class="iteml-text">我的参观门票</text>
+                </view>
+                <text class="leui-icon-next"></text>
+            </view>
+        </button>
+        <button bindtap="getUserMsg" class="list-item" data-url="/tzpackage/pages/myTicket/myTicket" hoverClass="none">
+            <view class="list-iteml flex m-between s-center">
+                <view class="flex s-center">
+                    <image class="iteml-img iteml-img1" src="/lib/images/inner06.png"></image>
+                    <text class="iteml-text">我的特展门票</text>
+                </view>
+                <text class="leui-icon-next"></text>
+            </view>
+        </button>
+        <button bindtap="getUserMsg" class="list-item" data-url="/pages/myLinkman/myLinkman" hoverClass="none">
+            <view class="list-iteml flex m-between s-center">
+                <view class="flex s-center">
+                    <image class="iteml-img iteml-img2" src="/lib/images/inner05.png"></image>
+                    <text class="iteml-text">我的联系人</text>
+                </view>
+                <text class="leui-icon-next"></text>
+            </view>
+        </button>
+        <button bindtap="toSysInfo" class="list-item" hoverClass="none">
+            <view class="list-iteml flex m-between s-center">
+                <view class="flex s-center">
+                    <image class="iteml-img iteml-img2" src="/lib/images/inner07.png"></image>
+                    <text class="iteml-text">关于我们</text>
+                </view>
+                <text class="leui-icon-next"></text>
+            </view>
+        </button>
+    </view>
+</view>
+<back-home></back-home>

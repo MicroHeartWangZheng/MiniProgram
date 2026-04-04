@@ -1,0 +1,33 @@
+<view class="container">
+    <view class="visitor-box">
+        <view class="visitor-item">
+            <text class="det-text" decode="{{true}}">&emsp;&emsp;在南京博物院“一院六馆”的格局中，共藏有文物43万余件（套），全部参观完至少需要4小时。下面推荐几款路线，您可以根据个人需求进行选择。</text>
+            <view class="flex m-center">
+                <image class="visitor-img" src="/lib/images/visitorimg.jpg"></image>
+            </view>
+        </view>
+        <view class="line-itembox">
+            <view class="line-item flex s-center">
+                <view class="square"></view>
+                <view class="line-title line-title1">推荐路线</view>
+            </view>
+            <view class="line-item">
+                <view class="line-title">常规路线：</view>
+                <view class="flex s-center f-wrap">历史馆<image class="arrow" src="/lib/images/arrow.png"></image>特展馆<image class="arrow" src="/lib/images/arrow.png"></image>数字馆<image class="arrow" src="/lib/images/arrow.png"></image>民国馆<image class="arrow" src="/lib/images/arrow.png"></image>艺术馆<image class="arrow" src="/lib/images/arrow.png"></image>非遗馆</view>
+            </view>
+            <view class="line-item">
+                <view class="line-title">镇院之宝路线：</view>
+                <view>历史馆（2展厅<image class="arrow" src="/lib/images/arrow.png"></image>3展厅<image class="arrow" src="/lib/images/arrow.png"></image>4展厅）</view>
+                <view>特展馆（9展厅<image class="arrow" src="/lib/images/arrow.png"></image>10展厅）</view>
+            </view>
+            <view class="line-item">
+                <view class="line-title">儿童路线：</view>
+                <view>历史馆<image class="arrow" src="/lib/images/arrow.png"></image>特展馆（7展厅）<image class="arrow" src="/lib/images/arrow.png"></image>数字馆</view>
+            </view>
+            <view class="line-item">
+                <view class="line-title">快速浏览：</view>
+                <view>历史馆<image class="arrow" src="/lib/images/arrow.png"></image>特展馆<image class="arrow" src="/lib/images/arrow.png"></image>民国馆</view>
+            </view>
+        </view>
+    </view>
+</view>

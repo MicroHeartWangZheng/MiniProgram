@@ -1,0 +1,47 @@
+<view class="container">
+    <view wx:if="{{getPhone}}">
+        <view class="auz-box flex column s-center">
+            <image class="auz-img" src="/lib/images/authorization.png"></image>
+            <view class="auz-text">感谢您使用【南京博物院预约服务】小程序，根据最新法律要求，使用前请仔细阅读<text bindtap="openPrivacyContract" class="url-title" data-type="1">《用户隐私协议》</text>、<text bindtap="openPrivacyContract" class="url-title" data-type="2">《第三方共享个人信息清单》</text>。如果您同意以上隐私政策条款，请点击同意按钮。我们将严格遵照经您同意的各项条款使用您的个人信息，以便为您提供更好的服务。</view>
+        </view>
+        <view class="auz-btnbox">
+            <view class="radio-box flex s-center">
+                <radio bindtap="radioChange" checked="{{checked}}"></radio>
+                <label class="radio-lbl" style="line-height:1.6;">打勾表示您已阅读并同意<text bindtap="openPrivacyContract" class="link" data-type="1">《用户隐私协议》</text>、<text bindtap="openPrivacyContract" class="link" data-type="2">《第三方共享个人信息清单》</text>
+                </label>
+            </view>
+            <button bindgetphonenumber="getPhoneNumber" class="btn primary-btn auz-btn" disabled="{{!checked}}" formType="submit" hoverClass="none" id="agree-btn" openType="getPhoneNumber{{usePrivacy?'|agreePrivacyAuthorization':''}}">同意授权并登录</button>
+            <view bindtap="back" class="btn gray-btn">暂不登录</view>
+        </view>
+    </view>
+    <view wx:else>
+        <view class="mp-prompt">
+            <text>系统检测到您尚未录入手机号码
+请录入手机号码后继续操作</text>
+        </view>
+        <form bindreset="" bindsubmit="register">
+            <view class="mp-box">
+                <view class="mp-cell">
+                    <view class="mp-cell-hd">手机号码</view>
+                    <view class="mp-cell-bd">
+                        <input bindinput="getTel" maxlength="11" name="tel" placeholder="请输入手机号码" placeholderClass="mp-placeholder" type="number"></input>
+                    </view>
+                </view>
+                <view class="mp-cell border-bot0">
+                    <view class="mp-cell-hd">验证码</view>
+                    <view class="mp-cell-bd">
+                        <input bindinput="setCode" maxlength="6" name="code" placeholder="请输入验证码" placeholderClass="mp-placeholder" type="number"></input>
+                    </view>
+                    <view class="mp-cell-ft">
+                        <button bindtap="getCode" class="btn code-btn" hoverClass="none" wx:if="{{status==0}}">获取验证码</button>
+                        <button class="btn code-btn discode-btn" hoverClass="none" wx:else>重新发送{{second}}s</button>
+                    </view>
+                </view>
+            </view>
+            <view class="mp-btnbox">
+                <button class="btn primary-btn" formType="submit" hidden="{{!subType}}">立即登录</button>
+                <button class="btn primary-btn disopa-btn" hidden="{{subType}}">立即登录</button>
+            </view>
+        </form>
+    </view>
+</view>

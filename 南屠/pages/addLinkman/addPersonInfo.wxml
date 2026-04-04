@@ -1,0 +1,59 @@
+<view class="container">
+    <view class="fixed-top">
+        <view class="addinfo-top flex s-center m-center">
+            <view bindtap="addTap" class="outline-btn flex m-center s-center">
+                <view class="leui-icon-actplus"></view>新增预约人</view>
+        </view>
+    </view>
+    <view class="addinfo-box">
+        <view class="addinfo-list">
+            <view bindtouchmove="touchmove" bindtouchstart="touchstart" class="touch-item flex m-between {{item.isTouchMove?'touch-move-active':''}}" data-index="{{index}}" wx:for="{{items}}">
+                <view class="content">
+                    <view class="leui-cell">
+                        <view class="leui-cell-hd">
+                            <image class="imedit" src="/lib/images/medit.png"></image>
+                        </view>
+                        <view class="leui-cell-bd flex column">
+                            <view class="dark4a">张三</view>
+                            <text class="gray9b">3012872839******09</text>
+                        </view>
+                        <view class="leui-cell-ft">
+                            <checkbox checked="" value=""></checkbox>
+                        </view>
+                    </view>
+                </view>
+                <view catchtap="del" class="flex m-center s-center del" data-index="{{index}}">
+                    <view class="leui-icon-actdet02"></view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="fixed-bot">
+        <view class="btn-area">
+            <button class="btn primary-btn" formType="submit">确认添加（1人）</button>
+        </view>
+    </view>
+    <view class="flex column fixed-top rephone-box" wx:if="{{showModalStatus}}">
+        <form bindreset="" bindsubmit="">
+            <view animation="{{animationData}}" class="phone-box">
+                <view class="leui-cell">
+                    <view class="leui-cell-hd">姓名</view>
+                    <view class="leui-cell-bd">
+                        <input bindfocus="" bindinput="" name="name" placeholder="请输入姓名" placeholderStyle="font-size: 28rpx; color: #ccc;" type="text"></input>
+                    </view>
+                </view>
+                <view class="leui-cell">
+                    <view class="leui-cell-hd">身份证号码</view>
+                    <view class="leui-cell-bd">
+                        <input maxlength="4" name="cardid" placeholder="请输入身份证号码" placeholderStyle="font-size: 28rpx; color: #ccc;" type="text"></input>
+                    </view>
+                </view>
+            </view>
+            <view class="btn-area flex">
+                <button bindtap="hideModal" class="btn white-btn" formType="submit">取消</button>
+                <button class="btn primary-btn" formType="submit">确定</button>
+            </view>
+        </form>
+    </view>
+    <view bindtap="hideModal" class="maskbox" wx:if="{{showModalStatus}}"></view>
+</view>

@@ -1,0 +1,1 @@
+module.exports={buildInitModel:function(){var e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:0,t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:"",r=arguments.length>2&&void 0!==arguments[2]?arguments[2]:"",i={ret:e,seq:t,err:r};return i}};

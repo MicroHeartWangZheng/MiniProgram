@@ -1,0 +1,9 @@
+<view class="navbar nav-bgfff" style="height:{{titleBarHeight}}px">
+    <view class="navbar-wrap" style="top:{{navTop}}px;height:{{menuHeight}}px">
+        <view bindtap="goback" class="nav-back" wx:if="{{isShowBack}}">
+            <view class="i-backb"></view>
+        </view>
+        <view class="nav-back" wx:if="{{!isShowBack}}"></view>
+    </view>
+    <view class="navbar-title" style="top:{{navTop}}px">{{innerTitle}}</view>
+</view>

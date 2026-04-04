@@ -1,0 +1,118 @@
+<view class="container">
+    <form bindreset="" bindsubmit="order">
+        <view class="tic-box flex-auto">
+            <view class="tic-top flex m-between">
+                <view class="title-left">
+                    <view>参观日期：{{time}}</view>
+                    <view class="reevn-box flex s-center">参观环境：<block wx:if="{{sumItem.useNum>=20000}}">
+                            <image class="env-img" mode="widthFix" src="/lib/images/ievn1-on.png"></image>
+                            <text class="reenv-text">十分拥挤，建议错峰出行</text>
+                        </block>
+                        <block wx:elif="{{sumItem.useNum>=15000}}">
+                            <image class="env-img" mode="widthFix" src="/lib/images/ievn2-on.png"></image>
+                            <text class="reenv-text">较为拥挤，预约人数较多</text>
+                        </block>
+                        <block wx:elif="{{sumItem.useNum>=8000}}">
+                            <image class="env-img" mode="widthFix" src="/lib/images/ievn3-on.png"></image>
+                            <text class="reenv-text">较为舒适，预约人数较少</text>
+                        </block>
+                        <block wx:else>
+                            <image class="env-img" mode="widthFix" src="/lib/images/ievn4-on.png"></image>
+                            <text class="reenv-text">十分舒适，预约人数很少</text>
+                        </block>
+                        <text class="reenv-text reenv-text1">(仅供参考)</text>
+                    </view>
+                </view>
+            </view>
+            <view class="tic-center">
+                <view class="flex s-center">
+                    <text>请选择进馆时间段</text>
+                </view>
+                <view class="center-bot flex">
+                    <button bindtap="selectTap" class="btn outline-btn {{ticketIndex==idx?'active':'default'}} {{item.stopDiff<=0?'btn-graync':''}}" data-index="{{idx}}" hoverClass="none" wx:for="{{items}}" wx:for-index="idx">{{item.name}}<text class="block-text">
+                            <text>（{{item.startTime}}-{{item.endTime}}）</text>
+                            <text class="tip-text grayc-tip" wx:if="{{item.stopDiff<=0}}">已结束</text>
+                            <text class="tip-text grayc-tip" wx:elif="{{item.num<=0}}">已无票</text>
+                            <text class="tip-text red-tip" wx:elif="{{item.num<1000}}">余票{{item.num}}张</text>
+                            <text class="tip-text green-tip" wx:else>余票充足</text>
+                        </text>
+                        <image class="active-img" mode="widthFix" src="/lib/images/reactive.png"></image>
+                    </button>
+                </view>
+            </view>
+            <view class="tic-bot">
+                <view class="bot-title flex s-center m-between">
+                    <view class="flex s-center m-center">
+                        <text hidden="{{linkmans&&linkmans.length>0}}">请选择需要预约的人员</text>
+                        <text hidden="{{!linkmans||linkmans.length==0}}">请确认需要预约的人</text>
+                    </view>
+                    <button bindtap="toAddLinkman" class="flex s-center m-center res-right" hoverClass="none">
+                        <image class="icon-add" src="/lib/images/icon-add.png"></image>
+                        <text>添加预约人</text>
+                    </button>
+                </view>
+                <view class="bot-info">
+                    <view class="info-item">
+                        <view class="leui-cell" wx:for="{{linkmans}}" wx:for-index="idx" wx:key="idx">
+                            <view class="leui-cell-hd flex m-center">
+                                <image bindtap="del" class="icon-del" data-index="{{idx}}" src="/lib/images/icon-del1.png"></image>
+                            </view>
+                            <view class="leui-cell-bd flex column">
+                                <view>{{item.name}}<text class="gray9b" wx:if="{{item.isChild}}">（未成年票）</text>
+                                </view>
+                                <text class="gray3">{{item.cardNoS}}</text>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+            <view class="bot-prompt" hidden="{{!linkmans||linkmans.length==0}}">共{{linkmans.length}}人预约</view>
+        </view>
+        <view class="fixed-bot {{isIphoneX?'padbotX':''}}" hidden="{{!linkmans||linkmans.length==0}}" id="cbtn">
+            <button class="btn primary-btn" formType="submit">点击这里，完成预约</button>
+        </view>
+        <view class="fixed-bot {{isIphoneX?'padbotX':''}}" hidden="{{linkmans&&linkmans.length>0}}">
+            <button class="btn primary-btn agray-btn">确定</button>
+        </view>
+    </form>
+    <view class="modal-mask" hidden="{{hiddenMask}}"></view>
+    <view class="modal-dialog modal-dialog1" hidden="{{hiddenModal}}">
+        <form bindreset="" bindsubmit="">
+            <view class="modal-content">
+                <text class="modal-ptxt">您确定要删除该联系人吗？</text>
+            </view>
+            <view class="modal-footer flex">
+                <button bindtap="delLink" class="btn-confirm">删除</button>
+                <button bindtap="hideModal" class="btn-cancel">取消</button>
+            </view>
+        </form>
+    </view>
+    <view class="modal-mask" hidden="{{hiddenMask}}"></view>
+    <view class="modal-dialog" hidden="{{tipsModal}}">
+        <form bindreset="" bindsubmit="">
+            <view class="modal-content tip-new">
+                <text class="modal-ptxt" style="text-align:left">1. <text style="color:#F33233">同一账号</text>7天内2次、30天内5次预约但未履约（预约后自行取消、参观日未到馆参观均视为未履约），该账号将被限制180天预约。
+2. 预约成功<text style="color:#F33233">当天仅可进出馆1次</text>，请合理规划行程和参观路线。
+        </text>
+            </view>
+            <view class="modal-footer flex">
+                <button bindtap="closeTips" class="btn-confirm">确认预约</button>
+                <button bindtap="hideModal" class="btn-cancel">我再想想</button>
+            </view>
+        </form>
+    </view>
+    <view class="modal-mask" hidden="{{hiddenMask}}"></view>
+    <view class="modal-dialog" hidden="{{tipsModal2}}" style="width:600rpx;margin-left:-300rpx;">
+        <view class="modal-content" style="padding:60rpx 40rpx 30rpx;">
+            <view class="font32 color333" style="text-align:center;">{{msg1}}</view>
+            <view class="font24 color999" style="text-align:center;margin-top:20rpx;" wx:if="{{msg2}}">{{msg2}}</view>
+        </view>
+        <view class="modal-footer" style="margin:0 30rpx;">
+            <button bindtap="hideModal" class="btn-confirm">确定</button>
+        </view>
+    </view>
+</view>
+<view style="position:fixed;top:9999rpx;">
+    <canvas canvasId="turing-canvas" style="width:150;height:150;"></canvas>
+    <canvas id="turing-render-webgl" style="width:100px;height:100px;" type="webgl"></canvas>
+</view>

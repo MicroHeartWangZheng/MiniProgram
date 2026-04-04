@@ -1,0 +1,1 @@
+Page({data:{},onLoad:function(o){this.selectComponent("#loading").show(),setTimeout((function(){}),3e3)},loadData:function(){var o=this;o.selectComponent("#loading").show(),setTimeout((function(){o.selectComponent("#loading").hide()}),3e3)}});

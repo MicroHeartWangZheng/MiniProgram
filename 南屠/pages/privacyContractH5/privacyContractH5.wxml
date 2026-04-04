@@ -1,0 +1,1 @@
+<web-view src="{{url}}/{{type==1?'privacy.html':type==2?'privacyTx.html':'sysInfo1.html'}}?version={{timestamp}}"></web-view>

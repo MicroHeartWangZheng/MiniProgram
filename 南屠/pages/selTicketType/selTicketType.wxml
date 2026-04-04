@@ -1,0 +1,93 @@
+<page-meta pageStyle="overflow: {{hiddenBox&&noticeBox?'visible':'hidden'}}"></page-meta>
+<view class="custom-navbar" style="height:{{titleBarHeight}}px;background:#fff;">
+    <view bindtap="goback" class="custom-back" style="top:{{navTop}}px;height:{{menuHeight}}px">
+        <view class="icon-back"></view>
+    </view>
+    <view class="custom-title" style="top:{{navTop}}px;">参观预约</view>
+</view>
+<view class="containera" style="margin-top:{{titleBarHeight}}px;">
+    <view class="view-bd">
+        <button bind:tap="toVR" class="mr-btn vr-btnbg" hoverClass="none">
+            <image class="vr-btn" mode="widthFix" src="/lib/images/btn-bg.png"></image>
+        </button>
+        <view style="font-size:20rpx;text-align:center;color:#999;margin-top:8rpx;">(温馨提示：购买VR展门票并成功预约场次可免约南博大门票)</view>
+        <button bindtap="toTicket" class="mr-btn mtop" data-type="normal" hoverClass="none" style="margin-top:40rpx;">预约普通票</button>
+        <button bindtap="ticNotice" class="mr-btn mtop" data-type="family" hoverClass="none">预约亲子票</button>
+        <button bind:tap="toTeam" class="mr-btn mtop" hoverClass="none">预约团队票</button>
+        <button bindtap="tolinkman" class="mr-btn link-btn" hoverClass="none">我的联系人</button>
+    </view>
+    <view class="tip-box">
+        <image class="iprompt" mode="widthFix" src="/lib/images/iprompt.png"></image>
+        <text class="tip-text">温馨提示：
+1. 开放时间：每日9:00-17:00，16:00停止检票，周一闭馆（法定节假日除外，除夕、正月初一闭馆）。
+2. 预约参观：
+①所有观众（包括享受优待政策的观众及其陪同人员）<text style="color:#F33233;">均须实名预约</text>。放票时间为<text style="color:#F33233;">每日18:00，可提前7日（不包括当日）通过官方微信小程序预约</text>，预约时段分为上午（9:00-13:00）和下午（12:00-16:00），当天不再放票；
+②参观当日须按照预约时段入馆参观，错过预约时段将谢绝入馆。<text style="color:#F33233;">同一证件号</text>当天仅可进出馆1次，预约上午票的观众入馆时间必须在13:00前；
+③<text style="color:#F33233;">同一账号</text>30天内最多预约5人，且有效身份证件信息不重复；<text style="color:#F33233;">同一证件号</text>7天内最多预约2次（包括享受优待政策的观众及其陪同人员）。
+3. 入馆方式：预约成功后，观众凭<text style="color:#F33233;">预约证件原件</text>（本人二代身份证、江苏省第三代社保卡或港澳台居民居住证），通过<text style="color:#F33233;">人脸比对系统</text>核验入馆。
+①<text style="color:#F33233;">14周岁及以下</text>未成年人<text style="color:#F33233;">不得单独预约</text>，须由成年人代为预约亲子票并同步核验入馆，每名成年人最多携带三名未成年人；
+②持港澳居民来往内地通行证、台湾居民来往大陆通行证及外国人永久居留身份证或外籍护照的观众，<text style="color:#F33233;">自行预约后</text>请于参观当日凭本人<text style="color:#F33233;">有效证件原件和预约成功凭证</text>在正门东侧绿色通道服务窗口办理相关手续后入馆；
+③70周岁及以上老年人、残障人士、现役军人、退役军人、伤残军人、消防救援人员和“三属”（烈士遗属、因公牺牲军人遗属、病故军人遗属）<text style="color:#F33233;">无需自行预约</text>，凭<text style="color:#F33233;">本人有效证件原件</text>（二代身份证、江苏省第三代社保卡＋军官证、退役军人优待证/残疾人证等相关证件）在正门东侧绿色通道服务窗口现场登记后，刷<text style="color:#F33233;">本人身份证原件或江苏省第三代社保卡原件</text>，通过<text style="color:#F33233;">人脸比对系统</text>核验入馆；
+④行动不便的70周岁及以上老年人和残障人士<text style="color:#F33233;">至多可随行一名陪护人员</text>。陪护人员须为年满18周岁、具有完全民事行为能力的成年人，一年内不得超过2名，不可变更。
+4. 限制预约：预约后自行取消订单、参观日未到馆参观的行为均被视为未履约。
+①<text style="color:#F33233;">同一证件号</text>累计3次预约但未履约，则该证件号将被限制预约90天；
+②<text style="color:#F33233;">同一账号</text>7天内2次、30天内5次预约但未履约，则该账号将被限制预约180天；
+③判定是“黄牛”行为的预约账号将永久列入黑名单；对发现的其他违规或者协助他人违规进馆行为的预约账号，将禁止预约3年。
+5. 注意事项：
+①大件行李请勿带进馆内，请于检票前存放至大件行李寄存处（正门东侧）；
+②请勿携带各类管制刀具、打火机、易燃易爆等危险品及任何动物（残疾人携带导盲犬请联系工作人员）；
+③酗酒者、衣冠不整者、无行为能力或限制行为能力且无监护人陪伴者谢绝入馆；
+④其他有碍展品安全、影响观众参观者谢绝入馆；
+⑤馆舍内外禁止售卖商品、乞讨、散发广告等行为；
+⑥馆内请勿吸烟；
+⑦请勿触摸展品；
+⑧馆内请勿追逐打闹、大声喧哗、攀爬躺卧、随意丢弃杂物；
+⑨馆内拍照请勿使用闪光灯及商用摄影、摄像器材，如：摇臂、自拍杆、落地式三脚架等；
+⑩展厅内请勿饮食；
+⑪根据国家有关规定，除常设的基本陈列和以院藏文物为主的专题展览免费开放外，按照市场化运作举办的临时展览及展演不列入免费参观范围。
+</text>
+    </view>
+</view>
+<view catchtouchmove="true" class="mask-box" hidden="{{hiddenBox}}"></view>
+<view class="notice-box" hidden="{{hiddenBox}}">
+    <view class="notice-title">预约须知</view>
+    <view class="notice-content">
+        <text class="content-text">1. 开放时间：每日9:00-17:00，16:00停止检票，周一闭馆（法定节假日除外，除夕、正月初一闭馆）。
+2. 预约参观：
+①所有观众（包括享受优待政策的观众及其陪同人员）<text style="color:#F33233;">均须实名预约</text>。放票时间为<text style="color:#F33233;">每日18:00，可提前7日（不包括当日）通过官方微信小程序预约</text>，预约时段分为上午（9:00-13:00）和下午（12:00-16:00），当天不再放票；
+②参观当日须按照预约时段入馆参观，错过预约时段将谢绝入馆。<text style="color:#F33233;">同一证件号</text>当天仅可进出馆1次，预约上午票的观众入馆时间必须在13:00前；
+③<text style="color:#F33233;">同一账号</text>30天内最多预约5人，且有效身份证件信息不重复；<text style="color:#F33233;">同一证件号</text>7天内最多预约2次（包括享受优待政策的观众及其陪同人员）。
+3. 入馆方式：预约成功后，观众凭<text style="color:#F33233;">预约证件原件</text>（本人二代身份证、江苏省第三代社保卡或港澳台居民居住证），通过<text style="color:#F33233;">人脸比对系统</text>核验入馆。
+①<text style="color:#F33233;">14周岁及以下</text>未成年人<text style="color:#F33233;">不得单独预约</text>，须由成年人代为预约亲子票并同步核验入馆，每名成年人最多携带三名未成年人；
+②持港澳居民来往内地通行证、台湾居民来往大陆通行证及外国人永久居留身份证或外籍护照的观众，<text style="color:#F33233;">自行预约后</text>请于参观当日凭本人<text style="color:#F33233;">有效证件原件和预约成功凭证</text>在正门东侧绿色通道服务窗口办理相关手续后入馆；
+③70周岁及以上老年人、残障人士、现役军人、退役军人、伤残军人、消防救援人员和“三属”（烈士遗属、因公牺牲军人遗属、病故军人遗属）<text style="color:#F33233;">无需自行预约</text>，凭<text style="color:#F33233;">本人有效证件原件</text>（二代身份证、江苏省第三代社保卡＋军官证、退役军人优待证/残疾人证等相关证件）在正门东侧绿色通道服务窗口现场登记后，刷<text style="color:#F33233;">本人身份证原件或江苏省第三代社保卡原件</text>，通过<text style="color:#F33233;">人脸比对系统</text>核验入馆；
+④行动不便的70周岁及以上老年人和残障人士<text style="color:#F33233;">至多可随行一名陪护人员</text>。陪护人员须为年满18周岁、具有完全民事行为能力的成年人，一年内不得超过2名，不可变更。
+4. 限制预约：预约后自行取消订单、参观日未到馆参观的行为均被视为未履约。
+①<text style="color:#F33233;">同一证件号</text>累计3次预约但未履约，则该证件号将被限制预约90天；
+②<text style="color:#F33233;">同一账号</text>7天内2次、30天内5次预约但未履约，则该账号将被限制预约180天；
+③判定是“黄牛”行为的预约账号将永久列入黑名单；对发现的其他违规或者协助他人违规进馆行为的预约账号，将禁止预约3年。
+5. 注意事项：
+①大件行李请勿带进馆内，请于检票前存放至大件行李寄存处（正门东侧）；
+②请勿携带各类管制刀具、打火机、易燃易爆等危险品及任何动物（残疾人携带导盲犬请联系工作人员）；
+③酗酒者、衣冠不整者、无行为能力或限制行为能力且无监护人陪伴者谢绝入馆；
+④其他有碍展品安全、影响观众参观者谢绝入馆；
+⑤馆舍内外禁止售卖商品、乞讨、散发广告等行为；
+⑥馆内请勿吸烟；
+⑦请勿触摸展品；
+⑧馆内请勿追逐打闹、大声喧哗、攀爬躺卧、随意丢弃杂物；
+⑨馆内拍照请勿使用闪光灯及商用摄影、摄像器材，如：摇臂、自拍杆、落地式三脚架等；
+⑩展厅内请勿饮食；
+⑪根据国家有关规定，除常设的基本陈列和以院藏文物为主的专题展览免费开放外，按照市场化运作举办的临时展览及展演不列入免费参观范围。</text>
+    </view>
+    <view class="notice-bot flex s-center">
+        <button bindtap="closeBox" class="primary-btn confirm-btn" disabled="{{timeFlag}}">我知道了<text wx:if="{{timeFlag}}">（{{second}}s）</text>
+        </button>
+    </view>
+</view>
+<view catchtouchmove="true" class="mask-box" hidden="{{noticeBox}}"></view>
+<view class="notice-box notice-box1" hidden="{{noticeBox}}">
+    <view class="n-content">
+        <rich-text class="rich-text" nodes="{{msg}}"></rich-text>
+    </view>
+    <button bindtap="goNext1" class="notice-btn">确定</button>
+</view>

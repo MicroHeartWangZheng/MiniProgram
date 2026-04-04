@@ -1,0 +1,1 @@
+var e=require("./utils/uuid");module.exports={generateUUID:function(){return e.UUIDjs.create().toString().split("-").join("")},generateReqId:function(){return e.UUIDjs.create().toString()}};

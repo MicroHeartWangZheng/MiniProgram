@@ -1,0 +1,123 @@
+<view class="mainbox">
+    <view class="scrollbox" id="scrollbox">
+        <block wx:if="{{pagetype==1}}">
+            <view animation="{{animationpt}}" class="promptbox">
+                <text class="prompt-info">现在你可以向我提问啦</text>
+            </view>
+            <view animation="{{animationqt}}" class="questionbox">
+                <text class="question-top">你可以问我这些问题</text>
+                <text class="question-info">
+          南京博物院有多少件展品？
+
+          南京博物院每周几闭馆？
+
+          南博有多少件镇院之宝？
+
+          南京博物院占地面积多少？有几个馆？
+
+          “金缕玉衣”在哪个展厅？
+
+          轮椅如何租借？
+
+          非遗馆在哪里？
+        </text>
+            </view>
+        </block>
+        <scroll-view scrollY scrollTop="{{scrollTop}}" style="height:100%" wx:if="{{pagetype==2}}">
+            <view class="qalist" id="answers">
+                <view class="qaline" wx:for="{{list}}" wx:for-index="idx">
+                    <view class="qaitem qitem">{{item.question}}</view>
+                    <view class="qaitem aitem">
+                        <text>{{item.answer}}</text>
+                        <image class="itemimg" mode="widthFix" src="{{url}}static/wenba/{{item.url}}" wx:if="{{item.type==2}}"></image>
+                    </view>
+                    <view class="flex column s-center">
+                        <text class="sat-title">您对此回答满意吗？</text>
+                        <view class="satisfaction flex m-around s-center">
+                            <view bindtap="selectCommentType" class="satis flex column s-center" data-index="{{idx}}" data-type="1">
+                                <image class="satisimg" src="{{item.commentType==1?'/lib/images/goodSelect.png':'/lib/images/goodDefault.png'}}"></image>
+                                <text class="{{item.commentType==1?'goodsatis':''}}">满意</text>
+                            </view>
+                            <view bindtap="selectCommentType" class="satis flex column s-center" data-index="{{idx}}" data-type="2">
+                                <image class="satisimg" src="{{item.commentType==2?'/lib/images/badSelect.png':'/lib/images/badDefault.png'}}"></image>
+                                <text class="{{item.commentType==2?'badsatis':''}}">不满意</text>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </scroll-view>
+        <view class="flexcenter loadingbox" wx:if="{{pagetype==3}}">
+            <view class="loading">
+                <view class="item"></view>
+                <view class="item"></view>
+                <view class="item"></view>
+                <view class="item"></view>
+                <view class="item"></view>
+            </view>
+            <text>我正在听…</text>
+        </view>
+        <view class="flexcenter networkbox" wx:if="{{pagetype==4}}">
+            <image class="networkimg" src="/lib/images/network.png"></image>
+            <text>网络不给力，请检查网络</text>
+        </view>
+        <view class="flexcenter searchbox" wx:if="{{pagetype==5}}">
+            <view class="search">
+                <view class="seinnerBox">
+                    <view class="seinner">
+                        <view class="sani01">
+                            <view class="longline"></view>
+                            <view class="longline centerline"></view>
+                            <view class="shortline"></view>
+                        </view>
+                        <view class="sani02">
+                            <view class="seniinner02">
+                                <view class="triangle lgtriangle"></view>
+                                <view class="triangle smtriangle"></view>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+                <view class="seinner03">
+                    <view class="sani03">
+                        <view class="obline"></view>
+                    </view>
+                </view>
+            </view>
+            <text>正在努力寻找答案</text>
+        </view>
+        <view class="flexcenter searchbox" wx:if="{{pagetype==6}}">
+            <text>对不起我没听清</text>
+        </view>
+        <block wx:if="{{pagetype==7}}">
+            <view class="prompt-info">{{errorQus}}</view>
+            <view class="prompt-info">您的问题我们暂时无法解答</view>
+            <view class="prompt-info">您可以问我下列问题</view>
+            <text class="question-info">
+          南京博物院有多少件展品？
+
+          南京博物院每周几闭馆？
+
+          南博有多少件镇院之宝？
+
+          南京博物院占地面积多少？有几个馆？
+
+          “金缕玉衣”在哪个展厅？
+
+          轮椅如何租借？
+
+          非遗馆在哪里？
+        </text>
+        </block>
+    </view>
+    <view class="voicebox">
+        <view class="circle-box flexcenter">
+            <canvas canvasId="canvasArcCir" class="circle" style="position:absolute;z-index:11;width:120px;height:120px;"></canvas>
+            <view class="bgcircle" style="{{bgcircleStyle}}"></view>
+            <view class="voicebotbox flex m-center s-center">
+                <image bindlongpress="drawbgCircle" bindtouchend="touchEnd" bindtouchstart="touchStart" class="voicebtn" src="/lib/images/voice.png"></image>
+            </view>
+        </view>
+        <text class="voice-info">按住即可提问</text>
+    </view>
+</view>

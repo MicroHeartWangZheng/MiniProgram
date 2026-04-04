@@ -1,0 +1,7 @@
+<view class="container">
+    <view class="error-box flex column s-center">
+        <image class="error-img" src="../../lib/images/network.png"></image>
+        <text class="error-text">网络不给力，请检查网络</text>
+        <button bindtap="backTo" class="btn outline-btn">重新加载</button>
+    </view>
+</view>

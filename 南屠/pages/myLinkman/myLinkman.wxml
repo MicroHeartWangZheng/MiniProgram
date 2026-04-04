@@ -1,0 +1,72 @@
+<view class="container {{addModalStatus?'container-ban':''}}">
+    <view style="position:relative;">
+        <view>
+            <view class="addinfo-top flex s-center m-center">
+                <view bindtap="addTap" class="outline-btn flex m-center s-center">
+                    <image class="icon-add" src="/lib/images/icon-add1.png"></image>
+                    <text>新增联系人</text>
+                </view>
+            </view>
+        </view>
+        <view class="tip-linkman">
+            <text style="color:#F33233">温馨提示：所有观众均须实名预约，联系人在添加或修改后30天内不允许修改或删除，每个账号最多添加5个常用联系人。</text>
+        </view>
+        <view class="addinfo-box">
+            <view class="addinfo-list">
+                <view class="list-item leui-cell flex m-between s-center" wx:for="{{items}}" wx:for-index="idx">
+                    <view class="leui-cell-bd flex column">
+                        <text class="dark4a" wx:if="{{item.isBlacklist==0&&item.cancelNums!=3}}">{{item.name}}</text>
+                        <text class="dark4a" wx:else>{{item.name}}（黑名单）</text>
+                        <view class="gray9b">{{item.cardNoS}}</view>
+                        <view class="gray9b">{{typeList[item.type]}}</view>
+                    </view>
+                    <view class="leui-cell-ft flex s-center">
+                        <view bindtap="editTap" class="item-tap" data-index="{{idx}}">
+                            <image class="icon-edit" src="/lib/images/icon-edit.png"></image>
+                        </view>
+                        <view bindtap="delTap" class="item-tap" data-index="{{idx}}">
+                            <image class="icon-del" src="/lib/images/icon-del1.png"></image>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="flex column fixed-top rephone-box" wx:if="{{addModalStatus}}">
+            <form bindreset="" bindsubmit="addLinkman">
+                <view animation="{{animationData}}" class="phone-box">
+                    <view bindtap="showIdModal" class="leui-cell">
+                        <view class="leui-cell-hd">证件类型</view>
+                        <view class="leui-cell-bd flex m-between s-center">
+                            <view class="type-text">{{typeList[typeIndex]}}</view>
+                            <view class="leui-icon-next"></view>
+                        </view>
+                    </view>
+                    <view class="leui-cell">
+                        <view class="leui-cell-hd">姓名</view>
+                        <view class="leui-cell-bd">
+                            <input bindfocus="" bindinput="" name="name" placeholder="请输入姓名" placeholderStyle="font-size: 28rpx; color: #ccc;" type="text" value="{{linkman.name}}"></input>
+                        </view>
+                    </view>
+                    <view class="leui-cell">
+                        <view class="leui-cell-hd">证件号码</view>
+                        <view class="leui-cell-bd">
+                            <input maxlength="18" name="cardNo" placeholder="请输入证件号码" placeholderStyle="font-size: 28rpx; color: #ccc;" type="text" value="{{linkman.cardNo}}"></input>
+                        </view>
+                    </view>
+                </view>
+                <view class="btn-area flex">
+                    <button bindtap="hideModal" class="btn white-btn" formType="reset">取消</button>
+                    <button class="btn primary-btn" formType="submit" hoverClass="none">确定</button>
+                </view>
+            </form>
+        </view>
+        <view bindtap="hideModal" class="maskbox" wx:if="{{addModalStatus||delModalStatus}}"></view>
+    </view>
+    <view bindtap="hideIdModal" class="modal-mask" hidden="{{isShowIdModal}}"></view>
+    <view class="idmodal-box" hidden="{{isShowIdModal}}">
+        <view class="idmodal-items">
+            <view bindtap="setType" class="idmodal-item {{typeIndex==idx?'active':''}}" data-index="{{idx}}" wx:for="{{typeList}}" wx:for-index="idx">{{item}}</view>
+            <button bindtap="hideIdModal" class="btn-cancel" hoverClass="none">关闭</button>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,72 @@
+<view class="container">
+    <view class="myres-box">
+        <view class="res-item" wx:for="{{list}}" wx:key="key">
+            <view class="leui-cell">
+                <view class="leui-cell-hd">预约人</view>
+                <view class="leui-cell-bd">{{item.tel}}</view>
+            </view>
+            <view class="leui-cell leui-cell-per">
+                <view class="leui-cell-hd">参观人<view class="leui-icon-prev" wx:if="{{item.linkMes.length>1}}"></view>
+                </view>
+                <view class="leui-cell-bd row" wx:if="{{item.ticketType==='family'}}">
+                    <view class="per-cell" wx:for="{{item.linkMes}}" wx:for-item="link" wx:key="key1">
+                        <view class="alt-item flex m-between s-center">
+                            <text class="text-lt">{{link.linkmanName}}<text class="tips" decode="true">（成年票&nbsp;|&nbsp;{{typeList[link.type]}}&nbsp;|&nbsp;{{link.type<=1?'闸机验票':'人工验票'}}）</text>
+                            </text>
+                            <text class="text-rt cred" wx:if="{{link.showStatus=='未验票'}}">未到场</text>
+                            <text class="text-rt cyellow" wx:elif="{{link.showStatus=='未完成'}}">待入场</text>
+                            <text class="text-rt cgreen" wx:elif="{{link.showStatus=='已完成'}}">已完成</text>
+                            <text class="text-rt cgray9" wx:else>已取消</text>
+                        </view>
+                        <view class="item-childbox" wx:if="{{link.childNum>0}}">
+                            <view class="item-child" wx:for="{{link.childLink}}" wx:for-item="child" wx:key="key2">
+                                <text>{{child.linkmanName}}</text>
+                                <text class="tips" decode="true">（未成年票&nbsp;|&nbsp;{{typeList[child.type]}}&nbsp;|&nbsp;{{child.type<=1?'闸机验票':'人工验票'}}）</text>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+                <view class="leui-cell-bd row" wx:else>
+                    <view class="per-cell" wx:for="{{item.linkMes}}" wx:for-item="link" wx:key="key1">
+                        <view class="alt-item">
+                            <text>{{link.linkmanName}}<text class="tips" decode="true">（{{typeList[link.type]}}&nbsp;|&nbsp;{{link.type<=1?'闸机验票':'人工验票'}}）</text>
+                            </text>
+                            <text class="text-right cred" wx:if="{{link.showStatus=='未验票'}}">未到场</text>
+                            <text class="text-right cyellow" wx:elif="{{link.showStatus=='未完成'}}">待入场</text>
+                            <text class="text-right cgreen" wx:elif="{{link.showStatus=='已完成'}}">已完成</text>
+                            <text class="text-right cgray9" wx:else>已取消</text>
+                        </view>
+                    </view>
+                </view>
+            </view>
+            <view class="leui-cell leui-cell-bot">
+                <view class="leui-cell-auto">
+                    <text class="cgray9">共预约{{item.num}}人	|	参观日期{{item.date}}  {{item.morAft}}</text>
+                </view>
+                <view class="flex row leui-cell-auto" wx:if="{{item.status==1}}">
+                    <button bindtap="cancelTap" class="btn outline-btn" data-id="{{item.id}}" data-type="{{item.ticketType}}">取消</button>
+                </view>
+            </view>
+        </view>
+        <view class="empty-box" wx:if="{{list.length==0}}">
+            <image class="empty-img" src="/lib/images/emptyimg.png"></image>
+            <text class="empty-text">没有预约记录</text>
+        </view>
+        <view wx:else>
+            <view class="loading" hidden="{{!searchLoading}}">
+                <view class="icon-loading"></view>
+                <text>正在载入更多...</text>
+            </view>
+            <view class="loading" hidden="{{!searchLoadingComplete}}">已加载全部</view>
+        </view>
+    </view>
+    <view class="fixed-left">
+        <view bindtap="pathDetail" class="dobox flex s-center">
+            <text>入场须知</text>
+            <image class="idothimg" src="/lib/images/idoth.png"></image>
+        </view>
+    </view>
+    <view class="fixed-bot bot-btnbox">
+        <button bindtap="goTicket" class="btn primary-btn">回到首页</button>
+    </view>
+</view>

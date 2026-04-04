@@ -1,0 +1,9 @@
+<view class="container flexview">
+    <view class="auto-box flex column s-center flex-auto">
+        <image class="auto-img" src="/lib/images/autoimg.png"></image>
+        <text class="auto-text">本功能正在测试中，即将上线</text>
+    </view>
+    <view>
+        <button bindtap="backTap" class="btn primary-btn" formType="submit">确定</button>
+    </view>
+</view>

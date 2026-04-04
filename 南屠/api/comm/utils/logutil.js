@@ -1,0 +1,1 @@
+module.exports={log:function(){},error:function(){for(var r=arguments.length>0&&void 0!==arguments[0]?arguments[0]:"",o=arguments.length,e=new Array(o>1?o-1:0),n=1;n<o;n++)e[n-1]=arguments[n];console.error(r,e)}};

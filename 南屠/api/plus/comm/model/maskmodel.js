@@ -1,0 +1,1 @@
+module.exports={b55be487e:function(){var e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:"",t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:"",i=arguments.length>2&&void 0!==arguments[2]?arguments[2]:[],n={session:e,device_ticket:t,action_results:i};return n}};

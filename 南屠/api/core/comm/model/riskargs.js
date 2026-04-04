@@ -1,0 +1,1 @@
+module.exports={buildRiskArgs:function(){return{cache:!0,page:null,timeout:0}}};

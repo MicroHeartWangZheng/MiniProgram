@@ -1,0 +1,1 @@
+var t=require("./utils/util");require("./utils/logutil");module.exports={getLocal:function(t){try{return wx.getStorageSync(t)}catch(t){return""}},setLocal:function(e,r){try{t.isEmpty(e)||wx.setStorageSync(e,r)}catch(t){}},delLocal:function(t){try{wx.removeStorageSync(t)}catch(t){}}};

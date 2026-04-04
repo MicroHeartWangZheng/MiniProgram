@@ -1,0 +1,1 @@
+var u=require("./touchHandle");require("../../../../comm/utils/logutil");module.exports={monitor:function(t){t&&t.getTouchs&&t.getTouchs({onTouch:function(t,c){null!==c&&null!=c&&u.cache(t,c)}})},f36a0cb61:function(t){try{if(t&&t.getTouchs)return u.getAllTouchs()}catch(u){}return""}};

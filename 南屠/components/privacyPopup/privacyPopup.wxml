@@ -1,0 +1,13 @@
+<view class="mask-box" wx:if="{{showPrivacy}}"></view>
+<view class="modal-dialog" wx:if="{{showPrivacy}}">
+    <view class="modal-content">
+        <view class="content-hd">{{title}}</view>
+        <view class="content-bd">
+            <view class="desc">{{desc1}}<text bindtap="openPrivacyContract" class="url-title">{{urlTitle}}</text>。{{desc2}}</view>
+        </view>
+        <view class="content-ft">
+            <button bindtap="handleDisagree" class="cancel-btn" hoverClass="btn-hover" id="disagree-btn">拒绝</button>
+            <button bindagreeprivacyauthorization="handleAgree" class="agree-btn" hoverClass="btn-hover" id="agree-btn" openType="agreePrivacyAuthorization">同意</button>
+        </view>
+    </view>
+</view>
