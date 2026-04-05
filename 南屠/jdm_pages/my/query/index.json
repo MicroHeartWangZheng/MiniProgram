@@ -1,5 +1,24 @@
 {
   "navigationBarTitleText": "查询预约",
   "navigationStyle": "custom",
-  "enablePullDownRefresh": false
+  "enablePullDownRefresh": false,  
+  "usingComponents": {
+    "calendar-select": "/jdm_pages/components/calendarSelect",
+    "dialog-wrap": "/components/dialogWrap",
+    "verify-slider": "/components/verifySlider/verifySlider",
+    "verify-point": "/components/verifyPoint/verifyPoint",
+    "verify-plus": "/components/verifyPlus/verifyPlus",
+    "verify-dialog":"/components/verifyDialog",
+    "verify-rotate": "/components/verifyRotate/verifyRotate",
+    "verify-slider-two": "/components/verifySliderTwo/verifySliderTwo",
+    "verify-match": "/components/verifyMatch/verifyMatch",
+    "btn-wrap": "/components/btnWrap",
+    "desktop-forbidden": "/components/desktopForbiddenPopup",
+    "empty": "/components/empty",
+    "page-head": "/components/navigator",
+    "red-btn": "/components/redBtn",
+    "normal-com":"/jdm_pages/components/normal",
+    "special-com":"/jdm_pages/components/special",
+    "family-com":"/jdm_pages/components/family"
+  }
 }

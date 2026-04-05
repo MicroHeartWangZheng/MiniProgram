@@ -36,17 +36,17 @@ e.index.addInterceptor("request", {
   if (t.config.requestt) {
     (new Date).getTime();
     var s = e.index.getStorageSync("versioncontrol");
-    r.langType = 3 == s ? 1 : 0, 
-    r.requestNo = n.utils.getuuid(), 
-    r.timestamp = (new Date).getTime(), 
+    r.langType = 3 == s ? 1 : 0,
+      r.requestNo = n.utils.getuuid(),
+      r.timestamp = (new Date).getTime(),
 
-    key = n.utils.getEncrypt(),
-    console.log("key:", key),
-    o.setPublicKey(key), 
+      key = n.utils.getEncrypt(),
+      console.log("key:", key),
+      o.setPublicKey(key),
 
-    r.timestamp = (new Date).getTime(), 
+      r.timestamp = (new Date).getTime(),
 
-    console.log("请求Url：", i.url);
+      console.log("请求Url：", i.url);
     console.log("请求data：", JSON.stringify(r));
     r = {
       data: r = o.encryptLong(JSON.stringify(r))
@@ -60,17 +60,19 @@ e.index.addInterceptor("request", {
     noToken: i.noToken || !1,
     userCode: i.userCode || !1
   }).then((function (t) {
+    console.log("返回：", t);
+    console.log("返回data：", t.data);
     var o = e.index.getStorageSync("versioncontrol");
     if (t && 500 == t.code);
     else if (t && 200 == t.statusCode) {
       if (!t.data || 2007 != t.data.code) {
         if (0 === t.data.type) {
-          
-          console.log("返回的数据：",t.data.data);
+
+          console.log("返回的数据：", t.data.data);
           var i = n.utils.decryptSm4(t.data.data);
           i = decodeURIComponent(i);
 
-          console.log("解密后的数据：",i);
+          console.log("解密后的数据：", i);
           try {
             i = JSON.parse(i)
           } catch (e) {}
