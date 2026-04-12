@@ -25,6 +25,6 @@
     "uni-popup-select": "/uni_modules/uni-popup-select/components/uni-popup-select/uni-popup-select",
     "dialog-info": "/jdm_pages/my/user/components/dialogInfo",
     "dialog-wrap-text": "/components/dialogWrapText/dialogWrapText",
-    "upload-img": "/jdm_pages/components/upload",
+    "upload-img": "/jdm_pages/components/upload"
   }
 }
