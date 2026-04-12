@@ -1,14 +1,15 @@
 {
   "navigationBarTitleText": "历史订单",
   "navigationBarBackgroundColor": "#A87E6C",
-  "enablePullDownRefresh": false,  
+  "enablePullDownRefresh": false,
   "usingComponents": {
     "calendar-select": "/jdm_pages/components/calendarSelect",
+    "country-select": "/jdm_pages/components/countrySelect",
     "dialog-wrap": "/components/dialogWrap",
     "verify-slider": "/components/verifySlider/verifySlider",
     "verify-point": "/components/verifyPoint/verifyPoint",
     "verify-plus": "/components/verifyPlus/verifyPlus",
-    "verify-dialog":"/components/verifyDialog",
+    "verify-dialog": "/components/verifyDialog",
     "verify-rotate": "/components/verifyRotate/verifyRotate",
     "verify-slider-two": "/components/verifySliderTwo/verifySliderTwo",
     "verify-match": "/components/verifyMatch/verifyMatch",
@@ -17,8 +18,14 @@
     "empty": "/components/empty",
     "page-head": "/components/navigator",
     "red-btn": "/components/redBtn",
-    "normal-com":"/jdm_pages/components/normal",
-    "special-com":"/jdm_pages/components/special",
-    "family-com":"/jdm_pages/components/family"
+    "normal-com": "/jdm_pages/components/normal",
+    "special-com": "/jdm_pages/components/special",
+    "family-com": "/jdm_pages/components/family",
+    "uni-easyinput": "/uni_modules/uni-easyinput/components/uni-easyinput/uni-easyinput",
+    "uni-popup-select": "/uni_modules/uni-popup-select/components/uni-popup-select/uni-popup-select",
+    "dialog-info": "/jdm_pages/my/user/components/dialogInfo",
+    "dialog-wrap-text": "/components/dialogWrapText/dialogWrapText",
+    "upload-img": "/jdm_pages/components/upload",
+    "popup-dialog": "/components/popupDialog/popupDialog"
   }
 }
