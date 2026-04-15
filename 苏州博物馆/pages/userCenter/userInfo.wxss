@@ -1,0 +1,99 @@
+page {
+    border-top: 1rpx solid #dfdfdf
+}
+
+.contentView {
+    background-color: #fff;
+    border-radius: 6rpx;
+    box-sizing: border-box;
+    margin: 20rpx 30rpx 30rpx;
+    padding: 0rpx 20rpx;
+    width: 690rpx
+}
+
+.cellview {
+    -webkit-align-items: center;
+    align-items: center;
+    border-bottom: 1rpx solid #dfdfdf;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    font-size: 28rpx;
+    height: 130rpx;
+    margin-left: 20rpx;
+    padding: 20rpx 0;
+    position: relative
+}
+
+.cellview,.left {
+    display: -webkit-flex;
+    display: flex
+}
+
+.left {
+    -webkit-flex-direction: column;
+    flex-direction: column
+}
+
+.cellTitlelab {
+    color: #595757;
+    height: 60rpx;
+    line-height: 60rpx
+}
+
+.textLab {
+    background-color: initial;
+    color: #908989;
+    height: 70rpx;
+    line-height: 70rpx
+}
+
+.cellJiantou {
+    height: 25rpx;
+    margin-left: auto;
+    margin-right: 30rpx;
+    width: 15rpx
+}
+
+.logout_view {
+    -webkit-align-items: center;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 6rpx;
+    box-sizing: border-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    height: 100rpx;
+    margin: 20rpx 30rpx 30rpx;
+    padding: 0rpx 20rpx;
+    width: 690rpx
+}
+
+.logout_view > wx-label:nth-child(1) {
+    color: #595757;
+    height: 60rpx;
+    line-height: 60rpx
+}
+
+.logout_view > wx-label:nth-child(2) {
+    color: #908989;
+    font-size: 25rpx;
+    height: 60rpx;
+    line-height: 60rpx;
+    margin-left: auto
+}
+
+.logout_view > wx-image:nth-child(3) {
+    -webkit-flex-shrink: 0;
+    flex-shrink: 0;
+    height: 25rpx;
+    margin-left: 30rpx;
+    margin-right: 30rpx;
+    width: 15rpx
+}
+
+.title {
+    margin-left: 30rpx;
+    margin-top: 30rpx
+}

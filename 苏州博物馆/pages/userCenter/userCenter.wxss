@@ -1,0 +1,80 @@
+.sectionHeaderView {
+    -webkit-align-items: center;
+    align-items: center;
+    background-color: #fff;
+    display: -webkit-flex;
+    display: flex;
+    height: 200rpx;
+    margin-bottom: 20rpx;
+    margin-top: 20rpx;
+    width: 100%
+}
+
+.userIcon {
+    border-radius: 20rpx;
+    height: 130rpx;
+    margin-left: 40rpx;
+    overflow: hidden;
+    width: 130rpx
+}
+
+.userIconBtn {
+    -webkit-flex-shrink: 0;
+    flex-shrink: 0;
+    height: 200rpx;
+    left: 0rpx;
+    opacity: 0;
+    position: absolute;
+    top: 0rpx;
+    width: 200rpx
+}
+
+.phoneNum {
+    color: #3f454b;
+    font-size: 30rpx;
+    font-weight: 400;
+    margin-left: 30rpx;
+    max-width: 520rpx;
+    padding: 30rpx 30rpx 30rpx 0rpx
+}
+
+.sectionItemView {
+    -webkit-align-items: center;
+    align-items: center;
+    background-color: #fff;
+    border-bottom: 1rpx solid #eee;
+    display: -webkit-flex;
+    display: flex;
+    height: 100rpx;
+    width: 100%
+}
+
+.cellIcon {
+    margin-left: 40rpx;
+    width: 36rpx
+}
+
+.cellLab {
+    color: #3f454b;
+    font-size: 28rpx;
+    line-height: 36px;
+    margin-left: 30rpx;
+    margin-right: auto
+}
+
+.cellJiantou {
+    height: 25rpx;
+    margin-right: 30rpx;
+    width: 15rpx
+}
+
+.sectionbottomView {
+    -webkit-align-items: center;
+    align-items: center;
+    background-color: #fff;
+    display: -webkit-flex;
+    display: flex;
+    height: 100rpx;
+    margin-top: 20rpx;
+    width: 100%
+}

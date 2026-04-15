@@ -1,0 +1,7 @@
+{
+  "navigationStyle": "custom",
+  "navigationBarTitleText": "启动页",
+  "usingComponents": {
+    "mp-navigation-bar": "miniprogram_npm/weui-miniprogram/navigation-bar/navigation-bar"
+  }
+}

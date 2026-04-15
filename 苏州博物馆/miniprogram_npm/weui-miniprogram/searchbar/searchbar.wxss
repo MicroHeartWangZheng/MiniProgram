@@ -1,0 +1,28 @@
+.weui-search-bar__label wx-text {
+    display: inline-block;
+    font-size: 14px;
+    vertical-align: middle;
+    ;wxcs_originclass: .weui-search-bar__label text;
+    ;wxcs_fileinfo: ./miniprogram_npm/weui-miniprogram/searchbar/searchbar.wxss 1 1;
+}
+
+.weui-search-bar .weui-icon-search, .weui-search-bar__box .weui-icon-search, .weui-search-bar .weui-search-bar__box .weui-icon-clear {
+    width: 22.578px;
+    height: 22.578px;
+    ;wxcs_originclass: .weui-search-bar .weui-icon-search, .weui-search-bar__box .weui-icon-search, .weui-search-bar .weui-search-bar__box .weui-icon-clear;
+    ;wxcs_fileinfo: ./miniprogram_npm/weui-miniprogram/searchbar/searchbar.wxss 6 1;
+}
+
+.weui-search-bar .weui-icon-search, .weui-search-bar__box .weui-icon-search {
+    background-color: var(--weui-FG-2);
+    ;wxcs_originclass: .weui-search-bar .weui-icon-search, .weui-search-bar__box .weui-icon-search;
+    ;wxcs_fileinfo: ./miniprogram_npm/weui-miniprogram/searchbar/searchbar.wxss 12 1;
+}
+
+.weui-search-bar__box .weui-icon-clear::before {
+    background-color: var(--weui-FG-2);
+    width: 22.578px;
+    height: 22.578px;
+    ;wxcs_originclass: .weui-search-bar__box .weui-icon-clear::before;
+    ;wxcs_fileinfo: ./miniprogram_npm/weui-miniprogram/searchbar/searchbar.wxss 17 1;
+}

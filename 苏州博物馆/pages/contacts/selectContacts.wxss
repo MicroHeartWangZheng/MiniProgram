@@ -1,0 +1,211 @@
+page {
+    background-color: #f7f6f7;
+    -webkit-flex-direction: column;
+    flex-direction: column
+}
+
+.visitorItem,page {
+    display: -webkit-flex;
+    display: flex
+}
+
+.visitorItem {
+    -webkit-align-items: center;
+    align-items: center;
+    background-color: #fff;
+    border: 3rpx dashed #e0e0e0;
+    border-radius: 5px;
+    height: 120rpx;
+    margin: 30rpx 30rpx 0;
+    padding: 30rpx;
+    position: relative
+}
+
+.visitorItem:first-of-type {
+    margin-top: 0rpx
+}
+
+.visitorItem:last-of-type {
+    margin-bottom: 150rpx
+}
+
+.firstLine {
+    -webkit-align-items: center;
+    align-items: center;
+    background-color: #fff;
+    display: -webkit-flex;
+    display: flex;
+    margin-left: 30rpx
+}
+
+.firstLine,.nameLab {
+    height: 60rpx;
+    line-height: 60rpx
+}
+
+.nameLab {
+    display: inline-block;
+    font-size: 32rpx;
+    font-weight: 600;
+    max-width: 480rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.ageLab {
+    background-color: #f2881d;
+    border-radius: 10rpx;
+    color: #fff;
+    font-size: 26rpx;
+    height: 40rpx;
+    line-height: 40rpx;
+    margin-left: 20rpx;
+    text-align: center;
+    width: 120rpx
+}
+
+.ageLab2 {
+    background-color: #78cfac
+}
+
+.iconImg {
+    height: 25rpx;
+    margin-left: 8rpx;
+    width: 25rpx
+}
+
+.editeImg {
+    right: 100rpx
+}
+
+.editeImg,.trashImg {
+    height: 40rpx;
+    position: absolute;
+    width: 40rpx
+}
+
+.trashImg {
+    border: 1px solid #bfbfbf;
+    border-radius: 8rpx;
+    display: inline-block;
+    left: 20rpx;
+    top: 70rpx
+}
+
+.secLineLab {
+    color: #5e5e5e;
+    font-size: 28rpx;
+    height: 60rpx;
+    line-height: 60rpx;
+    margin-left: 30rpx
+}
+
+.addvisitorbtn {
+    background-color: #f6f6f6;
+    border: 3rpx dashed var(--themeColor);
+    border-radius: 15rpx;
+    color: var(--themeColor);
+    font-size: 32rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    margin: 30rpx;
+    min-width: 60px;
+    text-align: center
+}
+
+.addvisitorbtn::after {
+    border: none
+}
+
+.button_container {
+    -webkit-align-items: center;
+    align-items: center;
+    background-color: #f7f6f7;
+    bottom: 0rpx;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    height: 150rpx;
+    -webkit-justify-content: center;
+    justify-content: center;
+    position: fixed;
+    width: 100%
+}
+
+.normalBtn {
+    background-color: var(--themeColor);
+    border-radius: 15rpx;
+    color: #fff;
+    font-size: 30rpx;
+    height: 90rpx;
+    line-height: 90rpx;
+    margin-left: 30rpx;
+    min-width: 60px;
+    text-align: center;
+    width: 690rpx
+}
+
+.appointbtnNor::after,.normalBtn::after {
+    border: none
+}
+
+.mySelfTag {
+    background-color: var(--themeColor);
+    border-radius: 10rpx;
+    color: #fff;
+    font-size: 22rpx;
+    height: 30rpx;
+    left: 0rpx;
+    line-height: 30rpx;
+    position: absolute;
+    text-align: center;
+    top: 0rpx;
+    width: 60rpx
+}
+
+.column {
+    -webkit-align-items: flex-start;
+    align-items: flex-start
+}
+
+.tipsView {
+    -webkit-align-self: center;
+    align-self: center;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    margin-top: 30rpx;
+    width: 690rpx
+}
+
+.tipsIcon {
+    -webkit-flex-shrink: 0;
+    flex-shrink: 0;
+    height: 40rpx;
+    margin-right: 20rpx;
+    width: 40rpx
+}
+
+.tipsText {
+    color: var(--themeColor);
+    font-size: 30rpx;
+    line-height: 50rpx
+}
+
+.friendTag {
+    background-color: var(--themeColor);
+    border-radius: 10rpx;
+    color: #fff;
+    font-size: 22rpx;
+    height: 30rpx;
+    line-height: 30rpx;
+    padding: 5rpx 3rpx;
+    position: absolute;
+    right: 0rpx;
+    text-align: center;
+    top: 1rpx;
+    width: 60rpx
+}

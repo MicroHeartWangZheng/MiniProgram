@@ -1,0 +1,56 @@
+@import "../../../publicCss/selectDevice.wxss";
+
+.bottom_view {
+    -webkit-align-items: flex-start;
+    align-items: flex-start;
+    background: #fff;
+    border-radius: 10rpx;
+    box-sizing: border-box;
+    margin-bottom: calc(env(safe-area-inset-bottom) + 154rpx);
+    margin-top: 30rpx;
+    padding: 30rpx;
+    width: 690rpx
+}
+
+.title {
+    margin-bottom: 30rpx;
+    padding-left: 18rpx;
+    position: relative
+}
+
+.title::before {
+    background-color: var(--themeColor);
+    bottom: 0;
+    box-sizing: initial;
+    content: "";
+    height: 30rpx;
+    left: 0;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    width: 8rpx
+}
+
+.user_item {
+    -webkit-align-items: flex-start;
+    align-items: flex-start;
+    border-top: 1rpx solid #f6f6f6;
+    padding-bottom: 20rpx;
+    padding-top: 20rpx;
+    width: 100%
+}
+
+.user_item>wx-label:first-of-type {
+    font-size: 30rpx;
+    font-weight: 700
+}
+
+.user_item>wx-label {
+    font-size: 28rpx;
+    height: 50rpx;
+    line-height: 50rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}

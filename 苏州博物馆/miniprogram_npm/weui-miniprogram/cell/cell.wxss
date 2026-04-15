@@ -1,0 +1,12 @@
+.weui-cell_wxss.weui-cell_wxss::before {
+    display: -webkit-flex;
+    display: flex;
+    ;wxcs_originclass: .weui-cell_wxss.weui-cell_wxss::before;
+    ;wxcs_fileinfo: ./miniprogram_npm/weui-miniprogram/cell/cell.wxss 1 1;
+}
+
+.weui-cell_access .weui-cell__ft::after {
+    background-color: var(--weui-FG-2);
+    ;wxcs_originclass: .weui-cell_access .weui-cell__ft::after;
+    ;wxcs_fileinfo: ./miniprogram_npm/weui-miniprogram/cell/cell.wxss 6 1;
+}

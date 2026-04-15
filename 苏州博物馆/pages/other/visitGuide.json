@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "参观指南",
+  "navigationBarTextStyle": "black",
+  "usingComponents": {
+    "mp-navigation-bar": "miniprogram_npm/weui-miniprogram/navigation-bar/navigation-bar"
+  }
+}

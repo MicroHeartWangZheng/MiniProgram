@@ -1,0 +1,50 @@
+page {
+    padding-top: 30rpx
+}
+
+.item {
+    -webkit-align-self: center;
+    align-self: center;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    width: 690rpx
+}
+
+.item,.title {
+    display: -webkit-flex;
+    display: flex
+}
+
+.title {
+    -webkit-align-items: center;
+    align-items: center;
+    border-bottom: 1rpx solid #dfdfdf;
+    height: 80rpx
+}
+
+.title_icon {
+    height: 25rpx;
+    width: 25rpx
+}
+
+.title_label {
+    color: #595959;
+    font-size: 30rpx;
+    margin-left: 20rpx
+}
+
+.title_label_selected {
+    color: var(--themeColor)
+}
+
+.arrow {
+    height: 12rpx;
+    margin-left: auto;
+    margin-right: 10rpx;
+    width: 23rpx
+}
+
+.arrow_up {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg)
+}

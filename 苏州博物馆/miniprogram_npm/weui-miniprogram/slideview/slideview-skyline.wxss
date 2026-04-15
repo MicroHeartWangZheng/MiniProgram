@@ -1,0 +1,28 @@
+.weui-slideview__btn {
+    -webkit-flex: 1;
+    flex: 1;
+    min-width: 0;
+    ;wxcs_originclass: .weui-slideview__btn;
+    ;wxcs_fileinfo: ./miniprogram_npm/weui-miniprogram/slideview/slideview-skyline.wxss 1 1;
+}
+
+.weui-slideview_icon .weui-slideview__btn {
+    -webkit-flex: none;
+    flex: none;
+    ;wxcs_originclass: .weui-slideview_icon .weui-slideview__btn;
+    ;wxcs_fileinfo: ./miniprogram_npm/weui-miniprogram/slideview/slideview-skyline.wxss 6 1;
+}
+
+.weui-slideview__btn__wrp {
+    -webkit-justify-content: center;
+    justify-content: center;
+    ;wxcs_originclass: .weui-slideview__btn__wrp;
+    ;wxcs_fileinfo: ./miniprogram_npm/weui-miniprogram/slideview/slideview-skyline.wxss 10 1;
+}
+
+.weui-slideview_icon .weui-slideview__btn {
+    display: -webkit-flex;
+    display: flex;
+    ;wxcs_originclass: .weui-slideview_icon .weui-slideview__btn;
+    ;wxcs_fileinfo: ./miniprogram_npm/weui-miniprogram/slideview/slideview-skyline.wxss 15 1;
+}

@@ -1,0 +1,67 @@
+@import "../../../publicCss/selectDevice.wxss";
+
+.title {
+    -webkit-align-self: flex-start;
+    align-self: flex-start;
+    font-size: 32rpx;
+    font-weight: 600;
+    margin-left: 30rpx;
+    margin-top: 30rpx
+}
+
+.project_view {
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    gap: 30rpx;
+    margin-top: 30rpx;
+    width: 690rpx
+}
+
+.project_item,.project_view {
+    display: -webkit-flex;
+    display: flex
+}
+
+.project_item {
+    -webkit-align-items: center;
+    align-items: center;
+    background: #fff;
+    border-radius: 10rpx;
+    box-sizing: border-box;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    gap: 10rpx;
+    height: 150rpx;
+    -webkit-justify-content: center;
+    justify-content: center;
+    position: relative;
+    width: 330rpx
+}
+
+.project_item_selected {
+    background: #ffd8b1;
+    border: 1rpx solid var(--themeColor)
+}
+
+.project_item_disabled > wx-label {
+    color: #a0a0a0
+}
+
+.state {
+    color: var(--themeColor);
+    font-size: 25rpx;
+    position: absolute;
+    right: 15rpx;
+    top: 15rpx
+}
+
+.user > wx-label:nth-child(2) {
+    font-weight: 600;
+    margin-left: 0rpx
+}
+
+.user > wx-label:nth-child(3) {
+    margin-left: 30rpx
+}

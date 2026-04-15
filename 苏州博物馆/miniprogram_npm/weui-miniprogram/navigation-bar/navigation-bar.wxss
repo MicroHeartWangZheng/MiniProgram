@@ -1,0 +1,12 @@
+.weui-navigation-bar__btn_goback_wrapper {
+    padding: 11px 18px 11px 16px;
+    margin: -11px -18px -11px -16px;
+    ;wxcs_originclass: .weui-navigation-bar__btn_goback_wrapper;
+    ;wxcs_fileinfo: ./miniprogram_npm/weui-miniprogram/navigation-bar/navigation-bar.wxss 1 1;
+}
+
+.weui-navigation-bar__inner .weui-navigation-bar__left .weui-navigation-bar__btn_goback {
+    background-color: rgba(0, 0, 0, 0.9);
+    ;wxcs_originclass: .weui-navigation-bar__inner .weui-navigation-bar__left .weui-navigation-bar__btn_goback;
+    ;wxcs_fileinfo: ./miniprogram_npm/weui-miniprogram/navigation-bar/navigation-bar.wxss 5 1;
+}

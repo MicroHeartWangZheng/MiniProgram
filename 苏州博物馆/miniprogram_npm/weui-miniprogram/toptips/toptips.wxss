@@ -1,0 +1,24 @@
+.weui-toptips {
+    display: -webkit-flex;
+    display: flex;
+    ;wxcs_originclass: .weui-toptips;
+    ;wxcs_fileinfo: ./miniprogram_npm/weui-miniprogram/toptips/toptips.wxss 1 1;
+}
+
+.weui-toptips_success {
+    background-color: var(--weui-BRAND);
+    ;wxcs_originclass: .weui-toptips_success;
+    ;wxcs_fileinfo: ./miniprogram_npm/weui-miniprogram/toptips/toptips.wxss 5 1;
+}
+
+.weui-toptips_error {
+    background-color: var(--weui-RED);
+    ;wxcs_originclass: .weui-toptips_error;
+    ;wxcs_fileinfo: ./miniprogram_npm/weui-miniprogram/toptips/toptips.wxss 8 1;
+}
+
+.weui-toptips_info {
+    background-color: var(--weui-BLUE);
+    ;wxcs_originclass: .weui-toptips_info;
+    ;wxcs_fileinfo: ./miniprogram_npm/weui-miniprogram/toptips/toptips.wxss 11 1;
+}

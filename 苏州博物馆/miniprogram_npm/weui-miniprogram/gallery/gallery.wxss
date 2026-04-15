@@ -1,0 +1,41 @@
+.weui-gallery__opr {
+    padding-bottom: 0;
+    ;wxcs_originclass: .weui-gallery__opr;
+    ;wxcs_fileinfo: ./miniprogram_npm/weui-miniprogram/gallery/gallery.wxss 1 1;
+}
+
+.weui-gallery__del {
+    padding-bottom: calc(16px + env(safe-area-inset-bottom));
+    ;wxcs_originclass: .weui-gallery__del;
+    ;wxcs_fileinfo: ./miniprogram_npm/weui-miniprogram/gallery/gallery.wxss 4 1;
+}
+
+.weui-gallery:focus {
+    outline: none;
+    ;wxcs_originclass: .weui-gallery:focus;
+    ;wxcs_fileinfo: ./miniprogram_npm/weui-miniprogram/gallery/gallery.wxss 7 1;
+}
+
+.weui-gallery__info {
+    padding-top: env(safe-area-inset-top);
+    ;wxcs_originclass: .weui-gallery__info;
+    ;wxcs_fileinfo: ./miniprogram_npm/weui-miniprogram/gallery/gallery.wxss 10 1;
+}
+
+.weui-gallery__del {
+    height: 60px;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    align-items: center;
+    ;wxcs_originclass: .weui-gallery__del;
+    ;wxcs_fileinfo: ./miniprogram_npm/weui-miniprogram/gallery/gallery.wxss 13 1;
+}
+
+.weui-icon-delete.weui-icon_gallery-delete {
+    background-color: var(--weui-WHITE);
+    ;wxcs_originclass: .weui-icon-delete.weui-icon_gallery-delete;
+    ;wxcs_fileinfo: ./miniprogram_npm/weui-miniprogram/gallery/gallery.wxss 22 1;
+}

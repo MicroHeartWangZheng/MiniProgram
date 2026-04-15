@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "添加参观者",
+  "enablePullDownRefresh": true,
+  "backgroundTextStyle": "dark",
+  "navigationStyle": "default",
+  "usingComponents": {
+    "mp-navigation-bar": "miniprogram_npm/weui-miniprogram/navigation-bar/navigation-bar"
+  }
+}

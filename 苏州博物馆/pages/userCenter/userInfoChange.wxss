@@ -1,0 +1,125 @@
+page {
+    -webkit-align-items: center;
+    align-items: center;
+    border-top: 1rpx solid #dfdfdf
+}
+
+.contentView {
+    background-color: #fff;
+    box-sizing: border-box;
+    margin-top: 30rpx;
+    padding: 0rpx 20rpx;
+    width: 690rpx
+}
+
+.cellview {
+    border-bottom: 1rpx solid #dfdfdf;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    font-size: 28rpx;
+    height: 130rpx;
+    padding: 20rpx 0;
+    position: relative
+}
+
+.cellTitlelab {
+    color: #595757;
+    height: 60rpx;
+    line-height: 60rpx;
+    min-width: 100%
+}
+
+.textLabImgView {
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: flex;
+    width: 100%
+}
+
+.textLab {
+    background-color: initial;
+    color: #908989;
+    height: 70rpx;
+    line-height: 70rpx;
+    width: 80%
+}
+
+.xianShiImg {
+    height: 64rpx;
+    margin-left: auto;
+    margin-right: 50rpx;
+    width: 64rpx
+}
+
+.inputView {
+    background-color: initial;
+    color: #908989;
+    height: 70rpx;
+    line-height: 70rpx;
+    width: 90%
+}
+
+.firstLine {
+    -webkit-flex-grow: 1;
+    flex-grow: 1;
+    width: auto
+}
+
+.unfoldimg {
+    bottom: 40rpx;
+    height: 17rpx;
+    padding: 10rpx 10rpx 10rpx 40rpx;
+    position: absolute;
+    right: 50rpx;
+    width: 33rpx
+}
+
+.last {
+    margin-bottom: 160rpx
+}
+
+.captcha {
+    background-color: var(--themeColor);
+    bottom: 15rpx;
+    width: 160rpx
+}
+
+.captcha,.captchaNone {
+    border-radius: 10rpx;
+    color: #fff;
+    font-size: 26rpx;
+    height: 60rpx;
+    line-height: 60rpx;
+    margin-left: 20rpx;
+    margin-top: 10rpx;
+    text-align: center
+}
+
+.captchaNone {
+    background-color: #a5a2a2;
+    padding-left: 10rpx;
+    padding-right: 10rpx
+}
+
+.buttonView {
+    height: 120rpx;
+    margin-top: 20rpx;
+    padding: 0rpx 30rpx;
+    width: calc(100% - 60rpx)
+}
+
+.appointBtn {
+    background-color: var(--themeColor);
+    border-radius: 15rpx;
+    color: #fff;
+    font-size: 30rpx;
+    height: 90rpx;
+    line-height: 90rpx;
+    min-width: 60px;
+    padding: 20 8rpx;
+    text-align: center;
+    width: 690rpx
+}

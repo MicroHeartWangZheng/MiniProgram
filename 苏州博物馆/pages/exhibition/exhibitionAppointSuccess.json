@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "特展购票成功",
+  "usingComponents": {
+    "mp-navigation-bar": "miniprogram_npm/weui-miniprogram/navigation-bar/navigation-bar"
+  }
+}

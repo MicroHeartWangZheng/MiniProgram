@@ -1,0 +1,14 @@
+.weui-uploader__bd, .weui-uploader__files {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    ;wxcs_originclass: .weui-uploader__bd, .weui-uploader__files;
+    ;wxcs_fileinfo: ./miniprogram_npm/weui-miniprogram/uploader/uploader.wxss 1 1;
+}
+
+.weui-uploader__file, .weui-uploader__input-box {
+    float: none;
+    ;wxcs_originclass: .weui-uploader__file, .weui-uploader__input-box;
+    ;wxcs_fileinfo: ./miniprogram_npm/weui-miniprogram/uploader/uploader.wxss 9 1;
+}

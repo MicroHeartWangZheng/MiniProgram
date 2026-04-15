@@ -1,0 +1,13 @@
+.weui-cells__group_wxss.weui-cells__group_wxss .weui-cells__title {
+    margin-top: 24px;
+    ;wxcs_originclass: .weui-cells__group_wxss.weui-cells__group_wxss .weui-cells__title;
+    ;wxcs_fileinfo: ./miniprogram_npm/weui-miniprogram/cells/cells.wxss 1 1;
+}
+
+.weui-cells__group_form .weui-cells__tips {
+    margin-top: 8px;
+    padding: 0 32px;
+    color: var(--weui-FG-1);
+    ;wxcs_originclass: .weui-cells__group_form .weui-cells__tips;
+    ;wxcs_fileinfo: ./miniprogram_npm/weui-miniprogram/cells/cells.wxss 4 1;
+}

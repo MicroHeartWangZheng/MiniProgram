@@ -1,0 +1,7 @@
+{
+  "publicComponents": {
+    "t-captcha": "components/index/index"
+  },
+  "pages": {},
+  "main": "index.js"
+}

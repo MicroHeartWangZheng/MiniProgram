@@ -1,0 +1,77 @@
+.sk-transparent {
+    color: transparent!important
+}
+
+.sk-text-25-8065-136 {
+    background-image: linear-gradient(transparent 25.8065%,#eee 0,#eee 74.1935%,transparent 0)!important;
+    background-size: 100% 59.6154rpx;
+    position: relative!important
+}
+
+.sk-text {
+    background-clip: content-box!important;
+    background-color: initial!important;
+    background-origin: content-box!important;
+    background-repeat: repeat-y!important;
+    color: transparent!important
+}
+
+.sk-text-30-6452-21,.sk-text-30-6452-535,.sk-text-30-6452-601,.sk-text-30-6452-70,.sk-text-30-6452-71,.sk-text-30-6452-886,.sk-text-30-6452-950 {
+    background-image: linear-gradient(transparent 30.6452%,#eee 0,#eee 69.3548%,transparent 0)!important;
+    background-size: 100% 59.6154rpx;
+    position: relative!important
+}
+
+.sk-text-14-2857-756 {
+    background-size: 100% 43.0769rpx
+}
+
+.sk-text-14-2857-247,.sk-text-14-2857-756 {
+    background-image: linear-gradient(transparent 14.2857%,#eee 0,#eee 85.7143%,transparent 0)!important;
+    position: relative!important
+}
+
+.sk-text-14-2857-247 {
+    background-size: 100% 32.3077rpx
+}
+
+.sk-text-26-9231-1000,.sk-text-26-9231-118,.sk-text-26-9231-128,.sk-text-26-9231-229,.sk-text-26-9231-274,.sk-text-26-9231-385,.sk-text-26-9231-475,.sk-text-26-9231-540,.sk-text-26-9231-543,.sk-text-26-9231-690,.sk-text-26-9231-711,.sk-text-26-9231-92,.sk-text-26-9231-950,.sk-text-26-9231-98,.sk-text-26-9231-996 {
+    background-image: linear-gradient(transparent 26.9231%,#eee 0,#eee 73.0769%,transparent 0)!important;
+    background-size: 100% 50rpx;
+    position: relative!important
+}
+
+.sk-button {
+    border: none!important;
+    box-shadow: none!important;
+    color: #efefef!important
+}
+
+.sk-button,.sk-image {
+    background: #efefef!important
+}
+
+.sk-pseudo::after,.sk-pseudo::before {
+    background: #efefef!important;
+    background-image: none!important;
+    border-color: transparent!important;
+    color: transparent!important
+}
+
+.sk-pseudo-rect::after,.sk-pseudo-rect::before {
+    border-radius: 0!important
+}
+
+.sk-pseudo-circle::after,.sk-pseudo-circle::before {
+    border-radius: 50%!important
+}
+
+.sk-container {
+    background-color: initial;
+    height: 100%;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    width: 100%
+}

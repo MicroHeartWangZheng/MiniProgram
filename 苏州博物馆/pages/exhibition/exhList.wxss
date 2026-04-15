@@ -1,0 +1,25 @@
+@import "/pages/activity/activityList.wxss";
+
+.act_box_top {
+    padding-bottom: 30rpx
+}
+
+.specicalType {
+    font-size: 25rpx
+}
+
+.activity_box .act_item {
+    min-height: unset
+}
+
+.title {
+    -webkit-flex-basis: 0;
+    flex-basis: 0;
+    -webkit-flex-grow: 1;
+    flex-grow: 1;
+    font-size: 28rpx
+}
+
+.is_re {
+    margin-right: 30rpx
+}

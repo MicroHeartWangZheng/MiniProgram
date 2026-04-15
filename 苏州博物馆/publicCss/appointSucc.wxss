@@ -1,0 +1,130 @@
+.banner-top {
+    height: 390rpx;
+    width: 752rpx
+}
+
+.sectionview {
+    -webkit-align-items: center;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 10rpx;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    margin: 0 30rpx;
+    position: absolute;
+    top: 160rpx;
+    width: 690rpx
+}
+
+.success-icon {
+    margin-bottom: 30rpx;
+    margin-top: 40rpx;
+    text-align: center
+}
+
+.success-icon wx-image {
+    height: 101rpx;
+    width: 129rpx
+}
+
+.success-icon wx-label {
+    display: block;
+    font-size: 34rpx;
+    font-weight: 600;
+    line-height: 80rpx;
+    -webkit-transform: translateX(4rpx);
+    transform: translateX(4rpx)
+}
+
+.time-tips {
+    -webkit-align-items: center;
+    align-items: center;
+    border: 1rpx dashed #e0e0e0;
+    border-bottom: none;
+    box-sizing: border-box;
+    display: -webkit-flex;
+    display: flex;
+    font-size: 30rpx;
+    padding-left: 30rpx;
+    padding-right: 30rpx;
+    width: 630rpx
+}
+
+.time-tips wx-label {
+    -webkit-flex-shrink: 0;
+    flex-shrink: 0;
+    line-height: 70rpx;
+    width: 154rpx
+}
+
+.time-tips :last-child {
+    word-wrap: break-word;
+    color: var(--themeColor);
+    -webkit-flex-grow: 1;
+    flex-grow: 1;
+    line-height: 40rpx;
+    margin-bottom: 10rpx;
+    margin-top: 10rpx;
+    overflow-wrap: break-word
+}
+
+.rich_text {
+    color: #000;
+    display: block;
+    font-size: 28rpx;
+    line-height: 40rpx;
+    margin: 30rpx
+}
+
+.buttomview {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-evenly;
+    justify-content: space-evenly;
+    margin-bottom: 20rpx;
+    margin-top: 30rpx;
+    width: 100%
+}
+
+.buttomview :last-child {
+    background-color: #fff;
+    background: unset;
+    border: 1rpx solid #b3b3b3;
+    color: #000
+}
+
+.buttomview wx-button {
+    background: linear-gradient(90deg,#61ccff,#89a2ff,#be71ff);
+    border-radius: 10rpx;
+    color: #fff;
+    cursor: pointer;
+    font-size: 30rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    margin: 0;
+    text-align: center;
+    width: 300rpx
+}
+
+.surebtn::after {
+    border: none
+}
+
+.guide_title {
+    margin-left: 30rpx;
+    margin-top: 30rpx
+}
+
+.row {
+    -webkit-justify-content: space-evenly;
+    justify-content: space-evenly;
+    margin-bottom: 30rpx;
+    margin-top: 20rpx
+}
+
+.row > wx-label {
+    color: var(--themeColor);
+    text-decoration: underline
+}

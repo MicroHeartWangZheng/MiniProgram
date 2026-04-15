@@ -1,0 +1,151 @@
+.info {
+    background-color: #fff;
+    border-radius: 10rpx;
+    margin: 25rpx 30rpx;
+    padding: 0 30rpx 30rpx
+}
+
+.info .title {
+    border-bottom: 1rpx solid #eee;
+    color: #434343;
+    font-size: 34rpx;
+    padding: 28rpx 0
+}
+
+.info .c {
+    color: #a0a0a0;
+    display: -webkit-flex;
+    display: flex;
+    font-size: 25rpx;
+    margin-top: 20rpx
+}
+
+.info .t {
+    color: #434343;
+    margin-right: 27rpx;
+    white-space: nowrap
+}
+
+.info .activity_time {
+    margin-top: 37rpx
+}
+
+.activity_cost .p,.batch .p {
+    color: #b25c43
+}
+
+.p_detail {
+    background-color: #fff;
+    border-radius: 10rpx;
+    margin: 0 30rpx 180rpx
+}
+
+.p_detail .t {
+    color: #434343;
+    font-size: 25rpx;
+    font-size: 30rpx;
+    padding: 36rpx 30rpx
+}
+
+.p_detail .p_item {
+    background-color: rgba(182,126,221,.1);
+    border: 1px dashed var(--themeColor);
+    border-radius: 10rpx;
+    margin: 0 30rpx 38rpx;
+    padding: 42rpx 56rpx;
+    position: relative
+}
+
+.p_item .id_card,.p_item .name wx-text {
+    color: #434343;
+    font-size: 25rpx
+}
+
+.p_item .id_card {
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: flex;
+    margin-top: 30rpx;
+    position: relative
+}
+
+.id_card .c {
+    color: #a0a0a0;
+    margin-left: 26rpx
+}
+
+.code {
+    -webkit-align-items: center;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 10rpx;
+    display: -webkit-flex;
+    display: flex;
+    height: 103rpx;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    margin: 0 30rpx 200rpx;
+    padding: 0 30rpx
+}
+
+.code .code_left {
+    color: #626262;
+    font-size: 25rpx;
+    margin-right: 50rpx;
+    white-space: nowrap
+}
+
+.image_code {
+    border-radius: 4rpx;
+    height: 42rpx
+}
+
+.btn {
+    -webkit-align-items: center;
+    align-items: center;
+    background-color: #fff;
+    bottom: 0;
+    display: -webkit-flex;
+    display: flex;
+    font-size: 30rpx;
+    height: 167rpx;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    z-index: 1000
+}
+
+.price {
+    color: #b25c43;
+    margin-left: 60rpx
+}
+
+.confirm {
+    background-color: var(--themeColor);
+    border-radius: 10rpx;
+    color: #fff;
+    height: 73rpx;
+    line-height: 73rpx;
+    margin-right: 30rpx;
+    text-align: center;
+    width: 258rpx
+}
+
+.disabledCon {
+    background-color: #a0a0a0
+}
+
+.order_price {
+    color: #626262
+}
+
+.price_i {
+    display: -webkit-flex;
+    display: flex
+}
+
+.pay_time {
+    font-size: 24rpx
+}

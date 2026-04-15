@@ -1,0 +1,449 @@
+.descView {
+    background-color: #fff;
+    border-radius: 10rpx;
+    padding: 20rpx 0rpx
+}
+
+.descView,.row {
+    margin: 30rpx 30rpx 0rpx
+}
+
+.row {
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: flex-start;
+    justify-content: flex-start
+}
+
+.row_title {
+    color: #2d2d2d;
+    -webkit-flex-shrink: 0;
+    flex-shrink: 0;
+    font-size: 25rpx;
+    font-weight: 400
+}
+
+.row_content {
+    color: #a1a1a1;
+    font-family: Helvetica Neue;
+    font-size: 26rpx;
+    margin-left: 21rpx
+}
+
+.type_label {
+    background: #55a662;
+    border-radius: 8rpx;
+    color: #fff;
+    -webkit-flex-shrink: 0;
+    flex-shrink: 0;
+    font-size: 30rpx;
+    height: 50rpx;
+    line-height: 50rpx;
+    padding: 0 14rpx
+}
+
+.name_label {
+    color: #2d2d2d;
+    font-size: 32rpx;
+    font-weight: 500;
+    margin-left: 20rpx
+}
+
+.museum_name {
+    -webkit-align-items: center;
+    align-items: center;
+    background: #fff;
+    border: 1rpx solid #dcdcdc;
+    border-radius: 4rpx;
+    color: #a1a1a1;
+    display: -webkit-flex;
+    display: flex;
+    font-size: 25rpx;
+    height: 52rpx;
+    margin-left: 21rpx;
+    padding: 0 17rpx
+}
+
+.right_arrow {
+    height: 21rpx;
+    margin-left: 45rpx;
+    width: 12rpx
+}
+
+.exhibitionDateView {
+    margin: 0rpx 20rpx 20rpx
+}
+
+.exhibitionDateView,.topview {
+    background-color: #fff;
+    border-radius: 10rpx
+}
+
+.topview {
+    margin: 30rpx 30rpx 0rpx;
+    padding: 10rpx;
+    position: relative
+}
+
+.topconent {
+    top: 30rpx
+}
+
+.topstatelab {
+    font-size: 26rpx;
+    height: 60rpx;
+    left: 30rpx;
+    line-height: 60rpx;
+    top: 90rpx
+}
+
+.paybtn,.topstatelab {
+    color: #fff;
+    position: absolute
+}
+
+.paybtn {
+    background-color: var(--themeColor);
+    border-radius: 10rpx;
+    font-size: 24rpx;
+    height: 40rpx;
+    line-height: 40rpx;
+    right: 50rpx;
+    text-align: center;
+    top: 20rpx;
+    width: 120rpx
+}
+
+.toptitlelab {
+    color: #2d2d2d;
+    display: -webkit-flex;
+    display: flex;
+    font-size: 30rpx;
+    line-height: 60rpx;
+    margin: 0 25rpx
+}
+
+.toplab {
+    color: #525252;
+    font-size: 24rpx;
+    margin: 0 25rpx 0 70rpx
+}
+
+.topStateLab,.toplab {
+    display: block;
+    height: 60rpx;
+    line-height: 60rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.topStateLab {
+    color: #3ac3b4;
+    font-size: 28rpx;
+    margin: 0 25rpx
+}
+
+.lineView {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row;
+    flex-flow: row;
+    height: 40rpx;
+    margin-top: 20rpx
+}
+
+.leftline {
+    background-color: var(--themeColor);
+    height: 1rpx;
+    line-height: 1rpx;
+    margin: 20rpx;
+    width: 280rpx
+}
+
+.lineLabstr {
+    color: var(--themeColor);
+    font-size: 26rpx;
+    height: 40rpx;
+    line-height: 40rpx
+}
+
+.rightlineLab {
+    background-color: var(--themeColor);
+    height: 1rpx;
+    line-height: 1rpx;
+    margin: 20rpx;
+    width: 280rpx
+}
+
+.memberlist {
+    height: 610rpx;
+    padding-bottom: 120rpx
+}
+
+.qrcode,.qrcodeimg {
+    height: 320rpx;
+    width: 320rpx
+}
+
+.qrcode {
+    left: 50%;
+    margin-top: 20px;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    z-index: 0
+}
+
+.qrcodeView {
+    position: relative
+}
+
+.huangpuLogo {
+    height: 100rpx;
+    left: 50%;
+    position: absolute;
+    top: 30%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    width: 100rpx;
+    z-index: 500
+}
+
+.huangpuLogo,.memberconent {
+    background-color: #fff;
+    border-radius: 10rpx
+}
+
+.memberconent {
+    margin: 30rpx;
+    padding: 20rpx 20rpx 30rpx;
+    position: relative
+}
+
+.canclebtn {
+    background-color: var(--themeColor);
+    border-radius: 10rpx;
+    color: #fff;
+    font-size: 24rpx;
+    height: 40rpx;
+    line-height: 40rpx;
+    position: absolute;
+    right: 50rpx;
+    text-align: center;
+    top: 20rpx;
+    width: 120rpx
+}
+
+.button_container {
+    background-color: #fff;
+    bottom: 0rpx;
+    height: 120rpx;
+    padding: 0rpx 30rpx;
+    position: fixed;
+    width: calc(100% - 60rpx);
+    z-index: 500
+}
+
+.payView {
+    margin-left: 0rpx;
+    width: calc(100% - 180rpx)
+}
+
+.moneyView {
+    color: #595757;
+    font-size: 26rpx
+}
+
+.moneyStateLab {
+    color: #595757;
+    display: inline-block
+}
+
+.moneyLab {
+    color: var(--themeColor);
+    display: inline-block;
+    min-width: 300rpx;
+    padding-left: 15rpx
+}
+
+.lessTimeLab {
+    color: #dc5858;
+    display: inline-block;
+    font-size: 26rpx
+}
+
+.appointbtnAble {
+    background-color: var(--themeColor);
+    border-radius: 15rpx;
+    color: #fff;
+    font-size: 30rpx;
+    height: 60rpx;
+    line-height: 60rpx;
+    margin-left: 0rpx;
+    margin-right: 0rpx;
+    min-width: 60px;
+    text-align: center;
+    width: 180rpx;
+    z-index: 500
+}
+
+.heXiaoBottomBtn,.tuidingBottomBtn {
+    background-color: var(--themeColor);
+    border-radius: 15rpx;
+    color: #fff;
+    font-size: 30rpx;
+    height: 90rpx;
+    line-height: 90rpx;
+    min-width: 60px;
+    padding: 20 8rpx;
+    text-align: center;
+    width: 690rpx;
+    z-index: 500
+}
+
+.heXiaoNormore {
+    background-color: #e8d499
+}
+
+.heXiaoBottomBtn::after,.tuidingBottomBtn::after {
+    border: none
+}
+
+.selecteimgview {
+    height: 40rpx;
+    left: 0rpx;
+    padding: 30rpx;
+    position: absolute;
+    top: 0rpx;
+    width: 40rpx
+}
+
+.trashImg {
+    border: 1px dashed var(--themeColor);
+    border-radius: 50%
+}
+
+.trashImg,.trashImgSelected {
+    display: inline-block;
+    height: 40rpx;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    width: 40rpx
+}
+
+.reserveStatusImg {
+    height: 138rpx;
+    position: absolute;
+    right: 30rpx;
+    top: 30rpx;
+    width: 164rpx
+}
+
+.normore {
+    background-color: #e8d499
+}
+
+.baozhangPopbgview {
+    background: rgba(0,0,0,.7);
+    height: 100vh;
+    left: 0rpx;
+    position: fixed;
+    top: 0rpx;
+    width: 100%;
+    z-index: 1000
+}
+
+.baozhangPopview {
+    background: #fff;
+    border-radius: 30rpx 30rpx 0rpx 0rpx;
+    bottom: 0;
+    display: inline;
+    height: 514rpx;
+    position: absolute;
+    width: 100%;
+    z-index: 1000
+}
+
+.baozhangPopTitleView {
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: flex;
+    height: 180rpx;
+    -webkit-justify-content: center;
+    justify-content: center;
+    width: 100%;
+    z-index: 1000
+}
+
+.baozhangTitleImg {
+    height: 117rpx;
+    width: 272rpx
+}
+
+.baozhangCloseImg {
+    height: 34rpx;
+    padding: 30rpx;
+    position: absolute;
+    right: 10rpx;
+    top: 30rpx;
+    width: 34rpx
+}
+
+.imgTextView {
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    height: 60rpx;
+    margin: 0rpx 30rpx
+}
+
+.timeImg {
+    height: 28rpx;
+    width: 26rpx
+}
+
+.timeLabel {
+    color: #2d2d2d;
+    font-size: 28rpx;
+    font-weight: 400;
+    margin-left: 15rpx;
+    margin-right: 40rpx
+}
+
+.popdescV {
+    height: 80rpx;
+    margin: 0 30rpx 20rpx
+}
+
+.popdescLab {
+    color: #a1a1a1;
+    font-size: 26rpx;
+    line-height: 40rpx;
+    white-space: normal
+}
+
+.eyesImg {
+    height: 30rpx;
+    position: absolute;
+    right: 70rpx;
+    top: 140rpx;
+    width: 40rpx
+}
+
+.cancel {
+    margin-left: 10rpx
+}
+
+.cancelzhifu {
+    background-color: #eee;
+    color: var(--themeColor);
+    margin-left: 10px
+}

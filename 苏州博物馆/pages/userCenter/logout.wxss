@@ -1,0 +1,22 @@
+@import "../login/phoneLogin.wxss";
+
+.form-field,.imgCode,.input {
+    -webkit-align-items: flex-start;
+    align-items: flex-start;
+    -webkit-flex-direction: column;
+    flex-direction: column
+}
+
+.row {
+    width: 100%
+}
+
+.input_title {
+    width: auto
+}
+
+.number-code,.phoneCode {
+    -webkit-flex-grow: 1;
+    flex-grow: 1;
+    margin-right: 20rpx
+}

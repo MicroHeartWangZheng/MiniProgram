@@ -1,0 +1,439 @@
+.wx_loading_view {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    align-items: center;
+    overflow: hidden;
+    ;wxcs_originclass: .wx_loading_view;
+    ;wxcs_fileinfo: ./miniprogram_npm/weui-miniprogram/loading/loading.wxss 1 1;
+}
+
+.wx_loading_view__hide {
+    height: 0 !important;
+    display: none;
+    ;wxcs_originclass: .wx_loading_view__hide;
+    ;wxcs_fileinfo: ./miniprogram_npm/weui-miniprogram/loading/loading.wxss 10 1;
+}
+
+.wx_loading_view__animated.wx_loading_view__hide {
+    display: -webkit-flex;
+    display: flex;
+    ;wxcs_originclass: .wx_loading_view__animated.wx_loading_view__hide;
+    ;wxcs_fileinfo: ./miniprogram_npm/weui-miniprogram/loading/loading.wxss 14 1;
+}
+
+.loading {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 17px;
+    text-align: center;
+    ;wxcs_originclass: .loading;
+    ;wxcs_fileinfo: ./miniprogram_npm/weui-miniprogram/loading/loading.wxss 18 1;
+}
+
+.loading_view_translation {
+    transition: height 0.2s 0.3s ease;
+    ;wxcs_originclass: .loading_view_translation;
+    ;wxcs_fileinfo: ./miniprogram_npm/weui-miniprogram/loading/loading.wxss 23 1;
+}
+
+.weui-loading-animation {
+    height: 15.047px;
+    width: 15.047px;
+    -webkit-animation: loading 1s linear infinite;
+    animation: loading 1s linear infinite;
+    ;wxcs_originclass: .weui-loading-animation;
+    ;wxcs_fileinfo: ./miniprogram_npm/weui-miniprogram/loading/loading.wxss 26 1;
+}
+
+@-webkit-keyframes loading {
+    from {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+        ;wxcs_fileinfo: ./miniprogram_npm/weui-miniprogram/loading/loading.wxss 33 3;
+    }
+
+    to {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+        ;wxcs_fileinfo: ./miniprogram_npm/weui-miniprogram/loading/loading.wxss 37 3;
+    }
+}
+
+@keyframes loading {
+    from {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+        ;wxcs_fileinfo: ./miniprogram_npm/weui-miniprogram/loading/loading.wxss 43 3;
+    }
+
+    to {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+        ;wxcs_fileinfo: ./miniprogram_npm/weui-miniprogram/loading/loading.wxss 47 3;
+    }
+}
+
+.wx_dot_loading, .wx_dot_loading::before, .wx_dot_loading::after {
+    display: inline-block;
+    vertical-align: middle;
+    width: 6px;
+    height: 6px;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.3);
+    font-size: 0;
+    -webkit-animation: dot2 1.6s step-start infinite;
+    animation: dot2 1.6s step-start infinite;
+    ;wxcs_originclass: .wx_dot_loading, .wx_dot_loading::before, .wx_dot_loading::after;
+    ;wxcs_fileinfo: ./miniprogram_npm/weui-miniprogram/loading/loading.wxss 52 1;
+}
+
+.wx_dot_loading {
+    position: relative;
+    ;wxcs_originclass: .wx_dot_loading;
+    ;wxcs_fileinfo: ./miniprogram_npm/weui-miniprogram/loading/loading.wxss 66 1;
+}
+
+.wx_dot_loading::before {
+    content: "";
+    position: absolute;
+    left: -12px;
+    background-color: rgba(0, 0, 0, 0.1);
+    -webkit-animation: dot1 1.6s step-start infinite;
+    animation: dot1 1.6s step-start infinite;
+    ;wxcs_originclass: .wx_dot_loading::before;
+    ;wxcs_fileinfo: ./miniprogram_npm/weui-miniprogram/loading/loading.wxss 69 1;
+}
+
+.wx_dot_loading::after {
+    content: "";
+    position: absolute;
+    right: -12px;
+    background-color: rgba(0, 0, 0, 0.5);
+    -webkit-animation: dot3 1.6s step-start infinite;
+    animation: dot3 1.6s step-start infinite;
+    ;wxcs_originclass: .wx_dot_loading::after;
+    ;wxcs_fileinfo: ./miniprogram_npm/weui-miniprogram/loading/loading.wxss 77 1;
+}
+
+@-webkit-keyframes dot1 {
+    0%, 100% {
+        background-color: rgba(0, 0, 0, 0.1);
+        ;wxcs_fileinfo: ./miniprogram_npm/weui-miniprogram/loading/loading.wxss 86 3;
+    }
+
+    30% {
+        background-color: rgba(0, 0, 0, 0.5);
+        ;wxcs_fileinfo: ./miniprogram_npm/weui-miniprogram/loading/loading.wxss 90 3;
+    }
+
+    60% {
+        background-color: rgba(0, 0, 0, 0.3);
+        ;wxcs_fileinfo: ./miniprogram_npm/weui-miniprogram/loading/loading.wxss 93 3;
+    }
+}
+
+@keyframes dot1 {
+    0%, 100% {
+        background-color: rgba(0, 0, 0, 0.1);
+        ;wxcs_fileinfo: ./miniprogram_npm/weui-miniprogram/loading/loading.wxss 98 3;
+    }
+
+    30% {
+        background-color: rgba(0, 0, 0, 0.5);
+        ;wxcs_fileinfo: ./miniprogram_npm/weui-miniprogram/loading/loading.wxss 102 3;
+    }
+
+    60% {
+        background-color: rgba(0, 0, 0, 0.3);
+        ;wxcs_fileinfo: ./miniprogram_npm/weui-miniprogram/loading/loading.wxss 105 3;
+    }
+}
+
+@-webkit-keyframes dot2 {
+    0%, 100% {
+        background-color: rgba(0, 0, 0, 0.3);
+        ;wxcs_fileinfo: ./miniprogram_npm/weui-miniprogram/loading/loading.wxss 110 3;
+    }
+
+    30% {
+        background-color: rgba(0, 0, 0, 0.1);
+        ;wxcs_fileinfo: ./miniprogram_npm/weui-miniprogram/loading/loading.wxss 114 3;
+    }
+
+    60% {
+        background-color: rgba(0, 0, 0, 0.5);
+        ;wxcs_fileinfo: ./miniprogram_npm/weui-miniprogram/loading/loading.wxss 117 3;
+    }
+}
+
+@keyframes dot2 {
+    0%, 100% {
+        background-color: rgba(0, 0, 0, 0.3);
+        ;wxcs_fileinfo: ./miniprogram_npm/weui-miniprogram/loading/loading.wxss 122 3;
+    }
+
+    30% {
+        background-color: rgba(0, 0, 0, 0.1);
+        ;wxcs_fileinfo: ./miniprogram_npm/weui-miniprogram/loading/loading.wxss 126 3;
+    }
+
+    60% {
+        background-color: rgba(0, 0, 0, 0.5);
+        ;wxcs_fileinfo: ./miniprogram_npm/weui-miniprogram/loading/loading.wxss 129 3;
+    }
+}
+
+@-webkit-keyframes dot3 {
+    0%, 100% {
+        background-color: rgba(0, 0, 0, 0.5);
+        ;wxcs_fileinfo: ./miniprogram_npm/weui-miniprogram/loading/loading.wxss 134 3;
+    }
+
+    30% {
+        background-color: rgba(0, 0, 0, 0.3);
+        ;wxcs_fileinfo: ./miniprogram_npm/weui-miniprogram/loading/loading.wxss 138 3;
+    }
+
+    60% {
+        background-color: rgba(0, 0, 0, 0.1);
+        ;wxcs_fileinfo: ./miniprogram_npm/weui-miniprogram/loading/loading.wxss 141 3;
+    }
+}
+
+@keyframes dot3 {
+    0%, 100% {
+        background-color: rgba(0, 0, 0, 0.5);
+        ;wxcs_fileinfo: ./miniprogram_npm/weui-miniprogram/loading/loading.wxss 146 3;
+    }
+
+    30% {
+        background-color: rgba(0, 0, 0, 0.3);
+        ;wxcs_fileinfo: ./miniprogram_npm/weui-miniprogram/loading/loading.wxss 150 3;
+    }
+
+    60% {
+        background-color: rgba(0, 0, 0, 0.1);
+        ;wxcs_fileinfo: ./miniprogram_npm/weui-miniprogram/loading/loading.wxss 153 3;
+    }
+}
+
+.wx_dot_loading_white {
+    background-color: rgba(255, 255, 255, 0.3);
+    -webkit-animation: dotw2 1.6s step-start infinite;
+    animation: dotw2 1.6s step-start infinite;
+    ;wxcs_originclass: .wx_dot_loading_white;
+    ;wxcs_fileinfo: ./miniprogram_npm/weui-miniprogram/loading/loading.wxss 157 1;
+}
+
+.wx_dot_loading_white::before {
+    background-color: rgba(255, 255, 255, 0.5);
+    -webkit-animation: dotw1 1.6s step-start infinite;
+    animation: dotw1 1.6s step-start infinite;
+    ;wxcs_originclass: .wx_dot_loading_white::before;
+    ;wxcs_fileinfo: ./miniprogram_npm/weui-miniprogram/loading/loading.wxss 162 1;
+}
+
+.wx_dot_loading_white::after {
+    background-color: rgba(255, 255, 255, 0.1);
+    -webkit-animation: dotw3 1.6s step-start infinite;
+    animation: dotw3 1.6s step-start infinite;
+    ;wxcs_originclass: .wx_dot_loading_white::after;
+    ;wxcs_fileinfo: ./miniprogram_npm/weui-miniprogram/loading/loading.wxss 167 1;
+}
+
+@-webkit-keyframes dotw1 {
+    0%, 100% {
+        background-color: rgba(255, 255, 255, 0.5);
+        ;wxcs_fileinfo: ./miniprogram_npm/weui-miniprogram/loading/loading.wxss 173 3;
+    }
+
+    30% {
+        background-color: rgba(255, 255, 255, 0.1);
+        ;wxcs_fileinfo: ./miniprogram_npm/weui-miniprogram/loading/loading.wxss 177 3;
+    }
+
+    60% {
+        background-color: rgba(255, 255, 255, 0.3);
+        ;wxcs_fileinfo: ./miniprogram_npm/weui-miniprogram/loading/loading.wxss 180 3;
+    }
+}
+
+@keyframes dotw1 {
+    0%, 100% {
+        background-color: rgba(255, 255, 255, 0.5);
+        ;wxcs_fileinfo: ./miniprogram_npm/weui-miniprogram/loading/loading.wxss 185 3;
+    }
+
+    30% {
+        background-color: rgba(255, 255, 255, 0.1);
+        ;wxcs_fileinfo: ./miniprogram_npm/weui-miniprogram/loading/loading.wxss 189 3;
+    }
+
+    60% {
+        background-color: rgba(255, 255, 255, 0.3);
+        ;wxcs_fileinfo: ./miniprogram_npm/weui-miniprogram/loading/loading.wxss 192 3;
+    }
+}
+
+@-webkit-keyframes dotw2 {
+    0%, 100% {
+        background-color: rgba(255, 255, 255, 0.3);
+        ;wxcs_fileinfo: ./miniprogram_npm/weui-miniprogram/loading/loading.wxss 197 3;
+    }
+
+    30% {
+        background-color: rgba(255, 255, 255, 0.5);
+        ;wxcs_fileinfo: ./miniprogram_npm/weui-miniprogram/loading/loading.wxss 201 3;
+    }
+
+    60% {
+        background-color: rgba(255, 255, 255, 0.1);
+        ;wxcs_fileinfo: ./miniprogram_npm/weui-miniprogram/loading/loading.wxss 204 3;
+    }
+}
+
+@keyframes dotw2 {
+    0%, 100% {
+        background-color: rgba(255, 255, 255, 0.3);
+        ;wxcs_fileinfo: ./miniprogram_npm/weui-miniprogram/loading/loading.wxss 209 3;
+    }
+
+    30% {
+        background-color: rgba(255, 255, 255, 0.5);
+        ;wxcs_fileinfo: ./miniprogram_npm/weui-miniprogram/loading/loading.wxss 213 3;
+    }
+
+    60% {
+        background-color: rgba(255, 255, 255, 0.1);
+        ;wxcs_fileinfo: ./miniprogram_npm/weui-miniprogram/loading/loading.wxss 216 3;
+    }
+}
+
+@-webkit-keyframes dotw3 {
+    0%, 100% {
+        background-color: rgba(255, 255, 255, 0.1);
+        ;wxcs_fileinfo: ./miniprogram_npm/weui-miniprogram/loading/loading.wxss 221 3;
+    }
+
+    30% {
+        background-color: rgba(255, 255, 255, 0.3);
+        ;wxcs_fileinfo: ./miniprogram_npm/weui-miniprogram/loading/loading.wxss 225 3;
+    }
+
+    60% {
+        background-color: rgba(255, 255, 255, 0.5);
+        ;wxcs_fileinfo: ./miniprogram_npm/weui-miniprogram/loading/loading.wxss 228 3;
+    }
+}
+
+@keyframes dotw3 {
+    0%, 100% {
+        background-color: rgba(255, 255, 255, 0.1);
+        ;wxcs_fileinfo: ./miniprogram_npm/weui-miniprogram/loading/loading.wxss 233 3;
+    }
+
+    30% {
+        background-color: rgba(255, 255, 255, 0.3);
+        ;wxcs_fileinfo: ./miniprogram_npm/weui-miniprogram/loading/loading.wxss 237 3;
+    }
+
+    60% {
+        background-color: rgba(255, 255, 255, 0.5);
+        ;wxcs_fileinfo: ./miniprogram_npm/weui-miniprogram/loading/loading.wxss 240 3;
+    }
+}
+
+.wx_dot_loading_white {
+    background-color: rgba(255, 255, 255, 0.3);
+    -webkit-animation: dotw2 1.6s step-start infinite;
+    animation: dotw2 1.6s step-start infinite;
+    ;wxcs_originclass: .wx_dot_loading_white;
+    ;wxcs_fileinfo: ./miniprogram_npm/weui-miniprogram/loading/loading.wxss 244 1;
+}
+
+.wx_dot_loading_white::before {
+    background-color: rgba(255, 255, 255, 0.5);
+    -webkit-animation: dotw1 1.6s step-start infinite;
+    animation: dotw1 1.6s step-start infinite;
+    ;wxcs_originclass: .wx_dot_loading_white::before;
+    ;wxcs_fileinfo: ./miniprogram_npm/weui-miniprogram/loading/loading.wxss 249 1;
+}
+
+.wx_dot_loading_white::after {
+    background-color: rgba(255, 255, 255, 0.1);
+    -webkit-animation: dotw3 1.6s step-start infinite;
+    animation: dotw3 1.6s step-start infinite;
+    ;wxcs_originclass: .wx_dot_loading_white::after;
+    ;wxcs_fileinfo: ./miniprogram_npm/weui-miniprogram/loading/loading.wxss 254 1;
+}
+
+@keyframes dotw1 {
+    0%, 100% {
+        background-color: rgba(255, 255, 255, 0.5);
+        ;wxcs_fileinfo: ./miniprogram_npm/weui-miniprogram/loading/loading.wxss 260 3;
+    }
+
+    30% {
+        background-color: rgba(255, 255, 255, 0.1);
+        ;wxcs_fileinfo: ./miniprogram_npm/weui-miniprogram/loading/loading.wxss 264 3;
+    }
+
+    60% {
+        background-color: rgba(255, 255, 255, 0.3);
+        ;wxcs_fileinfo: ./miniprogram_npm/weui-miniprogram/loading/loading.wxss 267 3;
+    }
+}
+
+@keyframes dotw2 {
+    0%, 100% {
+        background-color: rgba(255, 255, 255, 0.3);
+        ;wxcs_fileinfo: ./miniprogram_npm/weui-miniprogram/loading/loading.wxss 272 3;
+    }
+
+    30% {
+        background-color: rgba(255, 255, 255, 0.5);
+        ;wxcs_fileinfo: ./miniprogram_npm/weui-miniprogram/loading/loading.wxss 276 3;
+    }
+
+    60% {
+        background-color: rgba(255, 255, 255, 0.1);
+        ;wxcs_fileinfo: ./miniprogram_npm/weui-miniprogram/loading/loading.wxss 279 3;
+    }
+}
+
+@keyframes dotw3 {
+    0%, 100% {
+        background-color: rgba(255, 255, 255, 0.1);
+        ;wxcs_fileinfo: ./miniprogram_npm/weui-miniprogram/loading/loading.wxss 284 3;
+    }
+
+    30% {
+        background-color: rgba(255, 255, 255, 0.3);
+        ;wxcs_fileinfo: ./miniprogram_npm/weui-miniprogram/loading/loading.wxss 288 3;
+    }
+
+    60% {
+        background-color: rgba(255, 255, 255, 0.5);
+        ;wxcs_fileinfo: ./miniprogram_npm/weui-miniprogram/loading/loading.wxss 291 3;
+    }
+}
+
+.weui-loadmore {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    align-items: center;
+    ;wxcs_originclass: .weui-loadmore;
+    ;wxcs_fileinfo: ./miniprogram_npm/weui-miniprogram/loading/loading.wxss 295 1;
+}
+
+.weui-loadmore .weui-loading-animation {
+    margin-right: 4.518px;
+    ;wxcs_originclass: .weui-loadmore .weui-loading-animation;
+    ;wxcs_fileinfo: ./miniprogram_npm/weui-miniprogram/loading/loading.wxss 304 1;
+}

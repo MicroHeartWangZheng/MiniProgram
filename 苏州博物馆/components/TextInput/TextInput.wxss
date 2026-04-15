@@ -1,0 +1,74 @@
+.error {
+    border: 1px solid red!important
+}
+
+.inputView {
+    background: #fff;
+    border-bottom: 1rpx solid #e7e7e7;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    font-size: 28rpx;
+    height: 140rpx;
+    -webkit-justify-content: center;
+    justify-content: center;
+    padding: 20rpx 0;
+    width: 750rpx
+}
+
+.inputView,.titleRow {
+    display: -webkit-flex;
+    display: flex
+}
+
+.titleRow {
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-flex-direction: row;
+    flex-direction: row
+}
+
+.inputViewTitle {
+    color: #0f0f0f;
+    font-size: 28rpx;
+    font-weight: 400
+}
+
+.notNull {
+    color: red;
+    font-size: 30rpx;
+    height: 30rpx;
+    line-height: 30rpx;
+    text-align: right;
+    width: 32rpx
+}
+
+.input {
+    background-color: initial;
+    color: #0f0f0f;
+    margin-left: 32rpx;
+    margin-top: 16rpx;
+    width: 80%
+}
+
+.multiLine {
+    font-weight: 400;
+    height: 200rpx;
+    width: 686rpx
+}
+
+.input[disabled],.input_disabled {
+    color: #939393
+}
+
+.input_placeholder {
+    color: #7c7a7d
+}
+
+.input_row {
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row
+}

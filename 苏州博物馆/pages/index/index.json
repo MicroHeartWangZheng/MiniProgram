@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "dialog": "../../components/dialog/dialog",
+    "mp-navigation-bar": "miniprogram_npm/weui-miniprogram/navigation-bar/navigation-bar"
+  },
+  "backgroundTextStyle": "dark",
+  "navigationStyle": "custom"
+}

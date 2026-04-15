@@ -1,0 +1,46 @@
+@import "../contacts/privacyAgreement.wxss";
+
+page {
+    padding-bottom: calc(env(safe-area-inset-bottom) + 250rpx)
+}
+
+.rich_text {
+    margin-bottom: 0
+}
+
+.notice_row {
+    -webkit-align-items: center;
+    align-items: center;
+    background-color: #f7f6f7;
+    bottom: calc(env(safe-area-inset-bottom) + 120rpx);
+    box-sizing: border-box;
+    display: -webkit-flex;
+    display: flex;
+    height: 100rpx;
+    padding-left: 30rpx;
+    position: fixed;
+    width: 100%
+}
+
+.notice_row::after {
+    background-color: #c7c6c6;
+    bottom: 0;
+    content: "";
+    height: 1rpx;
+    left: 50%;
+    position: absolute;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    width: 690rpx
+}
+
+.notice_row_label1 {
+    color: #777;
+    font-size: 28rpx;
+    margin-left: 20rpx
+}
+
+.notice_row_label2 {
+    color: var(--activeColor);
+    font-size: 28rpx
+}

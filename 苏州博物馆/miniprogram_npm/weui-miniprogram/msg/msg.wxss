@@ -1,0 +1,8 @@
+.weui-msg__icon-img {
+    width: 190rpx;
+    ;wxcs_style_width: 190rpx;
+    height: 190rpx;
+    ;wxcs_style_height: 190rpx;
+    ;wxcs_originclass: .weui-msg__icon-img;
+    ;wxcs_fileinfo: ./miniprogram_npm/weui-miniprogram/msg/msg.wxss 1 1;
+}

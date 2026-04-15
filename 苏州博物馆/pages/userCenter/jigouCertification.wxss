@@ -1,0 +1,133 @@
+.cellview {
+    background-color: #fff;
+    border-bottom: 1rpx solid #dfdfdf;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    font-size: 28rpx;
+    margin: 0 20rpx;
+    padding: 20rpx 30rpx;
+    position: relative
+}
+
+.cellImg,.rejectReasonT {
+    display: block
+}
+
+.cellImg {
+    height: 200rpx;
+    width: 200rpx
+}
+
+.cellXinglab {
+    color: red
+}
+
+.cellTitlelab {
+    color: #595757;
+    height: 60rpx;
+    line-height: 60rpx;
+    min-width: 100%
+}
+
+.inputview {
+    background-color: initial;
+    height: 70rpx;
+    line-height: 70rpx;
+    width: 90%
+}
+
+.firstLine {
+    width: 350rpx
+}
+
+.unfoldimg {
+    bottom: 40rpx;
+    height: 17rpx;
+    padding: 10rpx 10rpx 10rpx 40rpx;
+    position: absolute;
+    right: 50rpx;
+    width: 33rpx
+}
+
+.first {
+    margin-top: 20rpx
+}
+
+.last {
+    margin-bottom: 160rpx
+}
+
+.reserveStatusImg {
+    height: 138rpx;
+    position: absolute;
+    right: 30rpx;
+    top: 20rpx;
+    width: 164rpx
+}
+
+.tishiView {
+    background-color: #fff;
+    border-bottom: 1rpx solid #f6f6f6;
+    display: -webkit-flex;
+    display: flex;
+    font-size: 28rpx;
+    height: 120rpx;
+    line-height: 120rpx;
+    margin: 0 20rpx 200rpx;
+    padding: 30rpx
+}
+
+.tishiText {
+    color: var(--themeColor);
+    font-size: 26rpx;
+    height: 40rpx;
+    line-height: 40rpx
+}
+
+.button_container {
+    background-color: #fff;
+    bottom: 0rpx;
+    height: 120rpx;
+    padding: 0rpx 30rpx;
+    position: fixed;
+    width: calc(100% - 60rpx);
+    z-index: 500
+}
+
+.appointBtn {
+    background-color: var(--themeColor);
+    border-radius: 15rpx;
+    color: #fff;
+    font-size: 30rpx;
+    height: 90rpx;
+    line-height: 90rpx;
+    min-width: 60px;
+    padding: 20 8rpx;
+    text-align: center;
+    width: 690rpx;
+    z-index: 500
+}
+
+.ziliaoTypeItem,.ziliaoTypeView {
+    display: -webkit-flex;
+    display: flex
+}
+
+.ziliaoTypeItem {
+    -webkit-align-items: center;
+    align-items: center;
+    background-color: #fff;
+    height: 50rpx;
+    margin-right: 40rpx
+}
+
+.ziliaoChooseImg {
+    height: 35rpx;
+    width: 35rpx
+}
+
+.ziliaoChooseLab {
+    color: #595757;
+    font-size: 28rpx;
+    margin-left: 5rpx
+}

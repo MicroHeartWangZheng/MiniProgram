@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "特展购票",
+  "usingComponents": {
+    "mp-navigation-bar": "miniprogram_npm/weui-miniprogram/navigation-bar/navigation-bar",
+    "t-captcha": "plugin://wx1fe8d9a3cb067a75/t-captcha"
+  },
+  "navigationStyle": "custom"
+}

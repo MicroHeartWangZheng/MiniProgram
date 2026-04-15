@@ -1,0 +1,51 @@
+@import "appointmentInfo.wxss";
+
+.couponInput {
+    border: 1rpx solid #eee;
+    padding: 0 15rpx;
+    width: 100rpx
+}
+
+.button_container {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    padding-left: 30rpx
+}
+
+.normalBtn {
+    margin-right: 60rpx;
+    width: 400rpx
+}
+
+.addbtn,.cutbtn {
+    background-color: var(--themeColor);
+    border-radius: 8rpx;
+    color: #fff;
+    font-size: 40rpx;
+    font-weight: 600rpx;
+    line-height: 40rpx;
+    padding: 5rpx 0;
+    text-align: center;
+    width: 40rpx
+}
+
+.addbtn {
+    margin-left: 10rpx
+}
+
+.cutbtn {
+    margin-right: 10rpx
+}
+
+.tao_item {
+    -webkit-align-items: center;
+    align-items: center;
+    color: #434343;
+    display: -webkit-flex;
+    display: flex;
+    font-size: 25rpx;
+    margin-bottom: 20rpx;
+    margin-left: 30rpx
+}

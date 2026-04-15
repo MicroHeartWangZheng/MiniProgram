@@ -1,0 +1,193 @@
+page {
+    -webkit-align-items: center;
+    align-items: center;
+    background-color: #f7f6f7;
+    padding-bottom: 0
+}
+
+.topView {
+    background-color: #fff;
+    border-radius: 10rpx;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    margin-top: 30rpx;
+    padding-bottom: 20rpx;
+    padding-top: 20rpx;
+    width: 690rpx
+}
+
+.topTitleLabel,.topView {
+    display: -webkit-flex;
+    display: flex
+}
+
+.topTitleLabel {
+    color: #2d2d2d;
+    font-size: 30rpx
+}
+
+.topLabel,.topTitleLabel {
+    line-height: 60rpx;
+    margin: 0 30rpx
+}
+
+.topLabel {
+    color: #525252;
+    display: block;
+    font-size: 24rpx;
+    height: 60rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.childOrderView {
+    background-color: #fff;
+    border-radius: 10rpx;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    margin-top: 30rpx
+}
+
+.childOrderView,.orderItem {
+    display: -webkit-flex;
+    display: flex;
+    width: 690rpx
+}
+
+.orderItem {
+    -webkit-align-items: center;
+    align-items: center;
+    border-bottom: 3rpx dashed #e0e0e0;
+    box-sizing: border-box;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    padding: 30rpx 20rpx;
+    position: relative
+}
+
+.orderItem:last-of-type {
+    border-bottom: none
+}
+
+.orderItemLabelView {
+    -webkit-align-items: flex-start;
+    align-items: flex-start;
+    margin-left: 20rpx
+}
+
+.orderItemLabel {
+    color: #525252;
+    display: block;
+    font-size: 24rpx;
+    margin-bottom: 10rpx;
+    margin-top: 10rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.statusImg {
+    -webkit-flex-shrink: 0;
+    flex-shrink: 0;
+    height: 138rpx;
+    margin-left: auto;
+    width: 164rpx
+}
+
+.normalBtn {
+    font-size: 25rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    padding: 0;
+    width: 210rpx
+}
+
+.guide {
+    background: #fff;
+    border-radius: 10rpx;
+    margin-bottom: calc(env(safe-area-inset-bottom) + 150rpx);
+    margin-top: 30rpx;
+    width: 690rpx
+}
+
+.guide_title {
+    -webkit-align-self: flex-start;
+    align-self: flex-start;
+    margin-left: 30rpx;
+    margin-top: 30rpx
+}
+
+.row {
+    -webkit-justify-content: space-evenly;
+    justify-content: space-evenly;
+    margin-bottom: 30rpx;
+    margin-top: 20rpx;
+    width: 100%
+}
+
+.row>wx-label {
+    color: var(--themeColor);
+    text-decoration: underline
+}
+
+.lastView {
+    margin-bottom: calc(env(safe-area-inset-bottom) + 150rpx)
+}
+
+@import "orderDetail.skeleton.wxss";
+
+.topView {
+    position: relative
+}
+
+.qrcode {
+    -webkit-align-self: center;
+    align-self: center;
+    height: 320rpx;
+    margin-bottom: 20rpx;
+    width: 320rpx;
+    z-index: 0
+}
+
+.notice {
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    position: absolute;
+    right: 16rpx;
+    top: 16rpx
+}
+
+.notice>wx-image {
+    height: 50rpx;
+    width: 50rpx
+}
+
+.notice>wx-label {
+    color: var(--themeColor);
+    font-size: 24rpx;
+    margin-top: 8rpx
+}
+
+.label_row {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    -webkit-justify-content: flex-start;
+    justify-content: flex-start;
+    width: 100%
+}
+
+.max {
+    height: auto;
+    max-width: 310rpx;
+    overflow: unset;
+    overflow-wrap: break-word;
+    text-overflow: unset;
+    white-space: unset
+}

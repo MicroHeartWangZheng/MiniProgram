@@ -1,0 +1,74 @@
+.weui-dialog__root {
+    position: relative;
+    z-index: 1000;
+    ;wxcs_originclass: .weui-dialog__root;
+    ;wxcs_fileinfo: ./miniprogram_npm/weui-miniprogram/dialog/dialog.wxss 1 1;
+}
+
+.weui-dialog__title:focus {
+    outline: none;
+    ;wxcs_originclass: .weui-dialog__title:focus;
+    ;wxcs_fileinfo: ./miniprogram_npm/weui-miniprogram/dialog/dialog.wxss 5 1;
+}
+
+.weui-animate-fade-in {
+    -webkit-animation: weuiFadeIn ease 0.3s forwards;
+    animation: weuiFadeIn ease 0.3s forwards;
+    ;wxcs_originclass: .weui-animate-fade-in;
+    ;wxcs_fileinfo: ./miniprogram_npm/weui-miniprogram/dialog/dialog.wxss 8 1;
+}
+
+@-webkit-keyframes weuiFadeIn {
+    from {
+        opacity: 0;
+        ;wxcs_fileinfo: ./miniprogram_npm/weui-miniprogram/dialog/dialog.wxss 13 3;
+    }
+
+    to {
+        opacity: 1;
+        ;wxcs_fileinfo: ./miniprogram_npm/weui-miniprogram/dialog/dialog.wxss 16 3;
+    }
+}
+
+@keyframes weuiFadeIn {
+    from {
+        opacity: 0;
+        ;wxcs_fileinfo: ./miniprogram_npm/weui-miniprogram/dialog/dialog.wxss 21 3;
+    }
+
+    to {
+        opacity: 1;
+        ;wxcs_fileinfo: ./miniprogram_npm/weui-miniprogram/dialog/dialog.wxss 24 3;
+    }
+}
+
+.weui-animate-fade-out {
+    -webkit-animation: weuiFadeOut ease 0.3s forwards;
+    animation: weuiFadeOut ease 0.3s forwards;
+    ;wxcs_originclass: .weui-animate-fade-out;
+    ;wxcs_fileinfo: ./miniprogram_npm/weui-miniprogram/dialog/dialog.wxss 28 1;
+}
+
+@-webkit-keyframes weuiFadeOut {
+    from {
+        opacity: 1;
+        ;wxcs_fileinfo: ./miniprogram_npm/weui-miniprogram/dialog/dialog.wxss 33 3;
+    }
+
+    to {
+        opacity: 0;
+        ;wxcs_fileinfo: ./miniprogram_npm/weui-miniprogram/dialog/dialog.wxss 36 3;
+    }
+}
+
+@keyframes weuiFadeOut {
+    from {
+        opacity: 1;
+        ;wxcs_fileinfo: ./miniprogram_npm/weui-miniprogram/dialog/dialog.wxss 41 3;
+    }
+
+    to {
+        opacity: 0;
+        ;wxcs_fileinfo: ./miniprogram_npm/weui-miniprogram/dialog/dialog.wxss 44 3;
+    }
+}

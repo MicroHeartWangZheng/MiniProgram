@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "TextInput": "../../components/TextInput/TextInput",
+    "mp-navigation-bar": "miniprogram_npm/weui-miniprogram/navigation-bar/navigation-bar"
+  },
+  "navigationBarTitleText": "投诉建议"
+}

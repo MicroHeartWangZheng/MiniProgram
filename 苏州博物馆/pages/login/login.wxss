@@ -1,0 +1,108 @@
+page {
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column
+}
+
+.top_bg {
+    height: 430rpx;
+    width: 750rpx
+}
+
+.userAvatar {
+    border: 2rpx solid var(--themeColor);
+    border-radius: 50%;
+    box-shadow: 3rpx 3rpx 10rpx rgba(0,0,0,.2);
+    height: 200rpx;
+    overflow: hidden;
+    position: absolute;
+    top: 430rpx;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    width: 200rpx
+}
+
+.touxiangImg {
+    width: 100%
+}
+
+.userNickName {
+    color: #222;
+    font-size: 30rpx;
+    margin-top: 120rpx
+}
+
+.tips {
+    color: #aaa;
+    font-size: 25rpx;
+    margin-top: 60rpx;
+    text-align: center
+}
+
+._button {
+    background: linear-gradient(90deg,#61ccff,#89a2ff,#be71ff);
+    border-radius: 0;
+    border-radius: 8rpx;
+    color: #fff;
+    font-size: 30rpx;
+    font-weight: 400;
+    height: 96rpx;
+    line-height: 96rpx;
+    margin-top: 30rpx;
+    padding: 0;
+    width: 650rpx
+}
+
+.not_login {
+    background: #fff;
+    border: 1rpx solid var(--themeColor);
+    color: var(--themeColor)
+}
+
+._button::after {
+    display: none
+}
+
+.btn_pressed,.not_login_pressed {
+    background: var(--activeColor)
+}
+
+.not_login_pressed {
+    color: #fff
+}
+
+wx-button:not([size="mini"]) {
+    width: 650rpx!important
+}
+
+.notice_row {
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: flex;
+    height: 80rpx;
+    margin-top: 10rpx;
+    width: 650rpx
+}
+
+.notice_row_img {
+    height: 42rpx;
+    margin-left: 40rpx;
+    margin-right: 8rpx;
+    width: 42rpx
+}
+
+.notice_row_label1 {
+    color: #777;
+    font-size: 28rpx
+}
+
+.notice_row_label2 {
+    color: var(--activeColor);
+    font-size: 28rpx;
+    margin-left: 10rpx;
+    text-decoration: underline
+}

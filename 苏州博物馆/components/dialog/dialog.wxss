@@ -1,0 +1,171 @@
+.mask_view {
+    -webkit-align-items: center;
+    align-items: center;
+    background: rgba(0,0,0,.5);
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    height: 100%;
+    -webkit-justify-content: center;
+    justify-content: center;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1000
+}
+
+@-webkit-keyframes openAnimation {
+    0% {
+        opacity: .5;
+        -webkit-transform: scale(.2);
+        transform: scale(.2)
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: scale(1);
+        transform: scale(1)
+    }
+}
+
+@keyframes openAnimation {
+    0% {
+        opacity: .5;
+        -webkit-transform: scale(.2);
+        transform: scale(.2)
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: scale(1);
+        transform: scale(1)
+    }
+}
+
+@-webkit-keyframes closeAnimation {
+    0% {
+        opacity: 1;
+        -webkit-transform: scale(1);
+        transform: scale(1)
+    }
+
+    100% {
+        opacity: .1;
+        -webkit-transform: scale(.2);
+        transform: scale(.2)
+    }
+}
+
+@keyframes closeAnimation {
+    0% {
+        opacity: 1;
+        -webkit-transform: scale(1);
+        transform: scale(1)
+    }
+
+    100% {
+        opacity: .1;
+        -webkit-transform: scale(.2);
+        transform: scale(.2)
+    }
+}
+
+.ani {
+    -webkit-align-items: center;
+    align-items: center;
+    background: #fff;
+    border-radius: 10rpx;
+    box-sizing: border-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    -webkit-justify-content: center;
+    justify-content: center;
+    padding: 30rpx;
+    position: relative;
+    width: 80%
+}
+
+.openAni {
+    -webkit-animation: openAnimation .5s;
+    animation: openAnimation .5s
+}
+
+.closeAni {
+    -webkit-animation: closeAnimation .5s;
+    animation: closeAnimation .5s
+}
+
+.title {
+    -webkit-text-fill-color: transparent;
+    background: linear-gradient(90deg,#61ccff,#89a2ff,#be71ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-size: 36rpx;
+    font-weight: 600;
+    margin-bottom: 30rpx
+}
+
+.content {
+    font-size: 30rpx;
+    line-height: 45rpx;
+    max-height: 800rpx;
+    overflow-y: scroll;
+    width: 100%
+}
+
+.paragraph {
+    margin-bottom: 10rpx;
+    text-align: justify;
+    text-indent: 2em
+}
+
+.signature-container {
+    margin-bottom: 10rpx;
+    margin-top: 30rpx
+}
+
+.signature {
+    margin-bottom: 10rpx;
+    text-align: right
+}
+
+.agreement_view {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    margin-bottom: 10rpx;
+    margin-top: 10rpx
+}
+
+.agreement {
+    color: var(--themeColor);
+    font-size: 30rpx;
+    text-decoration: underline
+}
+
+.btn_view {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    -webkit-justify-content: space-evenly;
+    justify-content: space-evenly;
+    margin-top: 30rpx;
+    width: 100%
+}
+
+.agree,.disAgree {
+    font-size: 30rpx;
+    width: 250rpx
+}
+
+.agree {
+    background: linear-gradient(90deg,#61ccff,#89a2ff,#be71ff);
+    color: #fff
+}

@@ -1,0 +1,41 @@
+.rich_text {
+    background-color: #fff;
+    border-radius: 10rpx;
+    box-shadow: 0rpx 0rpx 3rpx 0rpx #cccaca;
+    height: 85%;
+    margin: 30rpx 40rpx 150rpx;
+    padding: 10rpx 20rpx;
+    width: 630rpx
+}
+
+.normalBtn {
+    background-color: var(--themeColor);
+    border-radius: 15rpx;
+    color: #fff;
+    font-size: 30rpx;
+    height: 90rpx;
+    line-height: 90rpx;
+    min-width: 60px;
+    padding: 20 8rpx;
+    text-align: center;
+    width: 690rpx
+}
+
+.normalBtn::after {
+    border: none
+}
+
+.button_container {
+    -webkit-align-items: center;
+    align-items: center;
+    background-color: #f7f6f7;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    height: 120rpx;
+    -webkit-justify-content: center;
+    justify-content: center;
+    position: fixed;
+    width: 100%
+}

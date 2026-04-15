@@ -1,0 +1,30 @@
+{
+  "desc": "关于本文件的更多信息，请参考文档 代码加固开发者文档: https://developers.weixin.qq.com/miniprogram/dev/devtools/code_obfuscation.html",
+  "switch": true,
+  "configs": [
+    {
+      "path": "server/api.js",
+      "sub_switch": true
+    },
+    {
+      "path": "utils/tokenUtil.js",
+      "sub_switch": true
+    },
+    {
+      "path": "pages/appointment/sureInfo.js",
+      "sub_switch": true
+    },
+    {
+      "path": "app.js",
+      "sub_switch": true
+    },
+    {
+      "path": "server/exhAPi.js",
+      "sub_switch": true
+    },
+    {
+      "path": "pages/exhibition/exhibitionAppoint.js",
+      "sub_switch": true
+    }
+  ]
+}

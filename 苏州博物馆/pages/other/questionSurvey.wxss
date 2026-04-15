@@ -1,0 +1,87 @@
+.top_label {
+    color: #595959;
+    font-size: 26rpx;
+    line-height: 1.7;
+    padding: 30rpx 75rpx
+}
+
+.item,.top_label {
+    background-color: #fff
+}
+
+.item {
+    border-radius: 15rpx;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    margin: 30rpx 30rpx 0rpx;
+    padding: 40rpx
+}
+
+.question {
+    color: #111f2c;
+    font-size: 30rpx
+}
+
+.answer {
+    -webkit-align-items: center;
+    align-items: center;
+    border-bottom: 1rpx solid #dfdfdf;
+    color: #595959;
+    display: -webkit-flex;
+    display: flex;
+    font-size: 28rpx;
+    padding: 30rpx 0
+}
+
+.wx-radio-input {
+    margin-right: 10rpx!important
+}
+
+.wx-checkbox-input-checked {
+    color: var(--activeColor)!important
+}
+
+.wx-checkbox-input-checked::before {
+    font-size: 30rpx!important
+}
+
+.wx-checkbox-input {
+    height: 32rpx!important;
+    width: 32rpx!important
+}
+
+.normalBtn {
+    -webkit-align-self: center;
+    align-self: center;
+    margin-top: 30rpx
+}
+
+.other {
+    -webkit-align-items: center;
+    align-items: center;
+    border-bottom: 1rpx solid #dfdfdf;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row
+}
+
+.other_answer {
+    border-bottom: none
+}
+
+.other_input {
+    border: 1rpx solid #dfdfdf;
+    border-radius: 6rpx;
+    -webkit-flex-grow: 1;
+    flex-grow: 1;
+    font-size: 25rpx;
+    height: 50rpx;
+    line-height: 50rpx;
+    margin-left: 25rpx;
+    padding-left: 10rpx;
+    padding-right: 10rpx;
+    z-index: 100
+}

@@ -1,0 +1,19 @@
+{
+  "name": "suzhouappointment2024",
+  "version": "1.0.0",
+  "description": "Saas参观预约",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://gitee.com/xiangzhao/SuZhouAppointment2024.git"
+  },
+  "dependencies": {
+    "mini-i18n": "github:Shawn-zhao/mini-i18n"
+  }
+}
