@@ -1,7 +1,9 @@
 page {
     background-color: #f7f6f7;
     -webkit-flex-direction: column;
-    flex-direction: column
+    flex-direction: column;
+    height: 100%;
+    box-sizing: border-box
 }
 
 .visitorItem,page {
@@ -27,6 +29,15 @@ page {
 
 .visitorItem:last-of-type {
     margin-bottom: 150rpx
+}
+
+.visitorSelected {
+    border-color: var(--themeColor)
+}
+
+.list-wrap {
+    flex: 1;
+    max-height: calc(100vh - 320rpx)
 }
 
 .firstLine {

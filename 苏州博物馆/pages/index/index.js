@@ -48,7 +48,11 @@ Page({
     aniClass: "ani openAni",
     exhList: [],
     currentIndex: 0,
-    showDialog3: !1
+    showDialog1: !1,
+    showDialog2: !1,
+    showDialog3: !1,
+    languageBtnTop: 160,
+    languageBtnLeft: 30
   },
   onLoad: function(t) {
     console.log("options", t);
@@ -76,6 +80,10 @@ Page({
       wx.exitMiniProgram()
     }))
   },
+  /**
+   * 空捕获：阻止弹层滚动穿透到底层页面
+   */
+  noopCatch: function() {},
   onHide: function() {
     this.setData({
       showStoreWindow: !1
@@ -145,12 +153,29 @@ Page({
       language: (0, n.t)("index")
     }))
   },
+  /**
+   * 首页温馨提示弹窗点击确定：关闭各弹窗并跳转本馆个人预约
+   */
   dialogAgreeClick: function() {
+    this.setData({
+      showDialog1: !1,
+      showDialog2: !1,
+      showDialog3: !1
+    });
     setTimeout((function() {
-      getApp().globalData.museumName = t.museumName1, getApp().globalData.companyInfoId = t.companyInfoId1, (0, i.navigateTo)("../appointment/home?isTeamAppoint=false")
+      getApp().globalData.museumName = t.museumName1, getApp().globalData.companyInfoId = t.companyInfoId1, (0, i.navigateTo)("/pages/appointment/home?isTeamAppoint=false")
     }), 550)
   },
-  dialogDisAgreeClick: function() {},
+  /**
+   * 温馨提示弹窗点击关闭：仅关闭弹层
+   */
+  dialogDisAgreeClick: function() {
+    this.setData({
+      showDialog1: !1,
+      showDialog2: !1,
+      showDialog3: !1
+    })
+  },
   testTeam: function() {
     (0, i.showLoading)(), (0, e.teamReserveCheckCondition)().then((function(t) {
       wx.hideLoading(), 429 === t.code ? (0, e.queryTeamCertificationTip)(getApp().globalData.companyInfoId).then((function(e) {
@@ -169,7 +194,7 @@ Page({
       }), 2e3)) : 453 === t.code ? wx.navigateTo({
         url: "../contacts/realNameCertification"
       }) : 200 == t.code ? wx.navigateTo({
-        url: "../appointment/home?isTeamAppoint=true"
+        url: "/pages/appointment/home?isTeamAppoint=true"
       }) : (t.code, (0, i.modal)(t.msg, (function() {})))
     })).catch((function(e) {
       (0, i.hideLoading)(), console.error(e)

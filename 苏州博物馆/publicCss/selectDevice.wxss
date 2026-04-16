@@ -201,5 +201,3 @@ wx-radio .wx-radio-input {
     height: 30rpx;
     width: 30rpx
 }
-
-@import "../pages/activity/appointmentInfo.wxss";

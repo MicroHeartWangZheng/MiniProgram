@@ -1,1 +1,20 @@
-<text>pages/contacts/selectContacts.wxml</text>
+<view class="tipsView" wx:if="{{language}}">
+  <image class="tipsIcon" src="/images/warningButton.png" mode="aspectFit" />
+  <text class="tipsText">{{language.refreshTips}}</text>
+</view>
+<scroll-view scroll-y class="list-wrap" enable-back-to-top="{{true}}">
+  <view wx:for="{{allContactsArr}}" wx:key="customerContactId" class="visitorItem column {{item.selected ? 'visitorSelected' : ''}}" data-index="{{index}}" bindtap="contactsClick">
+    <text wx:if="{{1===item.myself}}" class="mySelfTag">本人</text>
+    <text wx:if="{{1===item.isJuveniles}}" class="friendTag">儿童</text>
+    <view class="firstLine">
+      <text class="nameLab">{{item.contactName}}</text>
+      <text wx:if="{{item.isJuveniles}}" class="ageLab ageLab2">儿童</text>
+      <text wx:elif="{{item.age}}" class="ageLab">{{item.age}}岁</text>
+    </view>
+    <text class="secLineLab">{{item.documentNumber}}</text>
+  </view>
+</scroll-view>
+<button class="addvisitorbtn" bindtap="addContactsBtnClick">+ 添加参观者</button>
+<view class="button_container">
+  <button class="normalBtn appointbtnNor" bindtap="appointBtnClick">{{language.confirm}}({{selectDataArr.length}})</button>
+</view>

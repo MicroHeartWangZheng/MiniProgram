@@ -17,7 +17,7 @@ Page({
   },
   onLoad: function(a) {
     "0" == a.pageUrl && this.setData({
-      pageUrl: "../appointment/home?isTeamAppoint=false"
+      pageUrl: "/pages/appointment/home?isTeamAppoint=false"
     });
     var e = "zh_CN" == i.i18n.getLocales() ? t.cardTypeArr : t.cardTypeArrEn;
     this.setData({

@@ -1,1 +1,15 @@
-<text>components/dialog/dialog.wxml</text>
+<view wx:if="{{innerShow}}" class="mask_view" catchtouchmove="preventTouchMove">
+  <view class="ani {{aniClass}}">
+    <view class="title" wx:if="{{title}}">{{title}}</view>
+    <scroll-view scroll-y class="content" style="max-height: 800rpx;">
+      <view class="paragraph" wx:for="{{contentArray}}" wx:key="index">{{item}}</view>
+      <view class="signature-container" wx:if="{{signatureArray.length}}">
+        <view class="signature" wx:for="{{signatureArray}}" wx:key="index">{{item}}</view>
+      </view>
+    </scroll-view>
+    <view class="btn_view">
+      <button wx:if="{{showCancel}}" class="disAgree" bindtap="handleDisagree">{{cancelText}}</button>
+      <button class="agree" bindtap="handleAgree">{{confirmText}}</button>
+    </view>
+  </view>
+</view>

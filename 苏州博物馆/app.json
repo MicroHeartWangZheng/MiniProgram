@@ -48,9 +48,6 @@
   "permission": {
     "scope.userLocation": {
       "desc": "你的位置信息将用于获取周边场馆"
-    },
-    "scope.camera": {
-      "desc": "用于刷脸入馆"
     }
   },
   "plugins": {},

@@ -1,1 +1,18 @@
-<text>pages/appointment/sureInfo.wxml</text>
+<block wx:if="{{language}}">
+  <view class="page" wx:if="{{draft}}">
+    <view class="card">
+      <view class="row"><text class="label">{{language.entryTime}} </text>{{draft.reserveDate}} {{draft.reserveTime}}</view>
+      <view class="row"><text class="label">{{language.venue}} </text>{{language.museum1}}</view>
+    </view>
+    <view class="card" wx:if="{{selectedContactsArr.length}}">
+      <view class="row" wx:for="{{selectedContactsArr}}" wx:key="customerContactId">{{item.contactName}}</view>
+    </view>
+  </view>
+  <view class="page" wx:else>
+    <view class="card">未找到预约草稿，请从首页重新进入。</view>
+  </view>
+  <view class="bottom" wx:if="{{draft}}">
+    <button class="btn" bindtap="goSelectContacts">{{language.add}}</button>
+    <button class="btn btn-plain" bindtap="goBackHome">返回修改时段</button>
+  </view>
+</block>

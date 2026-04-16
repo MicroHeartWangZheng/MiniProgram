@@ -1,3 +1,6 @@
 {
-  "component":true
+  "navigationBarTitleText": "本馆预约",
+  "navigationBarBackgroundColor": "#ffffff",
+  "navigationBarTextStyle": "black",
+  "usingComponents": {}
 }

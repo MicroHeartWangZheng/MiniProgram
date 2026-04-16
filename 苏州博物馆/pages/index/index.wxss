@@ -93,6 +93,24 @@ wx-swiper-item {
     margin-bottom: 40rpx
 }
 
+.team-entry {
+    background: linear-gradient(90deg,#61ccff,#89a2ff,#be71ff);
+    border-radius: 10rpx;
+    box-sizing: border-box;
+    color: #fff;
+    font-size: 32rpx;
+    font-weight: 600;
+    line-height: 132rpx;
+    margin-bottom: 40rpx;
+    padding: 0;
+    text-align: center;
+    width: 630rpx
+}
+
+.team-entry::after {
+    border: none
+}
+
 .language_view {
     -webkit-align-items: center;
     align-items: center;

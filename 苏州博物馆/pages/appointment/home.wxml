@@ -1,1 +1,62 @@
-<text>pages/appointment/home.wxml</text>
+<view class="section" wx:if="{{language && isBenGuan}}">
+  <view class="section-header-view">
+    <image class="header_icon" src="/images/mainpagelogoimg2.png" mode="aspectFit" />
+    <text class="header_text">{{language.title1}}</text>
+    <image class="header_bg" src="/images/museum1.jpg" mode="aspectFill" />
+  </view>
+</view>
+<view class="section" wx:elif="{{language}}">
+  <view class="section-header-view">
+    <image class="header_icon" src="/images/mainpagelogoimg2.png" mode="aspectFit" />
+    <text class="header_text">{{language.title2}}</text>
+    <image class="header_bg" src="/images/museum1.jpg" mode="aspectFill" />
+  </view>
+</view>
+<view class="section" wx:if="{{dateArr.length}}">
+  <view class="week_view" wx:if="{{language}}">
+    <text>{{language.MON}}</text>
+    <text>{{language.TUE}}</text>
+    <text>{{language.WED}}</text>
+    <text>{{language.THU}}</text>
+    <text>{{language.FRI}}</text>
+    <text>{{language.SAT}}</text>
+    <text>{{language.SUN}}</text>
+  </view>
+  <view class="section-content">
+    <view wx:for="{{dateArr}}" wx:key="subscribeDate" class="date_view {{currentDateIndex === index ? 'date_view_selected' : ''}} {{item.statusValue !== 0 ? 'date_view_disabled' : ''}} {{item.statusValue === -2 ? 'date_view_empty' : ''}}" data-index="{{index}}" bindtap="onDateTap">
+      <text class="month">{{item.month}}</text>
+      <text class="date {{item.statusValue !== 0 ? 'date_disabled' : ''}}">{{item.dayNum}}</text>
+      <text wx:if="{{item.isToday}}" class="today">{{language.today}}</text>
+      <text class="state {{item.statusValue === 0 ? '' : 'state_disabled'}}">{{item.stateText}}</text>
+      <image wx:if="{{item.isToday}}" class="selected_icon" src="/images/star.png" mode="aspectFit" />
+    </view>
+  </view>
+</view>
+<view class="section" wx:if="{{currentDateIndex >= 0 && timeList.length}}">
+  <view class="section-header-view">
+    <image class="header_icon" src="/images/mainpagelogoimg2.png" mode="aspectFit" />
+    <text class="header_text">{{language.time}}</text>
+    <image class="header_bg" src="/images/museum1.jpg" mode="aspectFill" />
+  </view>
+  <view class="section-content">
+    <view wx:for="{{timeList}}" wx:key="timeLine" class="time_view {{currentTimeIndex === index ? 'time_view_selected' : ''}} {{item.statusValue !== 0 ? 'time_view_disabled' : ''}}" data-index="{{index}}" bindtap="onTimeTap">
+      <text class="time_hour">{{item.timeLine}}</text>
+      <text class="time_state">{{item.statusText}}</text>
+    </view>
+  </view>
+</view>
+<view class="tipsView" wx:if="{{language}}">
+  <view style="display:flex;flex-direction:row;margin-top:20rpx;">
+    <image class="tipsIcon" src="/images/warningButton.png" mode="aspectFit" />
+    <view style="flex:1;">
+      <text class="tipsText">{{language.tipsTitle}}</text>
+      <text class="tipsText">{{language.tips1}}</text>
+      <text class="tipsText">{{language.tips2a}}<text class="tipsTextRed">{{language.tips2_red}}</text>{{language.tips2b}}</text>
+      <text class="tipsText">{{language.tips3}}</text>
+      <text class="tipsText">{{language.tips4}}</text>
+    </view>
+  </view>
+</view>
+<view class="bottom-bar">
+  <button class="next-btn" bindtap="onNext">下一步</button>
+</view>

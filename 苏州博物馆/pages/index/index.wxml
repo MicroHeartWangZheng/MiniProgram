@@ -1,1 +1,43 @@
-<text>pages/index/index.wxml</text>
+<view class="language_view" style="top: {{languageBtnTop}}rpx; left: {{languageBtnLeft}}rpx;">
+  <label class="cn {{currentLanguage == 'zh_CN' ? 'current_language' : ''}}" data-index="1" bindtap="changeLanguage">中</label>
+  <label class="en {{currentLanguage == 'en_US' ? 'current_language' : ''}}" data-index="2" bindtap="changeLanguage">EN</label>
+</view>
+<swiper wx:if="{{exhList.length}}" indicator-dots="{{true}}" circular="{{true}}" bindchange="handleChange">
+  <swiper-item wx:for="{{exhList}}" wx:key="displayInfoId" wx:for-index="idx">
+    <image class="{{currentIndex === idx ? 'banner_image active' : 'banner_image'}}" src="{{item.homeDisplayPoster}}" mode="aspectFit" data-index="{{idx}}" bindtap="bannerClick" />
+  </swiper-item>
+</swiper>
+<view class="museum_view">
+  <image class="museum" mode="widthFix" src="{{currentLanguage == 'en_US' ? '/images/main_museum1_en.png' : '/images/main_museum1.png'}}" />
+  <image class="museum" mode="widthFix" src="{{currentLanguage == 'en_US' ? '/images/main_museum2_en.png' : '/images/main_museum2.png'}}" />
+</view>
+<view class="row">
+  <image class="btn1" mode="aspectFit" src="{{currentLanguage == 'en_US' ? '/images/main_btn1_en.png' : '/images/main_btn1.png'}}" data-index="8" bindtap="btnTap" />
+  <image class="btn1" mode="aspectFit" src="{{currentLanguage == 'en_US' ? '/images/main_btn2_en.png' : '/images/main_btn2.png'}}" data-index="2" bindtap="btnTap" />
+</view>
+<view class="row">
+  <image class="btn2" mode="aspectFit" src="{{currentLanguage == 'en_US' ? '/images/main_btn3_en.png' : '/images/main_btn3.png'}}" data-index="3" bindtap="btnTap" />
+  <image class="btn2" mode="aspectFit" src="{{currentLanguage == 'en_US' ? '/images/main_btn4_en.png' : '/images/main_btn4.png'}}" data-index="4" bindtap="btnTap" />
+</view>
+<image class="fourBtn" mode="widthFix" src="{{currentLanguage == 'en_US' ? '/images/main_btn5_en.png' : '/images/main_btn5.png'}}" data-index="5" bindtap="btnTap" />
+<button class="fourBtn team-entry" hover-class="none" bindtap="testTeam">团队预约</button>
+<view class="row">
+  <image class="btn2" mode="aspectFit" src="{{currentLanguage == 'en_US' ? '/images/main_btn6_en.png' : '/images/main_btn6.png'}}" data-index="6" bindtap="btnTap" />
+  <image class="btn2" mode="aspectFit" src="{{currentLanguage == 'en_US' ? '/images/main_btn7_en.png' : '/images/main_btn7.png'}}" data-index="7" bindtap="btnTap" />
+</view>
+<view class="row" style="padding: 16rpx 30rpx; box-sizing: border-box;">
+  <button size="mini" type="default" data-index="1" bindtap="btnTap">团队参观提示</button>
+  <button size="mini" type="default" data-index="9" bindtap="btnTap">民俗博物馆提示</button>
+</view>
+<view class="mask_view" wx:if="{{showStoreWindow}}" catchtouchmove="noopCatch">
+  <view class="ani {{aniClass}}">
+    <view class="title">提示</view>
+    <view class="content">即将前往官方商城小程序，请在下一页确认打开。</view>
+    <view class="window_btn_view">
+      <button class="agree" bindtap="handleAgree">知道了</button>
+    </view>
+  </view>
+</view>
+<dialog show="{{showDialog1}}" title="{{language.tips}}" content="{{language.dialogContent1}}" confirmText="{{language.ok}}" bind:agree="dialogAgreeClick" bind:disagree="dialogDisAgreeClick" />
+<dialog show="{{showDialog2}}" title="{{language.tips}}" content="{{language.dialogContent2}}" confirmText="{{language.ok}}" bind:agree="dialogAgreeClick" bind:disagree="dialogDisAgreeClick" />
+<dialog show="{{showDialog3}}" title="{{language.tips}}" content="团队预约需先完成机构认证，请按后续页面提示操作。" confirmText="{{language.ok}}" bind:agree="dialogAgreeClick" bind:disagree="dialogDisAgreeClick" />

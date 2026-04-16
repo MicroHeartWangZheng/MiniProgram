@@ -1,1 +1,11 @@
-<text>pages/appointment/notice.wxml</text>
+<scroll-view scroll-y class="notice-page">
+  <rich-text wx:if="{{noticeHtml}}" nodes="{{noticeHtml}}" />
+  <view wx:else class="placeholder">加载中…</view>
+  <label class="agree-row" wx:if="{{language}}">
+    <checkbox-group bindchange="onAgreeChange">
+      <checkbox value="1" />
+    </checkbox-group>
+    <text class="agree-text">{{language.agree}}</text>
+  </label>
+  <button wx:if="{{language}}" class="btn-next" bindtap="onContinue">{{language.confirm}}</button>
+</scroll-view>

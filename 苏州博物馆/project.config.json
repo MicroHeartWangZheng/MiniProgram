@@ -1,7 +1,7 @@
 {
   "miniprogramRoot": "",
   "__compileDebugInfo__": {
-    "useSummer": true
+    "useSummer": false
   },
   "appid": "wx54cd9297ff0b822c",
   "libVersion": "3.12.1",
@@ -32,8 +32,33 @@
   "compileType": "miniprogram",
   "simulatorPluginLibVersion": {},
   "packOptions": {
-    "ignore": [],
+    "ignore": [
+      {
+        "value": "__extended__",
+        "type": "folder"
+      },
+      {
+        "value": "**/donutAuthorize__/**",
+        "type": "glob"
+      },
+      {
+        "value": "pages/**/*.html",
+        "type": "glob"
+      },
+      {
+        "value": "components/**/*.html",
+        "type": "glob"
+      }
+    ],
     "include": []
+  },
+  "watchOptions": {
+    "ignore": [
+      "__extended__/**",
+      "**/donutAuthorize__/**",
+      "pages/**/*.html",
+      "components/**/*.html"
+    ]
   },
   "editorSetting": {}
 }

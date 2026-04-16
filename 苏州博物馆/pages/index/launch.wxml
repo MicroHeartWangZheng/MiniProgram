@@ -1,1 +1,4 @@
-<text>pages/index/launch.wxml</text>
+<view class="container">
+  <image class="poster" src="{{posterUrl}}" mode="aspectFill" />
+  <view class="countdown" style="top: {{btnTop}}rpx; left: {{btnLeft}}rpx;">{{countdown}}s</view>
+</view>
