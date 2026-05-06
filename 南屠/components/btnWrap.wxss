@@ -1,1 +1,10 @@
-.uni-input-placeholder.data-v-19fe557a,.uni-textarea-placeholder.data-v-19fe557a{color:#c0c4cc!important}.scale.data-v-19fe557a{transform:scale(.95);transform-origin:50% 50%}
+.uni-input-placeholder.data-v-19fe557a,.uni-textarea-placeholder.data-v-19fe557a {
+    color: #c0c4cc!important
+}
+
+.scale.data-v-19fe557a {
+    -webkit-transform: scale(.95);
+    transform: scale(.95);
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%
+}

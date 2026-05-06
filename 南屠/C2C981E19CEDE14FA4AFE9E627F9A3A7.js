@@ -1,1 +1,17 @@
-exports.config={iv:"",secretKey:"",verifyImg:"https://jdmqn.19371213.com.cn/jdm/",productApi:"https://nlhapi.suruantech.com",mallApi:"https://jdm-api.19371213.com.cn/api",machType:"common",key:"",requestt:!0,imgUrl:"/static/img/",videoUrl:"https://jdmqn.19371213.com.cn/nlh-front-res/xcx/video/",audioUrl:"https://jdmqn.19371213.com.cn/nlh-front-res/xcx/audio/",mchCode:"91765058",wss:"wss://jy.suruantech.com",fileUploadUrl:"https://jdmimg-api.19371213.com.cn/api",fileDownUrl:"https://jdmqn.19371213.com.cn"};
+exports.config = {
+  iv: "",
+  secretKey: "",
+  verifyImg: "https://jdmqn.19371213.com.cn/jdm/",
+  productApi: "https://nlhapi.suruantech.com",
+  mallApi: "https://jdm-api.19371213.com.cn/api",
+  machType: "common",
+  key: "",
+  requestt: !0,
+  imgUrl: "/static/img/",
+  videoUrl: "https://jdmqn.19371213.com.cn/nlh-front-res/xcx/video/",
+  audioUrl: "https://jdmqn.19371213.com.cn/nlh-front-res/xcx/audio/",
+  mchCode: "91765058",
+  wss: "wss://jy.suruantech.com",
+  fileUploadUrl: "https://jdmimg-api.19371213.com.cn/api",
+  fileDownUrl: "https://jdmqn.19371213.com.cn"
+};

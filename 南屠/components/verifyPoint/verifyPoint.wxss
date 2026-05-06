@@ -1,1 +1,89 @@
-.uni-input-placeholder.data-v-7fa83aa9,.uni-textarea-placeholder.data-v-7fa83aa9{color:#c0c4cc!important}.verifyPoint-wrap.data-v-7fa83aa9{margin:0 34rpx;padding-bottom:20rpx}.verifyPoint-wrap .in.data-v-7fa83aa9{border-radius:16rpx;height:368rpx}.verifyPoint-wrap .msg.data-v-7fa83aa9{background-color:#4eac24;color:#fff;left:0;line-height:44rpx;pointer-events:none;position:absolute;top:0;transition:opacity .5s;z-index:20}.verifyPoint-wrap .msg.fail.data-v-7fa83aa9{background-color:#e55d43}.verifyPoint-wrap .tip.data-v-7fa83aa9{color:#2c2c2c;font-size:26rpx;line-height:36rpx;margin-bottom:96rpx;margin-top:20rpx}.verifyPoint-wrap .tip .answer.data-v-7fa83aa9{letter-spacing:10rpx}.verifyPoint-wrap .grid.data-v-7fa83aa9{left:0;position:absolute;top:0}.verifyPoint-wrap .grid .item.data-v-7fa83aa9{-webkit-text-stroke:1px #ff0;-webkit-text-fill-color:transparent;color:#fff;color:transparent;font-size:48rpx;height:13%;width:9.5%}.verifyPoint-wrap .grid .item.data-v-7fa83aa9:nth-child(9n){border-color:#04821d}.verifyPoint-wrap .grid .item .num.data-v-7fa83aa9{background-color:#cc5a29;border-radius:18rpx;color:#fff;height:36rpx;left:50%;line-height:36rpx;position:absolute;top:50%;transform:translate(-50%,-50%);width:36rpx;z-index:1}.verifyPoint-wrap .sure-btn.data-v-7fa83aa9{background-color:#a87e6c;border-radius:40rpx;color:#fff;height:80rpx;line-height:80rpx;margin:20rpx 34rpx 0}.verifyPoint-wrap .sure-btn.disabled.data-v-7fa83aa9{background-color:#b5b5b6}
+.uni-input-placeholder.data-v-7fa83aa9,.uni-textarea-placeholder.data-v-7fa83aa9 {
+    color: #c0c4cc!important
+}
+
+.verifyPoint-wrap.data-v-7fa83aa9 {
+    margin: 0 34rpx;
+    padding-bottom: 20rpx
+}
+
+.verifyPoint-wrap .in.data-v-7fa83aa9 {
+    border-radius: 16rpx;
+    height: 368rpx
+}
+
+.verifyPoint-wrap .msg.data-v-7fa83aa9 {
+    background-color: #4eac24;
+    color: #fff;
+    left: 0;
+    line-height: 44rpx;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    transition: opacity .5s;
+    z-index: 20
+}
+
+.verifyPoint-wrap .msg.fail.data-v-7fa83aa9 {
+    background-color: #e55d43
+}
+
+.verifyPoint-wrap .tip.data-v-7fa83aa9 {
+    color: #2c2c2c;
+    font-size: 26rpx;
+    line-height: 36rpx;
+    margin-bottom: 96rpx;
+    margin-top: 20rpx
+}
+
+.verifyPoint-wrap .tip .answer.data-v-7fa83aa9 {
+    letter-spacing: 10rpx
+}
+
+.verifyPoint-wrap .grid.data-v-7fa83aa9 {
+    left: 0;
+    position: absolute;
+    top: 0
+}
+
+.verifyPoint-wrap .grid .item.data-v-7fa83aa9 {
+    -webkit-text-stroke: 1px #ff0;
+    -webkit-text-fill-color: transparent;
+    color: #fff;
+    color: transparent;
+    font-size: 48rpx;
+    height: 13%;
+    width: 9.5%
+}
+
+.verifyPoint-wrap .grid .item.data-v-7fa83aa9:nth-child(9n) {
+    border-color: #04821d
+}
+
+.verifyPoint-wrap .grid .item .num.data-v-7fa83aa9 {
+    background-color: #cc5a29;
+    border-radius: 18rpx;
+    color: #fff;
+    height: 36rpx;
+    left: 50%;
+    line-height: 36rpx;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    width: 36rpx;
+    z-index: 1
+}
+
+.verifyPoint-wrap .sure-btn.data-v-7fa83aa9 {
+    background-color: #a87e6c;
+    border-radius: 40rpx;
+    color: #fff;
+    height: 80rpx;
+    line-height: 80rpx;
+    margin: 20rpx 34rpx 0
+}
+
+.verifyPoint-wrap .sure-btn.disabled.data-v-7fa83aa9 {
+    background-color: #b5b5b6
+}

@@ -1,1 +1,11 @@
-.uni-input-placeholder.data-v-e77de8e3,.uni-textarea-placeholder.data-v-e77de8e3{color:#c0c4cc!important}.img-wrap.data-v-e77de8e3{background:#f9f9f9;border-radius:8rpx;height:160rpx;margin-right:10rpx;width:160rpx}
+.uni-input-placeholder.data-v-e77de8e3,.uni-textarea-placeholder.data-v-e77de8e3 {
+    color: #c0c4cc!important
+}
+
+.img-wrap.data-v-e77de8e3 {
+    background: #f9f9f9;
+    border-radius: 8rpx;
+    height: 160rpx;
+    margin-right: 10rpx;
+    width: 160rpx
+}

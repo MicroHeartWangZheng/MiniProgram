@@ -1,1 +1,130 @@
-.uni-input-placeholder,.uni-textarea-placeholder{color:#c0c4cc!important}.uni-datetime-picker-view{cursor:pointer;height:130px;width:270px}.uni-datetime-picker-item{font-size:14px;height:50px;line-height:50px;text-align:center}.uni-datetime-picker-btn{cursor:pointer;display:-webkit-flex;display:flex;flex-direction:row;justify-content:space-between;margin-top:60px}.uni-datetime-picker-btn-text{color:#007aff;font-size:14px}.uni-datetime-picker-btn-group{display:-webkit-flex;display:flex;flex-direction:row}.uni-datetime-picker-cancel{margin-right:30px}.uni-datetime-picker-mask{background-color:rgba(0,0,0,.4);bottom:0;left:0;position:fixed;right:0;top:0;transition-duration:.3s;z-index:998}.uni-datetime-picker-popup{background-color:#fff;border-radius:8px;left:50%;padding:30px;position:fixed;top:50%;transform:translate(-50%,-50%);transition-duration:.3s;width:270px;z-index:999}.uni-datetime-picker-time{color:gray}.uni-datetime-picker-column{height:50px}.uni-datetime-picker-timebox{border:1px solid #e5e5e5;border-radius:5px;box-sizing:border-box;cursor:pointer;padding:7px 10px}.uni-datetime-picker-timebox-pointer{cursor:pointer}.uni-datetime-picker-disabled{opacity:.4}.uni-datetime-picker-text{font-size:14px;line-height:50px}.uni-datetime-picker-sign{color:#999;position:absolute;top:53px}.sign-left{left:86px}.sign-right{right:86px}.sign-center{left:135px}.uni-datetime-picker__container-box{align-items:center;display:-webkit-flex;display:flex;justify-content:center;margin-top:40px;position:relative}.time-hide-second{width:180px}
+.uni-input-placeholder,.uni-textarea-placeholder {
+    color: #c0c4cc!important
+}
+
+.uni-datetime-picker-view {
+    cursor: pointer;
+    height: 130px;
+    width: 270px
+}
+
+.uni-datetime-picker-item {
+    font-size: 14px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center
+}
+
+.uni-datetime-picker-btn {
+    cursor: pointer;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    margin-top: 60px
+}
+
+.uni-datetime-picker-btn-text {
+    color: #007aff;
+    font-size: 14px
+}
+
+.uni-datetime-picker-btn-group {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row
+}
+
+.uni-datetime-picker-cancel {
+    margin-right: 30px
+}
+
+.uni-datetime-picker-mask {
+    background-color: rgba(0,0,0,.4);
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    transition-duration: .3s;
+    z-index: 998
+}
+
+.uni-datetime-picker-popup {
+    background-color: #fff;
+    border-radius: 8px;
+    left: 50%;
+    padding: 30px;
+    position: fixed;
+    top: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    transition-duration: .3s;
+    width: 270px;
+    z-index: 999
+}
+
+.uni-datetime-picker-time {
+    color: gray
+}
+
+.uni-datetime-picker-column {
+    height: 50px
+}
+
+.uni-datetime-picker-timebox {
+    border: 1px solid #e5e5e5;
+    border-radius: 5px;
+    box-sizing: border-box;
+    cursor: pointer;
+    padding: 7px 10px
+}
+
+.uni-datetime-picker-timebox-pointer {
+    cursor: pointer
+}
+
+.uni-datetime-picker-disabled {
+    opacity: .4
+}
+
+.uni-datetime-picker-text {
+    font-size: 14px;
+    line-height: 50px
+}
+
+.uni-datetime-picker-sign {
+    color: #999;
+    position: absolute;
+    top: 53px
+}
+
+.sign-left {
+    left: 86px
+}
+
+.sign-right {
+    right: 86px
+}
+
+.sign-center {
+    left: 135px
+}
+
+.uni-datetime-picker__container-box {
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    justify-content: center;
+    margin-top: 40px;
+    position: relative
+}
+
+.time-hide-second {
+    width: 180px
+}

@@ -1,1 +1,59 @@
-.uni-input-placeholder.data-v-4c559ef7,.uni-textarea-placeholder.data-v-4c559ef7{color:#c0c4cc!important}.main-notice-dialog .notice-wrap.data-v-4c559ef7{border-radius:24rpx;box-sizing:border-box;padding:24rpx 26rpx 20rpx;width:578rpx}.main-notice-dialog .notice-wrap .title.data-v-4c559ef7{color:#2c2c2c;font-size:40rpx;font-weight:700;line-height:2}.main-notice-dialog .notice-wrap .content.data-v-4c559ef7{color:#2c2c2c;font-size:36rpx;font-weight:400;line-height:1.6;max-height:592rpx;overflow:auto}.main-notice-dialog .close.data-v-4c559ef7{align-items:center;background:#a87e6c;border-radius:40rpx;display:-webkit-flex;display:flex;height:80rpx;justify-content:center;margin-top:26rpx;width:100%}.main-notice-dialog .close text.data-v-4c559ef7{color:#fff;font-size:32rpx}.main-notice-dialog .close.disabled.data-v-4c559ef7{background:#dcdedd}.hintBox.data-v-4c559ef7{color:#898989;display:-webkit-flex;display:flex;font-family:Alibaba PuHuiTi 3,Alibaba PuHuiTi 30;font-size:32rpx;font-weight:400;margin:18rpx 0}
+.uni-input-placeholder.data-v-4c559ef7,.uni-textarea-placeholder.data-v-4c559ef7 {
+    color: #c0c4cc!important
+}
+
+.main-notice-dialog .notice-wrap.data-v-4c559ef7 {
+    border-radius: 24rpx;
+    box-sizing: border-box;
+    padding: 24rpx 26rpx 20rpx;
+    width: 578rpx
+}
+
+.main-notice-dialog .notice-wrap .title.data-v-4c559ef7 {
+    color: #2c2c2c;
+    font-size: 40rpx;
+    font-weight: 700;
+    line-height: 2
+}
+
+.main-notice-dialog .notice-wrap .content.data-v-4c559ef7 {
+    color: #2c2c2c;
+    font-size: 36rpx;
+    font-weight: 400;
+    line-height: 1.6;
+    max-height: 592rpx;
+    overflow: auto
+}
+
+.main-notice-dialog .close.data-v-4c559ef7 {
+    -webkit-align-items: center;
+    align-items: center;
+    background: #a87e6c;
+    border-radius: 40rpx;
+    display: -webkit-flex;
+    display: flex;
+    height: 80rpx;
+    -webkit-justify-content: center;
+    justify-content: center;
+    margin-top: 26rpx;
+    width: 100%
+}
+
+.main-notice-dialog .close wx-text.data-v-4c559ef7 {
+    color: #fff;
+    font-size: 32rpx
+}
+
+.main-notice-dialog .close.disabled.data-v-4c559ef7 {
+    background: #dcdedd
+}
+
+.hintBox.data-v-4c559ef7 {
+    color: #898989;
+    display: -webkit-flex;
+    display: flex;
+    font-family: Alibaba PuHuiTi 3,Alibaba PuHuiTi 30;
+    font-size: 32rpx;
+    font-weight: 400;
+    margin: 18rpx 0
+}

@@ -1,1 +1,63 @@
-var e=require("../../@babel/runtime/helpers/objectSpread2"),t=require("../../302F12419CEDE14F56497A46F35AA3A7.js"),n={computed:e({},t.mapState(["versioncontrol"])),data:function(){return{list:[{name:"标准版",type:1},{name:"敬老版",type:2},{name:"English Version",type:3}]}},methods:{skip:function(e){e!=this.versioncontrol&&(this.$store.dispatch("setState",{key:"versioncontrol",value:e}),t.index.setStorageSync("versioncontrol",e),t.index.reLaunch({url:"/pages/index/index"}))}}};Array||(t.resolveComponent("page-head")+t.resolveComponent("uni-icons"))(),Math;var o=t._export_sfc(n,[["render",function(e,n,o,r,i,s){return{a:t.p({title:3==e.versioncontrol?"version conversion":"版本切换"}),b:t.f(i.list,(function(n,o,r){return t.e({a:t.o((function(e){return s.skip(n.type)}),o),b:"1610ab11-1-"+r,c:t.p({type:e.versioncontrol==n.type?"checkbox-filled":"circle",color:"#A87E6C",size:"30"}),d:t.t(n.name),e:t.n(e.versioncontrol==n.type?"active":""),f:1==n.type},(n.type,{}),{g:2==n.type},(n.type,{}),{h:3==n.type},(n.type,{}),{i:o})}))}}],["__scopeId","data-v-1610ab11"]]);wx.createPage(o);
+var e = require("../../@babel/runtime/helpers/objectSpread2"),
+  t = require("../../302F12419CEDE14F56497A46F35AA3A7.js"),
+  n = {
+    computed: e({}, t.mapState(["versioncontrol"])),
+    data: function() {
+      return {
+        list: [{
+          name: "标准版",
+          type: 1
+        }, {
+          name: "敬老版",
+          type: 2
+        }, {
+          name: "English Version",
+          type: 3
+        }]
+      }
+    },
+    methods: {
+      skip: function(e) {
+        e != this.versioncontrol && (this.$store.dispatch("setState", {
+          key: "versioncontrol",
+          value: e
+        }), t.index.setStorageSync("versioncontrol", e), t.index.reLaunch({
+          url: "/pages/index/index"
+        }))
+      }
+    }
+  };
+Array || (t.resolveComponent("page-head") + t.resolveComponent("uni-icons"))(), Math;
+var o = t._export_sfc(n, [
+  ["render", function(e, n, o, r, i, s) {
+    return {
+      a: t.p({
+        title: 3 == e.versioncontrol ? "version conversion" : "版本切换"
+      }),
+      b: t.f(i.list, (function(n, o, r) {
+        return t.e({
+          a: t.o((function(e) {
+            return s.skip(n.type)
+          }), o),
+          b: "1610ab11-1-" + r,
+          c: t.p({
+            type: e.versioncontrol == n.type ? "checkbox-filled" : "circle",
+            color: "#A87E6C",
+            size: "30"
+          }),
+          d: t.t(n.name),
+          e: t.n(e.versioncontrol == n.type ? "active" : ""),
+          f: 1 == n.type
+        }, (n.type, {}), {
+          g: 2 == n.type
+        }, (n.type, {}), {
+          h: 3 == n.type
+        }, (n.type, {}), {
+          i: o
+        })
+      }))
+    }
+  }],
+  ["__scopeId", "data-v-1610ab11"]
+]);
+wx.createPage(o);

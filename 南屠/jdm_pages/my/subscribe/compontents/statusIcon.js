@@ -1,1 +1,66 @@
-var t=require("../../../../302F12419CEDE14F56497A46F35AA3A7.js"),s=require("../../../../42DF72329CEDE14F24B91A35674AA3A7.js"),c={name:"",props:{childOrderStatusDesc:{type:String,default:function(){return""}}},watch:{childOrderStatusDesc:function(t,s){t!=s&&this.successStatus()}},data:function(){return{statusList:{successIconWhite:["order_success","tickets_success"],failIconBlack:["audit_refuse"],infoIconWhite:["relation_ship_wait_add_info","cancel_success","verify_expire","verify_success","audit_refuse"],infoIconBlack:["wait_audit","gongan_check_wait"]},statusStr:""}},mounted:function(){this.successStatus()},methods:{successStatus:function(){var t=this,s=function(s){t.statusList[s].map((function(c){t.childOrderStatusDesc==c&&(t.statusStr=s)}))};for(var c in this.statusList)s(c)}}},e=t._export_sfc(c,[["render",function(c,e,i,a,n,r){return t.e({a:"successIconWhite"==n.statusStr},"successIconWhite"==n.statusStr?{b:s._imports_0$12}:{},{c:"infoIconWhite"==n.statusStr},"infoIconWhite"==n.statusStr?{d:s._imports_1$8}:{},{e:"infoIconBlack"==n.statusStr},"infoIconBlack"==n.statusStr?{f:s._imports_2$5}:{},{g:"failIconBlack"==n.statusStr},"failIconBlack"==n.statusStr?{h:s._imports_3$4}:{})}],["__scopeId","data-v-14b52501"]]);wx.createComponent(e);
+var t = require("../../../../302F12419CEDE14F56497A46F35AA3A7.js"),
+  s = require("../../../../42DF72329CEDE14F24B91A35674AA3A7.js"),
+  c = {
+    name: "",
+    props: {
+      childOrderStatusDesc: {
+        type: String,
+        default: function() {
+          return ""
+        }
+      }
+    },
+    watch: {
+      childOrderStatusDesc: function(t, s) {
+        t != s && this.successStatus()
+      }
+    },
+    data: function() {
+      return {
+        statusList: {
+          successIconWhite: ["order_success", "tickets_success"],
+          failIconBlack: ["audit_refuse"],
+          infoIconWhite: ["relation_ship_wait_add_info", "cancel_success", "verify_expire", "verify_success", "audit_refuse"],
+          infoIconBlack: ["wait_audit", "gongan_check_wait"]
+        },
+        statusStr: ""
+      }
+    },
+    mounted: function() {
+      this.successStatus()
+    },
+    methods: {
+      successStatus: function() {
+        var t = this,
+          s = function(s) {
+            t.statusList[s].map((function(c) {
+              t.childOrderStatusDesc == c && (t.statusStr = s)
+            }))
+          };
+        for (var c in this.statusList) s(c)
+      }
+    }
+  },
+  e = t._export_sfc(c, [
+    ["render", function(c, e, i, a, n, r) {
+      return t.e({
+        a: "successIconWhite" == n.statusStr
+      }, "successIconWhite" == n.statusStr ? {
+        b: s._imports_0$12
+      } : {}, {
+        c: "infoIconWhite" == n.statusStr
+      }, "infoIconWhite" == n.statusStr ? {
+        d: s._imports_1$8
+      } : {}, {
+        e: "infoIconBlack" == n.statusStr
+      }, "infoIconBlack" == n.statusStr ? {
+        f: s._imports_2$5
+      } : {}, {
+        g: "failIconBlack" == n.statusStr
+      }, "failIconBlack" == n.statusStr ? {
+        h: s._imports_3$4
+      } : {})
+    }],
+    ["__scopeId", "data-v-14b52501"]
+  ]);
+wx.createComponent(e);

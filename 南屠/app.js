@@ -1,1 +1,77 @@
-Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});var e=require("302F12419CEDE14F56497A46F35AA3A7.js"),t=require("AE7B8A759CEDE14FC81DE272CB6AA3A7.js"),o=require("C2C981E19CEDE14FA4AFE9E627F9A3A7.js"),n=require("E6064C639CEDE14F806024649ACAA3A7.js");require("99A56A709CEDE14FFFC30277932AA3A7.js"),require("F13970549CEDE14F975F18534C3AA3A7.js"),require("97D575919CEDE14FF1B31D960FBAA3A7.js"),require("42DF72329CEDE14F24B91A35674AA3A7.js"),require("2800CA079CEDE14F4E66A20028DAA3A7.js"),Math;var r={onLaunch:function(){this.updateMs();var t=e.index.getSystemInfoSync();"android"===t.platform||"ios"===t.platform||"devtools"===t.platform||"ohos"===t.platform||"openharmonyos"===t.osName||"harmonyos"===t.osName||t.model.includes("Nova")||this.$store.dispatch("setState",{key:"isDesktopForbiddenPopupVisible",value:!0});var o=e.index.getStorageSync("tokenTime");(new Date).getTime()-o-828e5>0&&(e.index.removeStorageSync("token"),e.index.removeStorageSync("refreshToken"),e.index.removeStorageSync("isLogin"),e.index.removeStorageSync("userInfo"),e.index.removeStorageSync("isUserInfo"))},onShow:function(){},onHide:function(){},methods:{updateMs:function(){var t=e.wx$1.getUpdateManager();t.onCheckForUpdate((function(o){o.hasUpdate&&(t.onUpdateReady((function(){e.wx$1.showModal({title:"更新提示",content:"新版本已经准备好，是否重启应用？",success:function(e){e.confirm&&t.applyUpdate()}})})),t.onUpdateFailed((function(){e.wx$1.showModal({title:"已经有新版本了哟~",content:"新版本已经上线啦~，请您删除当前小程序，重新打开哟~"})})))}))}}},i=function(){return"./components/navigator.js"},s=function(){return"./components/empty.js"},a=function(){return"./components/btnWrap.js"},p=function(){return"./components/redBtn.js"},c=function(){return"./components/desktopForbiddenPopup.js"},u=function(){return"./components/dialogWrapText/dialogWrapText.js"},d=function(){return"./components/index/closeDialog.js"};function m(){var m=e.createSSRApp(r);return Date.prototype.format=function(){var e="",t=this.getMonth()+1>=10?this.getMonth()+1:"0"+(this.getMonth()+1),o=this.getDate()>=10?this.getDate():"0"+this.getDate();return e+=this.getFullYear()+"-",e+=t+"-",e+=o},m.config.globalProperties.$settings=o.config,m.config.globalProperties.$utils=n.utils,m.component("desktop-forbidden",c),m.component("btn-wrap",a),m.component("red-btn",p),m.component("page-head",i),m.component("Empty",s),m.component("close-dialog",d),m.use(t.store),m.use(u),{app:m}}m().app.mount("#app"),exports.createApp=m;
+Object.defineProperty(exports, Symbol.toStringTag, {
+  value: "Module"
+});
+var e = require("302F12419CEDE14F56497A46F35AA3A7.js"),
+  t = require("AE7B8A759CEDE14FC81DE272CB6AA3A7.js"),
+  o = require("C2C981E19CEDE14FA4AFE9E627F9A3A7.js"),
+  n = require("E6064C639CEDE14F806024649ACAA3A7.js");
+require("99A56A709CEDE14FFFC30277932AA3A7.js"), require("F13970549CEDE14F975F18534C3AA3A7.js"), require("97D575919CEDE14FF1B31D960FBAA3A7.js"), require("42DF72329CEDE14F24B91A35674AA3A7.js"), require("2800CA079CEDE14F4E66A20028DAA3A7.js"), Math;
+var r = {
+    onLaunch: function() {
+      this.updateMs();
+      var t = e.index.getSystemInfoSync();
+      "android" === t.platform || "ios" === t.platform || "devtools" === t.platform || "ohos" === t.platform || "openharmonyos" === t.osName || "harmonyos" === t.osName || t.model.includes("Nova") || this.$store.dispatch("setState", {
+        key: "isDesktopForbiddenPopupVisible",
+        value: !0
+      });
+      var o = e.index.getStorageSync("tokenTime");
+      (new Date).getTime() - o - 828e5 > 0 && (e.index.removeStorageSync("token"), e.index.removeStorageSync("refreshToken"), e.index.removeStorageSync("isLogin"), e.index.removeStorageSync("userInfo"), e.index.removeStorageSync("isUserInfo"))
+    },
+    onShow: function() {},
+    onHide: function() {},
+    methods: {
+      updateMs: function() {
+        var t = e.wx$1.getUpdateManager();
+        t.onCheckForUpdate((function(o) {
+          o.hasUpdate && (t.onUpdateReady((function() {
+            e.wx$1.showModal({
+              title: "更新提示",
+              content: "新版本已经准备好，是否重启应用？",
+              success: function(e) {
+                e.confirm && t.applyUpdate()
+              }
+            })
+          })), t.onUpdateFailed((function() {
+            e.wx$1.showModal({
+              title: "已经有新版本了哟~",
+              content: "新版本已经上线啦~，请您删除当前小程序，重新打开哟~"
+            })
+          })))
+        }))
+      }
+    }
+  },
+  i = function() {
+    return "./components/navigator.js"
+  },
+  s = function() {
+    return "./components/empty.js"
+  },
+  a = function() {
+    return "./components/btnWrap.js"
+  },
+  p = function() {
+    return "./components/redBtn.js"
+  },
+  c = function() {
+    return "./components/desktopForbiddenPopup.js"
+  },
+  u = function() {
+    return "./components/dialogWrapText/dialogWrapText.js"
+  },
+  d = function() {
+    return "./components/index/closeDialog.js"
+  };
+
+function m() {
+  var m = e.createSSRApp(r);
+  return Date.prototype.format = function() {
+    var e = "",
+      t = this.getMonth() + 1 >= 10 ? this.getMonth() + 1 : "0" + (this.getMonth() + 1),
+      o = this.getDate() >= 10 ? this.getDate() : "0" + this.getDate();
+    return e += this.getFullYear() + "-", e += t + "-", e += o
+  }, m.config.globalProperties.$settings = o.config, m.config.globalProperties.$utils = n.utils, m.component("desktop-forbidden", c), m.component("btn-wrap", a), m.component("red-btn", p), m.component("page-head", i), m.component("Empty", s), m.component("close-dialog", d), m.use(t.store), m.use(u), {
+    app: m
+  }
+}
+m().app.mount("#app"), exports.createApp = m;

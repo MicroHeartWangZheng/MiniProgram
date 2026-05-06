@@ -1,1 +1,210 @@
-.uni-input-placeholder.data-v-c7ddb387,.uni-textarea-placeholder.data-v-c7ddb387{color:#c0c4cc!important}@-webkit-keyframes move1-c7ddb387{0%{left:-5%}to{left:100%}}@keyframes move1-c7ddb387{0%{left:-5%}to{left:100%}}.msg.data-v-c7ddb387{background-color:#4eac24;color:#fff;left:0;line-height:44rpx;pointer-events:none;position:absolute;top:0;transition:opacity .5s;z-index:20}.msg.fail.data-v-c7ddb387{background-color:#e55d43}.sure-btn.data-v-c7ddb387{background-color:#a87e6c;border-radius:40rpx;color:#fff;height:80rpx;line-height:80rpx;margin:20rpx 34rpx}.sure-btn.disabled.data-v-c7ddb387{background-color:#b5b5b6}.slider-wrap.data-v-c7ddb387{background-color:#f8f8f8;border-top:2rpx solid #ddd;height:80rpx}.slider-wrap .tip.data-v-c7ddb387{left:50%;line-height:80rpx;position:absolute;top:50%;transform:translate(-50%,-50%);z-index:5}.slider-wrap .slider-bg.data-v-c7ddb387{background-color:#ddd;position:relative;transition:width .3s;z-index:10}.slider-wrap .slider-bg.no-transition.data-v-c7ddb387{transition:none}.slider-wrap .slider-ctrl.data-v-c7ddb387{background-color:#fff;border:2rpx solid #ddd;height:80rpx;position:absolute;top:0;transition:left .3s;width:80rpx;z-index:6}.slider-wrap .slider-ctrl.no-transition.data-v-c7ddb387{transition:none}.slider-wrap .slider-ctrl .icon.data-v-c7ddb387{transform:rotate(-90deg)}.slider-com.data-v-c7ddb387{background-position:0 0;background-repeat:no-repeat;background-size:554rpx 368rpx;box-sizing:border-box;height:368rpx;position:relative;width:554rpx}.slide-succ.data-v-c7ddb387{align-items:center;display:-webkit-flex;display:flex;height:100vh;justify-content:center;left:0;position:fixed;top:0;width:100vw;z-index:100}.slide-succ .slide-succ-img.data-v-c7ddb387{height:88rpx;width:458rpx}.bg-s.data-v-c7ddb387{height:368rpx;position:absolute;width:554rpx}.fail-img-box.data-v-c7ddb387{align-items:center;display:-webkit-flex;display:flex;height:100%;justify-content:center;position:relative;width:100%;z-index:10}.img-box.data-v-c7ddb387{height:368rpx;overflow:visible;position:relative;width:100%}.img-box .bg.data-v-c7ddb387{box-sizing:border-box;height:100%;width:100%}.img-box .slider.data-v-c7ddb387{background:#dedede;background:red;box-shadow:0 0 6rpx 2rpx hsla(0,0%,100%,.2);clip-path:path("M455.163 90.8492C473.504 53.6869 526.496 53.687 544.837 90.8493L635.313 274.174C642.596 288.931 656.674 299.159 672.96 301.526L875.27 330.923C916.281 336.882 932.657 387.281 902.981 416.208L756.588 558.906C744.803 570.393 739.426 586.943 742.208 603.163L776.767 804.656C783.772 845.501 740.9 876.649 704.219 857.364L523.267 762.232C508.701 754.574 491.299 754.574 476.733 762.232L295.781 857.364C259.1 876.649 216.228 845.501 223.234 804.655L257.792 603.162C260.574 586.943 255.197 570.393 243.412 558.906L97.0192 416.208C67.3433 387.281 83.7189 336.882 124.73 330.923L327.04 301.526C343.326 299.159 357.404 288.931 364.687 274.174L455.163 90.8492Z");opacity:0;position:absolute;transform-origin:0 0;z-index:5}.img-box .slider-img-wrap.data-v-c7ddb387{position:absolute;z-index:10}.img-box .slider-img-in.data-v-c7ddb387{height:100%;left:50%;position:absolute;top:50%;transform-origin:50% 50%;width:100%;z-index:10}.img-box .slider-img.data-v-c7ddb387{box-sizing:initial;clip-path:path("M455.163 90.8492C473.504 53.6869 526.496 53.687 544.837 90.8493L635.313 274.174C642.596 288.931 656.674 299.159 672.96 301.526L875.27 330.923C916.281 336.882 932.657 387.281 902.981 416.208L756.588 558.906C744.803 570.393 739.426 586.943 742.208 603.163L776.767 804.656C783.772 845.501 740.9 876.649 704.219 857.364L523.267 762.232C508.701 754.574 491.299 754.574 476.733 762.232L295.781 857.364C259.1 876.649 216.228 845.501 223.234 804.655L257.792 603.162C260.574 586.943 255.197 570.393 243.412 558.906L97.0192 416.208C67.3433 387.281 83.7189 336.882 124.73 330.923L327.04 301.526C343.326 299.159 357.404 288.931 364.687 274.174L455.163 90.8492Z");height:1000px;transform-origin:0 0;transition:left .3s;width:1000px}.img-box .slider-img.no-transition.data-v-c7ddb387{transition:none}.img-box .slider-img.wrong.data-v-c7ddb387{border:2rpx solid #e23a00;box-shadow:0 0 12rpx 2rpx #e23a00}
+.uni-input-placeholder.data-v-c7ddb387,.uni-textarea-placeholder.data-v-c7ddb387 {
+    color: #c0c4cc!important
+}
+
+@-webkit-keyframes move1-c7ddb387 {
+    0% {
+        left: -5%
+    }
+
+    to {
+        left: 100%
+    }
+}
+
+@keyframes move1-c7ddb387 {
+    0% {
+        left: -5%
+    }
+
+    to {
+        left: 100%
+    }
+}
+
+.msg.data-v-c7ddb387 {
+    background-color: #4eac24;
+    color: #fff;
+    left: 0;
+    line-height: 44rpx;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    transition: opacity .5s;
+    z-index: 20
+}
+
+.msg.fail.data-v-c7ddb387 {
+    background-color: #e55d43
+}
+
+.sure-btn.data-v-c7ddb387 {
+    background-color: #a87e6c;
+    border-radius: 40rpx;
+    color: #fff;
+    height: 80rpx;
+    line-height: 80rpx;
+    margin: 20rpx 34rpx
+}
+
+.sure-btn.disabled.data-v-c7ddb387 {
+    background-color: #b5b5b6
+}
+
+.slider-wrap.data-v-c7ddb387 {
+    background-color: #f8f8f8;
+    border-top: 2rpx solid #ddd;
+    height: 80rpx
+}
+
+.slider-wrap .tip.data-v-c7ddb387 {
+    left: 50%;
+    line-height: 80rpx;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    z-index: 5
+}
+
+.slider-wrap .slider-bg.data-v-c7ddb387 {
+    background-color: #ddd;
+    position: relative;
+    transition: width .3s;
+    z-index: 10
+}
+
+.slider-wrap .slider-bg.no-transition.data-v-c7ddb387 {
+    transition: none
+}
+
+.slider-wrap .slider-ctrl.data-v-c7ddb387 {
+    background-color: #fff;
+    border: 2rpx solid #ddd;
+    height: 80rpx;
+    position: absolute;
+    top: 0;
+    transition: left .3s;
+    width: 80rpx;
+    z-index: 6
+}
+
+.slider-wrap .slider-ctrl.no-transition.data-v-c7ddb387 {
+    transition: none
+}
+
+.slider-wrap .slider-ctrl .icon.data-v-c7ddb387 {
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg)
+}
+
+.slider-com.data-v-c7ddb387 {
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: 554rpx 368rpx;
+    box-sizing: border-box;
+    height: 368rpx;
+    position: relative;
+    width: 554rpx
+}
+
+.slide-succ.data-v-c7ddb387 {
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: flex;
+    height: 100vh;
+    -webkit-justify-content: center;
+    justify-content: center;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    z-index: 100
+}
+
+.slide-succ .slide-succ-img.data-v-c7ddb387 {
+    height: 88rpx;
+    width: 458rpx
+}
+
+.bg-s.data-v-c7ddb387 {
+    height: 368rpx;
+    position: absolute;
+    width: 554rpx
+}
+
+.fail-img-box.data-v-c7ddb387 {
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: flex;
+    height: 100%;
+    -webkit-justify-content: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    z-index: 10
+}
+
+.img-box.data-v-c7ddb387 {
+    height: 368rpx;
+    overflow: visible;
+    position: relative;
+    width: 100%
+}
+
+.img-box .bg.data-v-c7ddb387 {
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%
+}
+
+.img-box .slider.data-v-c7ddb387 {
+    background: #dedede;
+    background: red;
+    box-shadow: 0 0 6rpx 2rpx hsla(0,0%,100%,.2);
+    -webkit-clip-path: path("M455.163 90.8492C473.504 53.6869 526.496 53.687 544.837 90.8493L635.313 274.174C642.596 288.931 656.674 299.159 672.96 301.526L875.27 330.923C916.281 336.882 932.657 387.281 902.981 416.208L756.588 558.906C744.803 570.393 739.426 586.943 742.208 603.163L776.767 804.656C783.772 845.501 740.9 876.649 704.219 857.364L523.267 762.232C508.701 754.574 491.299 754.574 476.733 762.232L295.781 857.364C259.1 876.649 216.228 845.501 223.234 804.655L257.792 603.162C260.574 586.943 255.197 570.393 243.412 558.906L97.0192 416.208C67.3433 387.281 83.7189 336.882 124.73 330.923L327.04 301.526C343.326 299.159 357.404 288.931 364.687 274.174L455.163 90.8492Z");
+    clip-path: path("M455.163 90.8492C473.504 53.6869 526.496 53.687 544.837 90.8493L635.313 274.174C642.596 288.931 656.674 299.159 672.96 301.526L875.27 330.923C916.281 336.882 932.657 387.281 902.981 416.208L756.588 558.906C744.803 570.393 739.426 586.943 742.208 603.163L776.767 804.656C783.772 845.501 740.9 876.649 704.219 857.364L523.267 762.232C508.701 754.574 491.299 754.574 476.733 762.232L295.781 857.364C259.1 876.649 216.228 845.501 223.234 804.655L257.792 603.162C260.574 586.943 255.197 570.393 243.412 558.906L97.0192 416.208C67.3433 387.281 83.7189 336.882 124.73 330.923L327.04 301.526C343.326 299.159 357.404 288.931 364.687 274.174L455.163 90.8492Z");
+    opacity: 0;
+    position: absolute;
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+    z-index: 5
+}
+
+.img-box .slider-img-wrap.data-v-c7ddb387 {
+    position: absolute;
+    z-index: 10
+}
+
+.img-box .slider-img-in.data-v-c7ddb387 {
+    height: 100%;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    width: 100%;
+    z-index: 10
+}
+
+.img-box .slider-img.data-v-c7ddb387 {
+    box-sizing: initial;
+    -webkit-clip-path: path("M455.163 90.8492C473.504 53.6869 526.496 53.687 544.837 90.8493L635.313 274.174C642.596 288.931 656.674 299.159 672.96 301.526L875.27 330.923C916.281 336.882 932.657 387.281 902.981 416.208L756.588 558.906C744.803 570.393 739.426 586.943 742.208 603.163L776.767 804.656C783.772 845.501 740.9 876.649 704.219 857.364L523.267 762.232C508.701 754.574 491.299 754.574 476.733 762.232L295.781 857.364C259.1 876.649 216.228 845.501 223.234 804.655L257.792 603.162C260.574 586.943 255.197 570.393 243.412 558.906L97.0192 416.208C67.3433 387.281 83.7189 336.882 124.73 330.923L327.04 301.526C343.326 299.159 357.404 288.931 364.687 274.174L455.163 90.8492Z");
+    clip-path: path("M455.163 90.8492C473.504 53.6869 526.496 53.687 544.837 90.8493L635.313 274.174C642.596 288.931 656.674 299.159 672.96 301.526L875.27 330.923C916.281 336.882 932.657 387.281 902.981 416.208L756.588 558.906C744.803 570.393 739.426 586.943 742.208 603.163L776.767 804.656C783.772 845.501 740.9 876.649 704.219 857.364L523.267 762.232C508.701 754.574 491.299 754.574 476.733 762.232L295.781 857.364C259.1 876.649 216.228 845.501 223.234 804.655L257.792 603.162C260.574 586.943 255.197 570.393 243.412 558.906L97.0192 416.208C67.3433 387.281 83.7189 336.882 124.73 330.923L327.04 301.526C343.326 299.159 357.404 288.931 364.687 274.174L455.163 90.8492Z");
+    height: 1000px;
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+    transition: left .3s;
+    width: 1000px
+}
+
+.img-box .slider-img.no-transition.data-v-c7ddb387 {
+    transition: none
+}
+
+.img-box .slider-img.wrong.data-v-c7ddb387 {
+    border: 2rpx solid #e23a00;
+    box-shadow: 0 0 12rpx 2rpx #e23a00
+}

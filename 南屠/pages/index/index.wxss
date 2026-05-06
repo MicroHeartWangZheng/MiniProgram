@@ -1,1 +1,8 @@
-.uni-input-placeholder.data-v-22201dd5,.uni-textarea-placeholder.data-v-22201dd5{color:#c0c4cc!important}.index.data-v-22201dd5{min-height:100vh;width:100%}
+.uni-input-placeholder.data-v-22201dd5,.uni-textarea-placeholder.data-v-22201dd5 {
+    color: #c0c4cc!important
+}
+
+.index.data-v-22201dd5 {
+    min-height: 100vh;
+    width: 100%
+}

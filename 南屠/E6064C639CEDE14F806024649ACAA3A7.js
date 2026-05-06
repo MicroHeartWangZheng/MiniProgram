@@ -1,1 +1,505 @@
-var e=require("@babel/runtime/helpers/typeof.js"),t=require("@babel/runtime/helpers/toConsumableArray.js"),n=require("@babel/runtime/helpers/regeneratorRuntime.js"),r=require("@babel/runtime/helpers/asyncToGenerator.js"),a=require("302F12419CEDE14F56497A46F35AA3A7.js"),i=require("C2C981E19CEDE14FA4AFE9E627F9A3A7.js"),o=require("99A56A709CEDE14FFFC30277932AA3A7.js"),u=require("97D575919CEDE14FF1B31D960FBAA3A7.js"),s=require("42DF72329CEDE14F24B91A35674AA3A7.js"),c=require("2800CA079CEDE14F4E66A20028DAA3A7.js");Array||a.resolveComponent("dialogWrap")();var l=a._export_sfc({components:{dialogWrap:function(){return"../components/dialogWrap.js"}},data:function(){return{msg:""}},methods:{open:function(e){this.msg=e,this.$refs.dialogWrapTextRef.open()}}},[["render",function(e,t,n,r,i,o){var u=this;return{a:s._imports_3,b:a.t(i.msg),c:a.o((function(){u.$refs.dialogWrapTextRef.close()})),d:a.sr("dialogWrapTextRef","f6fa94c1-0"),e:a.p({position:"center",isMaskClick:!1})}}],["__scopeId","data-v-f6fa94c1"]]),d=new a.JSEncrypt;function f(e){return m(M(y(u.arrayToUtf8(e.v)),e.nI))}function g(e,t,n,r){var a=e*Math.PI/180,i=n*Math.PI/180,o=a-i,u=t*Math.PI/180-r*Math.PI/180,s=2*Math.asin(Math.sqrt(Math.pow(Math.sin(o/2),2)+Math.cos(a)*Math.cos(i)*Math.pow(Math.sin(u/2),2)));return s*=6378.137,Math.round(1e4*s)/1e4}function p(e,t){try{a.index.setStorageSync(e,t)}catch(e){}}function h(e){try{var t=a.index.getStorageSync(e);if(t)return t}catch(e){}}function v(e,t){return new Promise((function(u,s){a.index.login({success:function(s){if(s.code){var c={mchCode:i.config.mchCode,code:s.code};o.loginAppletLogin(c).then(function(){var i=r(n().mark((function r(i){var s;return n().wrap((function(n){for(;;)switch(n.prev=n.next){case 0:if(1e3!=i.code){n.next=9;break}if(2!=i.data.isLogin){n.next=3;break}return n.abrupt("return",(p("registerToken",i.data.token),p("isUserInfo",!1),t||(p("backPageUrl",e),a.index.navigateTo({url:"/nlh_index/login/index"})),void u(2)));case 3:if(1!=i.data.isLogin){n.next=9;break}return p("refreshToken",i.data.refreshToken),p("token",i.data.token),p("isLogin",!0),n.next=7,o.api_getUserInfo();case 7:return s=n.sent,n.abrupt("return",void(1e3==s.code&&(p("isUserInfo",!0),p("userInfo",JSON.stringify(s.data)),u(1))));case 9:case"end":return n.stop()}}),r)})));return function(e){return i.apply(this,arguments)}}())}}})}))}function m(e){return e.split("").reverse().join("")}function x(e,t){return e.substring(0,t)+e.substring(t+1)}function M(e,t){for(var n=e,r=0;r<t.length;r++)n=x(n,t[r]);return n}function y(e,n){var r=[[1,3],[3,8],[2,5],[1,9],[11,15],[11,15],[1,3]];return n?(e=e.split(""),r.map((function(n,r){var a=e.splice(n[0],n[1]-n[0]);e=[].concat(t(e),t(a))}))):(e=e.split(""),r.reverse().map((function(n,r){var a,i=e.splice(e.length-(n[1]-n[0]),n[1]-n[0]);(a=e).splice.apply(a,[n[0],0].concat(t(i)))}))),e.join("")}var b,S,T,I={decryptSm4:function(e){var t=f(c.list[0]);t=y(t);var n=f(c.list[1]);return n=y(n),u.decrypt(e,n,{iv:t,padding:"pkcs#5",mode:"cbc"})},encryptSm4:function(e){var t=f(c.list[0]);t=y(t);var n=f(c.list[1]);return u.encrypt(e,n,{iv:t,padding:"pkcs#5",mode:"cbc"})},space:g,getAngleBetweenPoints:function(e,t,n,r){return 180*Math.atan2(r-t,n-e)/Math.PI},getRotate:function(e,t,n,r,a,i){var o,u=180*Math.atan2(t-i,e-a)/Math.PI,s=180*Math.atan2(r-i,n-a)/Math.PI;return u=u<=-90?360+u:u,s=s<=-90?360+s:s,o=(o=Math.floor(s-u))<0?o+360:o},aToBSpace:function(e,t,n,r){var a=e*Math.PI/180,i=n*Math.PI/180,o=a-i,u=t*Math.PI/180-r*Math.PI/180,s=2*Math.asin(Math.sqrt(Math.pow(Math.sin(o/2),2)+Math.cos(a)*Math.cos(i)*Math.pow(Math.sin(u/2),2)));return s*=6378.137,Math.round(1e4*s)/1e4},getAngle:function(e,t,n,r){if(!n){var a=e.split(","),i=t.split(",");e=a[0],t=a[1],n=i[0],r=i[1]}var o=Math.PI/180,u=(r-t)*o,s=Math.sin(u)*Math.cos(n*o),c=Math.cos(e*o)*Math.sin(n*o)-Math.sin(e*o)*Math.cos(n*o)*Math.cos(u);return 180*Math.atan2(s,c)/Math.PI},calDistance:function(e,t){var n=g(e.latitude,e.longitude,t.latitude,t.longitude).toFixed(2);return n<1?(1e3*n).toFixed(0)+"m":n+"km"},getLocation:function(){return new Promise((function(e,t){a.index.getLocation({success:function(t){var n;n={log:t.longitude?t.longitude:"",lat:t.latitude?t.latitude:""},e(n)},fail:function(e){t(e)}})}))},navigateTo:function(e){a.index.navigateTo({url:e,success:function(e){},fail:function(){},complete:function(){}})},redirectTo:function(e){a.index.redirectTo({url:e,success:function(e){},fail:function(){},complete:function(){}})},getLabel:function(e,t){if(e||0===e){var n=t.find((function(t){return t.value==e||t.dataValue==e}));return n?n.label||n.dataName:""}return""},fmtMoney:function(e){var t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:2;return Number(e)&&e?(e/100).toFixed(t)-0:0},readJsonFile:function(e){return new Promise((function(t,n){a.index.request({url:e,method:"GET",withCredentials:!0,success:function(e){t(e.data)},fail:function(e){n(res.data)}})}))},getImgUrl:function(e){return i.config.imgUrl+e},getAudioUrl:function(e){return i.config.audioUrl+e},getVideoUrl:function(e){return i.config.videoUrl+e},setStorageSync:p,getStorageSync:h,removeStorageSync:function(e){try{e.map((function(e){a.index.removeStorageSync(e)}))}catch(e){}},setNavigationBarTitle:function(e){a.index.setNavigationBarTitle({title:e})},previewImage:function(e){a.index.previewImage({urls:e})},makeAcall:function(e){a.index.makePhoneCall({phoneNumber:e,success:function(e){},fail:function(e){}})},openMap:function(e,t,n){a.index.openLocation({latitude:parseFloat(e),longitude:parseFloat(t),address:n,scale:12}),a.index.createMapContext("map").moveToLocation()},getLogin:v,wxUploadFile:function e(t,n,r,o,u,s,c){a.index.showLoading({title:"正在上传"+(1==u?"":"第"+(o+1)+"个"),mask:!0}),a.index.uploadFile({url:"".concat(i.config.mallApi,"/order-server/play/wx/uploadFile?platform=WECHAT_MINI_APP"),filePath:t[o].tempFilePath||t[o].path,name:"file",formData:{fileName:t[o].name||""},header:{Authorization:"bearer "+a.index.getStorageSync("token")},success:function(e){var t=JSON.parse(e.data);s.push(t.data),n++},fail:function(e){r++},complete:function(i){++o==u?(c&&c(s),a.index.showToast({title:r>0?"上传失败":"上传成功",icon:"success",duration:2e3}),a.index.hideLoading()):e(t,n,r,o,u,s,c)}})},pageliks:function(e,t){var n="";for(var r in e)n+="&"+r+"="+e[r];return""!=n&&(n="?"+n),n=n.replace("?&","?"),"/"+t[t.length-1].route+n},defaultLogin:(T=r(n().mark((function e(t,r){var i,o;return n().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:if(i=!0,h("token")){e.next=7;break}return a.index.showLoading({title:"加载中...",icon:"none"}),e.next=5,v(t,r);case 5:o=e.sent,a.index.hideLoading(),2==o&&(i=!1);case 7:return e.abrupt("return",i);case 8:case"end":return e.stop()}}),e)}))),function(e,t){return T.apply(this,arguments)}),userNavigateTo:(S=r(n().mark((function e(t){var r;return n().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:r=a.index.getStorageSync("versioncontrol"),a.index.getStorageSync("token")?a.index.navigateTo({url:t}):3==r?a.index.navigateTo({url:"/english_pages/login/index"}):2==r?a.index.navigateTo({url:"/oldage_pages/login/index"}):a.index.navigateTo({url:"/jdm_pages/login/index"});case 2:case"end":return e.stop()}}),e)}))),function(e){return S.apply(this,arguments)}),userRedirectTo:(b=r(n().mark((function e(t){var r;return n().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:r=a.index.getStorageSync("versioncontrol"),a.index.getStorageSync("token")?a.index.redirectTo({url:t}):3==r?a.index.navigateTo({url:"/english_pages/login/index"}):a.index.navigateTo({url:"/jdm_pages/login/index"});case 2:case"end":return e.stop()}}),e)}))),function(e){return b.apply(this,arguments)}),parseTime:function(t,n){if(0===arguments.length)return null;var r,a=n||"{y}-{m}-{d} {h}:{i}:{s}";"object"==e(t)?r=t:("string"==typeof t&&/^[0-9]+$/.test(t)&&(t=parseInt(t)),"number"==typeof t&&10===t.toString().length&&(t*=1e3),r=new Date(t));var i={y:r.getFullYear(),m:r.getMonth()+1,d:r.getDate(),h:r.getHours(),i:r.getMinutes(),s:r.getSeconds(),a:r.getDay()};return a.replace(/{([ymdhisa])+}/g,(function(e,t){var n=i[t];return"a"===t?["日","一","二","三","四","五","六"][n]:n.toString().padStart(2,"0")}))},getAgeByCardId:function(e,t){var n=e.substr(6,4),r=e.substr(10,2),a=e.substr(12,2),i=new Date;if(!t){var o=i.getDate();i.setDate(o-1)}o=i.getDate();var u=i.getFullYear(),s=i.getMonth()+1,c=0;if(u==n&&s<=r&&o<=a)c=0;else{var l=u-n;c=l>0?s==r?o-a<0?l-1:l:s-r<0?l-1:l:-1}return c},getAgeByCardId2:function(e,t){var n=e.substr(7,2);n=n>=23?"19"+n:"20"+n,n=Number(n);var r=e.substr(9,2),a=e.substr(11,2),i=new Date;if(!t){var o=i.getDate();i.setDate(o-1)}o=i.getDate();var u=i.getFullYear(),s=i.getMonth()+1,c=0;if(u==n&&s<=r&&o<=a)c=0;else{var l=u-n;c=l>0?s==r?o-a<0?l-1:l:s-r<0?l-1:l:-1}return c},getuuid:function(){for(var e=[],t="0123456789abcdef",n=0;n<36;n++)e[n]=t.substr(Math.floor(16*Math.random()),1);return e[14]="4",e[19]=t.substr(3&e[19]|8,1),e[8]=e[13]=e[18]=e[23]="-",e.join("")},decodeFun:function(e){d.setPrivateKey("".substring(4,-4));var t=d.decryptLong(e),n=decodeURIComponent(t);return JSON.parse(n)},dialogWrapText:l,isNightTime:function(){return(new Date).getHours()>=11},encodeBase64:function(e){return btoa(encodeURIComponent(e).replace(/%([0-9A-F]{2})/g,(function(e,t){return String.fromCharCode("0x"+t)})))},decodeBase64:function(e){return decodeURIComponent(Array.prototype.map.call(atob(e),(function(e){return"%"+("00"+e.charCodeAt(0).toString(16)).slice(-2)})).join(""))},reverseString:m,deleteStrByIndex:M,parseStr:y,getEncrypt:function(){return f(c.list[2]).substring(7,f(c.list[2]).length-11)}};exports.Component=l,exports.utils=I;
+var e = require("./@babel/runtime/helpers/typeof.js"),
+  t = require("./@babel/runtime/helpers/toConsumableArray.js"),
+  n = require("./@babel/runtime/helpers/regeneratorRuntime.js"),
+  r = require("./@babel/runtime/helpers/asyncToGenerator.js"),
+  a = require("302F12419CEDE14F56497A46F35AA3A7.js"),
+  i = require("C2C981E19CEDE14FA4AFE9E627F9A3A7.js"),
+  o = require("99A56A709CEDE14FFFC30277932AA3A7.js"),
+  u = require("97D575919CEDE14FF1B31D960FBAA3A7.js"),
+  s = require("42DF72329CEDE14F24B91A35674AA3A7.js"),
+  c = require("2800CA079CEDE14F4E66A20028DAA3A7.js");
+Array || a.resolveComponent("dialogWrap")();
+var l = a._export_sfc({
+    components: {
+      dialogWrap: function() {
+        return "../components/dialogWrap.js"
+      }
+    },
+    data: function() {
+      return {
+        msg: ""
+      }
+    },
+    methods: {
+      open: function(e) {
+        this.msg = e, this.$refs.dialogWrapTextRef.open()
+      }
+    }
+  }, [
+    ["render", function(e, t, n, r, i, o) {
+      var u = this;
+      return {
+        a: s._imports_3,
+        b: a.t(i.msg),
+        c: a.o((function() {
+          u.$refs.dialogWrapTextRef.close()
+        })),
+        d: a.sr("dialogWrapTextRef", "f6fa94c1-0"),
+        e: a.p({
+          position: "center",
+          isMaskClick: !1
+        })
+      }
+    }],
+    ["__scopeId", "data-v-f6fa94c1"]
+  ]),
+  d = new a.JSEncrypt;
+
+function f(e) {
+  return m(M(y(u.arrayToUtf8(e.v)), e.nI))
+}
+
+function g(e, t, n, r) {
+  var a = e * Math.PI / 180,
+    i = n * Math.PI / 180,
+    o = a - i,
+    u = t * Math.PI / 180 - r * Math.PI / 180,
+    s = 2 * Math.asin(Math.sqrt(Math.pow(Math.sin(o / 2), 2) + Math.cos(a) * Math.cos(i) * Math.pow(Math.sin(u / 2), 2)));
+  return s *= 6378.137, Math.round(1e4 * s) / 1e4
+}
+
+function p(e, t) {
+  try {
+    a.index.setStorageSync(e, t)
+  } catch (e) {}
+}
+
+function h(e) {
+  try {
+    var t = a.index.getStorageSync(e);
+    if (t) return t
+  } catch (e) {}
+}
+
+function v(e, t) {
+  return new Promise((function(u, s) {
+    a.index.login({
+      success: function(s) {
+        if (s.code) {
+          var c = {
+            mchCode: i.config.mchCode,
+            code: s.code
+          };
+          o.loginAppletLogin(c).then(function() {
+            var i = r(n().mark((function r(i) {
+              var s;
+              return n().wrap((function(n) {
+                for (;;) switch (n.prev = n.next) {
+                  case 0:
+                    if (1e3 != i.code) {
+                      n.next = 9;
+                      break
+                    }
+                    if (2 != i.data.isLogin) {
+                      n.next = 3;
+                      break
+                    }
+                    return n.abrupt("return", (p("registerToken", i.data.token), p("isUserInfo", !1), t || (p("backPageUrl", e), a.index.navigateTo({
+                      url: "/nlh_index/login/index"
+                    })), void u(2)));
+                  case 3:
+                    if (1 != i.data.isLogin) {
+                      n.next = 9;
+                      break
+                    }
+                    return p("refreshToken", i.data.refreshToken), p("token", i.data.token), p("isLogin", !0), n.next = 7, o.api_getUserInfo();
+                  case 7:
+                    return s = n.sent, n.abrupt("return", void(1e3 == s.code && (p("isUserInfo", !0), p("userInfo", JSON.stringify(s.data)), u(1))));
+                  case 9:
+                  case "end":
+                    return n.stop()
+                }
+              }), r)
+            })));
+            return function(e) {
+              return i.apply(this, arguments)
+            }
+          }())
+        }
+      }
+    })
+  }))
+}
+
+function m(e) {
+  return e.split("").reverse().join("")
+}
+
+function x(e, t) {
+  return e.substring(0, t) + e.substring(t + 1)
+}
+
+function M(e, t) {
+  for (var n = e, r = 0; r < t.length; r++) n = x(n, t[r]);
+  return n
+}
+
+function y(e, n) {
+  var r = [
+    [1, 3],
+    [3, 8],
+    [2, 5],
+    [1, 9],
+    [11, 15],
+    [11, 15],
+    [1, 3]
+  ];
+  return n ? (e = e.split(""), r.map((function(n, r) {
+    var a = e.splice(n[0], n[1] - n[0]);
+    e = [].concat(t(e), t(a))
+  }))) : (e = e.split(""), r.reverse().map((function(n, r) {
+    var a, i = e.splice(e.length - (n[1] - n[0]), n[1] - n[0]);
+    (a = e).splice.apply(a, [n[0], 0].concat(t(i)))
+  }))), e.join("")
+}
+var b, S, T, I = {
+  decryptSm4: function(e) {
+    var t = f(c.list[0]);
+    t = y(t);
+    var n = f(c.list[1]);
+    return n = y(n), u.decrypt(e, n, {
+      iv: t,
+      padding: "pkcs#5",
+      mode: "cbc"
+    })
+  },
+  encryptSm4: function(e) {
+    var t = f(c.list[0]);
+    t = y(t);
+    var n = f(c.list[1]);
+    return u.encrypt(e, n, {
+      iv: t,
+      padding: "pkcs#5",
+      mode: "cbc"
+    })
+  },
+  space: g,
+  getAngleBetweenPoints: function(e, t, n, r) {
+    return 180 * Math.atan2(r - t, n - e) / Math.PI
+  },
+  getRotate: function(e, t, n, r, a, i) {
+    var o, u = 180 * Math.atan2(t - i, e - a) / Math.PI,
+      s = 180 * Math.atan2(r - i, n - a) / Math.PI;
+    return u = u <= -90 ? 360 + u : u, s = s <= -90 ? 360 + s : s, o = (o = Math.floor(s - u)) < 0 ? o + 360 : o
+  },
+  aToBSpace: function(e, t, n, r) {
+    var a = e * Math.PI / 180,
+      i = n * Math.PI / 180,
+      o = a - i,
+      u = t * Math.PI / 180 - r * Math.PI / 180,
+      s = 2 * Math.asin(Math.sqrt(Math.pow(Math.sin(o / 2), 2) + Math.cos(a) * Math.cos(i) * Math.pow(Math.sin(u / 2), 2)));
+    return s *= 6378.137, Math.round(1e4 * s) / 1e4
+  },
+  getAngle: function(e, t, n, r) {
+    if (!n) {
+      var a = e.split(","),
+        i = t.split(",");
+      e = a[0], t = a[1], n = i[0], r = i[1]
+    }
+    var o = Math.PI / 180,
+      u = (r - t) * o,
+      s = Math.sin(u) * Math.cos(n * o),
+      c = Math.cos(e * o) * Math.sin(n * o) - Math.sin(e * o) * Math.cos(n * o) * Math.cos(u);
+    return 180 * Math.atan2(s, c) / Math.PI
+  },
+  calDistance: function(e, t) {
+    var n = g(e.latitude, e.longitude, t.latitude, t.longitude).toFixed(2);
+    return n < 1 ? (1e3 * n).toFixed(0) + "m" : n + "km"
+  },
+  getLocation: function() {
+    return new Promise((function(e, t) {
+      a.index.getLocation({
+        success: function(t) {
+          var n;
+          n = {
+            log: t.longitude ? t.longitude : "",
+            lat: t.latitude ? t.latitude : ""
+          }, e(n)
+        },
+        fail: function(e) {
+          t(e)
+        }
+      })
+    }))
+  },
+  navigateTo: function(e) {
+    a.index.navigateTo({
+      url: e,
+      success: function(e) {},
+      fail: function() {},
+      complete: function() {}
+    })
+  },
+  redirectTo: function(e) {
+    a.index.redirectTo({
+      url: e,
+      success: function(e) {},
+      fail: function() {},
+      complete: function() {}
+    })
+  },
+  getLabel: function(e, t) {
+    if (e || 0 === e) {
+      var n = t.find((function(t) {
+        return t.value == e || t.dataValue == e
+      }));
+      return n ? n.label || n.dataName : ""
+    }
+    return ""
+  },
+  fmtMoney: function(e) {
+    var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 2;
+    return Number(e) && e ? (e / 100).toFixed(t) - 0 : 0
+  },
+  readJsonFile: function(e) {
+    return new Promise((function(t, n) {
+      a.index.request({
+        url: e,
+        method: "GET",
+        withCredentials: !0,
+        success: function(e) {
+          t(e.data)
+        },
+        fail: function(e) {
+          n(res.data)
+        }
+      })
+    }))
+  },
+  getImgUrl: function(e) {
+    return i.config.imgUrl + e
+  },
+  getAudioUrl: function(e) {
+    return i.config.audioUrl + e
+  },
+  getVideoUrl: function(e) {
+    return i.config.videoUrl + e
+  },
+  setStorageSync: p,
+  getStorageSync: h,
+  removeStorageSync: function(e) {
+    try {
+      e.map((function(e) {
+        a.index.removeStorageSync(e)
+      }))
+    } catch (e) {}
+  },
+  setNavigationBarTitle: function(e) {
+    a.index.setNavigationBarTitle({
+      title: e
+    })
+  },
+  previewImage: function(e) {
+    a.index.previewImage({
+      urls: e
+    })
+  },
+  makeAcall: function(e) {
+    a.index.makePhoneCall({
+      phoneNumber: e,
+      success: function(e) {},
+      fail: function(e) {}
+    })
+  },
+  openMap: function(e, t, n) {
+    a.index.openLocation({
+      latitude: parseFloat(e),
+      longitude: parseFloat(t),
+      address: n,
+      scale: 12
+    }), a.index.createMapContext("map").moveToLocation()
+  },
+  getLogin: v,
+  wxUploadFile: function e(t, n, r, o, u, s, c) {
+    a.index.showLoading({
+      title: "正在上传" + (1 == u ? "" : "第" + (o + 1) + "个"),
+      mask: !0
+    }), a.index.uploadFile({
+      url: "".concat(i.config.mallApi, "/order-server/play/wx/uploadFile?platform=WECHAT_MINI_APP"),
+      filePath: t[o].tempFilePath || t[o].path,
+      name: "file",
+      formData: {
+        fileName: t[o].name || ""
+      },
+      header: {
+        Authorization: "bearer " + a.index.getStorageSync("token")
+      },
+      success: function(e) {
+        var t = JSON.parse(e.data);
+        s.push(t.data), n++
+      },
+      fail: function(e) {
+        r++
+      },
+      complete: function(i) {
+        ++o == u ? (c && c(s), a.index.showToast({
+          title: r > 0 ? "上传失败" : "上传成功",
+          icon: "success",
+          duration: 2e3
+        }), a.index.hideLoading()) : e(t, n, r, o, u, s, c)
+      }
+    })
+  },
+  pageliks: function(e, t) {
+    var n = "";
+    for (var r in e) n += "&" + r + "=" + e[r];
+    return "" != n && (n = "?" + n), n = n.replace("?&", "?"), "/" + t[t.length - 1].route + n
+  },
+  defaultLogin: (T = r(n().mark((function e(t, r) {
+    var i, o;
+    return n().wrap((function(e) {
+      for (;;) switch (e.prev = e.next) {
+        case 0:
+          if (i = !0, h("token")) {
+            e.next = 7;
+            break
+          }
+          return a.index.showLoading({
+            title: "加载中...",
+            icon: "none"
+          }), e.next = 5, v(t, r);
+        case 5:
+          o = e.sent, a.index.hideLoading(), 2 == o && (i = !1);
+        case 7:
+          return e.abrupt("return", i);
+        case 8:
+        case "end":
+          return e.stop()
+      }
+    }), e)
+  }))), function(e, t) {
+    return T.apply(this, arguments)
+  }),
+  userNavigateTo: (S = r(n().mark((function e(t) {
+    var r;
+    return n().wrap((function(e) {
+      for (;;) switch (e.prev = e.next) {
+        case 0:
+          r = a.index.getStorageSync("versioncontrol"), a.index.getStorageSync("token") ? a.index.navigateTo({
+            url: t
+          }) : 3 == r ? a.index.navigateTo({
+            url: "/english_pages/login/index"
+          }) : 2 == r ? a.index.navigateTo({
+            url: "/oldage_pages/login/index"
+          }) : a.index.navigateTo({
+            url: "/jdm_pages/login/index"
+          });
+        case 2:
+        case "end":
+          return e.stop()
+      }
+    }), e)
+  }))), function(e) {
+    return S.apply(this, arguments)
+  }),
+  userRedirectTo: (b = r(n().mark((function e(t) {
+    var r;
+    return n().wrap((function(e) {
+      for (;;) switch (e.prev = e.next) {
+        case 0:
+          r = a.index.getStorageSync("versioncontrol"), a.index.getStorageSync("token") ? a.index.redirectTo({
+            url: t
+          }) : 3 == r ? a.index.navigateTo({
+            url: "/english_pages/login/index"
+          }) : a.index.navigateTo({
+            url: "/jdm_pages/login/index"
+          });
+        case 2:
+        case "end":
+          return e.stop()
+      }
+    }), e)
+  }))), function(e) {
+    return b.apply(this, arguments)
+  }),
+  parseTime: function(t, n) {
+    if (0 === arguments.length) return null;
+    var r, a = n || "{y}-{m}-{d} {h}:{i}:{s}";
+    "object" == e(t) ? r = t : ("string" == typeof t && /^[0-9]+$/.test(t) && (t = parseInt(t)), "number" == typeof t && 10 === t.toString().length && (t *= 1e3), r = new Date(t));
+    var i = {
+      y: r.getFullYear(),
+      m: r.getMonth() + 1,
+      d: r.getDate(),
+      h: r.getHours(),
+      i: r.getMinutes(),
+      s: r.getSeconds(),
+      a: r.getDay()
+    };
+    return a.replace(/{([ymdhisa])+}/g, (function(e, t) {
+      var n = i[t];
+      return "a" === t ? ["日", "一", "二", "三", "四", "五", "六"][n] : n.toString().padStart(2, "0")
+    }))
+  },
+  getAgeByCardId: function(e, t) {
+    var n = e.substr(6, 4),
+      r = e.substr(10, 2),
+      a = e.substr(12, 2),
+      i = new Date;
+    if (!t) {
+      var o = i.getDate();
+      i.setDate(o - 1)
+    }
+    o = i.getDate();
+    var u = i.getFullYear(),
+      s = i.getMonth() + 1,
+      c = 0;
+    if (u == n && s <= r && o <= a) c = 0;
+    else {
+      var l = u - n;
+      c = l > 0 ? s == r ? o - a < 0 ? l - 1 : l : s - r < 0 ? l - 1 : l : -1
+    }
+    return c
+  },
+  getAgeByCardId2: function(e, t) {
+    var n = e.substr(7, 2);
+    n = n >= 23 ? "19" + n : "20" + n, n = Number(n);
+    var r = e.substr(9, 2),
+      a = e.substr(11, 2),
+      i = new Date;
+    if (!t) {
+      var o = i.getDate();
+      i.setDate(o - 1)
+    }
+    o = i.getDate();
+    var u = i.getFullYear(),
+      s = i.getMonth() + 1,
+      c = 0;
+    if (u == n && s <= r && o <= a) c = 0;
+    else {
+      var l = u - n;
+      c = l > 0 ? s == r ? o - a < 0 ? l - 1 : l : s - r < 0 ? l - 1 : l : -1
+    }
+    return c
+  },
+  getuuid: function() {
+    for (var e = [], t = "0123456789abcdef", n = 0; n < 36; n++) e[n] = t.substr(Math.floor(16 * Math.random()), 1);
+    return e[14] = "4", e[19] = t.substr(3 & e[19] | 8, 1), e[8] = e[13] = e[18] = e[23] = "-", e.join("")
+  },
+  decodeFun: function(e) {
+    d.setPrivateKey("".substring(4, -4));
+    var t = d.decryptLong(e),
+      n = decodeURIComponent(t);
+    return JSON.parse(n)
+  },
+  dialogWrapText: l,
+  isNightTime: function() {
+    return (new Date).getHours() >= 11
+  },
+  encodeBase64: function(e) {
+    return btoa(encodeURIComponent(e).replace(/%([0-9A-F]{2})/g, (function(e, t) {
+      return String.fromCharCode("0x" + t)
+    })))
+  },
+  decodeBase64: function(e) {
+    return decodeURIComponent(Array.prototype.map.call(atob(e), (function(e) {
+      return "%" + ("00" + e.charCodeAt(0).toString(16)).slice(-2)
+    })).join(""))
+  },
+  reverseString: m,
+  deleteStrByIndex: M,
+  parseStr: y,
+  getEncrypt: function() {
+    return f(c.list[2]).substring(7, f(c.list[2]).length - 11)
+  }
+};
+exports.Component = l, exports.utils = I;

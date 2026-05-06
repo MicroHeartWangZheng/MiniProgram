@@ -1,1 +1,105 @@
-var i=require("../../302F12419CEDE14F56497A46F35AA3A7.js"),t=["A","B","C","D","E","F","G","H","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","a","b","c","d","e","f","g","h","i","j","k","m","n","o","p","q","r","s","t","u","v","w","x","y","z"],r={name:"VerifyPoints",props:{},data:function(){return{idePicture:"",isRight:null,showArr:[],answer:"",arr:[],timer:0}},mounted:function(){this.init()},methods:{init:function(){var i=Math.round(14*Math.random()+1),r=this.$settings.verifyImg+"common/"+i+".jpg";this.idePicture=r;var n=[6];n.sort((function(){return Math.random()-.5}));var e=n[0];t.sort((function(){return Math.random()-.5}));var s=t.join(""),h=Math.floor(Math.random()*(s.length-n[0]-1)),o=s.substring(h,e+h);this.answer=o.substring(0,4);var a=[];(function i(t){if(0!=t.length){var r=Math.floor(59*Math.random());a[r]||(a[r]={value:t.shift(),index:null}),i(t)}})(o.split("")),this.showArr=a,this.arr=[]},selectItem:function(i){if(!this.isRight){var t=this.showArr[i];if(t)if(null===t.index||void 0===t.index){for(var r=-1,n=0;n<this.answer.length;n++)if(!this.arr[n]){r=n,this.arr[n]=t.value;break}-1!=r&&(t.index=r)}else this.arr[t.index]="",t.index=null}},submit:function(){var t=this;if(!this.isRight){var r=this.arr.join("");r.length==this.answer.length?(clearTimeout(this.timer),r===this.answer?(this.$emit("afterAnswer"),this.isRight=!0):(this.isRight=!1,this.timer=setTimeout((function(){t.isRight=null}),2e3),this.init())):i.index.showToast({title:"字没选完",icon:"none"})}}}},n=i._export_sfc(r,[["render",function(t,r,n,e,s,h){return i.e({a:s.idePicture,b:!1===s.isRight},(s.isRight,{}),{c:!0===s.isRight},(s.isRight,{}),{d:i.f(60,(function(t,r,n){return i.e({a:i.t(s.showArr[r]?s.showArr[r].value:""),b:s.showArr[r]&&null!==s.showArr[r].index&&void 0!==s.showArr[r].index},s.showArr[r]&&null!==s.showArr[r].index&&void 0!==s.showArr[r].index?{c:i.t(s.showArr[r]?s.showArr[r].index+1:"")}:{},{d:i.o((function(i){return h.selectItem(r)}),r),e:r})})),e:i.t(s.answer),f:i.t(s.isRight?"预约中，请等待…":"确定"),g:s.isRight?1:"",h:i.o((function(){return h.submit&&h.submit.apply(h,arguments)}))})}],["__scopeId","data-v-7fa83aa9"]]);wx.createComponent(n);
+var i = require("../../302F12419CEDE14F56497A46F35AA3A7.js"),
+  t = ["A", "B", "C", "D", "E", "F", "G", "H", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"],
+  r = {
+    name: "VerifyPoints",
+    props: {},
+    data: function() {
+      return {
+        idePicture: "",
+        isRight: null,
+        showArr: [],
+        answer: "",
+        arr: [],
+        timer: 0
+      }
+    },
+    mounted: function() {
+      this.init()
+    },
+    methods: {
+      init: function() {
+        var i = Math.round(14 * Math.random() + 1),
+          r = this.$settings.verifyImg + "common/" + i + ".jpg";
+        this.idePicture = r;
+        var n = [6];
+        n.sort((function() {
+          return Math.random() - .5
+        }));
+        var e = n[0];
+        t.sort((function() {
+          return Math.random() - .5
+        }));
+        var s = t.join(""),
+          h = Math.floor(Math.random() * (s.length - n[0] - 1)),
+          o = s.substring(h, e + h);
+        this.answer = o.substring(0, 4);
+        var a = [];
+        (function i(t) {
+          if (0 != t.length) {
+            var r = Math.floor(59 * Math.random());
+            a[r] || (a[r] = {
+              value: t.shift(),
+              index: null
+            }), i(t)
+          }
+        })(o.split("")), this.showArr = a, this.arr = []
+      },
+      selectItem: function(i) {
+        if (!this.isRight) {
+          var t = this.showArr[i];
+          if (t)
+            if (null === t.index || void 0 === t.index) {
+              for (var r = -1, n = 0; n < this.answer.length; n++)
+                if (!this.arr[n]) {
+                  r = n, this.arr[n] = t.value;
+                  break
+                } - 1 != r && (t.index = r)
+            } else this.arr[t.index] = "", t.index = null
+        }
+      },
+      submit: function() {
+        var t = this;
+        if (!this.isRight) {
+          var r = this.arr.join("");
+          r.length == this.answer.length ? (clearTimeout(this.timer), r === this.answer ? (this.$emit("afterAnswer"), this.isRight = !0) : (this.isRight = !1, this.timer = setTimeout((function() {
+            t.isRight = null
+          }), 2e3), this.init())) : i.index.showToast({
+            title: "字没选完",
+            icon: "none"
+          })
+        }
+      }
+    }
+  },
+  n = i._export_sfc(r, [
+    ["render", function(t, r, n, e, s, h) {
+      return i.e({
+        a: s.idePicture,
+        b: !1 === s.isRight
+      }, (s.isRight, {}), {
+        c: !0 === s.isRight
+      }, (s.isRight, {}), {
+        d: i.f(60, (function(t, r, n) {
+          return i.e({
+            a: i.t(s.showArr[r] ? s.showArr[r].value : ""),
+            b: s.showArr[r] && null !== s.showArr[r].index && void 0 !== s.showArr[r].index
+          }, s.showArr[r] && null !== s.showArr[r].index && void 0 !== s.showArr[r].index ? {
+            c: i.t(s.showArr[r] ? s.showArr[r].index + 1 : "")
+          } : {}, {
+            d: i.o((function(i) {
+              return h.selectItem(r)
+            }), r),
+            e: r
+          })
+        })),
+        e: i.t(s.answer),
+        f: i.t(s.isRight ? "预约中，请等待…" : "确定"),
+        g: s.isRight ? 1 : "",
+        h: i.o((function() {
+          return h.submit && h.submit.apply(h, arguments)
+        }))
+      })
+    }],
+    ["__scopeId", "data-v-7fa83aa9"]
+  ]);
+wx.createComponent(n);

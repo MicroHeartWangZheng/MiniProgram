@@ -1,1 +1,20 @@
-var e=require("F13970549CEDE14F975F18534C3AA3A7.js"),r=require("C2C981E19CEDE14FA4AFE9E627F9A3A7.js").config.mallApi;exports.api_getUserInfo=function(){return e.request({url:"".concat(r,"/manager-server/user/register/getWxUserByToken"),method:"post"})},exports.loginAppletLogin=function(t){return e.request({url:"".concat(r,"/app-server/login/appletLogin"),method:"post",data:t,noToken:!0})},exports.loginGetUserInfo=function(){return e.request({url:"".concat(r,"/app-server/login/getUserInfo"),method:"post"})};
+var e = require("F13970549CEDE14F975F18534C3AA3A7.js"),
+  r = require("C2C981E19CEDE14FA4AFE9E627F9A3A7.js").config.mallApi;
+exports.api_getUserInfo = function() {
+  return e.request({
+    url: "".concat(r, "/manager-server/user/register/getWxUserByToken"),
+    method: "post"
+  })
+}, exports.loginAppletLogin = function(t) {
+  return e.request({
+    url: "".concat(r, "/app-server/login/appletLogin"),
+    method: "post",
+    data: t,
+    noToken: !0
+  })
+}, exports.loginGetUserInfo = function() {
+  return e.request({
+    url: "".concat(r, "/app-server/login/getUserInfo"),
+    method: "post"
+  })
+};

@@ -1,1 +1,59 @@
-var o=require("../302F12419CEDE14F56497A46F35AA3A7.js");Array||(o.resolveComponent("mpHtml")+o.resolveComponent("dialogWrap"))();var n=o._export_sfc({components:{dialogWrap:function(){return"./dialogWrap.js"},mpHtml:function(){return"../node-modules/mp-html/dist/uni-app/components/mp-html/mp-html.js"}},data:function(){return{info:{title:"",content:"",isHtml:!1}}},methods:{open:function(o){this.info=o,this.$refs.dialog.open()},close:function(){this.$refs.dialog.close()}}},[["render",function(n,t,e,i,r,s){return o.e({a:o.o((function(){return s.close&&s.close.apply(s,arguments)})),b:o.t(r.info.title),c:r.info.isHtml},r.info.isHtml?{d:o.p({content:r.info.content})}:{e:o.t(r.info.content)},{f:r.info.btn},r.info.btn?{g:o.t(r.info.btn),h:o.o((function(){return s.close&&s.close.apply(s,arguments)}))}:{},{i:o.sr("dialog","105a6ca3-0"),j:o.p({position:"bottom"})})}],["__scopeId","data-v-105a6ca3"]]);wx.createComponent(n);
+var o = require("../302F12419CEDE14F56497A46F35AA3A7.js");
+Array || (o.resolveComponent("mpHtml") + o.resolveComponent("dialogWrap"))();
+var n = o._export_sfc({
+  components: {
+    dialogWrap: function() {
+      return "./dialogWrap.js"
+    },
+    mpHtml: function() {
+      return "../node-modules/mp-html/dist/uni-app/components/mp-html/mp-html.js"
+    }
+  },
+  data: function() {
+    return {
+      info: {
+        title: "",
+        content: "",
+        isHtml: !1
+      }
+    }
+  },
+  methods: {
+    open: function(o) {
+      this.info = o, this.$refs.dialog.open()
+    },
+    close: function() {
+      this.$refs.dialog.close()
+    }
+  }
+}, [
+  ["render", function(n, t, e, i, r, s) {
+    return o.e({
+      a: o.o((function() {
+        return s.close && s.close.apply(s, arguments)
+      })),
+      b: o.t(r.info.title),
+      c: r.info.isHtml
+    }, r.info.isHtml ? {
+      d: o.p({
+        content: r.info.content
+      })
+    } : {
+      e: o.t(r.info.content)
+    }, {
+      f: r.info.btn
+    }, r.info.btn ? {
+      g: o.t(r.info.btn),
+      h: o.o((function() {
+        return s.close && s.close.apply(s, arguments)
+      }))
+    } : {}, {
+      i: o.sr("dialog", "105a6ca3-0"),
+      j: o.p({
+        position: "bottom"
+      })
+    })
+  }],
+  ["__scopeId", "data-v-105a6ca3"]
+]);
+wx.createComponent(n);

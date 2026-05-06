@@ -1,4 +1,9 @@
 {
+  "entryPagePath": "pages/index/index",
+  "pages": [
+    "pages/index/index",
+    "pages/index/version"
+  ],
   "permission": {
     "scope.userLocation": {
       "desc": "你的位置信息将用于查找周围酒店并进行展示"
@@ -7,6 +12,7 @@
       "desc": "你的收货信息将用于商品收货"
     }
   },
+  "renderer": "webview",
   "requiredPrivateInfos": [
     "chooseAddress",
     "getLocation",
@@ -14,6 +20,12 @@
     "startLocationUpdate"
   ],
   "componentFramework": "exparser",
+  "window": {
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "demo",
+    "navigationBarBackgroundColor": "#FFFFFF",
+    "backgroundColor": "#FFFFFF"
+  },
   "subPackages": [
     {
       "root": "jdm_pages/",
@@ -74,14 +86,5 @@
       ]
     }
   ],
-  "window": {
-    "navigationBarTextStyle": "white",
-    "navigationBarTitleText": "demo",
-    "navigationBarBackgroundColor": "#FFFFFF",
-    "backgroundColor": "#FFFFFF"
-  },
-  "pages": [
-    "pages/index/index",
-    "pages/index/version"
-  ]
+  "plugins": {}
 }

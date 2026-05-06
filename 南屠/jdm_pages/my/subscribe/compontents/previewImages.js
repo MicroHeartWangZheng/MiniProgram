@@ -1,1 +1,47 @@
-var e=require("../../../../302F12419CEDE14F56497A46F35AA3A7.js"),t={name:"",props:{imgUrl:{type:String,default:function(){return""}}},data:function(){return{imageList:[]}},mounted:function(){this.initImage()},methods:{initImage:function(){this.imageList=this.imgUrl.split(",")},previewImage:function(t){e.index.previewImage({current:0,urls:[t]})}}},n=e._export_sfc(t,[["render",function(t,n,i,r,o,u){return{a:e.f(o.imageList,(function(t,n,i){return{a:t,b:e.o((function(e){return u.previewImage(t)}))}}))}}],["__scopeId","data-v-e77de8e3"]]);wx.createComponent(n);
+var e = require("../../../../302F12419CEDE14F56497A46F35AA3A7.js"),
+  t = {
+    name: "",
+    props: {
+      imgUrl: {
+        type: String,
+        default: function() {
+          return ""
+        }
+      }
+    },
+    data: function() {
+      return {
+        imageList: []
+      }
+    },
+    mounted: function() {
+      this.initImage()
+    },
+    methods: {
+      initImage: function() {
+        this.imageList = this.imgUrl.split(",")
+      },
+      previewImage: function(t) {
+        e.index.previewImage({
+          current: 0,
+          urls: [t]
+        })
+      }
+    }
+  },
+  n = e._export_sfc(t, [
+    ["render", function(t, n, i, r, o, u) {
+      return {
+        a: e.f(o.imageList, (function(t, n, i) {
+          return {
+            a: t,
+            b: e.o((function(e) {
+              return u.previewImage(t)
+            }))
+          }
+        }))
+      }
+    }],
+    ["__scopeId", "data-v-e77de8e3"]
+  ]);
+wx.createComponent(n);

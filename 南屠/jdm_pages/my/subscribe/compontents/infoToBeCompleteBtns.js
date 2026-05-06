@@ -1,1 +1,43 @@
-var e=require("../../../../302F12419CEDE14F56497A46F35AA3A7.js"),t={props:{orderNum:{type:String,default:function(){return""}},visibleType:{type:[String,Number]}},name:"",data:function(){return{}},mounted:function(){},methods:{skip:function(e){this.$utils.userNavigateTo("/jdm_pages/my/subscribe/infoToBeComplete?orderNum=".concat(this.orderNum,"&type=").concat(e))}}},n=e._export_sfc(t,[["render",function(t,n,r,i,o,u){return e.e({a:1==r.visibleType},1==r.visibleType?{b:e.o((function(e){return u.skip(1)}))}:{},{c:2==r.visibleType},2==r.visibleType?{d:e.o((function(e){return u.skip(2)}))}:{})}],["__scopeId","data-v-84557915"]]);wx.createComponent(n);
+var e = require("../../../../302F12419CEDE14F56497A46F35AA3A7.js"),
+  t = {
+    props: {
+      orderNum: {
+        type: String,
+        default: function() {
+          return ""
+        }
+      },
+      visibleType: {
+        type: [String, Number]
+      }
+    },
+    name: "",
+    data: function() {
+      return {}
+    },
+    mounted: function() {},
+    methods: {
+      skip: function(e) {
+        this.$utils.userNavigateTo("/jdm_pages/my/subscribe/infoToBeComplete?orderNum=".concat(this.orderNum, "&type=").concat(e))
+      }
+    }
+  },
+  n = e._export_sfc(t, [
+    ["render", function(t, n, r, i, o, u) {
+      return e.e({
+        a: 1 == r.visibleType
+      }, 1 == r.visibleType ? {
+        b: e.o((function(e) {
+          return u.skip(1)
+        }))
+      } : {}, {
+        c: 2 == r.visibleType
+      }, 2 == r.visibleType ? {
+        d: e.o((function(e) {
+          return u.skip(2)
+        }))
+      } : {})
+    }],
+    ["__scopeId", "data-v-84557915"]
+  ]);
+wx.createComponent(n);

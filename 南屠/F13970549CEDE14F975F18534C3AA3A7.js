@@ -3,7 +3,7 @@ var e = require("302F12419CEDE14F56497A46F35AA3A7.js"),
   n = require("E6064C639CEDE14F806024649ACAA3A7.js"),
   o = new e.JSEncrypt;
 e.index.addInterceptor("request", {
-  invoke: function (n) {
+  invoke: function(n) {
     if (n.noToken || -1 !== n.url.indexOf("https://image")) n.header = {
       "request-t": t.config.requestt + ""
     };
@@ -22,34 +22,29 @@ e.index.addInterceptor("request", {
     }
     return n
   },
-  success: function () {},
-  fail: function () {},
-  complete: function () {},
-  returnValue: function (e) {
-    return e.then((function (e) {
+  success: function() {},
+  fail: function() {},
+  complete: function() {},
+  returnValue: function(e) {
+    return e.then((function(e) {
       return e
     }))
   }
-}), exports.request = function (i, a) {
+}), exports.request = function(i, a) {
   i.data || (i.data = {});
   var r = i.data;
   if (t.config.requestt) {
     (new Date).getTime();
     var s = e.index.getStorageSync("versioncontrol");
-    r.langType = 3 == s ? 1 : 0,
-      r.requestNo = n.utils.getuuid(),
-      r.timestamp = (new Date).getTime(),
-
-      key = n.utils.getEncrypt(),
-      console.log("key:", key),
-      o.setPublicKey(key),
-
-      r.timestamp = (new Date).getTime(),
-
-      console.log("请求Url：", i.url);
-    console.log("请求data：", JSON.stringify(r));
-    r = {
-      data: r = o.encryptLong(JSON.stringify(r))
+      r.langType = 3 == s ? 1 : 0,
+          r.requestNo = n.utils.getuuid(),
+          r.timestamp = (new Date).getTime(),
+          o.setPublicKey(n.utils.getEncrypt()),
+          r.timestamp = (new Date).getTime(),
+          console.log("请求Url：", i.url);
+      console.log("请求data：", JSON.stringify(r));
+          r = {
+            data: r = o.encryptLong(JSON.stringify(r))
     }
   }
   return e.index.request({
@@ -60,19 +55,18 @@ e.index.addInterceptor("request", {
     noToken: i.noToken || !1,
     userCode: i.userCode || !1
   }).then((function (t) {
-    console.log("返回：", t);
-    console.log("返回data：", t.data);
+      console.log("返回：", t);
+      console.log("返回data：", t.data);
     var o = e.index.getStorageSync("versioncontrol");
     if (t && 500 == t.code);
     else if (t && 200 == t.statusCode) {
       if (!t.data || 2007 != t.data.code) {
         if (0 === t.data.type) {
+            console.log("返回的数据：", t.data.data);
+            var i = n.utils.decryptSm4(t.data.data);
+            i = decodeURIComponent(i);
 
-          console.log("返回的数据：", t.data.data);
-          var i = n.utils.decryptSm4(t.data.data);
-          i = decodeURIComponent(i);
-
-          console.log("解密后的数据：", i);
+            console.log("解密后的数据：", i);
           try {
             i = JSON.parse(i)
           } catch (e) {}
@@ -98,7 +92,7 @@ e.index.addInterceptor("request", {
         content: a,
         showCancel: !1,
         showConfirm: !1,
-        success: function (e) {
+        success: function(e) {
           e.confirm || e.cancel
         }
       })
@@ -114,7 +108,7 @@ e.index.addInterceptor("request", {
         content: r,
         showCancel: !1,
         showConfirm: !1,
-        success: function (e) {
+        success: function(e) {
           e.confirm || e.cancel
         }
       })
@@ -125,5 +119,5 @@ e.index.addInterceptor("request", {
     }) : e.index.navigateTo({
       url: "/jdm_pages/login/index"
     })
-  })).catch((function (e) {}))
+  })).catch((function(e) {}))
 };

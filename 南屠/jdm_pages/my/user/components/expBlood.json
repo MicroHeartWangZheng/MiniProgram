@@ -24,6 +24,6 @@
     "dialog-info": "/jdm_pages/my/user/components/dialogInfo",
     "dialog-wrap-text": "/components/dialogWrapText/dialogWrapText",
     "upload-img": "/jdm_pages/components/upload",
-    "popup-dialog": "/components/popupDialog/popupDialog",
+    "popup-dialog": "/components/popupDialog/popupDialog"
   }
 }

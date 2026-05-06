@@ -1,1 +1,98 @@
-var e=require("../../@babel/runtime/helpers/objectSpread2"),t=require("../../B5FE78D69CEDE14FD39810D1421AA3A7.js"),i=require("../../302F12419CEDE14F56497A46F35AA3A7.js");require("../../F13970549CEDE14F975F18534C3AA3A7.js"),require("../../C2C981E19CEDE14FA4AFE9E627F9A3A7.js"),require("../../E6064C639CEDE14F806024649ACAA3A7.js"),require("../../99A56A709CEDE14FFFC30277932AA3A7.js"),require("../../97D575919CEDE14FF1B31D960FBAA3A7.js"),require("../../42DF72329CEDE14F24B91A35674AA3A7.js"),require("../../2800CA079CEDE14F4E66A20028DAA3A7.js");var o={components:{dialogWrap:function(){return"../dialogWrap.js"},mpHtml:function(){return"../../node-modules/mp-html/dist/uni-app/components/mp-html/mp-html.js"}},data:function(){return{isShow:!1,info:"",timer:null,time:5,isAgree:!1}},mounted:function(){this.init()},computed:e({},i.mapState(["versioncontrol"])),unmounted:function(){clearTimeout(this.timer)},methods:{startDown:function(){var e=this;clearTimeout(this.timer);!function t(){e.time>0&&(e.timer=setTimeout((function(){e.time--,t()}),1e3))}()},toggleAgree:function(){this.isAgree=!this.isAgree},init:function(){var e=this,i=(new Date).getTime();t.readFileDeail(this.$settings.fileDownUrl+"/json/".concat(3==this.versioncontrol?"appointmentTipsEn":"appointmentTips",".json?A=")+i+"&langType="+(3==this.versioncontrol?1:0)).then((function(t){1e3==t.code&&(e.info=t.data,e.isShow&&e.startDown())}))},open:function(){this.$store.state.indexShowDialog&&(this.$refs.dialogWrap.open(),this.info?this.startDown():this.isShow=!0)},close:function(){this.time<=0&&this.isAgree&&(this.$refs.dialogWrap.close(),this.$store.dispatch("setState",{key:"indexShowDialog",value:!1}),this.time=5)}}};Array||(i.resolveComponent("mpHtml")+i.resolveComponent("uni-icons")+i.resolveComponent("dialog-wrap"))(),Math;var n=i._export_sfc(o,[["render",function(e,t,o,n,r,s){return i.e({a:i.t(3==e.versioncontrol?"Appointment  Terms and Conditions":"预约须知"),b:i.p({content:r.info}),c:i.p({type:r.isAgree?"checkbox-filled":"circle",color:"#A87E6C",size:"20"}),d:i.t(3==e.versioncontrol?"I have read and agree to the appointment notice/reservation instruction":"我已阅读并同意《预约须知》"),e:i.o((function(){return s.toggleAgree&&s.toggleAgree.apply(s,arguments)})),f:r.time||!r.isAgree},r.time||!r.isAgree?{g:i.t(3==e.versioncontrol?"I am already aware":"我已知晓"),h:i.t(r.time?"（0".concat(r.time,"s）"):"")}:{i:i.t(3==e.versioncontrol?"I am already aware":"我已知晓")},{j:r.time>0||!r.isAgree?1:"",k:i.o((function(){return s.close&&s.close.apply(s,arguments)})),l:i.sr("dialogWrap","047f5552-0"),m:i.p({position:"center",isMaskClick:!1})})}],["__scopeId","data-v-047f5552"]]);wx.createComponent(n);
+var e = require("../../@babel/runtime/helpers/objectSpread2"),
+  t = require("../../B5FE78D69CEDE14FD39810D1421AA3A7.js"),
+  i = require("../../302F12419CEDE14F56497A46F35AA3A7.js");
+require("../../F13970549CEDE14F975F18534C3AA3A7.js"), require("../../C2C981E19CEDE14FA4AFE9E627F9A3A7.js"), require("../../E6064C639CEDE14F806024649ACAA3A7.js"), require("../../99A56A709CEDE14FFFC30277932AA3A7.js"), require("../../97D575919CEDE14FF1B31D960FBAA3A7.js"), require("../../42DF72329CEDE14F24B91A35674AA3A7.js"), require("../../2800CA079CEDE14F4E66A20028DAA3A7.js");
+var o = {
+  components: {
+    dialogWrap: function() {
+      return "../dialogWrap.js"
+    },
+    mpHtml: function() {
+      return "../../node-modules/mp-html/dist/uni-app/components/mp-html/mp-html.js"
+    }
+  },
+  data: function() {
+    return {
+      isShow: !1,
+      info: "",
+      timer: null,
+      time: 5,
+      isAgree: !1
+    }
+  },
+  mounted: function() {
+    this.init()
+  },
+  computed: e({}, i.mapState(["versioncontrol"])),
+  unmounted: function() {
+    clearTimeout(this.timer)
+  },
+  methods: {
+    startDown: function() {
+      var e = this;
+      clearTimeout(this.timer);
+      ! function t() {
+        e.time > 0 && (e.timer = setTimeout((function() {
+          e.time--, t()
+        }), 1e3))
+      }()
+    },
+    toggleAgree: function() {
+      this.isAgree = !this.isAgree
+    },
+    init: function() {
+      var e = this,
+        i = (new Date).getTime();
+      t.readFileDeail(this.$settings.fileDownUrl + "/json/".concat(3 == this.versioncontrol ? "appointmentTipsEn" : "appointmentTips", ".json?A=") + i + "&langType=" + (3 == this.versioncontrol ? 1 : 0)).then((function(t) {
+        1e3 == t.code && (e.info = t.data, e.isShow && e.startDown())
+      }))
+    },
+    open: function() {
+      this.$store.state.indexShowDialog && (this.$refs.dialogWrap.open(), this.info ? this.startDown() : this.isShow = !0)
+    },
+    close: function() {
+      this.time <= 0 && this.isAgree && (this.$refs.dialogWrap.close(), this.$store.dispatch("setState", {
+        key: "indexShowDialog",
+        value: !1
+      }), this.time = 5)
+    }
+  }
+};
+Array || (i.resolveComponent("mpHtml") + i.resolveComponent("uni-icons") + i.resolveComponent("dialog-wrap"))(), Math;
+var n = i._export_sfc(o, [
+  ["render", function(e, t, o, n, r, s) {
+    return i.e({
+      a: i.t(3 == e.versioncontrol ? "Appointment  Terms and Conditions" : "预约须知"),
+      b: i.p({
+        content: r.info
+      }),
+      c: i.p({
+        type: r.isAgree ? "checkbox-filled" : "circle",
+        color: "#A87E6C",
+        size: "20"
+      }),
+      d: i.t(3 == e.versioncontrol ? "I have read and agree to the appointment notice/reservation instruction" : "我已阅读并同意《预约须知》"),
+      e: i.o((function() {
+        return s.toggleAgree && s.toggleAgree.apply(s, arguments)
+      })),
+      f: r.time || !r.isAgree
+    }, r.time || !r.isAgree ? {
+      g: i.t(3 == e.versioncontrol ? "I am already aware" : "我已知晓"),
+      h: i.t(r.time ? "（0".concat(r.time, "s）") : "")
+    } : {
+      i: i.t(3 == e.versioncontrol ? "I am already aware" : "我已知晓")
+    }, {
+      j: r.time > 0 || !r.isAgree ? 1 : "",
+      k: i.o((function() {
+        return s.close && s.close.apply(s, arguments)
+      })),
+      l: i.sr("dialogWrap", "047f5552-0"),
+      m: i.p({
+        position: "center",
+        isMaskClick: !1
+      })
+    })
+  }],
+  ["__scopeId", "data-v-047f5552"]
+]);
+wx.createComponent(n);

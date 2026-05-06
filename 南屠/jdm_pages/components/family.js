@@ -1,1 +1,176 @@
-var e=require("../../@babel/runtime/helpers/objectSpread2"),t=require("../../@babel/runtime/helpers/regeneratorRuntime"),a=require("../../@babel/runtime/helpers/asyncToGenerator"),i=require("../../302F12419CEDE14F56497A46F35AA3A7.js");require("../../99A56A709CEDE14FFFC30277932AA3A7.js");var r=require("../../42DF72329CEDE14F24B91A35674AA3A7.js");require("../../F13970549CEDE14F975F18534C3AA3A7.js"),require("../../C2C981E19CEDE14FA4AFE9E627F9A3A7.js"),require("../../E6064C639CEDE14F806024649ACAA3A7.js"),require("../../97D575919CEDE14FF1B31D960FBAA3A7.js"),require("../../2800CA079CEDE14F4E66A20028DAA3A7.js");var n={components:{personnelSelect:function(){return"../../components/personnelSelect/index.js"}},props:{formData:{type:[Object],default:function(){return{}}},audienceList:{type:[Array],default:function(){return[]}}},data:function(){return{personnelList:[],userInfo:{}}},mounted:function(){var e=this;return a(t().mark((function a(){return t().wrap((function(t){for(;;)switch(t.prev=t.next){case 0:e.userInfo=i.index.getStorageSync("userInfo")?JSON.parse(i.index.getStorageSync("userInfo")):{};case 1:case"end":return t.stop()}}),a)})))()},computed:{adultDict:function(){var t=this;return this.audienceList.filter((function(e){return 6!=e.visitorTag&&8!=e.specialType&&9!=e.specialType})).map((function(a){var i=JSON.parse(JSON.stringify(a));i.disabled=!1;var r=t.formData.hallCode,n=i.hallCodeList||[],s=i.visitorBlackType,d=!1,o=[],l=[];if((r||0!=r.length)&&n.forEach((function(e){r==e.hallCode&&(s=e.visitorBlackType,o.push(String(new Date(e.expireTime).getMonth()+1).padStart(2,"0")),l.push(e),d=!0)})),2==s&&(i.disabled="该观众爽约次数已达上限，暂不支持预约"),3==s&&(i.disabled="该观众本月预约取消次数已达上限，暂不支持预约"),4==s&&(i.disabled="该观众本月预约次数已达上限，暂不支持预约"),t.formData.date&&1!=i.visitorBlackType)if(4==s){if(d){var u=new Date(t.formData.date),c=String(u.getMonth()+1).padStart(2,"0"),p=null;if(o.forEach((function(e,t){e==c&&(p=t)})),null!=p){var f=l[p],m=f.expireTime,h=new Date(m),S=h.getFullYear()+"-"+String(h.getMonth()+1).padStart(2,"0")+"-"+String(h.getDate()).padStart(2,"0"),g=new Date(t.formData.date);new Date(S)<g&&(f.disabled=!1)}else i.disabled=!1}}else if(2==s||3==s){var D=i.expireTime,v=new Date(D),b=v.getFullYear()+"-"+String(v.getMonth()+1).padStart(2,"0")+"-"+String(v.getDate()).padStart(2,"0"),y=new Date(t.formData.date);new Date(b)<y&&(i.disabled=!1)}return 1==i.visitorBlackType&&(i.disabled="该观众账号异常，请联系工作人员025-86612230（8:00至20:00）。"),2==i.visitorStatus&&(i.disabled="该观众账号在编辑3天后方可使用"),3==i.visitorStatus&&(i.disabled="该观众处于“删除中”状态，暂不支持预约"),1==i.visitorIdType&&4==i.sfzAuditStatus&&(i.disabled="实名验证失败"),e({},i)}))},childDict:function(){var t=this;return this.audienceList.filter((function(e){return 6==e.visitorTag||8==e.specialType||9==e.specialType})).map((function(a){var i=JSON.parse(JSON.stringify(a));i.disabled=!1;var r=t.formData.hallCode,n=i.hallCodeList||[],s=i.visitorBlackType,d=!1,o=[],l=[];if((r||0!=r.length)&&n.forEach((function(e){r==e.hallCode&&(s=e.visitorBlackType,o.push(String(new Date(e.expireTime).getMonth()+1).padStart(2,"0")),l.push(e),d=!0)})),2==s&&(i.disabled="该观众爽约次数已达上限，暂不支持预约"),3==s&&(i.disabled="该观众本月预约取消次数已达上限，暂不支持预约"),4==s&&(i.disabled="该观众本月预约次数已达上限，暂不支持预约"),t.formData.date&&1!=i.visitorBlackType)if(4==s){if(d){var u=new Date(t.formData.date),c=String(u.getMonth()+1).padStart(2,"0"),p=null;if(o.forEach((function(e,t){e==c&&(p=t)})),null!=p){var f=l[p],m=f.expireTime,h=new Date(m),S=h.getFullYear()+"-"+String(h.getMonth()+1).padStart(2,"0")+"-"+String(h.getDate()).padStart(2,"0"),g=new Date(t.formData.date);new Date(S)<g&&(f.disabled=!1)}else i.disabled=!1}}else if(2==s||3==s){var D=i.expireTime,v=new Date(D),b=v.getFullYear()+"-"+String(v.getMonth()+1).padStart(2,"0")+"-"+String(v.getDate()).padStart(2,"0"),y=new Date(t.formData.date);new Date(b)<y&&(i.disabled=!1)}return 1==i.visitorBlackType&&(i.disabled="该观众账号异常，请联系工作人员025-86612230（8:00至20:00）。"),2==i.visitorStatus&&(i.disabled="该观众账号在编辑3天后方可使用"),3==i.visitorStatus&&(i.disabled="该观众处于“删除中”状态，暂不支持预约"),1==i.visitorIdType&&4==i.sfzAuditStatus&&(i.disabled="实名验证失败"),e({},i)}))},selectedNum:function(){return(this.formData.adultList?this.formData.adultList.length:0)+(this.formData.childList?this.formData.childList.length:0)}},methods:{audienceUpdate:function(e){}}};Array||i.resolveComponent("personnelSelect")();var s=i._export_sfc(n,[["render",function(e,t,a,n,s,d){return{a:r._imports_0$6,b:i.sr("personnelSelectRef","288c67d1-0"),c:i.o(d.audienceUpdate),d:i.o((function(e){return a.formData.adultList=e})),e:i.p({topHint:["14周岁（不含）以下的未成年人不得单独预约，须与至少1名成年人绑定。待亲子票中的成年人入馆后，方可生效。","14周岁计算方式：按照身份证字段出生日期当天到达次年生日当天的次日计为整一周岁。"],type:"成年人",dictList:d.adultDict,selectedNum:d.selectedNum,value:a.formData.adultList}),f:r._imports_0$6,g:i.sr("personnelSelectRef","288c67d1-1"),h:i.o(d.audienceUpdate),i:i.o((function(e){return a.formData.childList=e})),j:i.p({hint:["14周岁（不含）以下的未成年人不得单独预约，须与至少1名成年人绑定。待亲子票中的成年人入馆后，方可生效。","14周岁计算方式：按照身份证字段出生日期当天到达次年生日当天的次日计为整一周岁。"],type:"未成年人",dictList:d.childDict,selectedNum:d.selectedNum,editBtn:!0,value:a.formData.childList})}}],["__scopeId","data-v-288c67d1"]]);wx.createComponent(s);
+var e = require("../../@babel/runtime/helpers/objectSpread2"),
+  t = require("../../@babel/runtime/helpers/regeneratorRuntime"),
+  a = require("../../@babel/runtime/helpers/asyncToGenerator"),
+  i = require("../../302F12419CEDE14F56497A46F35AA3A7.js");
+require("../../99A56A709CEDE14FFFC30277932AA3A7.js");
+var r = require("../../42DF72329CEDE14F24B91A35674AA3A7.js");
+require("../../F13970549CEDE14F975F18534C3AA3A7.js"), require("../../C2C981E19CEDE14FA4AFE9E627F9A3A7.js"), require("../../E6064C639CEDE14F806024649ACAA3A7.js"), require("../../97D575919CEDE14FF1B31D960FBAA3A7.js"), require("../../2800CA079CEDE14F4E66A20028DAA3A7.js");
+var n = {
+  components: {
+    personnelSelect: function() {
+      return "../../components/personnelSelect/index.js"
+    }
+  },
+  props: {
+    formData: {
+      type: [Object],
+      default: function() {
+        return {}
+      }
+    },
+    audienceList: {
+      type: [Array],
+      default: function() {
+        return []
+      }
+    }
+  },
+  data: function() {
+    return {
+      personnelList: [],
+      userInfo: {}
+    }
+  },
+  mounted: function() {
+    var e = this;
+    return a(t().mark((function a() {
+      return t().wrap((function(t) {
+        for (;;) switch (t.prev = t.next) {
+          case 0:
+            e.userInfo = i.index.getStorageSync("userInfo") ? JSON.parse(i.index.getStorageSync("userInfo")) : {};
+          case 1:
+          case "end":
+            return t.stop()
+        }
+      }), a)
+    })))()
+  },
+  computed: {
+    adultDict: function() {
+      var t = this;
+      return this.audienceList.filter((function(e) {
+        return 6 != e.visitorTag && 8 != e.specialType && 9 != e.specialType
+      })).map((function(a) {
+        var i = JSON.parse(JSON.stringify(a));
+        i.disabled = !1;
+        var r = t.formData.hallCode,
+          n = i.hallCodeList || [],
+          s = i.visitorBlackType,
+          d = !1,
+          o = [],
+          l = [];
+        if ((r || 0 != r.length) && n.forEach((function(e) {
+            r == e.hallCode && (s = e.visitorBlackType, o.push(String(new Date(e.expireTime).getMonth() + 1).padStart(2, "0")), l.push(e), d = !0)
+          })), 2 == s && (i.disabled = "该观众爽约次数已达上限，暂不支持预约"), 3 == s && (i.disabled = "该观众本月预约取消次数已达上限，暂不支持预约"), 4 == s && (i.disabled = "该观众本月预约次数已达上限，暂不支持预约"), t.formData.date && 1 != i.visitorBlackType)
+          if (4 == s) {
+            if (d) {
+              var u = new Date(t.formData.date),
+                c = String(u.getMonth() + 1).padStart(2, "0"),
+                p = null;
+              if (o.forEach((function(e, t) {
+                  e == c && (p = t)
+                })), null != p) {
+                var f = l[p],
+                  m = f.expireTime,
+                  h = new Date(m),
+                  S = h.getFullYear() + "-" + String(h.getMonth() + 1).padStart(2, "0") + "-" + String(h.getDate()).padStart(2, "0"),
+                  g = new Date(t.formData.date);
+                new Date(S) < g && (f.disabled = !1)
+              } else i.disabled = !1
+            }
+          } else if (2 == s || 3 == s) {
+          var D = i.expireTime,
+            v = new Date(D),
+            b = v.getFullYear() + "-" + String(v.getMonth() + 1).padStart(2, "0") + "-" + String(v.getDate()).padStart(2, "0"),
+            y = new Date(t.formData.date);
+          new Date(b) < y && (i.disabled = !1)
+        }
+        return 1 == i.visitorBlackType && (i.disabled = "该观众账号异常，请联系工作人员025-86612230（8:00至20:00）。"), 2 == i.visitorStatus && (i.disabled = "该观众账号在编辑3天后方可使用"), 3 == i.visitorStatus && (i.disabled = "该观众处于“删除中”状态，暂不支持预约"), 1 == i.visitorIdType && 4 == i.sfzAuditStatus && (i.disabled = "实名验证失败"), e({}, i)
+      }))
+    },
+    childDict: function() {
+      var t = this;
+      return this.audienceList.filter((function(e) {
+        return 6 == e.visitorTag || 8 == e.specialType || 9 == e.specialType
+      })).map((function(a) {
+        var i = JSON.parse(JSON.stringify(a));
+        i.disabled = !1;
+        var r = t.formData.hallCode,
+          n = i.hallCodeList || [],
+          s = i.visitorBlackType,
+          d = !1,
+          o = [],
+          l = [];
+        if ((r || 0 != r.length) && n.forEach((function(e) {
+            r == e.hallCode && (s = e.visitorBlackType, o.push(String(new Date(e.expireTime).getMonth() + 1).padStart(2, "0")), l.push(e), d = !0)
+          })), 2 == s && (i.disabled = "该观众爽约次数已达上限，暂不支持预约"), 3 == s && (i.disabled = "该观众本月预约取消次数已达上限，暂不支持预约"), 4 == s && (i.disabled = "该观众本月预约次数已达上限，暂不支持预约"), t.formData.date && 1 != i.visitorBlackType)
+          if (4 == s) {
+            if (d) {
+              var u = new Date(t.formData.date),
+                c = String(u.getMonth() + 1).padStart(2, "0"),
+                p = null;
+              if (o.forEach((function(e, t) {
+                  e == c && (p = t)
+                })), null != p) {
+                var f = l[p],
+                  m = f.expireTime,
+                  h = new Date(m),
+                  S = h.getFullYear() + "-" + String(h.getMonth() + 1).padStart(2, "0") + "-" + String(h.getDate()).padStart(2, "0"),
+                  g = new Date(t.formData.date);
+                new Date(S) < g && (f.disabled = !1)
+              } else i.disabled = !1
+            }
+          } else if (2 == s || 3 == s) {
+          var D = i.expireTime,
+            v = new Date(D),
+            b = v.getFullYear() + "-" + String(v.getMonth() + 1).padStart(2, "0") + "-" + String(v.getDate()).padStart(2, "0"),
+            y = new Date(t.formData.date);
+          new Date(b) < y && (i.disabled = !1)
+        }
+        return 1 == i.visitorBlackType && (i.disabled = "该观众账号异常，请联系工作人员025-86612230（8:00至20:00）。"), 2 == i.visitorStatus && (i.disabled = "该观众账号在编辑3天后方可使用"), 3 == i.visitorStatus && (i.disabled = "该观众处于“删除中”状态，暂不支持预约"), 1 == i.visitorIdType && 4 == i.sfzAuditStatus && (i.disabled = "实名验证失败"), e({}, i)
+      }))
+    },
+    selectedNum: function() {
+      return (this.formData.adultList ? this.formData.adultList.length : 0) + (this.formData.childList ? this.formData.childList.length : 0)
+    }
+  },
+  methods: {
+    audienceUpdate: function(e) {}
+  }
+};
+Array || i.resolveComponent("personnelSelect")();
+var s = i._export_sfc(n, [
+  ["render", function(e, t, a, n, s, d) {
+    return {
+      a: r._imports_0$6,
+      b: i.sr("personnelSelectRef", "288c67d1-0"),
+      c: i.o(d.audienceUpdate),
+      d: i.o((function(e) {
+        return a.formData.adultList = e
+      })),
+      e: i.p({
+        topHint: ["14周岁（不含）以下的未成年人不得单独预约，须与至少1名成年人绑定。待亲子票中的成年人入馆后，方可生效。", "14周岁计算方式：按照身份证字段出生日期当天到达次年生日当天的次日计为整一周岁。"],
+        type: "成年人",
+        dictList: d.adultDict,
+        selectedNum: d.selectedNum,
+        value: a.formData.adultList
+      }),
+      f: r._imports_0$6,
+      g: i.sr("personnelSelectRef", "288c67d1-1"),
+      h: i.o(d.audienceUpdate),
+      i: i.o((function(e) {
+        return a.formData.childList = e
+      })),
+      j: i.p({
+        hint: ["14周岁（不含）以下的未成年人不得单独预约，须与至少1名成年人绑定。待亲子票中的成年人入馆后，方可生效。", "14周岁计算方式：按照身份证字段出生日期当天到达次年生日当天的次日计为整一周岁。"],
+        type: "未成年人",
+        dictList: d.childDict,
+        selectedNum: d.selectedNum,
+        editBtn: !0,
+        value: a.formData.childList
+      })
+    }
+  }],
+  ["__scopeId", "data-v-288c67d1"]
+]);
+wx.createComponent(s);
