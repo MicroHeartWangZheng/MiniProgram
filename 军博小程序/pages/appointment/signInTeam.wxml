@@ -1,0 +1,47 @@
+<image class="mainbgimg" mode="widthFix" src="../../images/sign.png"></image>
+<view class="descView">
+    <label class="name_label">{{timeStr}}</label>
+    <label class="name_label" style="color:#cfb053;">{{secondStr}}</label>
+</view>
+<scroll-view class="memberlist" scrollY="true">
+    <view class="memberconent" wx:for="{{data}}" wx:key="shareCode">
+        <view bindtap="radioTap" data-index="{{index}}">
+            <view class="seleteimgview" hidden="{{item.seleteimgviewHidden}}">
+                <image class="{{item.checked?'trashImgSeleted':'trashImg'}}" src="{{item.checked?'../../images/orderSelect.png':''}}"></image>
+            </view>
+            <image class="reserveStatusImg" src="{{item.reserveStatusImg}}"></image>
+            <label class="toplab">{{'团队名称：'+item.teamName}}</label>
+            <label class="toplab">{{'团队人数：'+item.quantity+'人'}}</label>
+            <label class="toplab">{{'参观时间：'+item.reserveDate+' '+item.reserveTime}}</label>
+            <label class="toplab">{{'领队姓名：'+item.visitorName}}</label>
+            <label class="toplab" data-index="{{index}}">{{'证件号码：'+item.documentNumber}}</label>
+            <label class="toplab">{{'手机号码：'+item.phoneNumber}}</label>
+            <label class="tishiLineLab"></label>
+            <view hidden="{{item.jishilabHidden}}">
+                <label class="jishilab">距检票开始:</label>
+                <label class="startingLabel">{{item.hours}}：{{item.minute}}：{{item.second}}</label>
+            </view>
+            <canvas canvasId="canvas{{index}}" class="qrcode" style="width:{{qrcode_w}}px;height:{{qrcode_w}}px;"></canvas>
+            <view class="title-view">
+                <text class="section-header">团员信息</text>
+            </view>
+            <view class="visitorView">
+                <view class="visitorCell" data-index="{{index}}" wx:for="{{item.isShousuo?item.hiddenList:item.list}}" wx:key="customerContactId">
+                    <view class="firstLine">
+                        <label class="nameLab">{{item.visitorName}}</label>
+                        <label class="mySelfTag" hidden="{{item.isLeader===1?false:true}}">领队</label>
+                        <label class="mySelfTag isVip" hidden="{{item.isVip===1?false:true}}">党员</label>
+                    </view>
+                    <label class="secLineLab">{{'证件号码：'+item.documentNumber}}</label>
+                    <label class="secLineLab">{{'手机号码：'+item.phoneNumber}}</label>
+                </view>
+            </view>
+        </view>
+        <view bindtap="bottomImgvImgClick" class="bottomImgv" data-index="{{index}}">
+            <image class="bottomImgvImg" mode="heightFix" src="{{item.isShousuo?'../../images/zhankai.png':'../../images/shousuo.png'}}"></image>
+        </view>
+    </view>
+</scroll-view>
+<cover-view class="appointView" hidden="{{isbtnhidden}}">
+    <button bindtap="btnClick" class="normalBtn" disabled="{{checkedIds.length==0}}">核 验</button>
+</cover-view>

@@ -1,0 +1,1 @@
+module.exports={buildOffScreenM:function(){var e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:0,r=arguments.length>1&&void 0!==arguments[1]?arguments[1]:"",t={ret:e,res:r};return t}};

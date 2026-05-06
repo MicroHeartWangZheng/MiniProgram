@@ -1,0 +1,62 @@
+<view class="main-view">
+    <image class="mainbgimg" src="../../images/mainpage-topbg.jpg"></image>
+    <image class="topLogoimg" mode="widthFix" src="../../images/mainpagelogoimg.png"></image>
+    <image class="logoimg" mode="heightFix" src="../../images/mainpagelogoimg2.png"></image>
+    <view class="contentView">
+        <scroll-view enhanced bindscroll="onScroll" class="noticeView" enablePassive="true" id="scroll" scrollY="true">
+            <view id="scroll_child" style="display:flex;flex-direction:column;">
+                <text class="noticeText" style="font-weight:700;" wx:if="{{before815}}">暑期8月15日开放夜场参观，请点击“个人预约”，选择当日18:30-20:00时段预约参观，19:30停止入馆。</text>
+                <text class="noticeText">1.我馆实行全员实名免费预约参观。您可通过军博官方微信公众号，使用第二代身份证、港澳台居住证/回乡证/台胞证、护照、外国人永久居留身份证等，实名制预约8日内的参观。已预约的社会人员可携带1名6周岁(含)以下未成年人凭居民身份证现场预约入馆。7-14周岁(含)的未成年人，须由成年人代为预约，并与预约人同步核验入馆。预约放票时间为8:00、17:00、20:00。</text>
+                <text class="noticeText">2.绿色通道人员(现役军人、军队文职人员、退役军人、预备役人员、烈士遗属、因公牺牲军人遗属、病故军人遗属、消防救援人员、60周岁以上老人、残疾人)，<text class="red">可持本人有关身份证明材料和居民身份证现场预约，预约后凭居民身份证原件（不支持老年卡），通过闸机核验后安检入馆。符合绿色通道政策的优待人员，入馆当日起7天内可享优待1次，每次可携带不超过2名亲属凭居民身份证现场预约入馆。</text>
+                </text>
+                <text class="noticeText">3.线上预约成功后，系统将推送预约订单信息，请妥善保存。提前或错过预约时段谢绝入馆。如无法按时入馆参观，最晚可于参观当日16:00前在系统申请退票，逾期无法操作退票，系统将默认该账号爽约1次。累计3次爽约的个人账号将被限制预约60天。团队账号每爽约1次将被限制预约180天。</text>
+                <text class="noticeText">4.开放时间:每日9:00-17:00，16:00停止入馆。周一闭馆，法定节假日除外。</text>
+                <text class="noticeText">5.参观当日由军事博物馆南门入馆，<text class="red">不论个人或团队，未满14周岁</text>的观众须出示本人验票动态码或预约时使用的有效证件原件，<text class="red">14周岁以上</text>的观众须出示本人预约时使用的有效证件原件。</text>
+                <text class="noticeText">6.文明参观提示：醉酒者、仪容不整者（包含穿着过于暴露、穿着奇装异服、穿着拖鞋等）谢绝入馆。</text>
+            </view>
+        </scroll-view>
+    </view>
+    <view class="more" wx:if="{{showArrow}}">
+        <image class="more_img" src="../../images/down_arrow.png"></image>
+        <label class="more_text">查看更多</label>
+    </view>
+    <view class="btnContentView" style="margin-top:{{showArrow?'20rpx':'80rpx'}};">
+        <view class="appointBtnView">
+            <image bindtap="btnTap" class="btn_img" data-index="1" mode="widthFix" src="../../images/mainbtn2.png"></image>
+            <image bindtap="btnTap" class="btn_img" data-index="2" mode="widthFix" src="../../images/mainbtn1.png"></image>
+            <image bindtap="btnTap" class="btn_img" data-index="4" mode="widthFix" src="../../images/mainbtn4.png"></image>
+        </view>
+        <image bindtap="btnTap" class="user_center_img" data-index="3" mode="widthFix" src="../../images/mainbtn3.png"></image>
+    </view>
+</view>
+<view class="popbgview" hidden="{{hiddlePop}}">
+    <view class="popview">
+        <view class="popTitleview">
+            <label class="poptitlelab">提 示</label>
+        </view>
+        <scroll-view class="tishiContentView" scrollY="true">
+            <view class="waringViewInner">
+                <rich-text class="waringTextNor2" nodes="{{renZrichTextNode}}"></rich-text>
+            </view>
+        </scroll-view>
+        <view class="buttomview">
+            <label bindtap="popViewCloseImgClick" class="cancleLab">关 闭</label>
+            <label bindtap="popViewSavebtnClick" class="saveLab">去认证</label>
+        </view>
+    </view>
+</view>
+<view class="popbgview" hidden="{{hiddleTongzhiPop}}">
+    <view class="tongzhiPopview">
+        <view class="popTitleview">
+            <label class="poptitlelab">通 知</label>
+        </view>
+        <scroll-view class="tongzhiContentView" scrollY="true">
+            <view class="tongzhiViewInner">
+                <rich-text class="waringTextNor2" nodes="{{tongzhiNotice}}" space="nbsp"></rich-text>
+            </view>
+        </scroll-view>
+        <view class="buttomview">
+            <label bindtap="tongzhiPopViewClick" class="saveLab">关 闭</label>
+        </view>
+    </view>
+</view>

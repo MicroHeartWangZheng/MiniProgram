@@ -1,0 +1,29 @@
+<image class="top_img" mode="widthFix" src="../../images/actappoint/sucess_banner.png"></image>
+<view class="orderDetail">
+    <view class="success">
+        <image class="success_img" mode="heightFix" src="../../images/actappoint/success.png"></image>
+        <view>预约成功</view>
+    </view>
+    <view class="info">
+        <view class="num c">
+            <text>报名人数</text>
+            <text class="n">{{num}}人</text>
+        </view>
+        <view class="start c">
+            <text>开始时间</text>
+            <text class="n">{{s}}</text>
+        </view>
+        <view class="end c">
+            <text>结束时间</text>
+            <text class="n">{{e}}</text>
+        </view>
+    </view>
+    <view class="prompt">
+        <view class="t">温馨提示</view>
+        <rich-text class="tips" nodes="{{tips}}"></rich-text>
+        <view class="btn">
+            <view bindtap="detail" class="detail">查看详情</view>
+            <view bindtap="back" class="back">返回</view>
+        </view>
+    </view>
+</view>

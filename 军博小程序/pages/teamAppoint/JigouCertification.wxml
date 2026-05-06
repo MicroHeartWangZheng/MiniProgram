@@ -1,0 +1,36 @@
+<view class="cellview first">
+    <picker bindchange="jigouTypePickerChange" mode="selector" range="{{jigouTypeArr}}" rangeKey="text" value="{{index}}">
+        <label class="cellXinglab">*</label>
+        <label class="cellTitlelab">机构类型</label>
+        <input class="inputview" disabled="true" placeholder="请选择机构类型" value="{{jigouTypeStr}}"></input>
+        <image class="unfoldimg" src="../../images/unfoldgary.png"></image>
+    </picker>
+</view>
+<view class="cellview">
+    <label class="cellXinglab">*</label>
+    <label class="cellTitlelab">机构名称</label>
+    <input bindinput="inputClick" class="inputview firstLine" cursorSpacing="50" data-index="1" placeholder="请输入机构名称" value="{{jigouNameStr}}"></input>
+</view>
+<view class="contentListView" hidden="{{ziliaoType==2}}">
+    <view class="cellview">
+        <label class="cellXinglab">*</label>
+        <label class="cellTitlelab">{{jigouTypeStr=='机关部委'?'组织机构代码':'统一社会信用代码'}}</label>
+        <input bindinput="inputClick" class="inputview" cursorSpacing="50" data-index="2" placeholder="{{jigouTypeStr=='机关部委'?'请输入组织机构代码':'请输入统一社会信用代码'}}" value="{{jigouIdStr}}"></input>
+    </view>
+    <view class="cellview" hidden="{{jigouTypeStr==''}}" wx:if="{{jigouTypeStr=='旅行社'||jigouTypeStr==''}}">
+        <label class="cellXinglab">*</label>
+        <label class="cellTitlelab">机构营业执照</label>
+        <image bindtap="cellImgClick" class="cellImg" data-index="1" src="{{jigouImg}}"></image>
+    </view>
+</view>
+<view class="cellview" hidden="{{jigouTypeStr==''}}" wx:if="{{jigouTypeStr!='旅行社'||jigouTypeStr==''}}">
+    <label class="cellXinglab">*</label>
+    <label class="cellTitlelab">介绍信</label>
+    <image bindtap="cellImgClick" class="cellImg" data-index="7" src="{{renzhenImg}}"></image>
+</view>
+<view class="tishiView" hidden="{{jigouTypeStr==''}}" wx:if="{{jigouTypeStr!='旅行社'}}">
+    <text class="tishiText">提示：请上传清晰的介绍信，介绍信内容需包含:参观时间、参观人数、单位名称、单位公章、联系人、联系电话、统一社会信用代码/组织机构代码。</text>
+</view>
+<cover-view class="button_container">
+    <button bindtap="appointBtnClick" class="appointBtn">提 交</button>
+</cover-view>

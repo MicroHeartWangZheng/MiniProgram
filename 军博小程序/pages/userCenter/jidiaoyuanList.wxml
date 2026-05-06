@@ -1,0 +1,14 @@
+<button bindtap="addBtnClick" class="addBtn">{{'+ 增加计调员'}}</button>
+<view class="visitorListView" hidden="{{contactsArr.length===0}}">
+    <view class="visitorCell" data-index="{{index}}" wx:for="{{contactsArr}}" wx:key="customerContactId">
+        <image class="iconImage" src="../../images/visitorListIcon.png"></image>
+        <label class="myselfTag" hidden="{{item.myself===0}}">我</label>
+        <view class="contentMsgView">
+            <label class="nameLab">{{item.visitorName}}</label>
+            <label class="idCardLab">{{'证件号码：'+item.documentNumber}}</label>
+            <label class="idCardLab">{{'手机号码：'+item.phoneNumber}}</label>
+            <image bindtap="deleteClick" class="deleteImg" data-index="{{index}}" data-value="{{item.customerContactId}}" hidden="{{item.myself===1}}" src="../../images/delete.png"></image>
+        </view>
+    </view>
+</view>
+<image class="noDataImg" hidden="{{contactsArr.length>0}}" src="../../images/visitorNullImg.png"></image>

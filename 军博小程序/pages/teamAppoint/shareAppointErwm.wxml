@@ -1,0 +1,42 @@
+<view class="title-view">
+    <label class="name_label">团队信息</label>
+</view>
+<view class="time-view">
+    <text class="contlab">场馆名称：</text>
+    <text class="timelab">{{param.companyName}}</text>
+</view>
+<view class="time-view">
+    <text class="contlab">入馆时间：</text>
+    <text class="timelab">{{param.reserveDate+' '+param.reserveTime}}</text>
+</view>
+<view class="time-view">
+    <text class="contlab">团队名称：</text>
+    <text class="timelab">{{param.teamName}}</text>
+</view>
+<view class="time-view">
+    <text class="contlab">领队姓名：</text>
+    <text class="timelab">{{param.visitorName}}</text>
+</view>
+<view class="title-view">
+    <label class="name_label">检票二维码</label>
+</view>
+<view class="tishiView">
+    <text class="tishiText">注：动态二维码，仅支持14岁及以下观众入馆检票，14岁以上观众请使用有效预约证件检票入馆。</text>
+</view>
+<view class="cellview">
+    <input bindinput="cardNumInput" class="inputview" cursorSpacing="50" placeholder="请输入预约时的证件号码" value="{{cardNumStr}}"></input>
+</view>
+<view class="cellview">
+    <input bindinput="vcodeInput" class="inputview firstLine" cursorSpacing="50" placeholder="请输入验证码" value="{{vcodeStr}}"></input>
+    <label bindtap="captchaClick" class="{{showCountdown?'captchaNone':'captcha'}}">{{showCountdown?'剩余'+countdown+'秒':codeStr}}</label>
+</view>
+<view class="tishiView">
+    <image class="tishiImg" src="../../images/exhibition/tishiImg.png"></image>
+    <label class="tishiLab">接收验证码手机号为预约时填写的手机号</label>
+</view>
+<view class="buttonView">
+    <button bindtap="sureBtnClick" class="appointBtn">获取检票二维码</button>
+</view>
+<view class="codeBView">
+    <canvas canvasId="{{'canvas0'}}" class="qrcode" style="width:{{qrcode_w}}px;height:{{qrcode_w}}px;"></canvas>
+</view>

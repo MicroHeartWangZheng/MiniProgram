@@ -1,0 +1,1 @@
+var e=require("../../utils/promiseutil.js"),t=require("../rcode.js");module.exports={obtainNetworkTypeAsync:function(){return e.buildPromise((function(e,r){wx.getNetworkType?wx.getNetworkType({success:function(t){e(t.networkType)},fail:function(e){r(e)}}):r(t.ERROR_BIZ_API_FAILD)}))}};

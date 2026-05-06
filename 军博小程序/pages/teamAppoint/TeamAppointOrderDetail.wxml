@@ -1,0 +1,74 @@
+<image class="mainbgimg" mode="widthFix" src="../../images/center/orderDetailbg.png"></image>
+<view class="descView">
+    <label class="name_label">{{timeStr}}</label>
+</view>
+<scroll-view class="scrollViewC" scrollY="true">
+    <view class="contentView">
+        <image class="reserveStatusImg" src="{{model.reserveStatusImg}}"></image>
+        <view class="time-view" style="margin-top:30rpx;">
+            <text class="contlab">参观时间：</text>
+            <text class="timelab">{{model.reserveDate+' '+model.reserveTime}}</text>
+        </view>
+        <view class="time-view">
+            <text class="contlab">团队名称：</text>
+            <text class="timelab">{{model.teamName}}</text>
+        </view>
+        <view class="time-view">
+            <text class="contlab">团队类型：</text>
+            <text class="timelab">{{model.typeStr}}</text>
+        </view>
+        <view class="time-view">
+            <text class="contlab">团队人数：</text>
+            <text class="timelab">{{model.quantity+'人'}}</text>
+        </view>
+        <view class="time-view">
+            <text class="contlab">领队姓名：</text>
+            <text class="timelab">{{model.visitorName}}</text>
+        </view>
+        <view class="time-view">
+            <text class="contlab">身份证号：</text>
+            <text class="timelab">{{model.documentNumber}}</text>
+        </view>
+        <view class="time-view">
+            <text class="contlab">手机号码：</text>
+            <text class="timelab">{{model.phoneNumber}}</text>
+        </view>
+        <view class="time-view">
+            <text class="contlab">订单编号：</text>
+            <text class="timelab">{{model.shareCodeStr}}</text>
+        </view>
+        <view class="time-view" wx:if="{{model.reserveStatusStr=='已拒绝'}}">
+            <text class="contlab">拒绝原因：</text>
+            <text class="timelab">{{model.auditReason}}</text>
+        </view>
+        <view class="btnView">
+            <canvas canvasId="{{'canvas0'}}" class="qrcode" style="width:{{qrcode_w}}px;height:{{qrcode_w}}px;"></canvas>
+            <cover-image class="huangpuLogo" mode="" src="../../images/center/huangpuLogo.png" wx:if=""></cover-image>
+            <view bind:tap="shuaxinLabClick" class="shuaxinLab">刷新二维码</view>
+        </view>
+    </view>
+    <view class="title-view">
+        <text class="section-header">团员信息</text>
+    </view>
+    <view class="visitorView">
+        <view class="visitorCell" data-index="{{index}}" wx:for="{{model.list}}" wx:key="customerContactId">
+            <view class="firstLine">
+                <label class="nameLab">{{item.visitorName}}</label>
+                <label class="mySelfTag" hidden="{{item.isLeader===1?false:true}}">领队</label>
+                <label class="mySelfTag isVip" hidden="{{item.isVip===1?false:true}}">党员</label>
+            </view>
+            <label class="secLineLab">{{'证件号码：'+item.documentNumber}}</label>
+            <label class="secLineLab">{{'手机号码：'+item.phoneNumber}}</label>
+        </view>
+    </view>
+</scroll-view>
+<view class="appointView" hidden="{{model.status==1?false:true}}">
+    <view bindtap="appointEndorseBtnClick" class="appointbtnNor">退票</view>
+    <button class="appointbtn" openType="share">分享给团员</button>
+</view>
+<view class="appointView" hidden="{{model.status==1?true:false}}">
+    <view bindtap="appointAgainBtnClick" class="appointbtn">再约一次</view>
+</view>
+<view class="appointView" wx:if="{{model.status==7?true:false}}">
+    <view bindtap="appointChexiaoBtnClick" class="appointbtn">撤销</view>
+</view>

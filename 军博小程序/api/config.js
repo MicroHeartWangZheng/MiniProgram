@@ -1,0 +1,1 @@
+Object.defineProperty(exports,"__esModule",{value:!0}),exports.config=void 0;exports.config={xxteaKey:[241,94,120,210,48,51,194,196,186,200,169,37,103,126,134,58],baseUrl:"https://jsonproxy.3g.qq.com/forward?cmdid=",reqUserSignKeyCMD:1754,getChannelIdCMD:1761,platform:3,signVersion:1,uuidKey:"turingmm_uuid",keyInfo:"turingmm_keyInfo",channel:"turingmm_channel",sdkVer:1};

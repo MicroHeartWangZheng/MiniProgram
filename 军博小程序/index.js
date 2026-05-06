@@ -1,0 +1,1 @@
+var e=require("./api/uniid/tdiduaid.js");module.exports={init:e.init,getTicket:e.getTicket,getDeviceToken:e.getDeviceToken,getDeviceTokenV2:e.getDeviceTokenV2,getDeviceTokenX:e.getDeviceTokenX,getSDKInfo:e.getSDKInfo,getDeviceInfo:e.getDeviceInfo,activateSign:e.activateSign,signData:e.signData,isActivate:e.isActivate};

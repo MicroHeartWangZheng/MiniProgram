@@ -1,0 +1,67 @@
+<view class="order-bg-view">
+    <view class="tabView" hidden="{{isHexiaoHidden}}">
+        <view bindtap="onTopTabItemTap" class="tabItem" data-index="{{0}}">
+            <image class="itemImage {{tabIndex==0?'selected':''}}" src="../../images/orderFirstBtn.png"></image>
+            <label class="itemLab {{tabIndex==0?'selected':''}}">个人预约</label>
+        </view>
+        <view bindtap="onTopTabItemTap" class="tabItem" data-index="{{3}}">
+            <image class="itemImage {{tabIndex==3?'selected':''}}" src="../../images/orderFourthBtn.png"></image>
+            <label class="itemLab {{tabIndex==3?'selected':''}}">团队预约</label>
+        </view>
+        <view bindtap="onTopTabItemTap" class="tabItem" data-index="{{1}}">
+            <image class="itemImage {{tabIndex==1?'selected':''}}" src="../../images/orderSecBtn.png"></image>
+            <label class="itemLab {{tabIndex==1?'selected':''}}">活动预约</label>
+        </view>
+    </view>
+    <view class="canguanView" hidden="{{tabIndex!=0?true:false}}">
+        <view bindtap="ordercellclick" class="orderCell" data-index="{{index}}" wx:for="{{orderArray}}" wx:key="orderPersonalId">
+            <view class="order-head">
+                <label class="orderStateLab">{{item.reserveStatusStr}}</label>
+            </view>
+            <view class="order-body">
+                <image class="museum_image" mode="aspectFill" src="{{item.photoUrl}}"></image>
+                <view class="label_container">
+                    <label class="label">{{'下单时间：'+item.createTime}}</label>
+                    <label class="label">{{'参观人数：'+item.orderNum+'人'}}</label>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="canguanView" hidden="{{tabIndex!=1?true:false}}">
+        <view bindtap="activityOrdercellclick" class="orderCell" data-index="{{index}}" wx:for="{{activityOrderArray}}" wx:key="orderPersonalId">
+            <view class="order-head">
+                <label class="orderTitleLab">{{item.orderTitle}}</label>
+                <label class="orderStateLab">{{item.reserveStatusStr}}</label>
+            </view>
+            <view class="order-body">
+                <image class="museum_image" mode="aspectFill" src="{{item.photoUrl}}"></image>
+                <view class="label_container">
+                    <label class="activityMuseumLab">{{'开始时间：'+item.reserveDate+' '+item.startTime}}</label>
+                    <label class="label">{{'报名人数：'+item.orderNum+'人'}}</label>
+                    <label class="label">{{'下单时间：'+item.createTime}}</label>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="canguanView" hidden="{{tabIndex!=3?true:false}}">
+        <view bindtap="teamOrdercellclick" class="orderCell" data-index="{{index}}" wx:for="{{teamOrderArray}}" wx:key="orderPersonalId">
+            <view class="order-head">
+                <label class="orderTitleLab">{{item.teamName==null?'':item.teamName}}</label>
+                <label class="orderStateLab">{{item.reserveStatusStr}}</label>
+            </view>
+            <view class="order-body">
+                <view class="label_container">
+                    <label class="label">{{'参观时间：'+item.reserveDate+' '+item.reserveTime}}</label>
+                    <label class="label">{{'参观人数：'+item.orderNum+'人'}}</label>
+                    <label class="label">{{'领队姓名：'+item.visitorName}}</label>
+                </view>
+            </view>
+            <view class="timeView" hidden="{{item.status==0?false:true}}">
+                <label>剩余</label>
+                <label class="expireTimeLab">{{item.expireTimeStr}}</label>
+                <label>自动解散</label>
+            </view>
+        </view>
+    </view>
+</view>
+<image class="orderNullImg" hidden="{{orderNullImgState}}" src="../../images/orderNullImg.png"></image>

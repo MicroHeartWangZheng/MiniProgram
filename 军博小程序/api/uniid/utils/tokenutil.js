@@ -1,0 +1,1 @@
+var e=require("../../utils/ziputil.js");module.exports={castToken:function(t,i,n){var r={expand_token:n,device_token:i.deviceToken};return t+":"+e.zip(r)}};

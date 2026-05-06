@@ -1,0 +1,1 @@
+var e=require("../../utils/promiseutil.js"),t=require("../rcode.js");module.exports={obtainSystemInfoAsync:function(){return e.buildPromise((function(e,s){wx.getSystemInfo?wx.getSystemInfo({success:function(t){e(t)},fail:function(e){s(e)}}):s(t.ERROR_BIZ_API_FAILD)}))}};

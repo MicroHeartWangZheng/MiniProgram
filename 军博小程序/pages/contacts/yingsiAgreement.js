@@ -1,0 +1,1 @@
+Page({data:{richTextNode:""},onLoad:function(n){},onReady:function(){},onShow:function(){},sureBtnClick:function(n){var t=getCurrentPages(),e=t[t.length-2];wx.navigateBack({success:function(){e.autoRefreshData()}})},onHide:function(){}});

@@ -1,0 +1,4 @@
+<rich-text class="rich_text" nodes="{{richTextNode}}"></rich-text>
+<view class="button_container">
+    <button bindtap="sureBtnClick" class="normalBtn">确 定</button>
+</view>

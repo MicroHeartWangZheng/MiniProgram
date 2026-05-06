@@ -1,0 +1,75 @@
+{
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于获取周边场馆"
+    },
+    "scope.camera": {
+      "desc": "用于刷脸入馆"
+    }
+  },
+  "plugins": {
+    "turingCore": {
+      "version": "1.0.25",
+      "provider": "wx63af045606be281d",
+      "subpackage": "__APP__"
+    }
+  },
+  "requiredPrivateInfos": [
+    "getLocation"
+  ],
+  "componentFramework": {
+    "allUsed": [
+      "exparser"
+    ],
+    "default": "exparser"
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Weixin",
+    "navigationBarTextStyle": "black"
+  },
+  "pages": [
+    "pages/index/index",
+    "pages/userCenter/logout",
+    "pages/login/phoneLogin",
+    "pages/login/login",
+    "pages/userCenter/logOutNotice",
+    "pages/appointment/home",
+    "pages/appointment/signIn",
+    "pages/appointment/appointSucc",
+    "pages/appointment/myOrderList",
+    "pages/contacts/realNameCertification",
+    "pages/appointment/orderDetail",
+    "pages/appointment/sureInfo",
+    "pages/appointment/notice",
+    "pages/contacts/addContact",
+    "pages/contacts/editPerple",
+    "pages/contacts/contactsList",
+    "pages/contacts/selectContacts",
+    "pages/userCenter/userCenter",
+    "pages/contacts/yingsiAgreement",
+    "pages/teamAppoint/TeamAppoint",
+    "pages/teamAppoint/TeamAppointTwo",
+    "pages/teamAppoint/JigouCertification",
+    "pages/teamAppoint/ShareTeamAppoint",
+    "pages/teamAppoint/shareAppointErwm",
+    "pages/teamAppoint/TeamAppointOrderDetail",
+    "pages/teamAppoint/teamAppointSucc",
+    "pages/userCenter/jigouCertification",
+    "pages/userCenter/jidiaoyuanList",
+    "pages/teamAppoint/addJidiaoyuan",
+    "pages/userCenter/userMessage",
+    "pages/userCenter/userMessageChange",
+    "pages/teamAppoint/piLiangDaoru",
+    "pages/appointment/signInTeam",
+    "pages/appointment/appointResult",
+    "pages/activity/activityList",
+    "pages/activity/activityDetail",
+    "pages/activity/appointmentInfo",
+    "pages/activity/order",
+    "pages/activity/appointSuccess",
+    "pages/activity/activitySignIn",
+    "pages/activity/orderDetail"
+  ]
+}

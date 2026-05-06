@@ -1,0 +1,22 @@
+<view class="phonelogin">
+    <image class="banner-top" mode="widthFix" src="../../images/top_bg.jpg"></image>
+    <view class="input">
+        <view class="input_title">手机号</view>
+        <input bindinput="phoneNumInput" class="number-TF" placeholder="请输入手机号码" placeholderStyle="color: #C4C4C5;" type="number" value="{{phoneNum}}"></input>
+    </view>
+    <view class="imgCode">
+        <view class="input_title">验证码</view>
+        <input bindinput="imgCodeInput" class="number-code" placeholder="请输入图形验证码" placeholderStyle="color: #C4C4C5;" value="{{vcode}}"></input>
+        <image bindtap="updateImgCode" class="captcha" src="data:image/png;base64,{{captchaImgBase64}}"></image>
+        <view class=""></view>
+    </view>
+    <view class="form-field">
+        <input bindinput="verificationCodeInput" class="phoneCode" placeholder="请输入短信验证码" placeholderStyle="color: #C4C4C5;" value="{{verificationCode}}"></input>
+        <button bindtap="codeBtnClick" class="{{showCountdown?'code-btn-count':'code-btn'}}">{{showCountdown?'剩余'+countdown+'秒':codeStr}}</button>
+    </view>
+    <view class="login-view">
+        <button bindtap="loginClick" class="{{showCountdown?'login-btn-count':'login-btn'}}" hoverClass="btn_pressed">登录</button>
+    </view>
+    <view bind:tap="openLogin2" class="login_type2">手机号快捷登录<image class="arrow" src="../../images/center/youjiantou.png"></image>
+    </view>
+</view>

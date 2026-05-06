@@ -1,0 +1,32 @@
+<image class="banner-top" src="{{isXinhai==true?'../../images/banner.jpg':'../../images/banner2.jpg'}}"></image>
+<view class="sectionview">
+    <view class="success-icon">
+        <image src="../../images/success.png"></image>
+        <label>预约成功</label>
+    </view>
+    <view class="time-tips">
+        <label>场馆名称：</label>
+        <label>{{model.companyName}}</label>
+    </view>
+    <view class="time-tips">
+        <label>参观时间：</label>
+        <label>{{time}}</label>
+    </view>
+    <view class="time-tips">
+        <label>团队人数：</label>
+        <label>{{visitorNum+'人'}}</label>
+    </view>
+    <view class="time-tips">
+        <label>领队姓名：</label>
+        <label>{{model.visitorName}}</label>
+    </view>
+    <view class="time-tips">
+        <label>手机号码：</label>
+        <label>{{model.phoneNumber}}</label>
+    </view>
+    <rich-text class="rich_text" nodes="{{richTextNode}}"></rich-text>
+    <view class="buttomview">
+        <button bindtap="shareBtnClick" openType="share">分享给团员</button>
+        <button bindtap="detailbtnClick">查看详情</button>
+    </view>
+</view>

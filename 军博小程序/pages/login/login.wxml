@@ -1,0 +1,14 @@
+<image class="top_bg" mode="widthFix" src="../../images/top_bg.jpg"></image>
+<label class="tips">授权进行手机号快捷登录</label>
+<label class="tips" style="margin:10rpx 0 0 0;">获取信息仅用于登录及预约使用</label>
+<label class="tips" style="margin:10rpx 0 30rpx 0;">平台不会泄露用户任何信息</label>
+<button bind:tap="wxLogin" bindgetphonenumber="onGetPhoneNumber" class="_button" hoverClass="btn_pressed" openType="{{openType}}">手机号快捷登录</button>
+<button bind:tap="notLogin" class="_button not_login" hoverClass="not_login_pressed">暂不登录</button>
+<view bindtap="privacyAgreementCheckedChange" class="notice_row">
+    <radio-group>
+        <radio checked="{{privacyAgreementChecked}}"></radio>
+    </radio-group>
+    <label class="notice_row_label1">我已阅读</label>
+    <label catch:tap="privacyAgreementClick" class="notice_row_label2">《隐私协议》</label>
+    <label class="notice_row_label1">并同意</label>
+</view>

@@ -1,0 +1,70 @@
+<image class="stateImg" hidden="{{model.status==0||model.status==-1?false:true}}" mode="widthFix" src="../../images/center/daitijiao.png"></image>
+<view class="time-view">
+    <text class="contlab">参观时间：</text>
+    <text class="timelab">{{model.intervalDate+' '+model.intervalValue}}</text>
+</view>
+<view class="time-view">
+    <text class="contlab">团队名称：</text>
+    <text class="timelab">{{model.teamName}}</text>
+</view>
+<view class="time-view">
+    <text class="contlab">团队类型：</text>
+    <text class="timelab">{{model.teamTypeStr}}</text>
+</view>
+<view class="time-view">
+    <text class="contlab">领队姓名：</text>
+    <text class="timelab">{{model.customerName}}</text>
+</view>
+<view class="time-view">
+    <text class="contlab">身份证号：</text>
+    <text class="timelab">{{model.documentNumber}}</text>
+</view>
+<view class="time-view">
+    <text class="contlab">手机号码：</text>
+    <text class="timelab">{{model.phoneNumber}}</text>
+</view>
+<view class="time-view">
+    <text class="contlab">团队人数：</text>
+    <text class="timelab">{{model.orderNum+'人'}}</text>
+</view>
+<view class="time-view">
+    <label>剩余</label>
+    <label class="expireTimeLab">{{orderStatusStr}}</label>
+    <label>自动解散</label>
+</view>
+<view class="btnView">
+    <view class="shareBtn">
+        <button class="shareViewBtn" openType="share">分享给团员</button>
+    </view>
+    <view bindtap="addContact" class="shareBtn left">添加团员</view>
+    <view bindtap="daoruBtnClick" class="shareBtn left">批量导入</view>
+</view>
+<view bindtap="visitHelpViewClick" class="visitHelpView">
+    <image class="helpImg" mode="widthFix" src="../../images/activity/teamtishi.png"></image>
+    <label class="helpLab">优先推荐使用分享给团员功能，分享给团员后，团员可自主添加自己的信息，快速完成团员信息收集。</label>
+</view>
+<view class="title-view">
+    <text class="section-header">团员信息</text>
+    <view class="descLabV">
+        <label>当前共</label>
+        <label class="descLab">{{maxCount}}</label>
+        <label>人</label>
+    </view>
+</view>
+<view class="visitorView">
+    <view class="visitorCell" data-index="{{index}}" wx:for="{{selectedContactsArr}}" wx:key="customerContactId">
+        <view class="firstLine">
+            <label class="nameLab">{{item.visitorName}}</label>
+            <label class="mySelfTag" hidden="{{item.isLeader===1?false:true}}">领队</label>
+            <label class="mySelfTag isVip" hidden="{{item.isVip===1?false:true}}">党员</label>
+        </view>
+        <label class="secLineLab">{{'证件号码：'+item.documentNumber}}</label>
+        <label class="secLineLab">{{'手机号码：'+item.phoneNumber}}</label>
+        <image bindtap="editBtnClick" class="editeImg" data-value="{{index}}" hidden="{{item.isLeader!=1?false:true}}" src="../../images/xiugai.png"></image>
+        <image bindtap="deleteBtnClick" class="trashImg" data-value="{{index}}" hidden="{{item.isLeader!=1?false:true}}" src="../../images/shanchu.png"></image>
+    </view>
+</view>
+<view class="button_container">
+    <view bindtap="appointEndorseBtnClick" class="appointbtn1">解散团队</view>
+    <view bindtap="appointBtnClick" class="appointbtn">提交预约</view>
+</view>

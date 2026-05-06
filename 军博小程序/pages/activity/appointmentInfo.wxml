@@ -1,0 +1,61 @@
+<view class="info">
+    <view class="title">{{detail.activityName}}</view>
+    <view class="c activity_time">
+        <text class="t">活动时间</text>
+        <text>{{detail.time}}</text>
+    </view>
+    <view class="c application_time" wx:if="{{!detail.activityType}}">
+        <text class="t">报名时间</text>
+        <text>{{detail.reserveTime}}</text>
+    </view>
+    <view class="c activity_loc">
+        <text class="t">活动地点</text>
+        <text>{{detail.address}}</text>
+    </view>
+    <view class="c activity_age">
+        <text class="t">年龄限制</text>
+        <text wx:if="{{!detail.reserveMinAge&&!detail.reserveMaxAge}}">年龄无限制</text>
+        <text wx:elif="{{!detail.reserveMinAge&&detail.reserveMaxAge}}">{{detail.reserveMaxAge}}岁以下</text>
+        <text wx:elif="{{detail.reserveMinAge&&!detail.reserveMaxAge}}">{{detail.reserveMinAge}}岁以上</text>
+        <text wx:else>{{detail.reserveMinAge}}岁 - {{detail.reserveMaxAge}}岁</text>
+    </view>
+    <view class="c remaining" wx:if="{{!detail.activityType}}">
+        <text class="t">剩余名额</text>
+        <text>{{detail.surplusNum}}</text>
+    </view>
+    <view class="c batch" wx:if="{{detail.activityType}}">
+        <text class="t">报名场次</text>
+        <text class="p">{{detail.ticktDetail.reserveDate}} {{detail.ticktDetail.reserveTime}}</text>
+    </view>
+</view>
+<view class="tips">
+    <view class="left">收费活动报名以最终缴费情况为准</view>
+    <view bindtap="toDetail" class="right">活动详情<image class="leftIcon" mode="heightFix" src="../../images/actappoint/left.png"></image>
+    </view>
+</view>
+<view class="visit_people">
+    <view class="t">
+        <view class="left">选择参观者</view>
+        <view class="right">(参观者最多{{detail.reserveTicketLimit}}人)</view>
+    </view>
+    <view class="p_list">
+        <view class="p_item" id="{{item.customerCertId}}" wx:for="{{selectedContactsArr}}" wx:key="customerContactId">
+            <view class="name">
+                <text>{{item.contactName}}</text>
+                <image mode="heightFix" src="../../images/actappoint/userIcon.png"></image>
+            </view>
+            <view class="id_card">
+                <text class="l">证件号</text>
+                <text class="c">{{item.documentNumber}}</text>
+            </view>
+            <view bindtap="delVisit" class="delBox" data-id="{{item.customerContactId}}">
+                <image class="del" mode="heightFix" src="../../images/actappoint/del.png"></image>
+            </view>
+            <image class="label" mode="heightFix" src="../../images/actappoint/label.png" wx:if="{{item.myself}}"></image>
+        </view>
+        <view bindtap="addp" class="add_p" wx:if="{{selectedContactsArr.length<detail.reserveTicketLimit}}">+添加参观者</view>
+    </view>
+</view>
+<view class="button_container">
+    <button bindtap="next_order" class="normalBtn" disabled="{{selectedContactsArr.length===0}}">下一步</button>
+</view>

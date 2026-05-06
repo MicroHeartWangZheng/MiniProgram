@@ -1,0 +1,48 @@
+<view class="content-view">
+    <view class="section">
+        <view class="section-header-view">
+            <image class="header_icon" src="../../images/star.png"></image>
+            <text class="header_text">选择入馆日期</text>
+            <image class="header_bg" src="../../images/header_bg.png"></image>
+        </view>
+        <view class="week_view">
+            <text>一</text>
+            <text>二</text>
+            <text>三</text>
+            <text>四</text>
+            <text>五</text>
+            <text>六</text>
+            <text>日</text>
+        </view>
+        <view class="section-content">
+            <view bindtap="dateViewClick" class="{{state.getDateViewClass(item.status,currentDateIndex==index)}}" data-index="{{index}}" wx:for="{{items}}" wx:key="dayTime">
+                <text class="month">{{item.month}}月</text>
+                <text class="{{item.isToday?'date today':item.status==0?'date':'date date_disabled'}}">{{item.isToday?'今天':item.dayNum}}</text>
+                <text class="{{state.getStateClass(item.status)}}">{{state.getState(item.status)}}</text>
+                <image class="selected_icon" src="../../images/selected.png" wx:if="{{currentDateIndex==index}}"></image>
+            </view>
+        </view>
+    </view>
+    <view class="section">
+        <view class="section-header-view">
+            <image class="header_icon" src="../../images/star.png"></image>
+            <text class="header_text">选择入馆时段</text>
+            <image class="header_bg" src="../../images/header_bg.png"></image>
+        </view>
+        <view class="section-content" hidden="{{currentDateIndex==-1}}" style="padding-top:30rpx;">
+            <view bindtap="timeViewClick" class="{{state.getTimeViewClass(isTeamAppoint,item,currentTimeIndex==index)}}" data-index="{{index}}" wx:for="{{items[currentDateIndex].surplusList}}" wx:key="surplusId">
+                <text class="time_hour" style="color:{{isTeamAppoint&&item.surplusCountTeam>0||!isTeamAppoint&&item.surplusCount>0?'#434343':'#A0A0A0'}}">{{item.intervalValue}}</text>
+                <text class="time_state" style="color:{{isTeamAppoint&&item.surplusCountTeam>0||!isTeamAppoint&&item.surplusCount>0?'#BBAA70':'#A0A0A0'}}">{{state.getTimeState(isTeamAppoint,item)}}</text>
+                <image class="selected_icon" src="../../images/selected.png" wx:if="{{currentTimeIndex==index}}"></image>
+            </view>
+        </view>
+    </view>
+</view>
+<view class="button_container">
+    <button bind:tap="appointBtnClick" class="normalBtn" disabled="{{currentDateIndex==-1||currentTimeIndex==-1}}">{{appointbtnStr}}</button>
+</view>
+<view style="position:fixed;top:9999rpx;">
+    <canvas canvasId="turing-canvas" style="width:150;height:150;"></canvas>
+    <canvas id="turing-render-webgl" style="width:100px;height:100px;" type="webgl"></canvas>
+</view>
+<wxs module="state">var getDateViewClass = (function (status,selected){if (status == 0){if (selected)return('date_view date_view_selected'); else return('date_view')} else if (status == 1 || status == 2 || status == 3)return('date_view date_view_disabled'); else return('date_view date_view_empty')});var getStateClass = (function (status){if (status == 0)return('state'); else if (status == 1 || status == 2 || status == 3)return('state state_disabled'); else return('state state_empty')});var getState = (function (status){if (status == 0)return('可预约'); else if (status == 1)return('闭馆'); else if (status == 2)return(''); else if (status == 3)return('已约满'); else if (status == -1)return('已过期'); else return('未开始')});var getTimeState = (function (isTeamAppoint,item){if ((isTeamAppoint && item.surplusCountTeam > 0) || (!isTeamAppoint && item.surplusCount > 0))return('可预约'); else return('已约满')});var getTimeViewClass = (function (isTeamAppoint,item,selected){if ((isTeamAppoint && item.surplusCountTeam > 0) || (!isTeamAppoint && item.surplusCount > 0)){if (selected)return('time_view time_view_selected'); else return('time_view')} else return('time_view time_view_disabled')});module.exports.getDateViewClass = getDateViewClass;module.exports.getState = getState;module.exports.getStateClass = getStateClass;module.exports.getTimeState = getTimeState;module.exports.getTimeViewClass = getTimeViewClass;</wxs>

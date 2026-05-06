@@ -1,0 +1,43 @@
+<view class="cellview first">
+    <picker bindchange="jigouTypePickerChange" disabled="{{model.hiddenShenq}}" mode="selector" range="{{jigouTypeArr}}" rangeKey="text" value="{{index}}">
+        <label class="cellXinglab">*</label>
+        <label class="cellTitlelab">机构类型</label>
+        <input class="inputview" disabled="true" placeholder="请选择机构类型" value="{{jigouTypeStr}}"></input>
+    </picker>
+    <image class="reserveStatusImg" mode="widthFix" src="{{model.reserveStatusImg}}"></image>
+</view>
+<view class="cellview">
+    <label class="cellXinglab">*</label>
+    <label class="cellTitlelab">机构名称</label>
+    <input bindinput="inputClick" class="inputview firstLine" data-index="1" disabled="{{model.hiddenShenq}}" placeholder="请输入机构名称" value="{{jigouNameStr}}"></input>
+</view>
+<view class="contentListView" hidden="{{ziliaoType==2}}">
+    <view class="cellview">
+        <label class="cellXinglab">*</label>
+        <label class="cellTitlelab">{{jigouTypeStr=='机关部委'?'组织机构代码':'统一社会信用代码'}}</label>
+        <input bindinput="inputClick" class="inputview" cursorSpacing="50" data-index="2" disabled="{{model.hiddenShenq}}" placeholder="{{jigouTypeStr=='机关部委'?'请输入组织机构代码':'请输入统一社会信用代码'}}" value="{{jigouIdStr}}"></input>
+    </view>
+    <view class="cellview" wx:if="{{jigouTypeStr=='旅行社'||jigouTypeStr==''}}">
+        <label class="cellXinglab">*</label>
+        <label class="cellTitlelab">机构营业执照</label>
+        <image bindtap="cellImgClick" class="cellImg" data-index="1" src="{{jigouImg}}"></image>
+    </view>
+</view>
+<view class="cellview" wx:if="{{jigouTypeStr!='旅行社'||jigouTypeStr==''}}">
+    <label class="cellXinglab">*</label>
+    <label class="cellTitlelab">介绍信</label>
+    <image bindtap="cellImgClick" class="cellImg" data-index="7" src="{{renzhenImg}}"></image>
+</view>
+<view class="cellview {{model.hiddenShenq==true?'last':''}}" hidden="{{model.status!=3}}">
+    <label class="cellTitlelab">{{model.reasonTitle}}</label>
+    <text class="rejectReasonT">{{model.rejectReason==null?'':model.rejectReason}}</text>
+</view>
+<view class="tishiView {{model.hiddenShenq==true?'last':''}}" hidden="{{model.hiddenShenq}}">
+    <text class="tishiText">温馨提示：如果修改资料，需要重新审核，48小时内完成审核。审核未通过前将不能进行预约操作，请留意审核结果。</text>
+</view>
+<cover-view class="button_container" hidden="{{model.hiddenShenq}}">
+    <button bindtap="appointBtnClick" class="appointBtn">提 交</button>
+</cover-view>
+<cover-view class="button_container" wx:if="{{model.status==2}}">
+    <button bindtap="zhuxiaoBtnClick" class="appointBtn">注 销</button>
+</cover-view>

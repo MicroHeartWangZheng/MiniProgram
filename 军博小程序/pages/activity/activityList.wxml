@@ -1,0 +1,20 @@
+<view class="activity_box">
+    <view bindtap="activityDetail" class="act_item" data-id="{{item.activityId}}" data-resStatus="{{item.reserveStatus}}" wx:for="{{activity}}" wx:key="activityId">
+        <label class="{{item.reserveStatus==2?'state_label':item.reserveStatus==3?'state_label red':'state_label gray'}}">{{item.appointBtnStr}}</label>
+        <label class="recommond_label" wx:if="{{item.isRecommend==1}}">推荐</label>
+        <view class="top">
+            <image mode="aspectFill" src="{{item.coverImage}}"></image>
+        </view>
+        <view class="title">{{item.activityName}}</view>
+        <view class="time">
+            <image mode="widthFix" src="../../images/actappoint/time.png"></image>
+            <view>{{item.time}}</view>
+        </view>
+        <view class="location">
+            <image mode="widthFix" src="../../images/actappoint/loc.png"></image>
+            <view style="width:470rpx;">{{item.address}}</view>
+        </view>
+        <view class="isFree">{{item.cost==null||item.cost==0?'免费':'￥'+item.cost}}</view>
+    </view>
+</view>
+<image class="empty" src="../../images/pageorderNullImg.png" wx:if="{{activity==null||activity.length==0}}"></image>

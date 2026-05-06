@@ -1,0 +1,25 @@
+<image class="mainbgimg" mode="widthFix" src="../../images/sign.png"></image>
+<view class="descView">
+    <label class="name_label">{{timeStr}}</label>
+    <label class="name_label" style="color:#cfb053;">{{secondStr}}</label>
+</view>
+<scroll-view class="memberlist" scrollY="true">
+    <view bindtap="radioTap" class="memberconent {{item.reserveStatusStr=='已使用'?'bgColor':''}}" data-index="{{index}}" wx:for="{{data}}" wx:key="orderPersonalId">
+        <view class="seleteimgview" hidden="{{item.seleteimgviewHidden}}">
+            <image class="{{item.checked?'trashImgSeleted':'trashImg'}}" src="{{item.checked?'../../images/orderSelect.png':''}}"></image>
+        </view>
+        <image class="reserveStatusImg" src="{{item.reserveStatusImg}}"></image>
+        <label class="toplab">{{'姓　　名：'+item.visitorName}}</label>
+        <label class="toplab" data-index="{{index}}">{{'证件号码：'+item.documentNumber}}</label>
+        <label class="toplab">{{'入馆时间：'+item.reserveDate+' '+item.reserveTime}}</label>
+        <label class="tishiLineLab"></label>
+        <view hidden="{{item.jishilabHidden}}">
+            <label class="jishilab">距检票开始:</label>
+            <label class="startingLabel">{{item.hours}}：{{item.minute}}：{{item.second}}</label>
+        </view>
+        <canvas canvasId="canvas{{item.orderPersonalId}}" class="qrcode" style="width:{{qrcode_w}}px;height:{{qrcode_w}}px;"></canvas>
+    </view>
+</scroll-view>
+<cover-view class="appointView" hidden="{{isbtnhidden}}">
+    <button bindtap="btnClick" class="normalBtn" disabled="{{checkedIds.length==0}}">核 验</button>
+</cover-view>

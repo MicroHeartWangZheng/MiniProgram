@@ -1,0 +1,85 @@
+<view class="bg_top">
+    <image mode="aspectFill" src="{{detail.coverImage}}"></image>
+</view>
+<view class="nav" style="top:{{titleBarTop}}rpx;">
+    <image bindtap="back" class="return" src="../../images/actappoint/back.png"></image>
+</view>
+<view class="info">
+    <view class="title">{{detail.activityName}}</view>
+    <view class="c activity_time">
+        <text class="t">活动时间</text>
+        <text>{{detail.time}}</text>
+    </view>
+    <view class="c application_time" wx:if="{{!activityType}}">
+        <text class="t">报名时间</text>
+        <text>{{detail.reserveTime}}</text>
+    </view>
+    <view class="c activity_loc">
+        <text class="t">活动地点</text>
+        <text>{{detail.address}}</text>
+    </view>
+    <view class="c activity_age">
+        <text class="t">年龄限制</text>
+        <text wx:if="{{!detail.reserveMinAge&&!detail.reserveMaxAge}}">年龄无限制</text>
+        <text wx:elif="{{!detail.reserveMinAge&&detail.reserveMaxAge}}">{{detail.reserveMaxAge}}岁以下</text>
+        <text wx:elif="{{detail.reserveMinAge&&!detail.reserveMaxAge}}">{{detail.reserveMinAge}}岁以上</text>
+        <text wx:else>{{detail.reserveMinAge}}岁 - {{detail.reserveMaxAge}}岁</text>
+    </view>
+    <view class="c remaining" wx:if="{{!activityType}}">
+        <text class="t">剩余名额</text>
+        <text>{{detail.surplusNum}}</text>
+    </view>
+</view>
+<view class="content-view" wx:if="{{activityType==1}}">
+    <view class="section">
+        <view class="section-header-view">
+            <image class="header_icon" src="../../images/star.png"></image>
+            <text class="header_text">选择活动日期</text>
+            <image class="header_bg" src="../../images/header_bg.png"></image>
+        </view>
+        <view class="week_view">
+            <text>一</text>
+            <text>二</text>
+            <text>三</text>
+            <text>四</text>
+            <text>五</text>
+            <text>六</text>
+            <text>日</text>
+        </view>
+        <view class="section-content">
+            <view bindtap="dateViewClick" class="{{state.getDateViewClass(item.status,currentDateIndex==index)}}" data-index="{{index}}" wx:for="{{dateArr}}" wx:key="dayTime">
+                <text class="month">{{item.month}}月</text>
+                <text class="{{item.isToday?'date today':item.status==0?'date':'date date_disabled'}}">{{item.isToday?'今天':item.dayNum}}</text>
+                <text class="{{state.getStateClass(item.status)}}">{{state.getState(item.status)}}</text>
+                <image class="selected_icon" src="../../images/selected.png" wx:if="{{currentDateIndex==index}}"></image>
+            </view>
+        </view>
+    </view>
+    <view class="section">
+        <view class="section-header-view">
+            <image class="header_icon" src="../../images/star.png"></image>
+            <text class="header_text">选择活动时段</text>
+            <image class="header_bg" src="../../images/header_bg.png"></image>
+        </view>
+        <view class="section-content" hidden="{{currentDateIndex==-1}}" style="padding-top:30rpx;">
+            <view bindtap="timeViewClick" class="{{state.getTimeViewClass(item,currentTimeIndex==index)}}" data-index="{{index}}" wx:for="{{dateArr[currentDateIndex].ticketList}}" wx:key="ticketId">
+                <text class="time_hour" style="color:{{item.ticketStatus==1||item.ticketStatus==2?'#434343':'#A0A0A0'}}">{{item.reserveTime}}</text>
+                <text class="time_state" style="color:{{item.ticketStatus==1||item.ticketStatus==2?'#BBAA70':'#A0A0A0'}}">{{state.getTimeState(item)}}</text>
+                <image class="selected_icon" src="../../images/selected.png" wx:if="{{currentTimeIndex==index}}"></image>
+            </view>
+        </view>
+    </view>
+</view>
+<view class="detail">
+    <view class="title">活动详情</view>
+    <rich-text nodes="{{detail.remark}}" style="font-size:13px;line-height:40rpx;color:#626262;"></rich-text>
+</view>
+<view class="detail" style="margin-top:25rpx;" wx:if="{{detail.information!=null&&detail.information!=''}}">
+    <view class="title">预约须知</view>
+    <rich-text nodes="{{detail.information}}" style="font-size:13px;line-height:40rpx;color:#626262;"></rich-text>
+</view>
+<view class="button_container">
+    <button bindtap="reserve" class="normalBtn" disabled="{{!detail.isCanAppoint}}" wx:if="{{detail.mainType==0}}">{{detail.appointBtnStr}}</button>
+    <button bindtap="reserve" class="normalBtn" disabled="{{currentTimeIndex==-1||dateArr[currentDateIndex].status!==0}}" wx:else>立即报名</button>
+</view>
+<wxs module="state">var getDateViewClass = (function (status,selected){if (status == 0 || status == 4 || status == 1 || status == 2 || status == 5){if (selected)return('date_view date_view_selected'); else return('date_view')} else if (status == 3)return('date_view date_view_disabled'); else return('date_view date_view_empty')});var getStateClass = (function (status){if (status == 0 || status == 4 || status == 1 || status == 2 || status == 5)return('state'); else if (status == 3)return('state state_disabled'); else return('state state_empty')});var getState = (function (status){if (status == 0)return('报名中'); else if (status == 1)return('闭馆'); else if (status == 2)return('已结束'); else if (status == 3)return('无场次'); else if (status == 4)return('已报满'); else if (status == 5)return('未开始'); else if (status == -1)return('已过期'); else return('未开始')});var getTimeState = (function (item){if (item.ticketStatus == 0)return('报名未开始'); else if ((item.ticketStatus == 2 || item.ticketStatus == 1) && item.surplusCount > 0)return('报名中'); else if (item.ticketStatus == 3)return('报名结束'); else return('报名已满')});var getTimeViewClass = (function (item,selected){if ((item.ticketStatus == 2 || item.ticketStatus == 1) && item.surplusCount > 0){if (selected)return('time_view time_view_selected'); else return('time_view')} else return('time_view time_view_disabled')});module.exports.getDateViewClass = getDateViewClass;module.exports.getState = getState;module.exports.getStateClass = getStateClass;module.exports.getTimeState = getTimeState;module.exports.getTimeViewClass = getTimeViewClass;</wxs>

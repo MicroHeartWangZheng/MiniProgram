@@ -1,0 +1,42 @@
+<view class="descView">
+    <view bind:tap="activityTitleClick" class="row">
+        <label class="type_label">活动</label>
+        <label class="name_label">{{model.orderTitle}}</label>
+    </view>
+    <view class="row">
+        <label class="row_title">活动时间</label>
+        <label class="row_content">{{model.reserveDate+' '+model.reserveTime}}</label>
+    </view>
+    <view class="row">
+        <label class="row_title">活动地点</label>
+        <label class="row_content">{{model.activity.address}}</label>
+    </view>
+</view>
+<view class="topview">
+    <view class="topconent">
+        <label class="toptitlelab">参观信息</label>
+        <label class="toplab">{{'报名人数：'+model.orderNum+'人'}}</label>
+        <label class="toplab">{{'订单编号：'+model.orderNo}}</label>
+        <label class="toplab">{{'下单时间：'+model.createTime}}</label>
+    </view>
+    <image bind:tap="reloadData" class="refresh" src="../../images/refresh.png"></image>
+</view>
+<swiper class="memberlist" indicatorDots="{{model.orderActivityList.length>1}}">
+    <swiper-item wx:for="{{model.orderActivityList}}" wx:key="orderActivityId">
+        <view bindtap="orderListClick" class="memberconent" data-index="{{index}}">
+            <view class="seleteimgview" data-index="{{index}}" hidden="{{item.reserveStatusStr!='已预约'}}">
+                <image class="{{item.selected?'trashImgSeleted':'trashImg'}}" src="{{item.selected?'../../images/orderSelect.png':''}}"></image>
+            </view>
+            <image class="reserveStatusImg" src="{{item.reserveStatusImg}}"></image>
+            <label class="toplab">{{'姓　　名：'+item.visitorName}}</label>
+            <label bindtap="eyesImgClick" class="toplab" data-index="{{index}}">{{'证件号码：'+item.documentNumber}}</label>
+            <view class="qrcodeView">
+                <canvas canvasId="{{'canvas'+index}}" class="qrcode" data-index="{{index}}" style="width:{{qrcode_w}}px;height:{{qrcode_w}}px;" wx:if="{{item.reserveNo!=''&&item.reserveNo!=null}}"></canvas>
+                <image class="qrcode" src="../../images/qr_code.png" style="width:{{qrcode_w}}px;height:{{qrcode_w}}px;" wx:else></image>
+            </view>
+        </view>
+    </swiper-item>
+</swiper>
+<cover-view class="button_container">
+    <button bindtap="cancelBtnClick" class="normalBtn" disabled="{{selectedArr.length==0}}">退票</button>
+</cover-view>

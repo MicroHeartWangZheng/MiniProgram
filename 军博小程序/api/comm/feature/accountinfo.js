@@ -1,0 +1,1 @@
+module.exports={obtainAccountInfo:function(){var n="";return wx.getAccountInfoSync&&(n=wx.getAccountInfoSync()),n}};

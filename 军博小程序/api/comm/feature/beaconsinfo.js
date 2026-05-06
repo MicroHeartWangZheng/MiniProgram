@@ -1,0 +1,1 @@
+var e=require("../../utils/promiseutil.js"),n=require("../rcode.js");module.exports={obtainBeanconsAsync:function(){return e.buildPromise((function(e,s){wx.getBeacons?wx.getBeacons({success:function(n){e(n)},fail:function(e){s(e)}}):s(n.ERROR_BIZ_API_FAILD)}))}};

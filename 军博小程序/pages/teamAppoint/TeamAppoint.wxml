@@ -1,0 +1,49 @@
+<view class="time-view" style="margin-top:30rpx;">
+    <text class="contlab">参观时间</text>
+    <text class="timelab">{{model.intervalDate+' '+model.intervalValue}}</text>
+</view>
+<view class="title-view">
+    <text class="section-header">团队信息</text>
+    <view class="descLabV">
+        <label>人数</label>
+        <label class="descLab">{{ruleData.minTeamCount+'~'+ruleData.maxTeamCount+'人'}}</label>
+        <label>之间</label>
+    </view>
+</view>
+<view class="time-view">
+    <picker bindchange="teamTypePickerChange" mode="selector" range="{{teamTypeArr}}" rangeKey="text" style="width:100%;" value="{{index}}">
+        <text class="contlab">团队类型</text>
+        <input class="inputview2" disabled="true" placeholder="请选择团队类型" value="{{teamTypeStr}}"></input>
+        <image class="unfoldimg" src="../../images/unfoldgary.png"></image>
+    </picker>
+</view>
+<view class="time-view">
+    <text class="contlab">团队名称</text>
+    <input bindinput="teamNameInput" class="inputview" placeholder="请输入团队名称" value="{{model.teamName}}"></input>
+</view>
+<view class="time-view">
+    <text class="contlab">领队姓名</text>
+    <input bindinput="customerNameInput" class="inputview" placeholder="请输入领队姓名" value="{{userModel.customerName}}"></input>
+</view>
+<view class="time-view">
+    <text class="contlab">身份证号</text>
+    <input bindinput="documentNumberInput" class="inputview" placeholder="请输入身份证号" value="{{userModel.documentNumber}}"></input>
+</view>
+<view class="time-view">
+    <text class="contlab">手机号码</text>
+    <input bindinput="phoneNumberInput" class="inputview" placeholder="请输入手机号码" type="number" value="{{userModel.phoneNumber}}"></input>
+</view>
+<view class="time-view">
+    <text class="contlab">团队人数（含领队）</text>
+    <input bindinput="teamNumberInput" class="inputview" cursorSpacing="50" placeholder="请输入团队人数" type="number" value="{{model.teamNumber}}"></input>
+</view>
+<view class="time-view last" hidden="{{hiddenTishi}}">
+    <text class="tishiText">温馨提示：请携带纸质盖单位公章证明。</text>
+</view>
+<cover-view class="button_container">
+    <button bindtap="appointBtnClick" class="appointBtn">创建团队</button>
+</cover-view>
+<view style="position:fixed;top:9999rpx;">
+    <canvas canvasId="turing-canvas" style="width:150;height:150;"></canvas>
+    <canvas id="turing-render-webgl" style="width:100px;height:100px;" type="webgl"></canvas>
+</view>

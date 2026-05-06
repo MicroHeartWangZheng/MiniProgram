@@ -1,0 +1,44 @@
+<image class="mainbgimg" mode="widthFix" src="../../images/center/orderDetailbg.png"></image>
+<view class="descView">
+    <label class="name_label">{{timeStr}}</label>
+</view>
+<scroll-view class="scrollViewC" scrollY="true">
+    <view class="contentView">
+        <view class="topview">
+            <view class="topconent">
+                <label class="toptitlelab">参观信息</label>
+                <label class="toplab">{{'订单编号：'+model.orderNo}}</label>
+                <label class="toplab">{{'预约时间：'+model.createTime}}</label>
+                <label class="toplab">{{'参观人数：'+model.orderNum+'人'}}</label>
+            </view>
+            <image bind:tap="reloadData" class="refresh" src="../../images/refresh.png"></image>
+        </view>
+        <swiper class="memberlist" current="{{currentNum}}" indicatorActiveColor="#a01b29" indicatorColor="#cfb053" indicatorDots="{{memberArr.length==1?false:true}}">
+            <swiper-item class="membercell" data-index="{{index}}" wx:for="{{model.orderPersonalList}}" wx:key="{{Id}}">
+                <view bindtap="membercellClick" data-index="{{index}}">
+                    <radio-group class="seleteimgview">
+                        <radio checked="{{item.selected}}"></radio>
+                    </radio-group>
+                    <image class="reserveStatusImg" src="{{item.reserveStatusImg}}"></image>
+                    <label class="toplab2">{{'姓 名：'+item.visitorName}}</label>
+                    <label bindtap="eyesImgClick" class="toplab2" data-index="{{index}}">{{'证件号码：'+item.documentNumber}}</label>
+                    <label class="toplab2">{{'参观时间：'+item.reserveDate+' '+item.reserveTime}}</label>
+                </view>
+                <view class="qrcodeView">
+                    <image bindtap="zuojiantouClick" class="jiantouImg" data-index="{{index}}" mode="widthFix" src="{{memberArr.length==1?'':'../../images/center/zuojiantou.png'}}"></image>
+                    <canvas bindtap="membercellClick" canvasId="{{'canvas'+index}}" class="qrcode" data-index="{{index}}" style="width:{{qrcode_w}}px;height:{{qrcode_w}}px;" wx:if="{{item.reserveNo!=''&&item.reserveNo!=null}}"></canvas>
+                    <image class="qrcode" src="../../images/qr_code.png" style="width:{{qrcode_w}}px;height:{{qrcode_w}}px;" wx:else></image>
+                    <image bindtap="youjiantouClick" class="jiantouImg" data-index="{{index}}" mode="widthFix" src="{{memberArr.length==1?'':'../../images/center/youjiantou.png'}}"></image>
+                </view>
+            </swiper-item>
+        </swiper>
+        <view style="display:flex;flex-direction:column;margin:30rpx 30rpx 0 30rpx;gap:10rpx;padding-bottom:30rpx;" wx:if="{{model.blackInfoList!=null&&model.blackInfoList.length>0}}">
+            <label style="font-size:28rpx;" wx:for="{{model.blackInfoList}}" wx:key="*this">{{item}}</label>
+        </view>
+    </view>
+</scroll-view>
+<view class="button_container">
+    <button bindtap="backHomeBtnClick" class="normalBtn">回首页</button>
+    <button bindtap="reBookBtnClick" class="normalBtn">改签</button>
+    <button bindtap="cancelBtnClick" class="normalBtn">退票</button>
+</view>

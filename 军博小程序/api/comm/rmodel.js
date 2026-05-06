@@ -1,0 +1,1 @@
+module.exports={detectM:{ret:0,deviceToken:""},ticketM:{ret:0,ticketID:""}};

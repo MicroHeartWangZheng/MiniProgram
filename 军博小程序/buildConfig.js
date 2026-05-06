@@ -1,0 +1,1 @@
+module.exports={BuildConfig:{buildNo:28,sdkVersion:"1.0.25",lc:"FJKRF3IO8NM8KYBG",requireType:0,apiUrl:"#³Ne¡Äõ\fÇTã8nt>A È¬ªH¿E)aNÚå",riskUrl:"ú\t8\0\0¢#®Oa3`â/£±\bwõÛñ#é0äH«j",proto_version:1,gwUrl:"https://gatherer.m.qq.com/gw_urls/get",gnUrl:"https://gatherer.m.qq.com/gw_parse/phone_mask",gsUrl:"https://gatherer.m.qq.com/event/report"}};

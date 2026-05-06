@@ -1,0 +1,8 @@
+<view class="bgView">
+    <image class="orderNullImg" mode="widthFix" src="{{msgCode=='201'?'../../images/appointResult2.png':'../../images/appointResult1.png'}}"></image>
+    <view class="msgView">{{msgStr}}</view>
+    <view class="buttomview">
+        <button bindtap="baceBtnClick" class="bottomBtn btnBg">首 页</button>
+        <button bindtap="appointAgainClick" class="bottomBtn" hidden="{{msgCode=='201'?true:false}}">再次预约</button>
+    </view>
+</view>

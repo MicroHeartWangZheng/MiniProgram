@@ -1,0 +1,1 @@
+Object.defineProperty(exports,"__esModule",{value:!0}),exports.systemId=exports.cardTypeArr=void 0;exports.cardTypeArr=[{id:"RLY0101",text:"中国居民身份证"},{id:"RLY0103",text:"港澳台居住证/回乡证/台胞证"},{id:"RLY0102",text:"护照"},{id:"RLY0107",text:"外国人永久居留身份证"}];exports.systemId="18905b1ea600401c945a99734f828076";

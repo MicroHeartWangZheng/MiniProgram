@@ -1,0 +1,1 @@
+var e=new Array;module.exports={cache:function(n){e.length>=20&&e.splice(0,1),e.push(n)},clear:function(){e.length=0},getAllTouchs:function(){return JSON.stringify(e)}};

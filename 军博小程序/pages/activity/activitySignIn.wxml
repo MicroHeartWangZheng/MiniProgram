@@ -1,0 +1,32 @@
+<view class="descView">
+    <view bindtap="activityTitleClick" class="row">
+        <label class="name_label">{{activity.activityName}}</label>
+    </view>
+    <view class="row">
+        <label class="row_title">活动时间</label>
+        <label class="row_content">{{activity.timeLabelStr}}</label>
+    </view>
+    <view class="row">
+        <label class="row_title">活动地点</label>
+        <label class="row_content">{{activity.address}}</label>
+    </view>
+</view>
+<view class="topconent">
+    <view class="titleLineView"></view>
+    <label class="toptitlelab">票务信息</label>
+</view>
+<view class="memberlist">
+    <view bindtap="radioTap" class="memberconent" data-index="{{index}}" wx:for="{{list}}" wx:key="orderActivityId">
+        <view class="seleteimgview" hidden="{{item.reserveStatus!=0?true:false}}">
+            <image class="{{item.checked?'trashImgSeleted':'trashImg'}}" src="{{item.checked?'../../images/orderSelect.png':''}}"></image>
+        </view>
+        <image class="reserveStatusImg" src="{{state.getStateImg(item.reserveStatus)}}"></image>
+        <label class="toplab">{{'姓　　名：'+item.visitorName}}</label>
+        <label class="toplab" data-index="{{index}}">{{'证件号码：'+item.documentNumber}}</label>
+        <canvas canvasId="{{'canvas'+index}}" class="qrcode" style="width:{{qrcode_w}}px;height:{{qrcode_w}}px;"></canvas>
+    </view>
+</view>
+<cover-view class="button_container">
+    <button bindtap="btnClick" class="normalBtn" disabled="{{checkedIds.length==0}}">签 到</button>
+</cover-view>
+<wxs module="state">var getStateImg = (function (status){if (status == -1)return('../../images/center/daizhifu.png'); else if (status == 0)return('../../images/center/daishiyong.png'); else if (status == 1)return('../../images/center/yituiding.png'); else if (status == 2)return('../../images/center/yiqiandao.png'); else return('../../images/center/yiguoqi.png')});module.exports.getStateImg = getStateImg;</wxs>

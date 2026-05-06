@@ -1,0 +1,43 @@
+<view class="title-view">
+    <label class="name_label">团队信息</label>
+</view>
+<view class="time-view">
+    <text class="contlab">参观时间：</text>
+    <text class="timelab">{{param.reserveDate+' '+param.reserveTime}}</text>
+</view>
+<view class="time-view">
+    <text class="contlab">团队名称：</text>
+    <text class="timelab">{{param.teamName}}</text>
+</view>
+<view class="time-view">
+    <text class="contlab">领队姓名：</text>
+    <text class="timelab">{{param.visitorName}}</text>
+</view>
+<view class="tishiView">
+    <text class="tishiText">注：请先确认好团队信息，如无误，再添加您的信息，填写信息时请确认是否正确，避免到时不能正常入馆参观。</text>
+</view>
+<view class="title-view">
+    <label class="name_label">您的信息</label>
+</view>
+<view class="cellview">
+    <label class="cellTitlelab">姓名</label>
+    <input bindinput="userNameInput" class="inputview firstLine" cursorSpacing="50" placeholder="请输入与证件一致的姓名" value="{{nameStr}}"></input>
+</view>
+<view class="cellview">
+    <label class="cellTitlelab">手机号码</label>
+    <input bindinput="phoneNumInput" class="inputview" placeholder="请输入手机号码" type="number" value="{{phoneStr}}"></input>
+</view>
+<view class="cellview">
+    <picker bindchange="cardTypePickerChange" mode="selector" range="{{cardtypeArr}}" rangeKey="text" value="{{index}}">
+        <label class="cellTitlelab">证件类型</label>
+        <input class="inputview" disabled="true" placeholder="请选择证件类型" value="{{cardTypeStr}}"></input>
+        <image class="unfoldimg" src="../../images/unfoldgary.png"></image>
+    </picker>
+</view>
+<view class="cellview last">
+    <label class="cellTitlelab">证件号码</label>
+    <input bindinput="cardNumInput" class="inputview" cursorSpacing="50" placeholder="请填写正确的证件号码" value="{{cardNumStr}}"></input>
+</view>
+<cover-view class="button_container">
+    <button bindtap="sureBtnClick" class="appointBtn">提 交</button>
+</cover-view>

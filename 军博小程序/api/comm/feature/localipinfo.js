@@ -1,0 +1,1 @@
+var e=require("../../utils/promiseutil.js"),s=require("../rcode.js");module.exports={obtainLocalIPAsync:function(){return e.buildPromise((function(e,i){wx.getLocalIPAddress?wx.getLocalIPAddress({success:function(s){e(s.localip)},fail:function(e){i(e)}}):i(s.ERROR_BIZ_API_FAILD)}))}};

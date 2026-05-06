@@ -1,0 +1,1 @@
+module.exports={getDeviceInfo:function(){var e=wx.getSystemInfoSync();return{1:e.system,2:e.platform,3:e.brand,4:e.model,5:e.language,6:e.screenHeight,7:e.screenWidth,8:e.pixelRatio,9:e.deviceOrientation,10:e.version,11:e.SDKVersion,12:e.batteryLevel,13:e.benchmarkLevel,14:e.fontSizeSetting}}};

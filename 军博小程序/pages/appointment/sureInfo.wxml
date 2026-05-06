@@ -1,0 +1,34 @@
+<view class="time-view">
+    <text class="contlab">入馆时间</text>
+    <text class="timelab">{{model.intervalDate+' '+model.intervalValue}}</text>
+</view>
+<view class="title-view">
+    <text class="section-header">{{'添加参观者（可预约人数：'}}</text>
+    <text class="section-header" style="color:#cfb053;">{{selectedContactsArr.length}}</text>
+    <text class="section-header">{{'/'+maxCount+'人）'}}</text>
+</view>
+<view>
+    <view class="visitorCell" data-index="{{index}}" wx:for="{{selectedContactsArr}}" wx:key="customerContactId">
+        <label class="mySelfTag" hidden="{{item.myself===1?false:true}}">我</label>
+        <view class="firstLine">
+            <label class="nameLab">{{item.contactName}}</label>
+            <image class="iconImg" src="../../images/redicon.png"></image>
+        </view>
+        <label class="secLineLab">{{'证件号码：'+item.documentNumber}}</label>
+        <image bindtap="deleteBtnClick" class="trashImg" data-value="{{index}}" src="../../images/delete.png"></image>
+    </view>
+</view>
+<button bindtap="selectContactsClick" class="addvisitorbtn">+ 添加参观者</button>
+<view class="captcha-view">
+    <text class="captchalab">验　证　码：</text>
+    <input bindinput="captchaCodeInput" class="code-input" cursorSpacing="50" placeholder="请输入验证码" value="{{codeInputStr}}"></input>
+    <image bindtap="captchaClick" class="captcha" src="../../images/shuaxinma.png" wx:if="{{captchaImgBase64.length==0}}"></image>
+    <image bindtap="captchaClick" class="captcha" src="data:image/png;base64,{{captchaImgBase64}}" wx:if="{{captchaImgBase64!=''}}"></image>
+</view>
+<view class="button_container">
+    <button bind:tap="appointBtnClick" class="normalBtn" disabled="{{selectedContactsArr.length==0}}">确认预约</button>
+</view>
+<view style="position:fixed;top:9999rpx;">
+    <canvas canvasId="turing-canvas" style="width:150;height:150;"></canvas>
+    <canvas id="turing-render-webgl" style="width:100px;height:100px;" type="webgl"></canvas>
+</view>

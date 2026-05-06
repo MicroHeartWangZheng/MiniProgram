@@ -1,0 +1,47 @@
+<view class="info">
+    <view class="title">{{detail.activityName}}</view>
+    <view class="c activity_time">
+        <text class="t">活动时间</text>
+        <text>{{detail.time}}</text>
+    </view>
+    <view class="c application_time" wx:if="{{!detail.activityType}}">
+        <text class="t">报名时间</text>
+        <text>{{detail.reserveTime}}</text>
+    </view>
+    <view class="c activity_loc">
+        <text class="t">活动地点</text>
+        <text>{{detail.address}}</text>
+    </view>
+    <view class="c activity_age">
+        <text class="t">年龄限制</text>
+        <text wx:if="{{!detail.reserveMinAge&&!detail.reserveMaxAge}}">年龄无限制</text>
+        <text wx:elif="{{!detail.reserveMinAge&&detail.reserveMaxAge}}">{{detail.reserveMaxAge}}岁以下</text>
+        <text wx:elif="{{detail.reserveMinAge&&!detail.reserveMaxAge}}">{{detail.reserveMinAge}}岁以上</text>
+        <text wx:else>{{detail.reserveMinAge}}岁 - {{detail.reserveMaxAge}}岁</text>
+    </view>
+    <view class="c batch" wx:if="{{detail.activityType}}">
+        <text class="t">报名场次</text>
+        <text class="p">{{detail.ticktDetail.reserveDate}} {{detail.ticktDetail.reserveTime}}</text>
+    </view>
+</view>
+<view class="p_detail">
+    <view class="t">参观者详情</view>
+    <view class="p_item" id="{{item.customerId}}" wx:for="{{visitList}}">
+        <view class="name">
+            <text>{{item.contactName}}</text>
+        </view>
+        <view class="id_card">
+            <text class="l">证件号</text>
+            <text class="c">{{item.documentNumber}}</text>
+        </view>
+    </view>
+</view>
+<view class="code">
+    <text class="code_left">验证码</text>
+    <input bindinput="codeChange" class="weui-input" cursorSpacing="50" placeholder="请输入验证码" placeholderStyle="color:#b5b5b5;font-size:25rpx"></input>
+    <image bindtap="captchaClick" class="image_code" mode="heightFix" src="../../images/shuaxinma.png" wx:if="{{captchaImgBase64==''}}"></image>
+    <image bindtap="captchaClick" class="image_code" mode="heightFix" src="data:image/png;base64,{{captchaImgBase64}}" wx:else></image>
+</view>
+<view class="btn">
+    <view bindtap="conformOrder" class="confirm">确定订单</view>
+</view>

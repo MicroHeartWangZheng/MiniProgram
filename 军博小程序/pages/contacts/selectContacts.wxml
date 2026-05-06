@@ -1,0 +1,15 @@
+<button bindtap="addContactsBtnClick" class="addvisitorbtn">+添加参观者</button>
+<view>
+    <view bindtap="contactsClick" class="visitorCell" data-index="{{index}}" wx:for="{{allContactsArr}}" wx:key="customerContactId">
+        <label class="mySelfTag" hidden="{{item.myself===1?false:true}}">我</label>
+        <view class="firstLine">
+            <label class="nameLab">{{item.contactName}}</label>
+            <image class="iconImg" src="../../images/redicon.png"></image>
+        </view>
+        <label class="secLineLab">{{'证件号码：'+item.documentNumber}}</label>
+        <image class="trashImg {{item.seleted?'trashImgSeleted':''}}" src="{{item.seleted?'../../images/select.png':''}}"></image>
+    </view>
+</view>
+<view class="button_container">
+    <button bindtap="appointBtnClick" class="normalBtn" disabled="{{seletDataArr.length===0}}">{{surebtnStr}}</button>
+</view>

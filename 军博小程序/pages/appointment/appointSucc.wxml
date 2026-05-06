@@ -1,0 +1,20 @@
+<image class="banner-top" src="../../images/banner.jpg"></image>
+<view class="sectionview">
+    <view class="success-icon">
+        <image src="../../images/success.png"></image>
+        <label>预约成功</label>
+    </view>
+    <view class="time-tips">
+        <label>参观人数：</label>
+        <label>{{visitorNum}}人</label>
+    </view>
+    <view class="time-tips">
+        <label>入馆时间：</label>
+        <label>{{time}}</label>
+    </view>
+    <rich-text class="rich_text" nodes="{{richTextNode}}"></rich-text>
+    <view class="buttomview">
+        <button bindtap="detailbtnClick">查看详情</button>
+        <button bindtap="backbtnClick">返回</button>
+    </view>
+</view>

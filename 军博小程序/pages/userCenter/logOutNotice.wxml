@@ -1,0 +1,21 @@
+<text class="rich_text">1.您应确保您有权决定该账号的注销事宜，不侵犯任何第三方的合法权益，如因此引发任何争议，由您自行承担。
+  2.账号注销后，已绑定的手机号、第三方登录账号和军事博物馆团队账号将会被解除绑定。
+  3.注销账号后，您将无法再使用本账号，也将无法找回您账号中及与账号相关的任何内容或信息，包括但不限于:
+  （1）您将无法继续使用该账号进行登录;
+  （2）您账号的个人资料和历史信息(包含昵称、头像、收藏记录等)都将无法找回;
+  （3）注销账号后，您将在30个自然日内无法使用该手机号继续注册;
+  4.在账号注销期间，如果您的账号被他人投诉、被国家机关调查或者正处于诉讼、仲裁程序中，我们有权自行终止您的账号注销程序，而无需另行得到您的同意。
+  5.本协议认为注销您的账号并不代表本账号注销前的账号行为和相关责任得到豁免或减轻。
+  6.已充分知晓并同意本协议全部条款，自愿申请注销军事博物馆个人账号。账号注销后我们无法协助您重新恢复前述服务，请您在申请注销前自行备份您欲保留的本账号信息和数据。
+</text>
+<view bindtap="privacyAgreementCheckedChange" class="notice_row">
+    <radio-group>
+        <radio checked="{{privacyAgreementChecked}}"></radio>
+    </radio-group>
+    <label class="notice_row_label1">我已阅读</label>
+    <label class="notice_row_label2">《注销须知》</label>
+    <label class="notice_row_label1">并同意</label>
+</view>
+<view class="button_container">
+    <button bindtap="sureBtnClick" class="normalBtn" disabled="{{!privacyAgreementChecked}}">下一步</button>
+</view>

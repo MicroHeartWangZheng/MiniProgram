@@ -1,0 +1,1 @@
+var i=require("../../utils/promiseutil.js"),t=require("../rcode.js");module.exports={obtainConnectedWifiAsync:function(){return i.buildPromise((function(i,e){wx.startWifi&&wx.getConnectedWifi?wx.startWifi({success:function(t){wx.getConnectedWifi({success:function(t){i(t)},fail:function(i){e(i)}})},fail:function(i){e(i)}}):e(t.ERROR_BIZ_API_FAILD)}))}};

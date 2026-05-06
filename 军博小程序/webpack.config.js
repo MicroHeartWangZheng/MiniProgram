@@ -1,0 +1,1 @@
+var e=require("path"),i=require("terser-webpack-plugin");module.exports={mode:"development",entry:"./index.js",output:{path:e.resolve(__dirname,"./dist"),publicPath:"/dist/",filename:"turing_plugin.js",libraryTarget:"commonjs2"},module:{rules:[{test:/\.js$/,loader:"babel-loader",exclude:/node_modules/}]},devtool:"source-map",optimization:{minimize:!0,minimizer:[new i]}};

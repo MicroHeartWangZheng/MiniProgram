@@ -1,0 +1,34 @@
+<image class="mainbgimg" src="../../images/pageGraybg.png"></image>
+<view class="bg-view">
+    <view class="waringView" hidden="{{hiddlearingView}}">
+        <view class="waringViewInner">
+            <image class="waringImg" src="../../images/warningButton.png"></image>
+            <text class="waringTextNor">
+                <text class="waringText">请输入您的实名认证信息，实名认证信息与您预约、入馆检票密切相关，请谨慎填写。</text>
+            </text>
+        </view>
+    </view>
+    <view class="cellview">
+        <label class="cellTitlelab">姓名</label>
+        <input bindinput="userNameInput" class="inputview firstLine" placeholder="请输入与证件一致的姓名" value="{{nameStr}}"></input>
+    </view>
+    <view class="cellview">
+        <picker bindchange="cardTypePickerChange" mode="selector" range="{{cardtypeArr}}" rangeKey="text" value="{{index}}">
+            <label class="cellTitlelab">证件类型</label>
+            <input class="inputview" disabled="true" placeholder="请选择证件类型" value="{{cardTypeStr}}"></input>
+            <image class="unfoldimg" src="../../images/unfoldgary.png"></image>
+        </picker>
+    </view>
+    <view class="cellview">
+        <label class="cellTitlelab">证件号码</label>
+        <input bindinput="cardNumInput" class="inputview" placeholder="请填写本人正确的证件号码" value="{{cardNumStr}}"></input>
+    </view>
+</view>
+<view bindtap="xieyiViewClick" class="xieyiView">
+    <image bindtap="chooseFalseImgClick" class="xieyiImg" src="{{xieyiSeleced==true?'../../images/chooseTurebtn.png':'../../images/chooseFalseBtn.png'}}"></image>
+    <label class="xieyiLab">阅读并同意</label>
+    <label class="xieyiLabS">《隐私协议》</label>
+</view>
+<view class="button_container">
+    <button bindtap="surebtnClick" class="normalBtn">保 存</button>
+</view>

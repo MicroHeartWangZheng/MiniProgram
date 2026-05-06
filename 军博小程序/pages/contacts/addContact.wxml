@@ -1,0 +1,37 @@
+<view class="cellview">
+    <label class="cellTitlelab">姓名</label>
+    <input bindinput="userNameInput" class="inputview firstLine" placeholder="请输入与证件一致的姓名" value="{{nameStr}}"></input>
+    <view class="userChooseView" hidden="{{isHasSelf}}">
+        <view class="chooseInnerView">
+            <label class="userPromptLab">是否为本人</label>
+            <image bindtap="chooseTureImgClick" class="chooseTureImg" src="{{isMySelf==true?'../../images/chooseTurebtn.png':'../../images/chooseFalseBtn.png'}}"></image>
+            <label bindtap="chooseTureImgClick" class="yesLab">是</label>
+            <image bindtap="chooseFalseImgClick" class="chooseNoImg" src="{{isMySelf==true?'../../images/chooseFalseBtn.png':'../../images/chooseTurebtn.png'}}"></image>
+            <label bindtap="chooseFalseImgClick" class="noLab">否</label>
+        </view>
+    </view>
+</view>
+<view class="cellview">
+    <label class="cellTitlelab">手机号码</label>
+    <input bindinput="phoneNumInput" class="inputview" placeholder="请输入手机号码" type="number" value="{{phoneStr}}"></input>
+</view>
+<view class="cellview">
+    <picker bindchange="cardTypePickerChange" mode="selector" range="{{cardtypeArr}}" rangeKey="text" style="width:100%;" value="{{index}}">
+        <label class="cellTitlelab">证件类型</label>
+        <input class="inputview" disabled="true" placeholder="请选择证件类型" value="{{cardTypeStr}}"></input>
+        <image class="unfoldimg" src="../../images/unfoldgary.png"></image>
+    </picker>
+</view>
+<view class="cellview">
+    <label class="cellTitlelab">证件号码</label>
+    <input bindinput="cardNumInput" class="inputview" cursorSpacing="50" placeholder="请填写正确的证件号码" value="{{cardNumStr}}"></input>
+</view>
+<view bindtap="xieyiViewClick" class="xieyiView">
+    <image class="xieyiImg" src="{{xieyiSeleced==true?'../../images/chooseTurebtn.png':'../../images/chooseFalseBtn.png'}}"></image>
+    <label class="xieyiLab">阅读并同意</label>
+    <label class="xieyiLabS">《隐私协议》</label>
+</view>
+<view class="buttomview">
+    <button bindtap="cancleBtnClick" class="canclebtn">取消</button>
+    <button bindtap="sureBtnClick" class="surebtn">确定</button>
+</view>

@@ -1,0 +1,20 @@
+<view class="sectionHeaderView">
+    <image class="userIcon" src="{{userIcon}}"></image>
+    <label bindtap="login" class="phoneNum">{{useName}}</label>
+    <button bindtap="getUserProfile" class="userIconBtn" wx:if="{{canIUseGetUserProfile}}"></button>
+</view>
+<view bindtap="visitorsCellClick" class="sectionCellView">
+    <image class="cellIcon" src="../../images/center/canguanzhe.png"></image>
+    <label class="cellLab">参观者信息</label>
+    <image class="cellJiantou" src="../../images/center/jiantou.png"></image>
+</view>
+<view bindtap="orderCellClick" class="sectionCellView">
+    <image class="cellIcon" src="../../images/center/dingdan.png"></image>
+    <label class="cellLab">预约记录</label>
+    <image class="cellJiantou" src="../../images/center/jiantou.png"></image>
+</view>
+<view bindtap="teamCurrentCertificationClick" class="sectionCellView" hidden="{{hiddenTuanduiShenhe}}">
+    <image class="cellIcon" src="../../images/center/renzheng.png"></image>
+    <label class="cellLab">团队注册</label>
+    <image class="cellJiantou" src="../../images/center/jiantou.png"></image>
+</view>

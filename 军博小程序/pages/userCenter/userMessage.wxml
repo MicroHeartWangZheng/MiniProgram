@@ -1,0 +1,37 @@
+<label class="title">基本信息</label>
+<view class="contentView">
+    <view bindtap="cellviewClick" class="cellview" data-index="1">
+        <view class="left">
+            <label class="cellTitlelab">姓名</label>
+            <label class="textLab">{{userModel.customerName}}</label>
+        </view>
+        <image class="cellJiantou" src="../../images/center/jiantou.png"></image>
+    </view>
+    <view bindtap="cellviewClick" class="cellview" data-index="2">
+        <view class="left">
+            <label class="cellTitlelab">手机号码</label>
+            <label class="textLab">{{userModel.hidePhoneNew}}</label>
+        </view>
+        <image class="cellJiantou" src="../../images/center/jiantou.png"></image>
+    </view>
+    <view bindtap="cellviewClick" class="cellview" data-index="3">
+        <view class="left">
+            <label class="cellTitlelab">证件类型</label>
+            <label class="textLab">{{userModel.documentTypeName}}</label>
+        </view>
+        <image class="cellJiantou" src="../../images/center/jiantou.png"></image>
+    </view>
+    <view bindtap="cellviewClick" class="cellview" data-index="4" style="border-bottom:none;">
+        <view class="left">
+            <label class="cellTitlelab">证件号码</label>
+            <label class="textLab">{{userModel.documentNumber}}</label>
+        </view>
+        <image class="cellJiantou" src="../../images/center/jiantou.png"></image>
+    </view>
+</view>
+<label class="title">安全</label>
+<view bind:tap="logoutClick" class="logout_view" wx:if="{{userModel!=null&&userModel.phoneNumber!=null}}">
+    <label>注销账号</label>
+    <label>注销后无法恢复，请谨慎操作</label>
+    <image src="../../images/center/jiantou.png"></image>
+</view>

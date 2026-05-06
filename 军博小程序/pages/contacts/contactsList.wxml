@@ -1,0 +1,17 @@
+<button bindtap="addBtnClick" class="addBtn">{{'+ 增加参观者（可添加'+maxCount+'人，已添加'+contactsArr.length+'人）'}}</button>
+<view class="visitorListView" hidden="{{contactsArr.length===0}}">
+    <view class="visitorCell" data-index="{{index}}" wx:for="{{contactsArr}}" wx:key="customerContactId">
+        <image class="iconImage" src="../../images/visitorListIcon.png"></image>
+        <label class="myselfTag" hidden="{{item.myself===0}}">我</label>
+        <view class="contentMsgView">
+            <view class="nameView">
+                <label class="nameLab">{{item.contactName}}</label>
+                <label class="isVipTag" hidden="{{item.isPartyMember===1?false:true}}">党员</label>
+            </view>
+            <label class="idCardLab">{{'证件号码：'+item.documentNumber}}</label>
+            <image bindtap="editeimgClick" class="editeImg" data-value="{{item}}" hidden="{{item.myself===1}}" src="../../images/center/editInfo.png"></image>
+            <image bindtap="deleteClick" class="deleteImg" data-value="{{item.customerContactId}}" hidden="{{item.myself===1}}" src="../../images/delete.png"></image>
+        </view>
+    </view>
+</view>
+<image class="noDataImg" hidden="{{contactsArr.length>0}}" src="../../images/visitorNullImg.png"></image>

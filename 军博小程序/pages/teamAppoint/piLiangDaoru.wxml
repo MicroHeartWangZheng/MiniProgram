@@ -1,0 +1,35 @@
+<view class="cellView">
+    <label class="descLab">{{'您的团队当前最多还可以导入 '+maxCount+' 人'}}</label>
+    <button bindtap="sendBtnClick" class="sendBtn">上传Excel</button>
+</view>
+<view class="zhinanView">上传指南</view>
+<view class="cellView">
+    <label class="stepLab">· 步骤一</label>
+    <label class="descLab2">复制链接地址，在PC端打开浏览器并粘贴，访问即可下载模板。</label>
+    <button bindtap="xiazaiTishiViewClick" class="fuzhiBtn">复制链接</button>
+</view>
+<view class="cellView">
+    <label class="stepLab">· 步骤二</label>
+    <label class="descLab2">在PC端，按照模板格式编辑好团队成员后，将文件发送给“文件传输助手”。</label>
+    <image class="daoruImg" mode="widthFix" src="../../images/daoru1.png"></image>
+</view>
+<view class="cellView">
+    <label class="stepLab">· 步骤三</label>
+    <label class="descLab2">返回小程序，进入此页面，点击“上传Excel”，在“文件传输助手”找到对应的文件即可。</label>
+    <image class="daoruImg" mode="widthFix" src="../../images/daoru2.png"></image>
+</view>
+<view class="popbgview" hidden="{{hiddleTongzhiPop}}">
+    <view class="tongzhiPopview">
+        <view class="popTitleview">
+            <label class="poptitlelab">提 示</label>
+        </view>
+        <scroll-view class="tongzhiContentView" scrollY="true">
+            <view class="tongzhiViewInner">
+                <view class="msgListView" data-index="{{index}}" wx:for="{{msgDataArr}}">{{item}}</view>
+            </view>
+        </scroll-view>
+        <view class="buttomview">
+            <label bindtap="tongzhiPopViewClick" class="saveLab">关 闭</label>
+        </view>
+    </view>
+</view>

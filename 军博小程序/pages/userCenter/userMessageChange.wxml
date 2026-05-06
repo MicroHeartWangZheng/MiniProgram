@@ -1,0 +1,41 @@
+<view class="contentView">
+    <view class="cellview">
+        <label class="cellTitlelab">{{titleStr=='证件号'?'当前证件类型':'当前'+titleStr}}</label>
+        <view class="textLabImgView">
+            <label class="textLab">{{oldStr}}</label>
+            <image bindtap="xianShiImgClick" class="xianShiImg" hidden="{{titleStr=='手机号'?false:true}}" src="{{xianShiImg==false?'../../images/center/xianshi.png':'../../images/center/yincang.png'}}"></image>
+        </view>
+    </view>
+    <view class="cellview" hidden="{{titleStr=='证件号'?false:true}}">
+        <label class="cellTitlelab">当前证件号</label>
+        <view class="textLabImgView">
+            <label class="textLab">{{xianShiImg==false?cardNumStr:hideCardNumStr}}</label>
+            <image bindtap="xianShiImgClick" class="xianShiImg" src="{{xianShiImg==false?'../../images/center/xianshi.png':'../../images/center/yincang.png'}}"></image>
+        </view>
+    </view>
+    <view class="cellview" hidden="{{titleStr=='证件号'?false:true}}">
+        <picker bindchange="cardTypePickerChange" mode="selector" range="{{cardtypeArr}}" rangeKey="text" style="width:100%;" value="{{index}}">
+            <label class="cellTitlelab">变更证件类型</label>
+            <input class="inputview" disabled="true" placeholder="请选择证件类型" value="{{cardTypeStr}}"></input>
+            <image class="unfoldimg" src="../../images/unfoldgary.png"></image>
+        </picker>
+    </view>
+    <view class="cellview">
+        <label class="cellTitlelab">{{'变更'+titleStr}}</label>
+        <input bindinput="newStrInput" class="inputView" placeholder="{{'请输入变更'+titleStr}}" value="{{newStr}}"></input>
+    </view>
+    <view class="cellview">
+        <label class="cellTitlelab">图文验证码</label>
+        <input bindinput="captchaCodeInput" class="inputView firstLine" cursorSpacing="50" placeholder="请输入图文验证码" value="{{codeInputStr}}"></input>
+        <image bindtap="captchaClick" class="captcha" src="../../images/shuaxinma.png" wx:if="{{captchaImgBase64.length==0}}"></image>
+        <image bindtap="tuwenCaptchaClick" class="captcha" src="data:image/png;base64,{{captchaImgBase64}}" wx:if="{{captchaImgBase64!=''}}"></image>
+    </view>
+    <view class="cellview">
+        <label class="cellTitlelab">验 证 码</label>
+        <input bindinput="vcodeInput" class="inputView firstLine" placeholder="请输入验证码" value="{{vcodeStr}}"></input>
+        <label bindtap="captchaClick" class="{{showCountdown?'captchaNone':'captcha'}}">{{showCountdown?'剩余'+countdown+'秒':codeStr}}</label>
+    </view>
+</view>
+<view class="buttonView">
+    <button bindtap="sureBtnClick" class="appointBtn">提 交</button>
+</view>

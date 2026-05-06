@@ -1,0 +1,1 @@
+module.exports={isEmpty:function(r){return null==r||0===r.length},isMatch:function(r,t){return r===t},toArray:function r(t){for(var n=[],e=0;e<t.length;++e){var i=t[e];if(Array.isArray(i)){var o=r(i);n=n.concat(o)}else n.push(i)}return n},getError:function(r){return r?r instanceof Error?r.message:JSON.stringify(r):""}};

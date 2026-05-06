@@ -1,0 +1,1 @@
+var t=require("../utils/util.js"),e={request:function(e,s,u,o){var r=arguments.length>4&&void 0!==arguments[4]?arguments[4]:"",a=arguments.length>5&&void 0!==arguments[5]?arguments[5]:"post",i={url:o,method:a,data:e,success:function(t){s({statusCode:t.statusCode,resp:t.data})},fail:function(t){u(t)}};t.isEmpty(r)||(i.header=r),wx.request(i)}};module.exports={defaultNetwork:e};
